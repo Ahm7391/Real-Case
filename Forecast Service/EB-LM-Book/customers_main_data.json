@@ -1,0 +1,1076 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": 2,
+            "area_id": 506,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 3,
+            "area_id": 506,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 6,
+            "area_id": 263,
+            "number_of_rooms": 11
+        },
+        {
+            "id": 7,
+            "area_id": 269,
+            "number_of_rooms": 13
+        },
+        {
+            "id": 9,
+            "area_id": 267,
+            "number_of_rooms": 11
+        },
+        {
+            "id": 10,
+            "area_id": 267,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 11,
+            "area_id": 264,
+            "number_of_rooms": 24
+        },
+        {
+            "id": 14,
+            "area_id": 503,
+            "number_of_rooms": 18
+        },
+        {
+            "id": 15,
+            "area_id": 229,
+            "number_of_rooms": 27
+        },
+        {
+            "id": 16,
+            "area_id": 263,
+            "number_of_rooms": 22
+        },
+        {
+            "id": 21,
+            "area_id": 226,
+            "number_of_rooms": 50
+        },
+        {
+            "id": 22,
+            "area_id": 270,
+            "number_of_rooms": 67
+        },
+        {
+            "id": 23,
+            "area_id": 353,
+            "number_of_rooms": 26
+        },
+        {
+            "id": 25,
+            "area_id": 263,
+            "number_of_rooms": 15
+        },
+        {
+            "id": 26,
+            "area_id": 263,
+            "number_of_rooms": 30
+        },
+        {
+            "id": 27,
+            "area_id": 209,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 30,
+            "area_id": 269,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 31,
+            "area_id": 269,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 32,
+            "area_id": 269,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 33,
+            "area_id": 262,
+            "number_of_rooms": 16
+        },
+        {
+            "id": 35,
+            "area_id": 269,
+            "number_of_rooms": 14
+        },
+        {
+            "id": 36,
+            "area_id": 269,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 37,
+            "area_id": 269,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 39,
+            "area_id": 218,
+            "number_of_rooms": 18
+        },
+        {
+            "id": 41,
+            "area_id": 246,
+            "number_of_rooms": 37
+        },
+        {
+            "id": 42,
+            "area_id": 246,
+            "number_of_rooms": 19
+        },
+        {
+            "id": 56,
+            "area_id": 223,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 58,
+            "area_id": 266,
+            "number_of_rooms": 13
+        },
+        {
+            "id": 60,
+            "area_id": 266,
+            "number_of_rooms": 21
+        },
+        {
+            "id": 61,
+            "area_id": 225,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 63,
+            "area_id": 267,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 65,
+            "area_id": 266,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 88,
+            "area_id": 507,
+            "number_of_rooms": 24
+        },
+        {
+            "id": 93,
+            "area_id": 267,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 98,
+            "area_id": 246,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 100,
+            "area_id": 160,
+            "number_of_rooms": 16
+        },
+        {
+            "id": 104,
+            "area_id": 263,
+            "number_of_rooms": 9
+        },
+        {
+            "id": 105,
+            "area_id": 263,
+            "number_of_rooms": 12
+        },
+        {
+            "id": 106,
+            "area_id": 260,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 107,
+            "area_id": 503,
+            "number_of_rooms": 26
+        },
+        {
+            "id": 109,
+            "area_id": 263,
+            "number_of_rooms": 13
+        },
+        {
+            "id": 110,
+            "area_id": 257,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 111,
+            "area_id": 264,
+            "number_of_rooms": 9
+        },
+        {
+            "id": 116,
+            "area_id": 263,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 121,
+            "area_id": 263,
+            "number_of_rooms": 4
+        },
+        {
+            "id": 122,
+            "area_id": 267,
+            "number_of_rooms": 9
+        },
+        {
+            "id": 123,
+            "area_id": 276,
+            "number_of_rooms": 12
+        },
+        {
+            "id": 124,
+            "area_id": 276,
+            "number_of_rooms": 9
+        },
+        {
+            "id": 125,
+            "area_id": 266,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 126,
+            "area_id": 266,
+            "number_of_rooms": 11
+        },
+        {
+            "id": 128,
+            "area_id": 263,
+            "number_of_rooms": 15
+        },
+        {
+            "id": 129,
+            "area_id": 213,
+            "number_of_rooms": 36
+        },
+        {
+            "id": 130,
+            "area_id": 274,
+            "number_of_rooms": 29
+        },
+        {
+            "id": 132,
+            "area_id": 273,
+            "number_of_rooms": 13
+        },
+        {
+            "id": 133,
+            "area_id": 268,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 134,
+            "area_id": 250,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 139,
+            "area_id": 262,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 141,
+            "area_id": 267,
+            "number_of_rooms": 4
+        },
+        {
+            "id": 146,
+            "area_id": 268,
+            "number_of_rooms": 17
+        },
+        {
+            "id": 147,
+            "area_id": 158,
+            "number_of_rooms": 18
+        },
+        {
+            "id": 154,
+            "area_id": 281,
+            "number_of_rooms": 12
+        },
+        {
+            "id": 155,
+            "area_id": 504,
+            "number_of_rooms": 4
+        },
+        {
+            "id": 156,
+            "area_id": 209,
+            "number_of_rooms": 12
+        },
+        {
+            "id": 158,
+            "area_id": 72,
+            "number_of_rooms": 29
+        },
+        {
+            "id": 159,
+            "area_id": 449,
+            "number_of_rooms": 17
+        },
+        {
+            "id": 160,
+            "area_id": 243,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 162,
+            "area_id": 260,
+            "number_of_rooms": 18
+        },
+        {
+            "id": 164,
+            "area_id": 157,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 165,
+            "area_id": 269,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 166,
+            "area_id": 264,
+            "number_of_rooms": 27
+        },
+        {
+            "id": 167,
+            "area_id": 263,
+            "number_of_rooms": 24
+        },
+        {
+            "id": 168,
+            "area_id": 262,
+            "number_of_rooms": 9
+        },
+        {
+            "id": 169,
+            "area_id": 255,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 170,
+            "area_id": 257,
+            "number_of_rooms": 18
+        },
+        {
+            "id": 171,
+            "area_id": 504,
+            "number_of_rooms": 9
+        },
+        {
+            "id": 173,
+            "area_id": 246,
+            "number_of_rooms": 20
+        },
+        {
+            "id": 174,
+            "area_id": 260,
+            "number_of_rooms": 11
+        },
+        {
+            "id": 175,
+            "area_id": 264,
+            "number_of_rooms": 17
+        },
+        {
+            "id": 176,
+            "area_id": 246,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 177,
+            "area_id": 266,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 178,
+            "area_id": 263,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 181,
+            "area_id": 216,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 184,
+            "area_id": 111,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 186,
+            "area_id": 215,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 189,
+            "area_id": 215,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 192,
+            "area_id": 263,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 195,
+            "area_id": 263,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 197,
+            "area_id": 263,
+            "number_of_rooms": 11
+        },
+        {
+            "id": 198,
+            "area_id": 246,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 200,
+            "area_id": 449,
+            "number_of_rooms": 17
+        },
+        {
+            "id": 202,
+            "area_id": 504,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 203,
+            "area_id": 263,
+            "number_of_rooms": 27
+        },
+        {
+            "id": 205,
+            "area_id": 157,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 206,
+            "area_id": 264,
+            "number_of_rooms": 12
+        },
+        {
+            "id": 208,
+            "area_id": 269,
+            "number_of_rooms": 9
+        },
+        {
+            "id": 212,
+            "area_id": 158,
+            "number_of_rooms": 50
+        },
+        {
+            "id": 220,
+            "area_id": 269,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 227,
+            "area_id": 257,
+            "number_of_rooms": 4
+        },
+        {
+            "id": 234,
+            "area_id": 263,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 235,
+            "area_id": 269,
+            "number_of_rooms": 13
+        },
+        {
+            "id": 236,
+            "area_id": 255,
+            "number_of_rooms": 11
+        },
+        {
+            "id": 238,
+            "area_id": 503,
+            "number_of_rooms": 12
+        },
+        {
+            "id": 240,
+            "area_id": 257,
+            "number_of_rooms": 22
+        },
+        {
+            "id": 243,
+            "area_id": 267,
+            "number_of_rooms": 20
+        },
+        {
+            "id": 245,
+            "area_id": 157,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 246,
+            "area_id": 255,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 248,
+            "area_id": 207,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 249,
+            "area_id": 207,
+            "number_of_rooms": 19
+        },
+        {
+            "id": 250,
+            "area_id": 216,
+            "number_of_rooms": 15
+        },
+        {
+            "id": 251,
+            "area_id": 274,
+            "number_of_rooms": 50
+        },
+        {
+            "id": 253,
+            "area_id": 263,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 256,
+            "area_id": 257,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 257,
+            "area_id": 263,
+            "number_of_rooms": 3
+        },
+        {
+            "id": 258,
+            "area_id": 255,
+            "number_of_rooms": 9
+        },
+        {
+            "id": 259,
+            "area_id": 207,
+            "number_of_rooms": 13
+        },
+        {
+            "id": 261,
+            "area_id": 264,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 263,
+            "area_id": 256,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 264,
+            "area_id": 176,
+            "number_of_rooms": 20
+        },
+        {
+            "id": 266,
+            "area_id": 176,
+            "number_of_rooms": 20
+        },
+        {
+            "id": 267,
+            "area_id": 257,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 269,
+            "area_id": 275,
+            "number_of_rooms": 56
+        },
+        {
+            "id": 270,
+            "area_id": 256,
+            "number_of_rooms": 11
+        },
+        {
+            "id": 275,
+            "area_id": 269,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 277,
+            "area_id": 256,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 278,
+            "area_id": 262,
+            "number_of_rooms": 31
+        },
+        {
+            "id": 279,
+            "area_id": 264,
+            "number_of_rooms": 12
+        },
+        {
+            "id": 283,
+            "area_id": 267,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 285,
+            "area_id": 176,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 286,
+            "area_id": 269,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 287,
+            "area_id": 266,
+            "number_of_rooms": 11
+        },
+        {
+            "id": 288,
+            "area_id": 271,
+            "number_of_rooms": 22
+        },
+        {
+            "id": 290,
+            "area_id": 257,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 292,
+            "area_id": 255,
+            "number_of_rooms": 3
+        },
+        {
+            "id": 293,
+            "area_id": 263,
+            "number_of_rooms": 15
+        },
+        {
+            "id": 296,
+            "area_id": 266,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 297,
+            "area_id": 207,
+            "number_of_rooms": 15
+        },
+        {
+            "id": 298,
+            "area_id": 214,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 300,
+            "area_id": 263,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 301,
+            "area_id": 157,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 302,
+            "area_id": 268,
+            "number_of_rooms": 12
+        },
+        {
+            "id": 303,
+            "area_id": 263,
+            "number_of_rooms": 39
+        },
+        {
+            "id": 307,
+            "area_id": 296,
+            "number_of_rooms": 18
+        },
+        {
+            "id": 308,
+            "area_id": 256,
+            "number_of_rooms": 4
+        },
+        {
+            "id": 310,
+            "area_id": 207,
+            "number_of_rooms": 4
+        },
+        {
+            "id": 311,
+            "area_id": 511,
+            "number_of_rooms": 60
+        },
+        {
+            "id": 312,
+            "area_id": 511,
+            "number_of_rooms": 30
+        },
+        {
+            "id": 314,
+            "area_id": 226,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 315,
+            "area_id": 266,
+            "number_of_rooms": 37
+        },
+        {
+            "id": 318,
+            "area_id": 256,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 319,
+            "area_id": 266,
+            "number_of_rooms": 2
+        },
+        {
+            "id": 321,
+            "area_id": 222,
+            "number_of_rooms": 20
+        },
+        {
+            "id": 325,
+            "area_id": 256,
+            "number_of_rooms": 3
+        },
+        {
+            "id": 328,
+            "area_id": 260,
+            "number_of_rooms": 4
+        },
+        {
+            "id": 329,
+            "area_id": 262,
+            "number_of_rooms": 8
+        },
+        {
+            "id": 331,
+            "area_id": 257,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 332,
+            "area_id": 269,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 334,
+            "area_id": 266,
+            "number_of_rooms": 1
+        },
+        {
+            "id": 336,
+            "area_id": 211,
+            "number_of_rooms": 9
+        },
+        {
+            "id": 337,
+            "area_id": 263,
+            "number_of_rooms": 12
+        },
+        {
+            "id": 339,
+            "area_id": 158,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 340,
+            "area_id": 257,
+            "number_of_rooms": 11
+        },
+        {
+            "id": 341,
+            "area_id": 259,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 342,
+            "area_id": 257,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 343,
+            "area_id": 226,
+            "number_of_rooms": 36
+        },
+        {
+            "id": 346,
+            "area_id": 266,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 347,
+            "area_id": 256,
+            "number_of_rooms": 9
+        },
+        {
+            "id": 348,
+            "area_id": 255,
+            "number_of_rooms": 11
+        },
+        {
+            "id": 349,
+            "area_id": 267,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 350,
+            "area_id": 267,
+            "number_of_rooms": 3
+        },
+        {
+            "id": 351,
+            "area_id": 263,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 353,
+            "area_id": 256,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 356,
+            "area_id": 257,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 357,
+            "area_id": 256,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 359,
+            "area_id": 262,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 360,
+            "area_id": 259,
+            "number_of_rooms": 4
+        },
+        {
+            "id": 361,
+            "area_id": 259,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 363,
+            "area_id": 291,
+            "number_of_rooms": 20
+        },
+        {
+            "id": 364,
+            "area_id": 261,
+            "number_of_rooms": 3
+        },
+        {
+            "id": 365,
+            "area_id": 258,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 366,
+            "area_id": 256,
+            "number_of_rooms": 2
+        },
+        {
+            "id": 367,
+            "area_id": 256,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 368,
+            "area_id": 256,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 369,
+            "area_id": 256,
+            "number_of_rooms": 16
+        },
+        {
+            "id": 370,
+            "area_id": 257,
+            "number_of_rooms": 2
+        },
+        {
+            "id": 371,
+            "area_id": 111,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 372,
+            "area_id": 267,
+            "number_of_rooms": 14
+        },
+        {
+            "id": 373,
+            "area_id": 226,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 374,
+            "area_id": 209,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 375,
+            "area_id": 263,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 376,
+            "area_id": 263,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 377,
+            "area_id": 267,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 379,
+            "area_id": 267,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 380,
+            "area_id": 263,
+            "number_of_rooms": 12
+        },
+        {
+            "id": 381,
+            "area_id": 266,
+            "number_of_rooms": 10
+        },
+        {
+            "id": 382,
+            "area_id": 259,
+            "number_of_rooms": 7
+        },
+        {
+            "id": 383,
+            "area_id": 152,
+            "number_of_rooms": 20
+        },
+        {
+            "id": 384,
+            "area_id": 259,
+            "number_of_rooms": 6
+        },
+        {
+            "id": 385,
+            "area_id": 259,
+            "number_of_rooms": 2
+        },
+        {
+            "id": 386,
+            "area_id": 264,
+            "number_of_rooms": 5
+        },
+        {
+            "id": 387,
+            "area_id": 266,
+            "number_of_rooms": 15
+        },
+        {
+            "id": 388,
+            "area_id": 257,
+            "number_of_rooms": 47
+        },
+        {
+            "id": 389,
+            "area_id": 263,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 390,
+            "area_id": 267,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 391,
+            "area_id": 155,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 392,
+            "area_id": 257,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 393,
+            "area_id": 359,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 394,
+            "area_id": 257,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 395,
+            "area_id": 253,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 396,
+            "area_id": 246,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 397,
+            "area_id": 266,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 398,
+            "area_id": 260,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 399,
+            "area_id": 267,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 400,
+            "area_id": 269,
+            "number_of_rooms": 0
+        },
+        {
+            "id": 401,
+            "area_id": 257,
+            "number_of_rooms": 0
+        }
+    ],
+    "last_update": "2026-03-25"
+}

@@ -1,0 +1,485 @@
+{
+    "key_id": "202602121111MACL0898",
+    "datetime_push": "2026-02-12 11:14:04",
+    "status_code": 2,
+    "status_message": "Data successfully processed!",
+    "date_start": "2025-02-13 00:00:00",
+    "date_end": "2026-02-11 00:00:00",
+    "result": {
+        "model_version": "v1.0.0",
+        "customer_id": "26",
+        "currency_id": 1,
+        "forecasts": [
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-13",
+                "forecasted_price": 352257,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-14",
+                "forecasted_price": 353906,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-15",
+                "forecasted_price": 353205,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-16",
+                "forecasted_price": 362216,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-17",
+                "forecasted_price": 363167,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-18",
+                "forecasted_price": 362527,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-19",
+                "forecasted_price": 352971,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-20",
+                "forecasted_price": 352257,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-21",
+                "forecasted_price": 343653.09,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-22",
+                "forecasted_price": 343653.09,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-23",
+                "forecasted_price": 343653.09,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-24",
+                "forecasted_price": 343653.09,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-25",
+                "forecasted_price": 343653.09,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-26",
+                "forecasted_price": 343653.09,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-27",
+                "forecasted_price": 343653.09,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-02-28",
+                "forecasted_price": 353312,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-03-01",
+                "forecasted_price": 352613,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-03-02",
+                "forecasted_price": 340272.72,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-03-03",
+                "forecasted_price": 340272.72,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-03-04",
+                "forecasted_price": 340272.72,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-03-05",
+                "forecasted_price": 335001.68,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-03-06",
+                "forecasted_price": 335001.68,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-03-07",
+                "forecasted_price": 335001.68,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-03-08",
+                "forecasted_price": 335001.68,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-03-09",
+                "forecasted_price": 335001.68,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 1,
+                "forecast_date": "2026-03-10",
+                "forecasted_price": 335001.68,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-13",
+                "forecasted_price": 289165,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-14",
+                "forecasted_price": 291644,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-15",
+                "forecasted_price": 289464,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-16",
+                "forecasted_price": 295099,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-17",
+                "forecasted_price": 293206,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-18",
+                "forecasted_price": 291953,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-19",
+                "forecasted_price": 284913,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-20",
+                "forecasted_price": 260471.47,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-21",
+                "forecasted_price": 260471.47,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-22",
+                "forecasted_price": 260471.47,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-23",
+                "forecasted_price": 260471.47,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-24",
+                "forecasted_price": 261348.65,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-25",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-26",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-27",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-02-28",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-03-01",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-03-02",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-03-03",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-03-04",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-03-05",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-03-06",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-03-07",
+                "forecasted_price": 261478.06,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": 0,
+                "all_season_negative_multiplier_rate": -0.05
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-03-08",
+                "forecasted_price": 277246.12,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": -0.08,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-03-09",
+                "forecasted_price": 277246.12,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": -0.08,
+                "all_season_negative_multiplier_rate": 0
+            },
+            {
+                "room_type_id": 2,
+                "forecast_date": "2026-03-10",
+                "forecasted_price": 277246.12,
+                "high_season_positive_multiplier_rate": 0,
+                "all_season_positive_multiplier_rate": 0,
+                "high_season_negative_multiplier_rate": -0.08,
+                "all_season_negative_multiplier_rate": 0
+            }
+        ]
+    },
+    "comprate_early_booking": [],
+    "comprate_last_minute": []
+}

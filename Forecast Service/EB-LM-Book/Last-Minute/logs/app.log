@@ -1,0 +1,112 @@
+2026-01-13 02:49:00,888 | INFO | prediction_master | APPLICATION STARTED
+2026-01-13 02:49:10,231 | INFO | uvicorn.error | Started server process [26315]
+2026-01-13 02:49:10,231 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-13 02:49:10,231 | INFO | uvicorn.error | Application startup complete.
+2026-01-13 02:49:10,232 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-13 02:50:07,178 | INFO | uvicorn.access | 127.0.0.1:44486 - "POST /predict-step HTTP/1.1" 200
+2026-01-13 02:50:08,725 | INFO | root | Added 402 records from this chunk.
+2026-01-13 02:50:12,937 | INFO | root | Added 455 records from this chunk.
+2026-01-13 02:50:17,060 | INFO | root | Added 285 records from this chunk.
+2026-01-13 02:50:20,124 | INFO | root | Added 287 records from this chunk.
+2026-01-13 02:50:22,495 | INFO | root | Added 10 records from this chunk.
+2026-01-13 03:11:57,847 | INFO | uvicorn.error | Shutting down
+2026-01-13 03:11:57,949 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-13 03:11:57,950 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-13 03:11:57,951 | INFO | uvicorn.error | Finished server process [26315]
+2026-01-14 02:53:07,884 | INFO | prediction_master | APPLICATION STARTED
+2026-01-14 02:53:14,080 | INFO | uvicorn.error | Started server process [8497]
+2026-01-14 02:53:14,081 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-14 02:53:14,082 | INFO | uvicorn.error | Application startup complete.
+2026-01-14 02:53:14,082 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-14 02:53:39,392 | INFO | uvicorn.access | 127.0.0.1:57368 - "GET / HTTP/1.1" 404
+2026-01-14 02:53:44,014 | INFO | uvicorn.access | 127.0.0.1:57368 - "GET /docs HTTP/1.1" 200
+2026-01-14 02:53:44,207 | INFO | uvicorn.access | 127.0.0.1:57368 - "GET /openapi.json HTTP/1.1" 200
+2026-01-14 02:54:09,308 | INFO | uvicorn.access | 127.0.0.1:57358 - "POST /predict-step HTTP/1.1" 200
+2026-01-14 02:54:10,011 | INFO | root | Added 152 records from this chunk.
+2026-01-14 02:54:12,626 | INFO | root | Added 138 records from this chunk.
+2026-01-14 02:54:15,902 | INFO | root | Added 161 records from this chunk.
+2026-01-14 02:54:19,249 | INFO | root | Added 78 records from this chunk.
+2026-01-14 02:54:21,696 | INFO | root | Added 9 records from this chunk.
+2026-01-14 02:54:36,875 | INFO | uvicorn.error | Shutting down
+2026-01-14 02:54:36,976 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-14 02:54:36,976 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-14 02:54:36,977 | INFO | uvicorn.error | Finished server process [8497]
+2026-01-14 03:18:35,617 | INFO | prediction_master | APPLICATION STARTED
+2026-01-14 03:18:42,869 | INFO | uvicorn.error | Started server process [12316]
+2026-01-14 03:18:42,870 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-14 03:18:42,870 | INFO | uvicorn.error | Application startup complete.
+2026-01-14 03:18:42,871 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-14 03:19:10,411 | INFO | uvicorn.access | 127.0.0.1:54938 - "POST /predict-step HTTP/1.1" 200
+2026-01-14 03:19:13,558 | INFO | root | Added 1115 records from this chunk.
+2026-01-14 03:19:20,196 | INFO | root | Added 1246 records from this chunk.
+2026-01-14 03:19:25,407 | INFO | root | Added 1006 records from this chunk.
+2026-01-14 03:19:29,898 | INFO | root | Added 682 records from this chunk.
+2026-01-14 03:19:33,063 | INFO | root | Added 25 records from this chunk.
+2026-01-14 03:28:09,477 | INFO | uvicorn.error | Shutting down
+2026-01-14 03:28:09,578 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-14 03:28:09,579 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-14 03:28:09,579 | INFO | uvicorn.error | Finished server process [12316]
+2026-01-15 09:35:49,285 | INFO | prediction_master | APPLICATION STARTED
+2026-01-15 09:36:13,856 | INFO | uvicorn.error | Started server process [7021]
+2026-01-15 09:36:13,856 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-15 09:36:13,857 | INFO | uvicorn.error | Application startup complete.
+2026-01-15 09:36:13,857 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-15 09:36:17,106 | INFO | uvicorn.access | 127.0.0.1:57628 - "GET / HTTP/1.1" 404
+2026-01-15 09:36:17,375 | INFO | uvicorn.access | 127.0.0.1:57628 - "GET /favicon.ico HTTP/1.1" 404
+2026-01-15 09:36:21,079 | INFO | uvicorn.access | 127.0.0.1:57628 - "GET /docs HTTP/1.1" 200
+2026-01-15 09:36:21,369 | INFO | uvicorn.access | 127.0.0.1:57628 - "GET /openapi.json HTTP/1.1" 200
+2026-01-15 09:36:59,928 | INFO | uvicorn.error | Shutting down
+2026-01-15 09:37:00,030 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-15 09:37:00,030 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-15 09:37:00,031 | INFO | uvicorn.error | Finished server process [7021]
+2026-01-15 09:37:06,704 | INFO | prediction_master | APPLICATION STARTED
+2026-01-15 09:37:13,041 | INFO | uvicorn.error | Started server process [7192]
+2026-01-15 09:37:13,041 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-15 09:37:13,042 | INFO | uvicorn.error | Application startup complete.
+2026-01-15 09:37:13,042 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-15 09:37:27,464 | INFO | uvicorn.access | 127.0.0.1:59832 - "POST /predict-step HTTP/1.1" 200
+2026-01-15 09:37:31,022 | INFO | root | Added 1127 records from this chunk.
+2026-01-15 09:37:36,378 | INFO | root | Added 1235 records from this chunk.
+2026-01-15 09:37:41,773 | INFO | root | Added 1016 records from this chunk.
+2026-01-15 09:37:46,550 | INFO | root | Added 677 records from this chunk.
+2026-01-15 09:37:49,359 | INFO | root | Added 16 records from this chunk.
+2026-01-15 09:52:48,245 | INFO | uvicorn.access | 127.0.0.1:42686 - "POST /predict-step HTTP/1.1" 200
+2026-01-15 09:52:51,366 | INFO | root | Added 1127 records from this chunk.
+2026-01-15 09:52:57,218 | INFO | root | Added 1235 records from this chunk.
+2026-01-15 09:53:04,753 | INFO | root | Added 1016 records from this chunk.
+2026-01-15 09:53:09,663 | INFO | root | Added 677 records from this chunk.
+2026-01-15 09:53:12,550 | INFO | root | Added 16 records from this chunk.
+2026-01-15 09:54:15,524 | INFO | uvicorn.access | 127.0.0.1:57204 - "POST /predict-step HTTP/1.1" 200
+2026-01-15 09:54:18,811 | INFO | root | Added 1127 records from this chunk.
+2026-01-15 09:54:25,148 | INFO | root | Added 1235 records from this chunk.
+2026-01-15 09:54:30,325 | INFO | root | Added 1016 records from this chunk.
+2026-01-15 09:54:34,665 | INFO | root | Added 677 records from this chunk.
+2026-01-15 09:54:37,563 | INFO | root | Added 16 records from this chunk.
+2026-01-15 09:56:44,903 | INFO | uvicorn.access | 127.0.0.1:45588 - "POST /predict-step HTTP/1.1" 200
+2026-01-15 09:56:48,122 | INFO | root | Added 1127 records from this chunk.
+2026-01-15 09:56:53,618 | INFO | root | Added 1235 records from this chunk.
+2026-01-15 09:56:59,219 | INFO | root | Added 1016 records from this chunk.
+2026-01-15 09:57:04,957 | INFO | root | Added 677 records from this chunk.
+2026-01-15 09:57:08,139 | INFO | root | Added 16 records from this chunk.
+2026-01-15 09:57:22,655 | INFO | uvicorn.error | Shutting down
+2026-01-15 09:57:22,756 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-15 09:57:22,757 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-15 09:57:22,757 | INFO | uvicorn.error | Finished server process [7192]
+2026-01-15 09:57:31,608 | INFO | uvicorn.error | Will watch for changes in these directories: ['/home/antoniohazman8855/Ecommerce-Project/Machine Learning Development']
+2026-01-15 09:57:31,608 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-15 09:57:31,608 | INFO | uvicorn.error | Started reloader process [8119] using StatReload
+2026-01-15 09:57:32,566 | INFO | prediction_master | APPLICATION STARTED
+2026-01-15 09:57:39,248 | INFO | uvicorn.error | Started server process [8122]
+2026-01-15 09:57:39,249 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-15 09:57:39,249 | INFO | uvicorn.error | Application startup complete.
+2026-01-15 09:58:33,844 | INFO | uvicorn.access | 127.0.0.1:51742 - "GET / HTTP/1.1" 404
+2026-01-15 09:58:40,421 | INFO | uvicorn.access | 127.0.0.1:51756 - "POST /predict-step HTTP/1.1" 200
+2026-01-15 09:58:43,708 | INFO | root | Added 1127 records from this chunk.
+2026-01-15 09:58:50,531 | INFO | root | Added 1235 records from this chunk.
+2026-01-15 09:58:56,068 | INFO | root | Added 1016 records from this chunk.
+2026-01-15 09:59:00,725 | INFO | root | Added 677 records from this chunk.
+2026-01-15 09:59:03,663 | INFO | root | Added 16 records from this chunk.
+2026-01-15 09:59:18,449 | INFO | uvicorn.error | Shutting down
+2026-01-15 09:59:18,551 | INFO | uvicorn.error | Waiting for background tasks to complete. (CTRL+C to force quit)
+2026-01-15 09:59:20,485 | INFO | uvicorn.error | Finished server process [8122]
+2026-01-15 09:59:20,554 | INFO | uvicorn.error | Stopping reloader process [8119]

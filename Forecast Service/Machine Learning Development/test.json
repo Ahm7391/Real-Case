@@ -1,0 +1,16 @@
+{
+    "success": true,
+    "data": [
+        {
+            "customer_id": 14,
+            "booking_date": "2025-02-16 00:00:00",
+            "check_in": "2025-04-29",
+            "check_out": "2025-04-30",
+            "is_confirmed": true,
+            "country_id": 240,
+            "currency_id": 1,
+            "net_amount_stay": 245292,
+            "room_type": "37373"
+        }
+    ]
+}
