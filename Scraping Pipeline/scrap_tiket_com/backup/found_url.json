@@ -1,0 +1,1354 @@
+[
+    {
+        "properties_name": "Manca Villa",
+        "competitor_id": 2,
+        "slug": "manca-villa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/manca-villa.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Canggu Boutique Villas & Spa",
+        "competitor_id": 3,
+        "slug": "the-canggu-boutique-villas-amp-spa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/the-canggu-boutique-villas-amp-spa.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Batur Homestay",
+        "competitor_id": 10,
+        "slug": "batur-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/batur-homestay.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Pondok Bali Cottage",
+        "competitor_id": 11,
+        "slug": "pondok-bali-cottage",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/pondok-bali-cottage.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Bintang House Kintamani",
+        "competitor_id": 22,
+        "slug": "bintang-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/bintang-house.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Black Lava Hostel & Lodge",
+        "competitor_id": 23,
+        "slug": "black-lava-hostel",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/black-lava-hostel.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Reddoorz @ Panglima Sudirman",
+        "competitor_id": 25,
+        "slug": "reddoorz-@-panglima-sudirman",
+        "match": "fuzzy",
+        "score": 0.812,
+        "url": "https://www.booking.com/hotel/id/reddoorz-panglima-sudirman-surabaya1.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Kertajaya Residence Syariah Surabaya",
+        "competitor_id": 27,
+        "slug": "twospaces-living-at-kertajaya-residence",
+        "match": "fuzzy",
+        "score": 0.812,
+        "url": "https://www.booking.com/hotel/id/twospaces-living-at-kertajaya-residence.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Bogor Icon Apartment",
+        "competitor_id": 42,
+        "slug": "bogor-icon-apartment",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/channel-stay-bogor-icon-apartment.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Hotel Semeru",
+        "competitor_id": 43,
+        "slug": "semeru-park",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/semeru-park.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Victory Munggu",
+        "competitor_id": 44,
+        "slug": "victory-munggu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/victory-munggu.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Villa Alisha Pererenan",
+        "competitor_id": 45,
+        "slug": "villa-alisha-pererenan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/villa-alisha-pererenan.html?aid=304142&checkin=2026-06-08&checkout=2026-06-09&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Sanata Yoga Guesthouse",
+        "competitor_id": 50,
+        "slug": "sanata-yoga-guesthouse",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/sanata-yoga-guesthouse.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Canggu Bona Kubu",
+        "competitor_id": 51,
+        "slug": "canggu-bona-kubu",
+        "match": "fuzzy",
+        "score": 0.938,
+        "url": "https://www.booking.com/hotel/id/canngu-bona-kubu.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Nari Homestay",
+        "competitor_id": 52,
+        "slug": "nari-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/nari-homestay-canggu.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Harmoni Guesthouse",
+        "competitor_id": 56,
+        "slug": "harmoni-guest-house-tumpak-sewu",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/harmoni-guest-house-tumpak-sewu.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Hotel Manyar",
+        "competitor_id": 57,
+        "slug": "sahid-gunawangsa",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/sahid-gunawangsa.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Berlian Abadi",
+        "competitor_id": 58,
+        "slug": "berlian-abadi",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/berlian-abadi-banyuwangi.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Uno Hotel Surabaya",
+        "competitor_id": 64,
+        "slug": "oyo-491-coconut",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/oyo-491-coconut.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Bumi Banyu Bening Syariah",
+        "competitor_id": 66,
+        "slug": "oyo-469-bumi-banyu-bening",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/oyo-469-bumi-banyu-bening.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Bliss Ubud Abangan",
+        "competitor_id": 67,
+        "slug": "bliss-ubud-abangan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/bliss-ubud-abangan.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Alam Terrace Cottages",
+        "competitor_id": 68,
+        "slug": "alam-terrace-cottages",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/alam-terrace-cottages.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Abipraya",
+        "competitor_id": 69,
+        "slug": "bije-sari-suite-bisma",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/bije-sari-suite-bisma.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Bali Astetic Villa",
+        "competitor_id": 70,
+        "slug": "bali-astetic-villa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/bali-astetic-villa.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Batur Green Hill",
+        "competitor_id": 71,
+        "slug": "batur-green-hill",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/batur-green-hill.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Sunset Hill Cottage",
+        "competitor_id": 84,
+        "slug": "sunset-hill-cottage",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/us/sunset-hill-cottage.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg"
+    },
+    {
+        "properties_name": "Nusa Penida Pudak Nature Bungalow",
+        "competitor_id": 85,
+        "slug": "nusa-penida-pudak-nature-bungalow",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/nusa-penida-pudak-nature-bungalow.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg"
+    },
+    {
+        "properties_name": "Dekara Cottages",
+        "competitor_id": 86,
+        "slug": "dekara-cottages",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/dekara-cottages.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "OYO Flagship 3688 Pot Art",
+        "competitor_id": 93,
+        "slug": "oyo-flagship-3688-pot-art",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/oyo-flagship-3688-pot-art.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "OYO 1086 2oscar",
+        "competitor_id": 94,
+        "slug": "oyo-1086-2oscar",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/oyo-1086-2oscar.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Rinaya Canggu",
+        "competitor_id": 96,
+        "slug": "the-rinaya-canggu",
+        "match": "fuzzy",
+        "score": 0.833,
+        "url": "https://www.booking.com/hotel/id/litus-rinaya-canggu.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Asung Guesthouse",
+        "competitor_id": 97,
+        "slug": "asung-guesthouse",
+        "match": "fuzzy",
+        "score": 0.97,
+        "url": "https://www.booking.com/hotel/id/asung-guest-house.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Canggu Dream Village",
+        "competitor_id": 98,
+        "slug": "canggu-dream-village",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/canggu-dream-village.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Noormans Hotel Semarang",
+        "competitor_id": 99,
+        "slug": "noormans-hotel-by-lorin",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/noormans-hotel-by-lorin.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Hotel Candi Indah",
+        "competitor_id": 101,
+        "slug": "candi-indah-semarang",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/candi-indah-semarang.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Jero Ratna Homestay",
+        "competitor_id": 102,
+        "slug": "jero-ratna-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/jero-ratna-homestay.html?aid=304142&checkin=2026-06-02&checkout=2026-06-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Ratna House",
+        "competitor_id": 103,
+        "slug": "ratna-guest-house-kabupaten-gianyar",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/ratna-guest-house-kabupaten-gianyar.html?aid=304142&checkin=2026-06-02&checkout=2026-06-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Soka Homestay",
+        "competitor_id": 104,
+        "slug": "soka-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/asoka-homestay-sanur.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Cempaka 3 Inn",
+        "competitor_id": 108,
+        "slug": "cempaka-3-inn",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/cempaka-3-inn.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Danasari Homestay",
+        "competitor_id": 113,
+        "slug": "dana-sari-accomodation",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/dana-sari-accomodation.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Sukma Guesthouse",
+        "competitor_id": 114,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/sukma-guest-house.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Dewi Antara Homestay",
+        "competitor_id": 115,
+        "slug": "dewi-antara-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/dewi-antara-homestay.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Dajan Buyan Homestay",
+        "competitor_id": 119,
+        "slug": "dajan-buyan-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/dajan-buyan-homestay.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Umah lumbung bedugul",
+        "competitor_id": 120,
+        "slug": "umah-lumbung-bedugul",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/umah-lumbung-bedugul-kabupaten-tabanan.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Umah Lumbung Bedugul",
+        "competitor_id": 120,
+        "slug": "umah-lumbung-bedugul",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/umah-lumbung-bedugul-kabupaten-tabanan.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Puri Canggu Rooms ll",
+        "competitor_id": 121,
+        "slug": "puri-canggu-rooms-ll",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/puri-canggu-rooms-ll.html?aid=304142&checkin=2026-05-31&checkout=2026-06-01&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Capila Villa Bali",
+        "competitor_id": 130,
+        "slug": "capila-villa-bali",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/capila-villa-bali.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Japa Guesthouse",
+        "competitor_id": 132,
+        "slug": "japa-guesthouse",
+        "match": "fuzzy",
+        "score": 0.968,
+        "url": "https://www.booking.com/hotel/id/japa-guest-house.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg"
+    },
+    {
+        "properties_name": "Villa Danu",
+        "competitor_id": 136,
+        "slug": "villa-danu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/villa-danu.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "U Tube Hotel",
+        "competitor_id": 147,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/u-tube-amp-spa-by-shailendra.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Uma Manyar Sunset Villa",
+        "competitor_id": 151,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/uma-manyar.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Ubud Chez Nyoman",
+        "competitor_id": 152,
+        "slug": "ubud-chez-nyoman",
+        "match": "fuzzy",
+        "score": 0.815,
+        "url": "https://www.booking.com/hotel/id/chez-nyoman.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Bakung Beach Resort",
+        "competitor_id": 153,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/bakung-beach.html?aid=304142&checkin=2026-07-02&checkout=2026-07-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Palm Beach Hotel Bali",
+        "competitor_id": 154,
+        "slug": "palm-beach-hotel-bali",
+        "match": "fuzzy",
+        "score": 0.833,
+        "url": "https://www.booking.com/hotel/id/palm-beach-bali.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Angkul Angkul Segara Beach Kuta",
+        "competitor_id": 155,
+        "slug": "angkul-angkul-segara-beach-kuta",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/angkul-angkul-segara-beach-kuta.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Adiwana Warnakali Resort",
+        "competitor_id": 156,
+        "slug": "adiwana-warnakali-resort",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/adiwana-warnakali-resort.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Semabu Hills Hotel Nusa Penida",
+        "competitor_id": 157,
+        "slug": "semabu-hills-hotel-nusa-penida",
+        "match": "fuzzy",
+        "score": 0.814,
+        "url": "https://www.booking.com/hotel/id/semabu-hills-nusa-penida-bali.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Kalangan",
+        "competitor_id": 159,
+        "slug": "the-kalangan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/the-kalangan.html?aid=304142&checkin=2026-06-02&checkout=2026-06-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Ubud Sky",
+        "competitor_id": 161,
+        "slug": "ubud-sky",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/ubud-sky.html?aid=304142&checkin=2026-06-02&checkout=2026-06-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Wijaya Guesthouse",
+        "competitor_id": 162,
+        "slug": "wijaya-guesthouse",
+        "match": "fuzzy",
+        "score": 0.85,
+        "url": "https://www.booking.com/hotel/id/wijaya-guest-house-ubud.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Nita Guest House Bali",
+        "competitor_id": 163,
+        "slug": "nita-guest-house-bali",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/nita-guest-house-bali.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg"
+    },
+    {
+        "properties_name": "Bali Laksita Homestay",
+        "competitor_id": 164,
+        "slug": "bali-laksita-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/bali-laksita-homestay.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Tirtha Canggu Suites",
+        "competitor_id": 167,
+        "slug": "tirtha-canggu-suites",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/tirtha-canggu-suites-kabupaten-badung.html?aid=304142&checkin=2026-06-09&checkout=2026-06-10&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "BRAW Inn Canggu",
+        "competitor_id": 168,
+        "slug": "braw-inn-canggu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/braw-inn-canggu.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg"
+    },
+    {
+        "properties_name": "Sunrise Penida Hill",
+        "competitor_id": 169,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/green-sunrise-hill-view.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg"
+    },
+    {
+        "properties_name": "Camar Cottage & Hostel",
+        "competitor_id": 170,
+        "slug": "camar-cottage-amp-hostel",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/camar-cottage-amp-hostel.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Abasan Hill Hotel and Spa",
+        "competitor_id": 171,
+        "slug": "abasan-hill-hotel-and-spa",
+        "match": "fuzzy",
+        "score": 0.864,
+        "url": "https://www.booking.com/hotel/id/abasan-hill-and-spa.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "RedDoorz Near Juanda International Airport 2",
+        "competitor_id": 173,
+        "slug": "reddoorz-near-juanda-international-airport-2",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/reddoorz-near-juanda-international-airport-2.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Nova Guest House",
+        "competitor_id": 174,
+        "slug": "nova-guest-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/nova-guest-house-kabupaten-badung.html?aid=304142&checkin=2026-06-01&checkout=2026-06-02&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Euforia Guest House",
+        "competitor_id": 175,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/euforia.html?aid=304142&checkin=2026-06-01&checkout=2026-06-02&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Wasabi Hotel",
+        "competitor_id": 176,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/wasabi.html?aid=304142&checkin=2026-06-01&checkout=2026-06-02&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Murai Guest House",
+        "competitor_id": 179,
+        "slug": "murai-guest-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/murai-guest-house-kota-denpasar1.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Mount Batur Villa",
+        "competitor_id": 182,
+        "slug": "mount-batur-villa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/mount-batur-villa-bangli.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "OYO 3132 Mahkota Sivali",
+        "competitor_id": 185,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/helloroom-mahkota-bandara-soekarno-hatta.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Canggu Nadi Guest House",
+        "competitor_id": 191,
+        "slug": "canggu-nadi-guest-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/canggu-nadi-guest-house.html?aid=304142&checkin=2026-06-01&checkout=2026-06-02&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Rumah Kita",
+        "competitor_id": 192,
+        "slug": "rumah-kita",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/rumah-kita-kota-padang.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Keramas Surf Camp",
+        "competitor_id": 197,
+        "slug": "keramas-surf-camp",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/keramas-surf-camp.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Uma Guesthouse",
+        "competitor_id": 200,
+        "slug": "the-uma-guesthouse",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/the-uma-guesthouse.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "D'canggu homestay",
+        "competitor_id": 204,
+        "slug": "d'canggu-homestay",
+        "match": "fuzzy",
+        "score": 0.865,
+        "url": "https://www.booking.com/hotel/id/d-39-canggu-homestay.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "ASTON INN Mataram",
+        "competitor_id": 213,
+        "slug": "aston-inn-mataram",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/aston-inn-mataram.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Amerta Home Stay",
+        "competitor_id": 220,
+        "slug": "amerta-home-stay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/amerta-home-stay-bali.html?aid=304142&checkin=2026-05-31&checkout=2026-06-01&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Villa Ana",
+        "competitor_id": 223,
+        "slug": "villa-ana",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/villa-anahata-modern-2br-villa-w-pool-in-seminyak.html?aid=304142&checkin=2026-06-03&checkout=2026-06-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "RedLiving Apartment Green lake View Ciputat- Aurora Rooms",
+        "competitor_id": 227,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/redliving-apartemen-green-lake-view-ciputat-aurora-rooms.html?aid=304142&checkin=2026-06-03&checkout=2026-06-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Lonceng By Sila Dharma Mesari Management",
+        "competitor_id": 231,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/the-lonceng-guest-house.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Bima Sakti House Canggu",
+        "competitor_id": 232,
+        "slug": "bima-sakti-house-canggu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/bima-sakti-house-canggu.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Surf Motel",
+        "competitor_id": 233,
+        "slug": "surf-motel",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/the-surf-motel.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Pererenan Nengah Guest House Canggu",
+        "competitor_id": 234,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/569024.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Gading Guest House",
+        "competitor_id": 238,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/guest-house-gading-lombok.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Cleo Hotel Jemursari Surabaya",
+        "competitor_id": 240,
+        "slug": "cleo-hotel-jemursari-surabaya",
+        "match": "fuzzy",
+        "score": 0.885,
+        "url": "https://www.booking.com/hotel/id/cleo-jemursari-surabaya.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Amaris Hotel Margorejo Surabaya",
+        "competitor_id": 241,
+        "slug": "amaris-hotel-margorejo-surabaya",
+        "match": "fuzzy",
+        "score": 0.893,
+        "url": "https://www.booking.com/hotel/id/amaris-margorejo-surabaya.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Kencana Garden",
+        "competitor_id": 243,
+        "slug": "kencana-garden",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/kencana-garden.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg"
+    },
+    {
+        "properties_name": "Bale Gede Lembongan",
+        "competitor_id": 244,
+        "slug": "bale-gede-lembongan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/bale-gede-lembongan.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Palm Grove Villas",
+        "competitor_id": 245,
+        "slug": "the-palm-grove-villas",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/the-palm-grove-villas.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Adiputra Guesthouse 2",
+        "competitor_id": 249,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/adiputra-guesthouse-2.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "RedDoorz near AMIKOM Yogyakarta",
+        "competitor_id": 252,
+        "slug": "reddoorz-near-amikom-yogyakarta",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/reddoorz-near-amikom-yogyakarta.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Rumah Nyaman Back Packer",
+        "competitor_id": 260,
+        "slug": "rumah-nyaman-back-packer",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/rumah-nyaman-back-packer.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Ayuning Guest House Syariah Semarang Mitra RedDoorz",
+        "competitor_id": 261,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/oyo-1041-ayuning-residence-semarang1.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Astani Family Home",
+        "competitor_id": 263,
+        "slug": "astani-family-home",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/astani-family-home.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Homestay Sakinah Syariah Mitra RedDoorz",
+        "competitor_id": 265,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/oyo-91265-sakinah-homestay-syariah-bukittinggi.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Dana's House",
+        "competitor_id": 266,
+        "slug": "dana's-house",
+        "match": "fuzzy",
+        "score": 0.8,
+        "url": "https://www.booking.com/hotel/id/sania-s-house.html?aid=304142&checkin=2026-06-02&checkout=2026-06-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Fabel Homestay",
+        "competitor_id": 267,
+        "slug": "fabel-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/fabel-homestay-palembang.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "RedDoorz Plus near Palembang Square Mall",
+        "competitor_id": 268,
+        "slug": "reddoorz-plus-near-palembang-square-mall",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/reddoorz-plus-near-palembang-square-mall.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Cove T63",
+        "competitor_id": 271,
+        "slug": "cove-t63",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/cove-t63.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Cozy Residence Tomang",
+        "competitor_id": 272,
+        "slug": "cozy-residence-tomang",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/cozy-residence-tomang.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "OYO 1487 Residence Khoe",
+        "competitor_id": 273,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/residence-khoe-tanjung-duren.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Maple Hotel Grogol",
+        "competitor_id": 274,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/maple-jakarta.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Social Hub by TwoSpaces",
+        "competitor_id": 275,
+        "slug": "social-hub-by-twospaces",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/social-hub-by-twospaces.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Grand Inna Tunjungan",
+        "competitor_id": 277,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/inna-simpang-surabaya.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Canggu Wooden Green Paradise",
+        "competitor_id": 279,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/green-paradise-bungalows.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "D'jineng Rice Terrace Canggu",
+        "competitor_id": 280,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/d-jineng-bungalow-canggu.html?aid=304142&checkin=2026-06-01&checkout=2026-06-02&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Mai Mucuk Lumbung",
+        "competitor_id": 281,
+        "slug": "mai-mucuk-lumbung",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/mai-mucuk-lumbung.html?aid=304142&checkin=2026-06-01&checkout=2026-06-02&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "De Dukuh Guest House",
+        "competitor_id": 282,
+        "slug": "de-dukuh-guest-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/de-dukuh-guest-house.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Berlian Inn Kuta Beach",
+        "competitor_id": 283,
+        "slug": "berlian-inn-kuta-beach",
+        "match": "fuzzy",
+        "score": 0.842,
+        "url": "https://www.booking.com/hotel/id/berlian-inn-kuta.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Arnaya Homestay",
+        "competitor_id": 284,
+        "slug": "arnaya-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/arnaya-homestay.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Twin Island Villas & Dive Resort",
+        "competitor_id": 285,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/twin-island-villas.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "D'Lesung Villas Lembongan",
+        "competitor_id": 286,
+        "slug": "d'lesung-villas-lembongan",
+        "match": "fuzzy",
+        "score": 0.906,
+        "url": "https://www.booking.com/hotel/id/d-39-lesung-villas-lembongan.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Bukit Permata Lembongan",
+        "competitor_id": 287,
+        "slug": "bukit-permata-lembongan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/bukit-permata-lembongan.html?aid=304142&checkin=2026-07-03&checkout=2026-07-04&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Rinjani Garden",
+        "competitor_id": 289,
+        "slug": "rinjani-garden",
+        "match": "fuzzy",
+        "score": 0.815,
+        "url": "https://www.booking.com/hotel/id/arunni-garden.html?aid=304142&checkin=2026-06-01&checkout=2026-06-02&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Tulus Hati Ubud Retreat & Spa",
+        "competitor_id": 291,
+        "slug": "tulus-hati-ubud-retreat-amp-spa",
+        "match": "fuzzy",
+        "score": 0.852,
+        "url": "https://www.booking.com/hotel/id/tulus-hati-ubud-retreat.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Sanga Suites",
+        "competitor_id": 292,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/sanga-house.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "LeGreen Suite Waihaong",
+        "competitor_id": 297,
+        "slug": "legreen-suite-waihaong",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/legreen-suite-waihaong.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Rumaruma Farvet Residence",
+        "competitor_id": 299,
+        "slug": "rumaruma-farvet-residence",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/rumaruma-farvet-residence-ambon-ambon.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Green Ponci Bedugul",
+        "competitor_id": 303,
+        "slug": "the-green-ponci-bedugul",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/the-green-ponci-bedugul.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Strawberry Hill Hotel & Restaurant",
+        "competitor_id": 304,
+        "slug": "strawberry-hill-hotel-amp-restaurant",
+        "match": "fuzzy",
+        "score": 0.909,
+        "url": "https://www.booking.com/hotel/id/strawberry-hill-amp-restaurant.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Kd Suites & Coffee Shop",
+        "competitor_id": 308,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/the-kd-suites-amp-foffeeshop-kabupaten-badung.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Ume",
+        "competitor_id": 309,
+        "slug": "the-ume",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/the-ume-cemagi.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Djakarta Anandita Syariah Hotel",
+        "competitor_id": 310,
+        "slug": "the-djakarta-anandita-syariah-hotel",
+        "match": "fuzzy",
+        "score": 0.811,
+        "url": "https://www.booking.com/hotel/id/the-djakarta-anandita-syariah-samarinda.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Roommates Hostel Canggu by Ini Vie Hospitality",
+        "competitor_id": 313,
+        "slug": "roommates-hostel-canggu-by-ini-vie-hospitality",
+        "match": "fuzzy",
+        "score": 0.828,
+        "url": "https://www.booking.com/hotel/id/atap-resort-canggu-by-ini-vie-hospitality.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Jonsen Homestay",
+        "competitor_id": 314,
+        "slug": "jonsen-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/jonsen-homestay.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Andi Beach House",
+        "competitor_id": 315,
+        "slug": "andi-beach-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/andi-beach-house.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Lembah Rinjani Villa & Resto by ecommerceloka",
+        "competitor_id": 316,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/lembah-rinjani-homestay-amp-restaurant.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Masmara Resort Canggu",
+        "competitor_id": 320,
+        "slug": "masmara-resort-canggu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/masmara-resort-canggu.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Rhythm & Rumble",
+        "competitor_id": 321,
+        "slug": "rhythm-amp-rumble",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/rhythm-amp-rumble.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Eastin Ashta Resort Canggu",
+        "competitor_id": 322,
+        "slug": "eastin-ashta-resort-canggu",
+        "match": "fuzzy",
+        "score": 0.962,
+        "url": "https://www.booking.com/hotel/id/eastin-astha-resort-canggu.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "RedDoorz @ Tanjung Sari Surabaya",
+        "competitor_id": 323,
+        "slug": "reddoorz-@-tanjung-sari-surabaya",
+        "match": "fuzzy",
+        "score": 0.968,
+        "url": "https://www.booking.com/hotel/id/reddoorz-tanjung-sari-surabaya.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Promosia Guest House",
+        "competitor_id": 324,
+        "slug": "promosia-guest-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/promosia-guest-house.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Keramas Sacred River Retreat Resort and Villa",
+        "competitor_id": 329,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/11sacred-river-village.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Villa Casablanca Surf Keramas",
+        "competitor_id": 330,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/villa-casablanca.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Green Vanilla Bungalow",
+        "competitor_id": 335,
+        "slug": "green-vanilla-bungalow",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/green-vanilla-bungalow.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Taman Unique Hotel",
+        "competitor_id": 338,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/taman-unique-kabupaten-lombok-barat.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Glamour camping bedugul",
+        "competitor_id": 339,
+        "slug": "glamour-camping-bedugul",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/glamour-camping-bedugul.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Popitan Garden Campground & Glamping Bedugul",
+        "competitor_id": 340,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/popitan-garden-amp-campsite-bedugul.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Segara Wangi Beach Cottages",
+        "competitor_id": 341,
+        "slug": "segara-wangi-beach-cottages",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/segara-wangi-beach-cottages.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Ashyana Candidasa Beach Resort",
+        "competitor_id": 342,
+        "slug": "ashyana-candidasa-beach-resort",
+        "match": "fuzzy",
+        "score": 0.889,
+        "url": "https://www.booking.com/hotel/id/ashyana-candidasa-resort.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Bali Palms Resort",
+        "competitor_id": 343,
+        "slug": "bali-palms-resort",
+        "match": "fuzzy",
+        "score": 0.882,
+        "url": "https://www.booking.com/hotel/id/gili-palms-resort.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Kubu Indah Homestay Sanur",
+        "competitor_id": 344,
+        "slug": "kubu-indah-homestay-sanur",
+        "match": "fuzzy",
+        "score": 0.864,
+        "url": "https://www.booking.com/hotel/id/kubu-indah-homestay.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Svarna Hotel",
+        "competitor_id": 345,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/svarna.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Gazebo Beach Hotel",
+        "competitor_id": 346,
+        "slug": "gazebo-beach-hotel",
+        "match": "fuzzy",
+        "score": 0.8,
+        "url": "https://www.booking.com/hotel/id/gazebo-beach.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Rayz UMM Hotel Malang",
+        "competitor_id": 350,
+        "slug": "rayz-umm-hotel-malang",
+        "match": "fuzzy",
+        "score": 0.833,
+        "url": "https://www.booking.com/hotel/id/rayz-umm-malang.html?aid=304142&checkin=2026-05-31&checkout=2026-06-01&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Favehotel Malang",
+        "competitor_id": 352,
+        "slug": "favehotel-malang",
+        "match": "fuzzy",
+        "score": 0.867,
+        "url": "https://www.booking.com/hotel/id/elhotel-malang.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Agus Villa",
+        "competitor_id": 353,
+        "slug": "agus-villa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/agus-villa.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Louto Dmell Guesthouse",
+        "competitor_id": 354,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/louto-dmell-homestay.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Cening Ayu Sanur",
+        "competitor_id": 355,
+        "slug": "cening-ayu-sanur",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/cening-ayu-sanur.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg"
+    },
+    {
+        "properties_name": "Kaja Villa",
+        "competitor_id": 358,
+        "slug": "kaja-villa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/kaja-villa.html?aid=304142&checkin=2026-06-06&checkout=2026-06-07&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Prema Ubud Romantic Villas",
+        "competitor_id": 361,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/prema-ubud-villas.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "RAMP COTTAGE",
+        "competitor_id": 363,
+        "slug": "ramp-cottage",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/ramp-cottage.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Dayuh House",
+        "competitor_id": 364,
+        "slug": "dayuh-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/dayuh-house-nusa-penida.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "CBG INN RedPartner near Stasiun Solo balapan",
+        "competitor_id": 366,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/cbg-inn-and-villas-solo.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "The Peace Arta Bungalow",
+        "competitor_id": 367,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/arta-asih.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Umah Putih",
+        "competitor_id": 368,
+        "slug": "umah-putih",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/rumah-putih-edi.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Nushe Hostel",
+        "competitor_id": 369,
+        "slug": "nushe-hostel",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/nushe-hostel.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Santhara Canggu Wooden House",
+        "competitor_id": 374,
+        "slug": "santhara-canggu-wooden-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/santhara-canggu-wooden-house-kabupaten-badung2.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg"
+    },
+    {
+        "properties_name": "TNC Residence Syariah Mataram",
+        "competitor_id": 375,
+        "slug": "tnc-residence-syariah-mataram",
+        "match": "fuzzy",
+        "score": 0.84,
+        "url": "https://www.booking.com/hotel/id/tnc-residence-syariah.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Seaside Huts Lembongan",
+        "competitor_id": 377,
+        "slug": "seaside-huts-lembongan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/seaside-huts-lembongan.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Hotel Dewata Indah Denpasar Mitra RedDoorz",
+        "competitor_id": 378,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/reddoorz-at-dewata-indah-denpasar-kota-denpasar.html?aid=304142&checkin=2026-07-04&checkout=2026-07-05&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Duyung Homestay",
+        "competitor_id": 379,
+        "slug": "duyung-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/duyung-homestay.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Asoka Hotel & Suite",
+        "competitor_id": 380,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/asoka-homestay-sanur.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Sekar Waru Homestay",
+        "competitor_id": 381,
+        "slug": "sekar-waru-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/sekar-waru-homestay.html?aid=304142&checkin=2026-06-02&checkout=2026-06-03&group_adults=2&req_adults=2&no_rooms=1"
+    },
+    {
+        "properties_name": "Pondok Lulik",
+        "competitor_id": 383,
+        "slug": "pondok-lulik",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.booking.com/hotel/id/pondok-lulik.html?aid=304142&checkin=2026-05-27&checkout=2026-05-28&group_adults=2&req_adults=2&no_rooms=1"
+    }
+]

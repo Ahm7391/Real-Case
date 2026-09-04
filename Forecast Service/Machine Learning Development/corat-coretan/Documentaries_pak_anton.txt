@@ -1,0 +1,73 @@
+/*
+|--------------------------------------------------------------------------
+| Data Analyst API Documentation (lines 91-100)
+|--------------------------------------------------------------------------
+|
+| All endpoints require Bearer Token authentication via middleware.
+| Base URL: /api/xcustomendpoint
+|
+| GET ENDPOINTS:
+| --------------
+| GET /currencies
+|   - Returns: id, code, name from currencies table
+|
+| GET /countries
+|   - Returns: id, name from countries table
+|
+| GET /regions
+|   - Returns: id, country_id, name from regions table
+|
+| GET /areas
+|   - Returns: id, region_id, name from areas table
+|
+| GET /customers
+|   - Returns: id, area_id of active customers only
+|
+| GET /customer-parameter-by-user
+|   - Returns: customer_id, high_season_positive_multiplier_rate,
+|     all_season_positive_multiplier_rate, high_season_negative_multiplier_rate,
+|     all_season_negative_multiplier_rate from customer_parameters table
+|
+| POST ENDPOINTS:
+| ---------------
+| POST /customer-parameter-by-ml -> ini sistem ML kita yang kirim informasi ini
+|   - Body: { customer_id, high_season_positive_multiplier_rate,
+|     all_season_positive_multiplier_rate, high_season_negative_multiplier_rate,
+|     all_season_negative_multiplier_rate }
+|   - Saves to customer_by_ml_parameters table
+|   - Auto-creates customer_parameters if not exists (created_by_type='system')
+| STATUS -> DONE, NUNGGU ROOM TYPE AJA
+|
+| POST /customer-production-booking-rates
+|   - Body: { customer_id, start_date (Y-m-d), finish_date (Y-m-d) }
+|   - Max period: 366 days
+|   - Returns: booking_date, check_in, check_out, is_confirmed, country_id,
+|     currency_id, net_amount_stay for the customer within date range
+| STATUS -> DONE, SUDAH DIADJUST
+|
+| POST /price-forecast-batch
+|   - Body: {
+|       model_version: "v1.0.0",
+|       customer_id: int,
+|       currency_id: int,
+|       forecasts: [{
+|         room_type_id: int,
+|         forecast_date: "Y-m-d",
+|         forecasted_price: numeric (nullable),
+|         high_season_positive_multiplier_rate: numeric,
+|         all_season_positive_multiplier_rate: numeric,
+|         high_season_negative_multiplier_rate: numeric,
+|         all_season_negative_multiplier_rate: numeric,
+|         all_room_types_min_forecasted_price: numeric (nullable),
+|         all_room_types_median_forecasted_price: numeric (nullable),
+|         all_room_types_max_forecasted_price: numeric (nullable)
+|       }, ...]
+|     }
+|   - Creates batch record, dispatches job to extract forecasts asynchronously
+|   - Returns: batch_id, total_records, status
+|   - Job updates batch status to 'completed', 'failed', or 'partial'
+|
+*/
+| STATUS -> DONE SUDAH DISESUAIKAN OUTPUTNYA
+|
+*/

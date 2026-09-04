@@ -1,0 +1,2149 @@
+2026-08-10 10:54:23,344 [INFO] ==================================================
+2026-08-10 10:54:23,344 [INFO] SESSION START
+2026-08-10 10:54:23,344 [INFO] ==================================================
+2026-08-10 10:54:23,344 [INFO] Date range: 2026-08-11 to 2026-08-12
+2026-08-10 10:54:23,348 [INFO] ====== WebDriver manager ======
+2026-08-10 10:54:24,629 [INFO] Get LATEST chromedriver version for google-chrome
+2026-08-10 10:54:24,857 [INFO] Get LATEST chromedriver version for google-chrome
+2026-08-10 10:54:25,049 [INFO] There is no [win64] chromedriver "151.0.7922.77" for browser google-chrome "151.0.7922" in cache
+2026-08-10 10:54:25,049 [INFO] Get LATEST chromedriver version for google-chrome
+2026-08-10 10:54:25,529 [INFO] WebDriver version 151.0.7922.77 selected
+2026-08-10 10:54:25,550 [INFO] Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.77/win32/chromedriver-win32.zip
+2026-08-10 10:54:25,550 [INFO] About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.77/win32/chromedriver-win32.zip
+2026-08-10 10:54:25,717 [INFO] Driver downloading response is 200
+2026-08-10 10:54:32,591 [INFO] Get LATEST chromedriver version for google-chrome
+2026-08-10 10:54:32,902 [INFO] Driver has been saved in cache [C:\Users\anton\.wdm\drivers\chromedriver\win64\151.0.7922.77]
+2026-08-10 10:54:36,526 [INFO] Chrome driver initialised.
+2026-08-10 10:54:36,526 [INFO] Scraping customer mode.
+2026-08-10 10:54:36,526 [INFO] Searching manually through list.
+2026-08-10 10:54:36,526 [INFO] cross_check is : AA Fashion
+2026-08-10 10:54:36,526 [INFO] Found last checkpoint!!!
+2026-08-10 10:54:36,526 [INFO] Safe guarding with 35 properties limiter, breaking algorithm now!
+2026-08-10 10:54:36,526 [INFO] Targeting 30 customer MANUALLY this session.
+2026-08-10 10:54:36,526 [INFO] [1/30] Scraping …
+2026-08-10 10:55:08,130 [INFO] Rewriting dates -> checkin=2026-08-11 checkout=2026-08-12
+2026-08-10 10:55:10,844 [INFO] 1    Abams Gili Air                                           100.0%
+2026-08-10 10:55:10,845 [INFO] [OK] MATCH: 'Abams Gili Air' (100.0%)
+2026-08-10 10:55:13,008 [INFO] [GATEWAY] address='Dusun Gili Air, Gili Indah, 83352 Gili Islands, Indonesia' allowed=['Indonesia'] pass=True
+2026-08-10 10:55:13,009 [INFO] Created fresh seen_url.json
+2026-08-10 10:55:13,010 [INFO] Cleaning the URL to https://www.booking.com/hotel/id/abams-gili-air.html
+2026-08-10 10:55:13,010 [INFO] Stratified sampling for MANUAL SEARCH start at today + 3 days
+2026-08-10 10:55:13,010 [INFO] Scraping last minute mode.
+2026-08-10 10:55:13,011 [INFO]   Visiting: https://www.booking.com/hotel/id/abams-gili-air.html?aid=304142&checkin=2026-08-11&checkout=2026-08-12&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg
+2026-08-10 10:55:14,613 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/abams-gili-air.html?aid=304142&checkin=2026-08-13&checkout=2026-08-14&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg
+2026-08-10 10:55:19,694 [INFO] villa/hotel = 2 and rating is: 3
+2026-08-10 10:55:40,050 [INFO] The availability on current date is not available, renew the date range.
+2026-08-10 10:55:41,556 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/abams-gili-air.html?aid=304142&checkin=2026-08-14&checkout=2026-08-15&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg
+2026-08-10 10:56:06,883 [INFO] The availability on current date is not available, renew the date range.
+2026-08-10 10:56:08,393 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/abams-gili-air.html?aid=304142&checkin=2026-08-15&checkout=2026-08-16&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg
+2026-08-10 10:56:38,724 [WARNING] Caught a runtime error: Trials changing date exceeding limits (3) times.
+2026-08-10 10:56:38,725 [INFO]   Sleeping 7.0s …
+2026-08-10 10:56:45,700 [INFO] Stratified sampling for MANUAL SEARCH start at today + 7 days
+2026-08-10 10:56:45,700 [INFO] Scraping last minute mode.
+2026-08-10 10:56:45,700 [INFO]   Visiting: https://www.booking.com/hotel/id/abams-gili-air.html?aid=304142&checkin=2026-08-11&checkout=2026-08-12&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg
+2026-08-10 10:56:47,139 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/abams-gili-air.html?aid=304142&checkin=2026-08-17&checkout=2026-08-18&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg
+2026-08-10 10:56:52,216 [INFO] villa/hotel = 2 and rating is: 3
+2026-08-10 10:57:12,498 [INFO] The availability on current date is not available, renew the date range.
+2026-08-10 10:57:14,268 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/abams-gili-air.html?aid=304142&checkin=2026-08-18&checkout=2026-08-19&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg
+2026-08-10 10:57:24,314 [INFO]   Scraping : https://www.booking.com/hotel/id/abams-gili-air.html?aid=304142&checkin=2026-08-18&checkout=2026-08-19&group_adults=2&req_adults=2&no_rooms=1#no_availability_msg
+2026-08-10 10:57:24,329 [INFO] Total <tr> rows found: 3
+2026-08-10 10:57:24,351 [INFO] room_link found
+2026-08-10 10:57:24,362 [INFO] room_type is Double Room with Terrace
+2026-08-10 10:57:26,371 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 10:57:26,375 [INFO] current_pos is : 835
+2026-08-10 10:57:26,873 [INFO] current_pos is : 1834
+2026-08-10 10:57:27,095 [INFO] current_pos is : 2710
+2026-08-10 10:57:27,500 [INFO] current_pos is : 3433
+2026-08-10 10:57:27,659 [INFO] current_pos is : 4268
+2026-08-10 10:57:27,985 [INFO] current_pos is : 5227
+2026-08-10 10:57:28,222 [INFO] current_pos is : 6071
+2026-08-10 10:57:28,488 [INFO] current_pos is : 6947
+2026-08-10 10:57:28,803 [INFO] current_pos is : 7509
+2026-08-10 10:57:29,417 [INFO] current_pos is : 8154
+2026-08-10 10:57:29,634 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 10:57:29,634 [INFO]   [scroll] Current Position is : 8154
+2026-08-10 10:57:29,634 [INFO]   [scroll] new_height 1 is : 7744
+2026-08-10 10:57:34,639 [INFO] current_pos is : 8761
+2026-08-10 10:57:35,769 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 10:57:35,769 [INFO]   [scroll] Current Position is : 8761
+2026-08-10 10:57:35,769 [INFO]   [scroll] new_height 1 is : 7744
+2026-08-10 10:57:40,775 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 10:57:45,783 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 10:58:06,082 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 10:58:06,098 [INFO] KUNG-FU WORKS!!!! price is Rp 540,000
+2026-08-10 10:58:08,106 [INFO] span found
+2026-08-10 10:58:08,118 [INFO] room info ['Select Rooms']
+2026-08-10 10:58:18,139 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 10:58:20,146 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 10:58:20,149 [INFO] current_pos is : 826
+2026-08-10 10:58:20,565 [INFO] current_pos is : 1516
+2026-08-10 10:58:21,014 [INFO] current_pos is : 2164
+2026-08-10 10:58:21,533 [INFO] current_pos is : 2881
+2026-08-10 10:58:22,189 [INFO] current_pos is : 3421
+2026-08-10 10:58:22,579 [INFO] current_pos is : 4196
+2026-08-10 10:58:23,223 [INFO] current_pos is : 4771
+2026-08-10 10:58:23,833 [INFO] current_pos is : 5429
+2026-08-10 10:58:24,224 [INFO] current_pos is : 6117
+2026-08-10 10:58:24,949 [INFO] current_pos is : 6787
+2026-08-10 10:58:25,288 [INFO] current_pos is : 7422
+2026-08-10 10:58:25,751 [INFO] current_pos is : 8303
+2026-08-10 10:58:26,202 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 10:58:26,202 [INFO]   [scroll] Current Position is : 8303
+2026-08-10 10:58:26,203 [INFO]   [scroll] new_height 1 is : 7744
+2026-08-10 10:58:31,208 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 10:58:36,215 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 10:58:40,960 [INFO] Finish processing URL listed competitor.
+2026-08-10 10:58:40,960 [INFO] ==================================================
+2026-08-10 10:58:40,964 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/9b1dfbd2ec1f66998c4025be28a65de9
+2026-08-10 10:59:02,056 [INFO] ==================================================
+2026-08-10 10:59:02,056 [INFO] SESSION START
+2026-08-10 10:59:02,056 [INFO] ==================================================
+2026-08-10 10:59:02,056 [INFO] Date range: 2026-08-11 to 2026-08-12
+2026-08-10 10:59:02,056 [INFO] ====== WebDriver manager ======
+2026-08-10 10:59:03,319 [INFO] Get LATEST chromedriver version for google-chrome
+2026-08-10 10:59:03,488 [INFO] Get LATEST chromedriver version for google-chrome
+2026-08-10 10:59:03,639 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\151.0.7922.77\chromedriver-win32/chromedriver.exe] found in cache
+2026-08-10 10:59:04,780 [INFO] Chrome driver initialised.
+2026-08-10 10:59:04,780 [INFO] Scraping customer mode.
+2026-08-10 10:59:04,780 [INFO] Searching manually through list.
+2026-08-10 10:59:04,780 [INFO] cross_check is : Abams Gili Air
+
+2026-08-10 10:59:04,780 [INFO] Found last checkpoint!!!
+2026-08-10 10:59:04,780 [INFO] Safe guarding with 35 properties limiter, breaking algorithm now!
+2026-08-10 10:59:04,780 [INFO] Targeting 2 customer MANUALLY this session.
+2026-08-10 10:59:04,780 [INFO] [1/2] Scraping …
+2026-08-10 10:59:39,816 [INFO] Rewriting dates -> checkin=2026-08-11 checkout=2026-08-12
+2026-08-10 10:59:42,053 [INFO] 1    Guest House Abimanyu                                      86.5%
+2026-08-10 10:59:42,053 [INFO] [OK] MATCH: 'Guest House Abimanyu' (86.5%)
+2026-08-10 10:59:44,058 [INFO] [GATEWAY] address='Jl. Abimanyu No E40, Griya Pamungkas, Kaliurang KM. 14 Sleman, 55584 Kaliurang, Indonesia' allowed=['Indonesia'] pass=True
+2026-08-10 10:59:44,059 [INFO] Cleaning the URL to https://www.booking.com/hotel/id/guest-house-abimanyu.html
+2026-08-10 10:59:44,059 [INFO] Stratified sampling for MANUAL SEARCH start at today + 3 days
+2026-08-10 10:59:44,061 [INFO] Scraping last minute mode.
+2026-08-10 10:59:44,061 [INFO]   Visiting: https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-11&checkout=2026-08-12&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 10:59:45,789 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-13&checkout=2026-08-14&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 10:59:50,875 [INFO] villa/hotel = 1 and rating is: 3
+2026-08-10 10:59:55,882 [INFO]   Scraping : https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-13&checkout=2026-08-14&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 10:59:55,904 [INFO] Total <tr> rows found: 1
+2026-08-10 10:59:55,927 [INFO] room_link found
+2026-08-10 10:59:55,940 [INFO] room_type is Three-Bedroom House
+2026-08-10 10:59:57,950 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 10:59:57,954 [INFO] current_pos is : 897
+2026-08-10 10:59:58,316 [INFO] current_pos is : 1788
+2026-08-10 10:59:58,571 [INFO] current_pos is : 2670
+2026-08-10 10:59:58,771 [INFO] current_pos is : 3221
+2026-08-10 10:59:59,102 [INFO] current_pos is : 4163
+2026-08-10 10:59:59,767 [INFO] current_pos is : 4850
+2026-08-10 11:00:00,204 [INFO] current_pos is : 5705
+2026-08-10 11:00:01,354 [INFO] current_pos is : 6298
+2026-08-10 11:00:01,679 [INFO] current_pos is : 6862
+2026-08-10 11:00:02,149 [INFO] current_pos is : 7810
+2026-08-10 11:00:02,382 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:00:02,382 [INFO]   [scroll] Current Position is : 7810
+2026-08-10 11:00:02,383 [INFO]   [scroll] new_height 1 is : 7213
+2026-08-10 11:00:07,388 [INFO] current_pos is : 8767
+2026-08-10 11:00:07,632 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:00:07,632 [INFO]   [scroll] Current Position is : 8767
+2026-08-10 11:00:07,632 [INFO]   [scroll] new_height 1 is : 7213
+2026-08-10 11:00:12,638 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:00:17,646 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:00:37,952 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:00:37,969 [INFO] KUNG-FU WORKS!!!! price is Rp 600,000
+2026-08-10 11:00:39,977 [INFO] span found
+2026-08-10 11:00:39,989 [INFO] room info ['Select Rooms']
+2026-08-10 11:00:49,990 [INFO]   Sleeping 6.8s …
+2026-08-10 11:00:56,753 [INFO] Stratified sampling for MANUAL SEARCH start at today + 7 days
+2026-08-10 11:00:56,753 [INFO] Scraping last minute mode.
+2026-08-10 11:00:56,753 [INFO]   Visiting: https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-11&checkout=2026-08-12&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:00:58,518 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-17&checkout=2026-08-18&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:01:03,585 [INFO] villa/hotel = 1 and rating is: 3
+2026-08-10 11:01:08,590 [INFO]   Scraping : https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-17&checkout=2026-08-18&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:01:08,602 [INFO] Total <tr> rows found: 1
+2026-08-10 11:01:08,621 [INFO] room_link found
+2026-08-10 11:01:08,633 [INFO] room_type is Three-Bedroom House
+2026-08-10 11:01:10,640 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:01:10,644 [INFO] current_pos is : 807
+2026-08-10 11:01:11,132 [INFO] current_pos is : 1358
+2026-08-10 11:01:11,719 [INFO] current_pos is : 2166
+2026-08-10 11:01:12,095 [INFO] current_pos is : 2748
+2026-08-10 11:01:12,457 [INFO] current_pos is : 3390
+2026-08-10 11:01:12,571 [INFO] current_pos is : 4051
+2026-08-10 11:01:13,102 [INFO] current_pos is : 4826
+2026-08-10 11:01:13,429 [INFO] current_pos is : 5787
+2026-08-10 11:01:13,740 [INFO] current_pos is : 6453
+2026-08-10 11:01:14,190 [INFO] current_pos is : 7350
+2026-08-10 11:01:14,835 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:01:14,835 [INFO]   [scroll] Current Position is : 7350
+2026-08-10 11:01:14,835 [INFO]   [scroll] new_height 1 is : 7213
+2026-08-10 11:01:19,840 [INFO] current_pos is : 8272
+2026-08-10 11:01:20,231 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:01:20,231 [INFO]   [scroll] Current Position is : 8272
+2026-08-10 11:01:20,231 [INFO]   [scroll] new_height 1 is : 7213
+2026-08-10 11:01:25,236 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:01:30,243 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:01:50,539 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:01:50,553 [INFO] KUNG-FU WORKS!!!! price is Rp 700,000
+2026-08-10 11:01:52,559 [INFO] span found
+2026-08-10 11:01:52,571 [INFO] room info ['Select Rooms']
+2026-08-10 11:02:02,572 [INFO]   Sleeping 6.6s …
+2026-08-10 11:02:09,205 [INFO] Stratified sampling for MANUAL SEARCH start at today + 14 days
+2026-08-10 11:02:09,205 [INFO] Scraping Early Book Mode
+2026-08-10 11:02:09,205 [INFO]   Visiting: https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-11&checkout=2026-08-12&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:02:09,206 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-24&checkout=2026-08-25&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:02:36,044 [INFO] The availability on current date is not available, renew the date range.
+2026-08-10 11:02:36,045 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-25&checkout=2026-08-26&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:03:03,004 [INFO] The availability on current date is not available, renew the date range.
+2026-08-10 11:03:03,004 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-26&checkout=2026-08-27&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:03:14,910 [INFO]   Scraping : https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-26&checkout=2026-08-27&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:03:14,922 [INFO] Total <tr> rows found: 1
+2026-08-10 11:03:14,942 [INFO] room_link found
+2026-08-10 11:03:14,955 [INFO] room type info eb : Three-Bedroom House
+2026-08-10 11:03:16,961 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:03:16,964 [INFO] current_pos is : 502
+2026-08-10 11:03:17,650 [INFO] current_pos is : 1318
+2026-08-10 11:03:18,025 [INFO] current_pos is : 2132
+2026-08-10 11:03:18,305 [INFO] current_pos is : 2981
+2026-08-10 11:03:19,363 [INFO] current_pos is : 3622
+2026-08-10 11:03:19,646 [INFO] current_pos is : 4522
+2026-08-10 11:03:19,956 [INFO] current_pos is : 5078
+2026-08-10 11:03:20,556 [INFO] current_pos is : 5747
+2026-08-10 11:03:21,654 [INFO] current_pos is : 6376
+2026-08-10 11:03:22,112 [INFO] current_pos is : 6891
+2026-08-10 11:03:22,643 [INFO] current_pos is : 7415
+2026-08-10 11:03:22,813 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:03:22,813 [INFO]   [scroll] Current Position is : 7415
+2026-08-10 11:03:22,813 [INFO]   [scroll] new_height 1 is : 7229
+2026-08-10 11:03:27,818 [INFO] current_pos is : 8197
+2026-08-10 11:03:28,621 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:03:28,621 [INFO]   [scroll] Current Position is : 8197
+2026-08-10 11:03:28,622 [INFO]   [scroll] new_height 1 is : 7229
+2026-08-10 11:03:33,637 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:03:38,655 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:03:58,957 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:03:58,971 [INFO] KUNG FU WORKS !!!! price is Rp 600,000
+2026-08-10 11:04:00,980 [INFO] span found
+2026-08-10 11:04:00,991 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:04:10,993 [INFO]   Sleeping 6.8s …
+2026-08-10 11:04:17,762 [INFO] Stratified sampling for MANUAL SEARCH start at today + 30 days
+2026-08-10 11:04:17,762 [INFO] Scraping Early Book Mode
+2026-08-10 11:04:17,763 [INFO]   Visiting: https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-08-11&checkout=2026-08-12&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:04:17,763 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-09-09&checkout=2026-09-10&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:04:29,518 [INFO]   Scraping : https://www.booking.com/hotel/id/guest-house-abimanyu.html?aid=304142&checkin=2026-09-09&checkout=2026-09-10&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:04:29,531 [INFO] Total <tr> rows found: 1
+2026-08-10 11:04:29,551 [INFO] room_link found
+2026-08-10 11:04:29,562 [INFO] room type info eb : Three-Bedroom House
+2026-08-10 11:04:31,569 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:04:31,573 [INFO] current_pos is : 864
+2026-08-10 11:04:32,251 [INFO] current_pos is : 1560
+2026-08-10 11:04:32,749 [INFO] current_pos is : 2388
+2026-08-10 11:04:33,235 [INFO] current_pos is : 2910
+2026-08-10 11:04:33,945 [INFO] current_pos is : 3652
+2026-08-10 11:04:34,091 [INFO] current_pos is : 4480
+2026-08-10 11:04:34,602 [INFO] current_pos is : 5039
+2026-08-10 11:04:35,026 [INFO] current_pos is : 5770
+2026-08-10 11:04:35,573 [INFO] current_pos is : 6459
+2026-08-10 11:04:36,163 [INFO] current_pos is : 7445
+2026-08-10 11:04:36,620 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:04:36,632 [INFO]   [scroll] Current Position is : 7445
+2026-08-10 11:04:36,633 [INFO]   [scroll] new_height 1 is : 7213
+2026-08-10 11:04:41,638 [INFO] current_pos is : 8188
+2026-08-10 11:04:42,110 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:04:42,110 [INFO]   [scroll] Current Position is : 8188
+2026-08-10 11:04:42,110 [INFO]   [scroll] new_height 1 is : 7213
+2026-08-10 11:04:47,121 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:04:52,128 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:05:12,435 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:05:12,450 [INFO] KUNG FU WORKS !!!! price is Rp 600,000
+2026-08-10 11:05:14,457 [INFO] span found
+2026-08-10 11:05:14,469 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:05:24,470 [INFO]   Sleeping 6.1s …
+2026-08-10 11:05:30,610 [INFO] [2/2] Scraping …
+2026-08-10 11:06:00,927 [INFO] Rewriting dates -> checkin=2026-08-11 checkout=2026-08-12
+2026-08-10 11:06:03,230 [INFO] 1    Adhidrawa Ubud                                           100.0%
+2026-08-10 11:06:03,230 [INFO] [OK] MATCH: 'Adhidrawa Ubud' (100.0%)
+2026-08-10 11:06:05,268 [INFO] [GATEWAY] address='Jalan Raya Pejeng Kawan, 3, Ubud, Bali, Indonesia, 80552, 80552 Ubud, Indonesia' allowed=['Indonesia'] pass=True
+2026-08-10 11:06:05,268 [INFO] Cleaning the URL to https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html
+2026-08-10 11:06:05,269 [INFO] Stratified sampling for MANUAL SEARCH start at today + 3 days
+2026-08-10 11:06:05,269 [INFO] Scraping last minute mode.
+2026-08-10 11:06:05,270 [INFO]   Visiting: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-08-11&checkout=2026-08-12&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:06:07,201 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-08-13&checkout=2026-08-14&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:06:12,273 [INFO] villa/hotel = 2 and rating is: 3
+2026-08-10 11:06:17,278 [INFO]   Scraping : https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-08-13&checkout=2026-08-14&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:06:17,291 [INFO] Total <tr> rows found: 8
+2026-08-10 11:06:17,313 [INFO] room_link found
+2026-08-10 11:06:17,325 [INFO] room_type is Superior Double Room
+2026-08-10 11:06:19,332 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:06:19,335 [INFO] current_pos is : 894
+2026-08-10 11:06:19,657 [INFO] current_pos is : 1766
+2026-08-10 11:06:20,513 [INFO] current_pos is : 2647
+2026-08-10 11:06:21,224 [INFO] current_pos is : 3151
+2026-08-10 11:06:21,444 [INFO] current_pos is : 3974
+2026-08-10 11:06:22,041 [INFO] current_pos is : 4758
+2026-08-10 11:06:22,703 [INFO] current_pos is : 5516
+2026-08-10 11:06:22,909 [INFO] current_pos is : 6410
+2026-08-10 11:06:23,021 [INFO] current_pos is : 7395
+2026-08-10 11:06:24,241 [INFO] current_pos is : 8152
+2026-08-10 11:06:24,400 [INFO] current_pos is : 8964
+2026-08-10 11:06:25,105 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:06:25,105 [INFO]   [scroll] Current Position is : 8964
+2026-08-10 11:06:25,105 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:06:30,111 [INFO] current_pos is : 9881
+2026-08-10 11:06:30,750 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:06:30,750 [INFO]   [scroll] Current Position is : 9881
+2026-08-10 11:06:30,751 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:06:35,756 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:06:40,763 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:07:01,062 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:07:01,080 [INFO] KUNG-FU WORKS!!!! price is Rp 411,523
+2026-08-10 11:07:03,087 [INFO] span found
+2026-08-10 11:07:03,099 [INFO] room info ['Select Rooms']
+2026-08-10 11:07:13,117 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:07:15,125 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:07:15,128 [INFO] current_pos is : 852
+2026-08-10 11:07:15,560 [INFO] current_pos is : 1478
+2026-08-10 11:07:16,143 [INFO] current_pos is : 2404
+2026-08-10 11:07:16,300 [INFO] current_pos is : 3195
+2026-08-10 11:07:16,837 [INFO] current_pos is : 3910
+2026-08-10 11:07:17,413 [INFO] current_pos is : 4705
+2026-08-10 11:07:17,904 [INFO] current_pos is : 5454
+2026-08-10 11:07:18,494 [INFO] current_pos is : 6325
+2026-08-10 11:07:18,790 [INFO] current_pos is : 7085
+2026-08-10 11:07:19,362 [INFO] current_pos is : 7947
+2026-08-10 11:07:19,799 [INFO] current_pos is : 8500
+2026-08-10 11:07:20,069 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:07:20,069 [INFO]   [scroll] Current Position is : 8500
+2026-08-10 11:07:20,071 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:07:25,076 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:07:30,084 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:07:50,380 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:07:50,395 [INFO] KUNG-FU WORKS!!!! price is Rp 350,877
+2026-08-10 11:07:52,405 [INFO] span found
+2026-08-10 11:07:52,416 [INFO] room info ['Select Rooms']
+2026-08-10 11:08:02,433 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:08:04,439 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:08:04,443 [INFO] current_pos is : 514
+2026-08-10 11:08:04,979 [INFO] current_pos is : 1105
+2026-08-10 11:08:05,369 [INFO] current_pos is : 1900
+2026-08-10 11:08:05,877 [INFO] current_pos is : 2833
+2026-08-10 11:08:06,326 [INFO] current_pos is : 3387
+2026-08-10 11:08:07,000 [INFO] current_pos is : 4087
+2026-08-10 11:08:07,161 [INFO] current_pos is : 4953
+2026-08-10 11:08:07,847 [INFO] current_pos is : 5463
+2026-08-10 11:08:08,412 [INFO] current_pos is : 6059
+2026-08-10 11:08:08,560 [INFO] current_pos is : 6727
+2026-08-10 11:08:08,851 [INFO] current_pos is : 7322
+2026-08-10 11:08:09,315 [INFO] current_pos is : 8199
+2026-08-10 11:08:09,516 [INFO] current_pos is : 9197
+2026-08-10 11:08:09,643 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:08:09,643 [INFO]   [scroll] Current Position is : 9197
+2026-08-10 11:08:09,643 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:08:14,650 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:08:19,658 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:08:39,951 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:08:39,968 [INFO] KUNG-FU WORKS!!!! price is Rp 559,848
+2026-08-10 11:08:41,976 [INFO] span found
+2026-08-10 11:08:41,988 [INFO] room info ['Select Rooms']
+2026-08-10 11:08:52,006 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:08:54,013 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:08:54,017 [INFO] current_pos is : 774
+2026-08-10 11:08:54,234 [INFO] current_pos is : 1652
+2026-08-10 11:08:54,620 [INFO] current_pos is : 2527
+2026-08-10 11:08:54,953 [INFO] current_pos is : 3368
+2026-08-10 11:08:55,470 [INFO] current_pos is : 4345
+2026-08-10 11:08:56,167 [INFO] current_pos is : 5067
+2026-08-10 11:08:56,661 [INFO] current_pos is : 5707
+2026-08-10 11:08:56,817 [INFO] current_pos is : 6337
+2026-08-10 11:08:56,991 [INFO] current_pos is : 6874
+2026-08-10 11:08:57,508 [INFO] current_pos is : 7841
+2026-08-10 11:08:58,022 [INFO] current_pos is : 8496
+2026-08-10 11:08:58,206 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:08:58,206 [INFO]   [scroll] Current Position is : 8496
+2026-08-10 11:08:58,206 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:09:03,213 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:09:08,220 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:09:28,524 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:09:28,543 [INFO] KUNG-FU WORKS!!!! price is Rp 566,515
+2026-08-10 11:09:30,551 [INFO] span found
+2026-08-10 11:09:30,562 [INFO] room info ['Select Rooms']
+2026-08-10 11:09:40,583 [INFO] room_link found
+2026-08-10 11:09:40,595 [INFO] room_type is Suite
+2026-08-10 11:09:42,603 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:09:42,607 [INFO] current_pos is : 893
+2026-08-10 11:09:42,746 [INFO] current_pos is : 1763
+2026-08-10 11:09:42,913 [INFO] current_pos is : 2636
+2026-08-10 11:09:43,147 [INFO] current_pos is : 3387
+2026-08-10 11:09:43,680 [INFO] current_pos is : 4196
+2026-08-10 11:09:44,327 [INFO] current_pos is : 4763
+2026-08-10 11:09:44,914 [INFO] current_pos is : 5297
+2026-08-10 11:09:45,102 [INFO] current_pos is : 6189
+2026-08-10 11:09:45,469 [INFO] current_pos is : 6760
+2026-08-10 11:09:46,103 [INFO] current_pos is : 7732
+2026-08-10 11:09:46,359 [INFO] current_pos is : 8652
+2026-08-10 11:09:46,997 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:09:46,997 [INFO]   [scroll] Current Position is : 8652
+2026-08-10 11:09:46,997 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:09:52,003 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:09:57,011 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:10:17,305 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:10:17,322 [INFO] KUNG-FU WORKS!!!! price is Rp 626,666
+2026-08-10 11:10:19,329 [INFO] span found
+2026-08-10 11:10:19,341 [INFO] room info ['Select Rooms']
+2026-08-10 11:10:29,357 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:10:31,364 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:10:31,368 [INFO] current_pos is : 985
+2026-08-10 11:10:31,894 [INFO] current_pos is : 1625
+2026-08-10 11:10:32,366 [INFO] current_pos is : 2375
+2026-08-10 11:10:33,019 [INFO] current_pos is : 3085
+2026-08-10 11:10:33,561 [INFO] current_pos is : 3874
+2026-08-10 11:10:33,934 [INFO] current_pos is : 4845
+2026-08-10 11:10:34,497 [INFO] current_pos is : 5815
+2026-08-10 11:10:35,180 [INFO] current_pos is : 6553
+2026-08-10 11:10:35,740 [INFO] current_pos is : 7103
+2026-08-10 11:10:36,044 [INFO] current_pos is : 7769
+2026-08-10 11:10:36,309 [INFO] current_pos is : 8427
+2026-08-10 11:10:36,885 [INFO] current_pos is : 9110
+2026-08-10 11:10:37,440 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:10:37,440 [INFO]   [scroll] Current Position is : 9110
+2026-08-10 11:10:37,440 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:10:42,447 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:10:47,454 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:11:07,747 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:11:07,764 [INFO] KUNG-FU WORKS!!!! price is Rp 659,649
+2026-08-10 11:11:09,771 [INFO] span found
+2026-08-10 11:11:09,782 [INFO] room info ['Select Rooms']
+2026-08-10 11:11:19,799 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:11:21,805 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:11:21,809 [INFO] current_pos is : 734
+2026-08-10 11:11:22,216 [INFO] current_pos is : 1621
+2026-08-10 11:11:22,717 [INFO] current_pos is : 2521
+2026-08-10 11:11:23,963 [INFO] current_pos is : 3138
+2026-08-10 11:11:24,210 [INFO] current_pos is : 3943
+2026-08-10 11:11:24,633 [INFO] current_pos is : 4800
+2026-08-10 11:11:25,669 [INFO] current_pos is : 5308
+2026-08-10 11:11:26,329 [INFO] current_pos is : 5979
+2026-08-10 11:11:26,439 [INFO] current_pos is : 6874
+2026-08-10 11:11:26,692 [INFO] current_pos is : 7558
+2026-08-10 11:11:27,109 [INFO] current_pos is : 8359
+2026-08-10 11:11:27,706 [INFO] current_pos is : 9156
+2026-08-10 11:11:28,351 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:11:28,351 [INFO]   [scroll] Current Position is : 9156
+2026-08-10 11:11:28,351 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:11:33,357 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:11:38,365 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:11:58,662 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:11:58,678 [INFO] KUNG-FU WORKS!!!! price is Rp 762,249
+2026-08-10 11:12:00,685 [INFO] span found
+2026-08-10 11:12:00,697 [INFO] room info ['Select Rooms']
+2026-08-10 11:12:10,713 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:12:12,720 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:12:12,724 [INFO] current_pos is : 657
+2026-08-10 11:12:13,014 [INFO] current_pos is : 1211
+2026-08-10 11:12:13,585 [INFO] current_pos is : 1747
+2026-08-10 11:12:14,071 [INFO] current_pos is : 2543
+2026-08-10 11:12:14,306 [INFO] current_pos is : 3357
+2026-08-10 11:12:14,578 [INFO] current_pos is : 4199
+2026-08-10 11:12:15,033 [INFO] current_pos is : 4921
+2026-08-10 11:12:15,722 [INFO] current_pos is : 5816
+2026-08-10 11:12:16,474 [INFO] current_pos is : 6693
+2026-08-10 11:12:17,070 [INFO] current_pos is : 7457
+2026-08-10 11:12:17,461 [INFO] current_pos is : 7981
+2026-08-10 11:12:17,643 [INFO] current_pos is : 8858
+2026-08-10 11:12:18,326 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:12:18,326 [INFO]   [scroll] Current Position is : 8858
+2026-08-10 11:12:18,326 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:12:23,329 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:12:28,338 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:12:48,637 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:12:48,653 [INFO] KUNG-FU WORKS!!!! price is Rp 767,649
+2026-08-10 11:12:50,661 [INFO] span found
+2026-08-10 11:12:50,672 [INFO] room info ['Select Rooms']
+2026-08-10 11:13:00,673 [INFO]   Sleeping 5.9s …
+2026-08-10 11:13:06,543 [INFO] Stratified sampling for MANUAL SEARCH start at today + 7 days
+2026-08-10 11:13:06,543 [INFO] Scraping last minute mode.
+2026-08-10 11:13:06,543 [INFO]   Visiting: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-08-11&checkout=2026-08-12&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:13:08,421 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-08-17&checkout=2026-08-18&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:13:13,499 [INFO] villa/hotel = 2 and rating is: 3
+2026-08-10 11:13:18,506 [INFO]   Scraping : https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-08-17&checkout=2026-08-18&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:13:18,518 [INFO] Total <tr> rows found: 8
+2026-08-10 11:13:18,539 [INFO] room_link found
+2026-08-10 11:13:18,551 [INFO] room_type is Superior Double Room
+2026-08-10 11:13:20,559 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:13:20,562 [INFO] current_pos is : 888
+2026-08-10 11:13:21,101 [INFO] current_pos is : 1756
+2026-08-10 11:13:21,220 [INFO] current_pos is : 2743
+2026-08-10 11:13:21,481 [INFO] current_pos is : 3426
+2026-08-10 11:13:21,793 [INFO] current_pos is : 4046
+2026-08-10 11:13:22,864 [INFO] current_pos is : 4649
+2026-08-10 11:13:24,110 [INFO] current_pos is : 5506
+2026-08-10 11:13:25,130 [INFO] current_pos is : 6375
+2026-08-10 11:13:25,405 [INFO] current_pos is : 7164
+2026-08-10 11:13:25,858 [INFO] current_pos is : 8018
+2026-08-10 11:13:26,081 [INFO] current_pos is : 8880
+2026-08-10 11:13:26,533 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:13:26,533 [INFO]   [scroll] Current Position is : 8880
+2026-08-10 11:13:26,534 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:13:31,538 [INFO] current_pos is : 9705
+2026-08-10 11:13:31,745 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:13:31,745 [INFO]   [scroll] Current Position is : 9705
+2026-08-10 11:13:31,745 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:13:36,751 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:13:41,758 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:14:02,030 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:14:02,047 [INFO] KUNG-FU WORKS!!!! price is Rp 411,523
+2026-08-10 11:14:04,054 [INFO] span found
+2026-08-10 11:14:04,063 [INFO] room info ['Select Rooms']
+2026-08-10 11:14:14,081 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:14:16,087 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:14:16,090 [INFO] current_pos is : 746
+2026-08-10 11:14:16,614 [INFO] current_pos is : 1355
+2026-08-10 11:14:17,265 [INFO] current_pos is : 1922
+2026-08-10 11:14:17,517 [INFO] current_pos is : 2498
+2026-08-10 11:14:18,046 [INFO] current_pos is : 3083
+2026-08-10 11:14:19,165 [INFO] current_pos is : 3778
+2026-08-10 11:14:20,022 [INFO] current_pos is : 4491
+2026-08-10 11:14:20,183 [INFO] current_pos is : 5211
+2026-08-10 11:14:20,464 [INFO] current_pos is : 5786
+2026-08-10 11:14:21,163 [INFO] current_pos is : 6571
+2026-08-10 11:14:21,613 [INFO] current_pos is : 7286
+2026-08-10 11:14:21,875 [INFO] current_pos is : 8083
+2026-08-10 11:14:22,377 [INFO] current_pos is : 8878
+2026-08-10 11:14:22,827 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:14:22,828 [INFO]   [scroll] Current Position is : 8878
+2026-08-10 11:14:22,828 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:14:27,834 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:14:32,842 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:14:53,134 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:14:53,151 [INFO] KUNG-FU WORKS!!!! price is Rp 433,182
+2026-08-10 11:14:55,159 [INFO] span found
+2026-08-10 11:14:55,169 [INFO] room info ['Select Rooms']
+2026-08-10 11:15:05,185 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:15:07,192 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:15:07,195 [INFO] current_pos is : 699
+2026-08-10 11:15:07,570 [INFO] current_pos is : 1319
+2026-08-10 11:15:08,208 [INFO] current_pos is : 2037
+2026-08-10 11:15:08,919 [INFO] current_pos is : 2808
+2026-08-10 11:15:09,189 [INFO] current_pos is : 3739
+2026-08-10 11:15:09,876 [INFO] current_pos is : 4736
+2026-08-10 11:15:10,550 [INFO] current_pos is : 5498
+2026-08-10 11:15:11,134 [INFO] current_pos is : 6213
+2026-08-10 11:15:11,441 [INFO] current_pos is : 6925
+2026-08-10 11:15:11,739 [INFO] current_pos is : 7790
+2026-08-10 11:15:12,077 [INFO] current_pos is : 8454
+2026-08-10 11:15:12,378 [INFO] current_pos is : 9252
+2026-08-10 11:15:12,989 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:15:12,989 [INFO]   [scroll] Current Position is : 9252
+2026-08-10 11:15:12,989 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:15:17,995 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:15:23,002 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:15:43,285 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:15:43,300 [INFO] KUNG-FU WORKS!!!! price is Rp 453,477
+2026-08-10 11:15:45,307 [INFO] span found
+2026-08-10 11:15:45,319 [INFO] room info ['Select Rooms']
+2026-08-10 11:15:55,336 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:15:57,344 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:15:57,347 [INFO] current_pos is : 997
+2026-08-10 11:15:57,682 [INFO] current_pos is : 1843
+2026-08-10 11:15:58,259 [INFO] current_pos is : 2463
+2026-08-10 11:15:58,617 [INFO] current_pos is : 3371
+2026-08-10 11:15:59,331 [INFO] current_pos is : 4025
+2026-08-10 11:15:59,876 [INFO] current_pos is : 4882
+2026-08-10 11:16:00,423 [INFO] current_pos is : 5607
+2026-08-10 11:16:00,660 [INFO] current_pos is : 6425
+2026-08-10 11:16:01,026 [INFO] current_pos is : 7406
+2026-08-10 11:16:01,412 [INFO] current_pos is : 8222
+2026-08-10 11:16:01,830 [INFO] current_pos is : 8973
+2026-08-10 11:16:02,137 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:16:02,137 [INFO]   [scroll] Current Position is : 8973
+2026-08-10 11:16:02,137 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:16:07,141 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:16:12,149 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:16:32,430 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:16:32,446 [INFO] KUNG-FU WORKS!!!! price is Rp 458,877
+2026-08-10 11:16:34,453 [INFO] span found
+2026-08-10 11:16:34,464 [INFO] room info ['Select Rooms']
+2026-08-10 11:16:44,485 [INFO] room_link found
+2026-08-10 11:16:44,496 [INFO] room_type is Suite
+2026-08-10 11:16:46,504 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:16:46,507 [INFO] current_pos is : 565
+2026-08-10 11:16:46,935 [INFO] current_pos is : 1088
+2026-08-10 11:16:47,467 [INFO] current_pos is : 1610
+2026-08-10 11:16:47,804 [INFO] current_pos is : 2280
+2026-08-10 11:16:48,112 [INFO] current_pos is : 3021
+2026-08-10 11:16:49,292 [INFO] current_pos is : 3992
+2026-08-10 11:16:49,754 [INFO] current_pos is : 4727
+2026-08-10 11:16:50,351 [INFO] current_pos is : 5604
+2026-08-10 11:16:50,669 [INFO] current_pos is : 6155
+2026-08-10 11:16:50,883 [INFO] current_pos is : 7013
+2026-08-10 11:16:51,538 [INFO] current_pos is : 7539
+2026-08-10 11:16:52,121 [INFO] current_pos is : 8387
+2026-08-10 11:16:52,720 [INFO] current_pos is : 9234
+2026-08-10 11:16:52,959 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:16:52,959 [INFO]   [scroll] Current Position is : 9234
+2026-08-10 11:16:52,959 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:16:57,966 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:17:02,973 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:17:23,251 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:17:23,267 [INFO] KUNG-FU WORKS!!!! price is Rp 773,662
+2026-08-10 11:17:25,274 [INFO] span found
+2026-08-10 11:17:25,283 [INFO] room info ['Select Rooms']
+2026-08-10 11:17:35,300 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:17:37,307 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:17:37,310 [INFO] current_pos is : 659
+2026-08-10 11:17:37,493 [INFO] current_pos is : 1474
+2026-08-10 11:17:38,038 [INFO] current_pos is : 2325
+2026-08-10 11:17:38,543 [INFO] current_pos is : 3002
+2026-08-10 11:17:38,957 [INFO] current_pos is : 3884
+2026-08-10 11:17:39,661 [INFO] current_pos is : 4798
+2026-08-10 11:17:40,190 [INFO] current_pos is : 5616
+2026-08-10 11:17:40,485 [INFO] current_pos is : 6468
+2026-08-10 11:17:41,110 [INFO] current_pos is : 7182
+2026-08-10 11:17:41,620 [INFO] current_pos is : 7786
+2026-08-10 11:17:42,292 [INFO] current_pos is : 8777
+2026-08-10 11:17:42,834 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:17:42,835 [INFO]   [scroll] Current Position is : 8777
+2026-08-10 11:17:42,835 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:17:47,840 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:17:52,848 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:18:13,121 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:18:13,137 [INFO] KUNG-FU WORKS!!!! price is Rp 659,649
+2026-08-10 11:18:15,143 [INFO] span found
+2026-08-10 11:18:15,153 [INFO] room info ['Select Rooms']
+2026-08-10 11:18:25,172 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:18:27,179 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:18:27,182 [INFO] current_pos is : 823
+2026-08-10 11:18:27,772 [INFO] current_pos is : 1535
+2026-08-10 11:18:28,362 [INFO] current_pos is : 2285
+2026-08-10 11:18:29,141 [INFO] current_pos is : 3122
+2026-08-10 11:18:29,564 [INFO] current_pos is : 3841
+2026-08-10 11:18:29,795 [INFO] current_pos is : 4356
+2026-08-10 11:18:30,360 [INFO] current_pos is : 5288
+2026-08-10 11:18:30,536 [INFO] current_pos is : 5865
+2026-08-10 11:18:30,741 [INFO] current_pos is : 6687
+2026-08-10 11:18:31,155 [INFO] current_pos is : 7382
+2026-08-10 11:18:31,769 [INFO] current_pos is : 8019
+2026-08-10 11:18:31,963 [INFO] current_pos is : 8808
+2026-08-10 11:18:32,521 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:18:32,521 [INFO]   [scroll] Current Position is : 8808
+2026-08-10 11:18:32,522 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:18:37,527 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:18:42,534 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:19:02,814 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:19:02,830 [INFO] KUNG-FU WORKS!!!! price is Rp 762,249
+2026-08-10 11:19:04,836 [INFO] span found
+2026-08-10 11:19:04,846 [INFO] room info ['Select Rooms']
+2026-08-10 11:19:14,862 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:19:16,869 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:19:16,872 [INFO] current_pos is : 762
+2026-08-10 11:19:17,218 [INFO] current_pos is : 1340
+2026-08-10 11:19:17,365 [INFO] current_pos is : 2202
+2026-08-10 11:19:17,636 [INFO] current_pos is : 2789
+2026-08-10 11:19:18,181 [INFO] current_pos is : 3416
+2026-08-10 11:19:18,569 [INFO] current_pos is : 4186
+2026-08-10 11:19:19,258 [INFO] current_pos is : 5176
+2026-08-10 11:19:19,423 [INFO] current_pos is : 5715
+2026-08-10 11:19:19,695 [INFO] current_pos is : 6596
+2026-08-10 11:19:20,039 [INFO] current_pos is : 7165
+2026-08-10 11:19:20,299 [INFO] current_pos is : 7667
+2026-08-10 11:19:20,635 [INFO] current_pos is : 8252
+2026-08-10 11:19:21,159 [INFO] current_pos is : 8870
+2026-08-10 11:19:21,423 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:19:21,423 [INFO]   [scroll] Current Position is : 8870
+2026-08-10 11:19:21,423 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:19:26,429 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:19:31,435 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:19:51,716 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:19:51,730 [INFO] KUNG-FU WORKS!!!! price is Rp 767,649
+2026-08-10 11:19:53,736 [INFO] span found
+2026-08-10 11:19:53,747 [INFO] room info ['Select Rooms']
+2026-08-10 11:20:03,748 [INFO]   Sleeping 5.1s …
+2026-08-10 11:20:08,893 [INFO] Stratified sampling for MANUAL SEARCH start at today + 14 days
+2026-08-10 11:20:08,893 [INFO] Scraping Early Book Mode
+2026-08-10 11:20:08,893 [INFO]   Visiting: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-08-11&checkout=2026-08-12&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:20:08,893 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-08-24&checkout=2026-08-25&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:20:20,936 [INFO]   Scraping : https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-08-24&checkout=2026-08-25&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:20:20,948 [INFO] Total <tr> rows found: 8
+2026-08-10 11:20:20,966 [INFO] room_link found
+2026-08-10 11:20:20,978 [INFO] room type info eb : Superior Double Room
+2026-08-10 11:20:22,984 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:20:22,988 [INFO] current_pos is : 988
+2026-08-10 11:20:23,730 [INFO] current_pos is : 1779
+2026-08-10 11:20:24,293 [INFO] current_pos is : 2689
+2026-08-10 11:20:24,954 [INFO] current_pos is : 3264
+2026-08-10 11:20:25,584 [INFO] current_pos is : 4093
+2026-08-10 11:20:26,040 [INFO] current_pos is : 4851
+2026-08-10 11:20:26,610 [INFO] current_pos is : 5403
+2026-08-10 11:20:26,795 [INFO] current_pos is : 6372
+2026-08-10 11:20:27,142 [INFO] current_pos is : 7334
+2026-08-10 11:20:27,461 [INFO] current_pos is : 7912
+2026-08-10 11:20:27,914 [INFO] current_pos is : 8713
+2026-08-10 11:20:28,294 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:20:28,295 [INFO]   [scroll] Current Position is : 8713
+2026-08-10 11:20:28,295 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:20:33,360 [INFO] current_pos is : 9311
+2026-08-10 11:20:33,608 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:20:33,608 [INFO]   [scroll] Current Position is : 9311
+2026-08-10 11:20:33,609 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:20:38,615 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:20:43,622 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:21:03,897 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:21:03,915 [INFO] KUNG FU WORKS !!!! price is Rp 411,523
+2026-08-10 11:21:05,922 [INFO] span found
+2026-08-10 11:21:05,933 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:21:15,948 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:21:17,955 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:21:17,958 [INFO] current_pos is : 871
+2026-08-10 11:21:18,319 [INFO] current_pos is : 1831
+2026-08-10 11:21:18,601 [INFO] current_pos is : 2641
+2026-08-10 11:21:19,045 [INFO] current_pos is : 3159
+2026-08-10 11:21:19,663 [INFO] current_pos is : 3805
+2026-08-10 11:21:20,205 [INFO] current_pos is : 4488
+2026-08-10 11:21:20,904 [INFO] current_pos is : 5064
+2026-08-10 11:21:21,115 [INFO] current_pos is : 5725
+2026-08-10 11:21:21,831 [INFO] current_pos is : 6629
+2026-08-10 11:21:21,962 [INFO] current_pos is : 7441
+2026-08-10 11:21:22,519 [INFO] current_pos is : 8350
+2026-08-10 11:21:23,172 [INFO] current_pos is : 9169
+2026-08-10 11:21:23,802 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:21:23,802 [INFO]   [scroll] Current Position is : 9169
+2026-08-10 11:21:23,804 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:21:28,809 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:21:33,815 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:21:54,093 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:21:54,110 [INFO] KUNG FU WORKS !!!! price is Rp 433,182
+2026-08-10 11:21:56,116 [INFO] span found
+2026-08-10 11:21:56,127 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:22:06,144 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:22:08,151 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:22:08,154 [INFO] current_pos is : 540
+2026-08-10 11:22:08,352 [INFO] current_pos is : 1360
+2026-08-10 11:22:08,762 [INFO] current_pos is : 2076
+2026-08-10 11:22:08,894 [INFO] current_pos is : 2739
+2026-08-10 11:22:09,487 [INFO] current_pos is : 3534
+2026-08-10 11:22:09,858 [INFO] current_pos is : 4213
+2026-08-10 11:22:10,021 [INFO] current_pos is : 4747
+2026-08-10 11:22:10,527 [INFO] current_pos is : 5402
+2026-08-10 11:22:10,720 [INFO] current_pos is : 6191
+2026-08-10 11:22:10,844 [INFO] current_pos is : 7154
+2026-08-10 11:22:11,488 [INFO] current_pos is : 8084
+2026-08-10 11:22:11,701 [INFO] current_pos is : 8658
+2026-08-10 11:22:11,856 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:22:11,857 [INFO]   [scroll] Current Position is : 8658
+2026-08-10 11:22:11,857 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:22:16,862 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:22:21,869 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:22:42,152 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:22:42,167 [INFO] KUNG FU WORKS !!!! price is Rp 453,477
+2026-08-10 11:22:44,174 [INFO] span found
+2026-08-10 11:22:44,186 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:22:54,202 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:22:56,209 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:22:56,213 [INFO] current_pos is : 797
+2026-08-10 11:22:56,575 [INFO] current_pos is : 1518
+2026-08-10 11:22:56,926 [INFO] current_pos is : 2335
+2026-08-10 11:22:57,153 [INFO] current_pos is : 3028
+2026-08-10 11:22:57,861 [INFO] current_pos is : 3549
+2026-08-10 11:22:58,403 [INFO] current_pos is : 4251
+2026-08-10 11:22:59,022 [INFO] current_pos is : 4838
+2026-08-10 11:22:59,638 [INFO] current_pos is : 5736
+2026-08-10 11:22:59,909 [INFO] current_pos is : 6274
+2026-08-10 11:23:00,411 [INFO] current_pos is : 7037
+2026-08-10 11:23:01,078 [INFO] current_pos is : 7619
+2026-08-10 11:23:01,658 [INFO] current_pos is : 8211
+2026-08-10 11:23:01,844 [INFO] current_pos is : 8852
+2026-08-10 11:23:02,194 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:23:02,194 [INFO]   [scroll] Current Position is : 8852
+2026-08-10 11:23:02,195 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:23:07,200 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:23:12,207 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:23:32,493 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:23:32,508 [INFO] KUNG FU WORKS !!!! price is Rp 458,877
+2026-08-10 11:23:34,515 [INFO] span found
+2026-08-10 11:23:34,526 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:23:44,551 [INFO] room_link found
+2026-08-10 11:23:44,562 [INFO] room type info eb : Suite
+2026-08-10 11:23:46,570 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:23:46,575 [INFO] current_pos is : 872
+2026-08-10 11:23:47,147 [INFO] current_pos is : 1515
+2026-08-10 11:23:47,409 [INFO] current_pos is : 2465
+2026-08-10 11:23:47,925 [INFO] current_pos is : 3106
+2026-08-10 11:23:48,169 [INFO] current_pos is : 3607
+2026-08-10 11:23:48,697 [INFO] current_pos is : 4446
+2026-08-10 11:23:49,385 [INFO] current_pos is : 5256
+2026-08-10 11:23:49,728 [INFO] current_pos is : 5931
+2026-08-10 11:23:50,169 [INFO] current_pos is : 6740
+2026-08-10 11:23:50,454 [INFO] current_pos is : 7599
+2026-08-10 11:23:51,041 [INFO] current_pos is : 8210
+2026-08-10 11:23:51,614 [INFO] current_pos is : 8867
+2026-08-10 11:23:51,794 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:23:51,794 [INFO]   [scroll] Current Position is : 8867
+2026-08-10 11:23:51,794 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:23:56,800 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:24:01,806 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:24:22,083 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:24:22,101 [INFO] KUNG FU WORKS !!!! price is Rp 773,662
+2026-08-10 11:24:24,108 [INFO] span found
+2026-08-10 11:24:24,119 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:24:34,136 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:24:36,144 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:24:36,148 [INFO] current_pos is : 684
+2026-08-10 11:24:36,550 [INFO] current_pos is : 1260
+2026-08-10 11:24:37,417 [INFO] current_pos is : 1781
+2026-08-10 11:24:38,079 [INFO] current_pos is : 2611
+2026-08-10 11:24:38,236 [INFO] current_pos is : 3586
+2026-08-10 11:24:38,352 [INFO] current_pos is : 4214
+2026-08-10 11:24:39,461 [INFO] current_pos is : 5050
+2026-08-10 11:24:39,729 [INFO] current_pos is : 5859
+2026-08-10 11:24:39,873 [INFO] current_pos is : 6795
+2026-08-10 11:24:40,155 [INFO] current_pos is : 7646
+2026-08-10 11:24:41,158 [INFO] current_pos is : 8401
+2026-08-10 11:24:41,800 [INFO] current_pos is : 8908
+2026-08-10 11:24:41,960 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:24:41,960 [INFO]   [scroll] Current Position is : 8908
+2026-08-10 11:24:41,960 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:24:46,965 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:24:51,972 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:25:12,252 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:25:12,268 [INFO] KUNG FU WORKS !!!! price is Rp 659,649
+2026-08-10 11:25:14,274 [INFO] span found
+2026-08-10 11:25:14,285 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:25:24,301 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:25:26,309 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:25:26,313 [INFO] current_pos is : 700
+2026-08-10 11:25:26,512 [INFO] current_pos is : 1525
+2026-08-10 11:25:26,709 [INFO] current_pos is : 2056
+2026-08-10 11:25:27,320 [INFO] current_pos is : 2898
+2026-08-10 11:25:27,787 [INFO] current_pos is : 3560
+2026-08-10 11:25:28,168 [INFO] current_pos is : 4549
+2026-08-10 11:25:28,577 [INFO] current_pos is : 5057
+2026-08-10 11:25:28,703 [INFO] current_pos is : 5742
+2026-08-10 11:25:29,252 [INFO] current_pos is : 6423
+2026-08-10 11:25:29,561 [INFO] current_pos is : 6968
+2026-08-10 11:25:29,683 [INFO] current_pos is : 7730
+2026-08-10 11:25:30,339 [INFO] current_pos is : 8287
+2026-08-10 11:25:31,053 [INFO] current_pos is : 8878
+2026-08-10 11:25:31,626 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:25:31,626 [INFO]   [scroll] Current Position is : 8878
+2026-08-10 11:25:31,627 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:25:36,631 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:25:41,639 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:26:01,920 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:26:01,936 [INFO] KUNG FU WORKS !!!! price is Rp 762,249
+2026-08-10 11:26:03,942 [INFO] span found
+2026-08-10 11:26:03,952 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:26:13,969 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:26:15,975 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:26:15,979 [INFO] current_pos is : 945
+2026-08-10 11:26:16,191 [INFO] current_pos is : 1864
+2026-08-10 11:26:16,689 [INFO] current_pos is : 2762
+2026-08-10 11:26:17,230 [INFO] current_pos is : 3493
+2026-08-10 11:26:18,356 [INFO] current_pos is : 4376
+2026-08-10 11:26:18,809 [INFO] current_pos is : 5185
+2026-08-10 11:26:19,004 [INFO] current_pos is : 6067
+2026-08-10 11:26:19,562 [INFO] current_pos is : 6921
+2026-08-10 11:26:19,922 [INFO] current_pos is : 7499
+2026-08-10 11:26:20,207 [INFO] current_pos is : 8064
+2026-08-10 11:26:20,674 [INFO] current_pos is : 8750
+2026-08-10 11:26:21,248 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:26:21,248 [INFO]   [scroll] Current Position is : 8750
+2026-08-10 11:26:21,248 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:26:26,255 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:26:31,261 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:26:51,545 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:26:51,561 [INFO] KUNG FU WORKS !!!! price is Rp 767,649
+2026-08-10 11:26:53,568 [INFO] span found
+2026-08-10 11:26:53,579 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:27:03,581 [INFO]   Sleeping 6.8s …
+2026-08-10 11:27:10,345 [INFO] Stratified sampling for MANUAL SEARCH start at today + 30 days
+2026-08-10 11:27:10,345 [INFO] Scraping Early Book Mode
+2026-08-10 11:27:10,345 [INFO]   Visiting: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-08-11&checkout=2026-08-12&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:27:10,346 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-09-09&checkout=2026-09-10&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:27:22,467 [INFO]   Scraping : https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?aid=304142&checkin=2026-09-09&checkout=2026-09-10&group_adults=2&req_adults=2&no_rooms=1
+2026-08-10 11:27:22,479 [INFO] Total <tr> rows found: 8
+2026-08-10 11:27:22,500 [INFO] room_link found
+2026-08-10 11:27:22,512 [INFO] room type info eb : Superior Double Room
+2026-08-10 11:27:24,518 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:27:24,521 [INFO] current_pos is : 732
+2026-08-10 11:27:25,109 [INFO] current_pos is : 1663
+2026-08-10 11:27:25,682 [INFO] current_pos is : 2401
+2026-08-10 11:27:26,303 [INFO] current_pos is : 2952
+2026-08-10 11:27:26,839 [INFO] current_pos is : 3905
+2026-08-10 11:27:27,205 [INFO] current_pos is : 4591
+2026-08-10 11:27:27,701 [INFO] current_pos is : 5117
+2026-08-10 11:27:27,953 [INFO] current_pos is : 6096
+2026-08-10 11:27:28,131 [INFO] current_pos is : 6900
+2026-08-10 11:27:28,668 [INFO] current_pos is : 7465
+2026-08-10 11:27:28,829 [INFO] current_pos is : 8371
+2026-08-10 11:27:29,062 [INFO] current_pos is : 9065
+2026-08-10 11:27:29,180 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:27:29,180 [INFO]   [scroll] Current Position is : 9065
+2026-08-10 11:27:29,180 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:27:34,185 [INFO] current_pos is : 9575
+2026-08-10 11:27:34,884 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:27:34,885 [INFO]   [scroll] Current Position is : 9575
+2026-08-10 11:27:34,885 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:27:39,890 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:27:44,897 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:28:05,173 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:28:05,192 [INFO] KUNG FU WORKS !!!! price is Rp 411,523
+2026-08-10 11:28:07,199 [INFO] span found
+2026-08-10 11:28:07,209 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:28:17,230 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:28:19,237 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:28:19,241 [INFO] current_pos is : 998
+2026-08-10 11:28:19,882 [INFO] current_pos is : 1708
+2026-08-10 11:28:20,101 [INFO] current_pos is : 2459
+2026-08-10 11:28:20,327 [INFO] current_pos is : 3125
+2026-08-10 11:28:20,974 [INFO] current_pos is : 3901
+2026-08-10 11:28:21,375 [INFO] current_pos is : 4604
+2026-08-10 11:28:21,705 [INFO] current_pos is : 5364
+2026-08-10 11:28:22,143 [INFO] current_pos is : 6188
+2026-08-10 11:28:22,466 [INFO] current_pos is : 7055
+2026-08-10 11:28:23,080 [INFO] current_pos is : 7919
+2026-08-10 11:28:23,222 [INFO] current_pos is : 8696
+2026-08-10 11:28:23,499 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:28:23,499 [INFO]   [scroll] Current Position is : 8696
+2026-08-10 11:28:23,501 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:28:28,505 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:28:33,513 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:28:53,793 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:28:53,812 [INFO] KUNG FU WORKS !!!! price is Rp 433,182
+2026-08-10 11:28:55,820 [INFO] span found
+2026-08-10 11:28:55,832 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:29:05,851 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:29:07,858 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:29:07,862 [INFO] current_pos is : 759
+2026-08-10 11:29:08,540 [INFO] current_pos is : 1758
+2026-08-10 11:29:09,001 [INFO] current_pos is : 2555
+2026-08-10 11:29:09,656 [INFO] current_pos is : 3114
+2026-08-10 11:29:09,904 [INFO] current_pos is : 3738
+2026-08-10 11:29:10,230 [INFO] current_pos is : 4531
+2026-08-10 11:29:10,763 [INFO] current_pos is : 5499
+2026-08-10 11:29:11,127 [INFO] current_pos is : 6239
+2026-08-10 11:29:11,792 [INFO] current_pos is : 6960
+2026-08-10 11:29:12,196 [INFO] current_pos is : 7557
+2026-08-10 11:29:12,466 [INFO] current_pos is : 8431
+2026-08-10 11:29:13,105 [INFO] current_pos is : 9134
+2026-08-10 11:29:13,627 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:29:13,627 [INFO]   [scroll] Current Position is : 9134
+2026-08-10 11:29:13,627 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:29:18,632 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:29:23,639 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:29:43,949 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:29:43,971 [INFO] KUNG FU WORKS !!!! price is Rp 453,477
+2026-08-10 11:29:45,978 [INFO] span found
+2026-08-10 11:29:45,993 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:29:56,013 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:29:58,020 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:29:58,023 [INFO] current_pos is : 542
+2026-08-10 11:29:58,730 [INFO] current_pos is : 1055
+2026-08-10 11:29:58,942 [INFO] current_pos is : 1618
+2026-08-10 11:29:59,899 [INFO] current_pos is : 2230
+2026-08-10 11:30:00,012 [INFO] current_pos is : 2747
+2026-08-10 11:30:00,311 [INFO] current_pos is : 3334
+2026-08-10 11:30:00,578 [INFO] current_pos is : 4330
+2026-08-10 11:30:00,907 [INFO] current_pos is : 5158
+2026-08-10 11:30:01,138 [INFO] current_pos is : 6086
+2026-08-10 11:30:01,247 [INFO] current_pos is : 6979
+2026-08-10 11:30:01,826 [INFO] current_pos is : 7713
+2026-08-10 11:30:02,054 [INFO] current_pos is : 8548
+2026-08-10 11:30:02,608 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:30:02,608 [INFO]   [scroll] Current Position is : 8548
+2026-08-10 11:30:02,608 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:30:07,615 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:30:12,623 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:30:32,939 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:30:32,963 [INFO] KUNG FU WORKS !!!! price is Rp 458,877
+2026-08-10 11:30:34,971 [INFO] span found
+2026-08-10 11:30:34,984 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:30:45,010 [INFO] room_link found
+2026-08-10 11:30:45,024 [INFO] room type info eb : Suite
+2026-08-10 11:30:47,032 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:30:47,035 [INFO] current_pos is : 510
+2026-08-10 11:30:47,718 [INFO] current_pos is : 1076
+2026-08-10 11:30:48,311 [INFO] current_pos is : 2000
+2026-08-10 11:30:48,994 [INFO] current_pos is : 2547
+2026-08-10 11:30:49,221 [INFO] current_pos is : 3411
+2026-08-10 11:30:49,838 [INFO] current_pos is : 4160
+2026-08-10 11:30:49,979 [INFO] current_pos is : 5047
+2026-08-10 11:30:50,352 [INFO] current_pos is : 5637
+2026-08-10 11:30:51,005 [INFO] current_pos is : 6291
+2026-08-10 11:30:51,595 [INFO] current_pos is : 7004
+2026-08-10 11:30:52,152 [INFO] current_pos is : 7838
+2026-08-10 11:30:52,528 [INFO] current_pos is : 8396
+2026-08-10 11:30:53,139 [INFO] current_pos is : 9126
+2026-08-10 11:30:53,434 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:30:53,434 [INFO]   [scroll] Current Position is : 9126
+2026-08-10 11:30:53,434 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:30:58,441 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:31:03,449 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:31:23,953 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:31:23,982 [INFO] KUNG FU WORKS !!!! price is Rp 773,662
+2026-08-10 11:31:25,991 [INFO] span found
+2026-08-10 11:31:26,005 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:31:36,030 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:31:38,040 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:31:38,043 [INFO] current_pos is : 523
+2026-08-10 11:31:39,065 [INFO] current_pos is : 1091
+2026-08-10 11:31:39,501 [INFO] current_pos is : 1861
+2026-08-10 11:31:40,095 [INFO] current_pos is : 2655
+2026-08-10 11:31:40,521 [INFO] current_pos is : 3237
+2026-08-10 11:31:40,794 [INFO] current_pos is : 4122
+2026-08-10 11:31:41,400 [INFO] current_pos is : 4815
+2026-08-10 11:31:41,893 [INFO] current_pos is : 5410
+2026-08-10 11:31:42,385 [INFO] current_pos is : 6041
+2026-08-10 11:31:42,821 [INFO] current_pos is : 6912
+2026-08-10 11:31:43,232 [INFO] current_pos is : 7663
+2026-08-10 11:31:43,777 [INFO] current_pos is : 8589
+2026-08-10 11:31:44,212 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:31:44,212 [INFO]   [scroll] Current Position is : 8589
+2026-08-10 11:31:44,212 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:31:49,218 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:31:54,226 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:32:14,538 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:32:14,558 [INFO] KUNG FU WORKS !!!! price is Rp 659,649
+2026-08-10 11:32:16,565 [INFO] span found
+2026-08-10 11:32:16,579 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:32:26,598 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:32:28,604 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:32:28,608 [INFO] current_pos is : 750
+2026-08-10 11:32:29,201 [INFO] current_pos is : 1687
+2026-08-10 11:32:29,479 [INFO] current_pos is : 2299
+2026-08-10 11:32:29,600 [INFO] current_pos is : 3078
+2026-08-10 11:32:29,967 [INFO] current_pos is : 3827
+2026-08-10 11:32:30,263 [INFO] current_pos is : 4572
+2026-08-10 11:32:30,812 [INFO] current_pos is : 5092
+2026-08-10 11:32:31,427 [INFO] current_pos is : 5825
+2026-08-10 11:32:31,658 [INFO] current_pos is : 6578
+2026-08-10 11:32:31,781 [INFO] current_pos is : 7324
+2026-08-10 11:32:32,440 [INFO] current_pos is : 7860
+2026-08-10 11:32:33,121 [INFO] current_pos is : 8371
+2026-08-10 11:32:33,528 [INFO] current_pos is : 8921
+2026-08-10 11:32:34,139 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:32:34,139 [INFO]   [scroll] Current Position is : 8921
+2026-08-10 11:32:34,139 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:32:39,145 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:32:44,153 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:33:04,454 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:33:04,470 [INFO] KUNG FU WORKS !!!! price is Rp 762,249
+2026-08-10 11:33:06,477 [INFO] span found
+2026-08-10 11:33:06,489 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:33:16,505 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-10 11:33:18,512 [INFO] trigger scrolling to fight lazy loader
+2026-08-10 11:33:18,515 [INFO] current_pos is : 695
+2026-08-10 11:33:19,078 [INFO] current_pos is : 1326
+2026-08-10 11:33:19,551 [INFO] current_pos is : 2074
+2026-08-10 11:33:19,862 [INFO] current_pos is : 2680
+2026-08-10 11:33:19,983 [INFO] current_pos is : 3443
+2026-08-10 11:33:20,356 [INFO] current_pos is : 4003
+2026-08-10 11:33:21,011 [INFO] current_pos is : 4724
+2026-08-10 11:33:21,610 [INFO] current_pos is : 5593
+2026-08-10 11:33:22,312 [INFO] current_pos is : 6207
+2026-08-10 11:33:22,542 [INFO] current_pos is : 6967
+2026-08-10 11:33:22,768 [INFO] current_pos is : 7689
+2026-08-10 11:33:22,948 [INFO] current_pos is : 8196
+2026-08-10 11:33:23,263 [INFO] current_pos is : 9082
+2026-08-10 11:33:23,763 [INFO]   [scroll] Scroll past current bottom
+2026-08-10 11:33:23,763 [INFO]   [scroll] Current Position is : 9082
+2026-08-10 11:33:23,763 [INFO]   [scroll] new_height 1 is : 8464
+2026-08-10 11:33:28,769 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-10 11:33:33,776 [INFO]   [scroll] Reached stable bottom.
+2026-08-10 11:33:54,073 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-10 11:33:54,089 [INFO] KUNG FU WORKS !!!! price is Rp 767,649
+2026-08-10 11:33:56,097 [INFO] span found
+2026-08-10 11:33:56,108 [INFO] notes info eb : ['Select Rooms']
+2026-08-10 11:34:06,109 [INFO]   Sleeping 6.7s …
+2026-08-10 11:34:12,865 [INFO] Flushed final batch of 4 records.
+2026-08-10 11:34:12,882 [INFO] Flushed final batch of 4 records.
+2026-08-10 11:34:12,883 [INFO] [CUSTOMER ONLY - MANUAL SEARCH] Session complete.
+2026-08-10 11:34:12,883 [INFO] Finish processing URL listed competitor.
+2026-08-10 11:34:12,883 [INFO] ==================================================
+2026-08-10 11:34:15,375 [INFO] Temp profile directory removed.
+2026-08-10 11:34:15,376 [INFO] Driver shut down. Session END.
+2026-08-10 11:34:15,376 [INFO] ==================================================
+2026-08-12 10:25:42,006 [INFO] ==================================================
+2026-08-12 10:25:42,006 [INFO] SESSION START
+2026-08-12 10:25:42,006 [INFO] ==================================================
+2026-08-12 10:25:42,006 [INFO] Date range: 2026-08-13 to 2026-08-14
+2026-08-12 10:25:42,023 [INFO] ====== WebDriver manager ======
+2026-08-12 10:25:43,291 [INFO] Get LATEST chromedriver version for google-chrome
+2026-08-12 10:25:43,544 [INFO] Get LATEST chromedriver version for google-chrome
+2026-08-12 10:25:43,753 [INFO] There is no [win64] chromedriver "151.0.7922.138" for browser google-chrome "151.0.7922" in cache
+2026-08-12 10:25:43,753 [INFO] Get LATEST chromedriver version for google-chrome
+2026-08-12 10:25:44,355 [INFO] WebDriver version 151.0.7922.138 selected
+2026-08-12 10:25:44,362 [INFO] Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/win32/chromedriver-win32.zip
+2026-08-12 10:25:44,362 [INFO] About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/win32/chromedriver-win32.zip
+2026-08-12 10:25:44,544 [INFO] Driver downloading response is 200
+2026-08-12 10:25:48,418 [INFO] Get LATEST chromedriver version for google-chrome
+2026-08-12 10:25:48,663 [INFO] Driver has been saved in cache [C:\Users\anton\.wdm\drivers\chromedriver\win64\151.0.7922.138]
+2026-08-12 10:25:52,324 [INFO] Chrome driver initialised.
+2026-08-12 10:25:52,324 [INFO] Scraping customer mode.
+2026-08-12 10:25:52,327 [INFO] Searching through all URLs that available.
+2026-08-12 10:25:52,328 [INFO] cross_check is : https://www.booking.com/hotel/id/abams-gili-air.html
+2026-08-12 10:25:52,328 [INFO] Found last checkpoint!!!
+2026-08-12 10:25:52,328 [INFO] Safe guarding with 35 properties limiter, breaking algorithm now!
+2026-08-12 10:25:52,328 [INFO] Targeting 3 customer this session.
+2026-08-12 10:25:52,328 [INFO] [1/3] Scraping …
+2026-08-12 10:25:52,329 [INFO] Stratified sampling start at today + 3 days
+2026-08-12 10:25:52,329 [INFO] Scraping last minute mode.
+2026-08-12 10:25:52,329 [INFO]   Visiting: https://www.booking.com/hotel/id/guest-house-abimanyu.html
+2026-08-12 10:25:53,387 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/guest-house-abimanyu.html?checkin=2026-08-15&checkout=2026-08-16&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:25:58,509 [INFO] villa/hotel = 1 and rating is: 3
+2026-08-12 10:26:18,954 [INFO] The availability on current date is not available, renew the date range.
+2026-08-12 10:26:20,872 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/guest-house-abimanyu.html?checkin=2026-08-16&checkout=2026-08-17&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:26:46,208 [INFO] The availability on current date is not available, renew the date range.
+2026-08-12 10:26:48,179 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/guest-house-abimanyu.html?checkin=2026-08-17&checkout=2026-08-18&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:26:58,223 [INFO]   Scraping : https://www.booking.com/hotel/id/guest-house-abimanyu.html?checkin=2026-08-17&checkout=2026-08-18&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:26:58,243 [INFO] Total <tr> rows found: 1
+2026-08-12 10:26:58,265 [INFO] room_link found
+2026-08-12 10:26:58,276 [INFO] room_type is Three-Bedroom House
+2026-08-12 10:27:00,286 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:27:00,290 [INFO] current_pos is : 541
+2026-08-12 10:27:00,762 [INFO] current_pos is : 1055
+2026-08-12 10:27:01,313 [INFO] current_pos is : 1870
+2026-08-12 10:27:02,016 [INFO] current_pos is : 2580
+2026-08-12 10:27:02,270 [INFO] current_pos is : 3176
+2026-08-12 10:27:03,123 [INFO] current_pos is : 4068
+2026-08-12 10:27:03,780 [INFO] current_pos is : 4581
+2026-08-12 10:27:03,958 [INFO] current_pos is : 5569
+2026-08-12 10:27:04,593 [INFO] current_pos is : 6198
+2026-08-12 10:27:05,237 [INFO] current_pos is : 6846
+2026-08-12 10:27:05,694 [INFO] current_pos is : 7413
+2026-08-12 10:27:05,828 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:27:05,828 [INFO]   [scroll] Current Position is : 7413
+2026-08-12 10:27:05,828 [INFO]   [scroll] new_height 1 is : 7350
+2026-08-12 10:27:10,836 [INFO] current_pos is : 8036
+2026-08-12 10:27:11,125 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:27:11,125 [INFO]   [scroll] Current Position is : 8036
+2026-08-12 10:27:11,125 [INFO]   [scroll] new_height 1 is : 7350
+2026-08-12 10:27:16,132 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:27:21,140 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:27:41,442 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:27:41,457 [INFO] KUNG-FU WORKS!!!! price is Rp 700,000
+2026-08-12 10:27:43,466 [INFO] span found
+2026-08-12 10:27:43,476 [INFO] room info ['Select Rooms']
+2026-08-12 10:27:53,479 [INFO]   Sleeping 6.0s …
+2026-08-12 10:27:59,463 [INFO] Stratified sampling start at today + 7 days
+2026-08-12 10:27:59,463 [INFO] Scraping last minute mode.
+2026-08-12 10:27:59,463 [INFO]   Visiting: https://www.booking.com/hotel/id/guest-house-abimanyu.html
+2026-08-12 10:28:01,618 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/guest-house-abimanyu.html?checkin=2026-08-19&checkout=2026-08-20&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:28:06,682 [INFO] villa/hotel = 1 and rating is: 3
+2026-08-12 10:28:11,698 [INFO]   Scraping : https://www.booking.com/hotel/id/guest-house-abimanyu.html?checkin=2026-08-19&checkout=2026-08-20&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:28:11,711 [INFO] Total <tr> rows found: 1
+2026-08-12 10:28:11,732 [INFO] room_link found
+2026-08-12 10:28:11,749 [INFO] room_type is Three-Bedroom House
+2026-08-12 10:28:13,757 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:28:13,761 [INFO] current_pos is : 962
+2026-08-12 10:28:14,115 [INFO] current_pos is : 1559
+2026-08-12 10:28:14,643 [INFO] current_pos is : 2180
+2026-08-12 10:28:14,887 [INFO] current_pos is : 2995
+2026-08-12 10:28:15,433 [INFO] current_pos is : 3840
+2026-08-12 10:28:15,888 [INFO] current_pos is : 4426
+2026-08-12 10:28:16,637 [INFO] current_pos is : 5210
+2026-08-12 10:28:16,868 [INFO] current_pos is : 6100
+2026-08-12 10:28:17,141 [INFO] current_pos is : 6747
+2026-08-12 10:28:17,492 [INFO] current_pos is : 7532
+2026-08-12 10:28:18,136 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:28:18,136 [INFO]   [scroll] Current Position is : 7532
+2026-08-12 10:28:18,136 [INFO]   [scroll] new_height 1 is : 7366
+2026-08-12 10:28:23,144 [INFO] current_pos is : 8370
+2026-08-12 10:28:23,491 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:28:23,491 [INFO]   [scroll] Current Position is : 8370
+2026-08-12 10:28:23,491 [INFO]   [scroll] new_height 1 is : 7366
+2026-08-12 10:28:28,497 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:28:33,505 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:28:53,799 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:28:53,809 [INFO] KUNG-FU WORKS!!!! price is Rp 600,000
+2026-08-12 10:28:55,816 [INFO] span found
+2026-08-12 10:28:55,826 [INFO] room info ['Select Rooms']
+2026-08-12 10:29:05,829 [INFO]   Sleeping 6.5s …
+2026-08-12 10:29:12,290 [INFO] Stratified sampling start at today + 14 days
+2026-08-12 10:29:12,290 [INFO] Scraping Early Book Mode
+2026-08-12 10:29:12,290 [INFO]   Visiting: https://www.booking.com/hotel/id/guest-house-abimanyu.html
+2026-08-12 10:29:12,291 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/guest-house-abimanyu.html?checkin=2026-08-26&checkout=2026-08-27&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:29:24,253 [INFO]   Scraping : https://www.booking.com/hotel/id/guest-house-abimanyu.html?checkin=2026-08-26&checkout=2026-08-27&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:29:24,265 [INFO] Total <tr> rows found: 1
+2026-08-12 10:29:24,286 [INFO] room_link found
+2026-08-12 10:29:24,299 [INFO] room type info eb : Three-Bedroom House
+2026-08-12 10:29:26,306 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:29:26,309 [INFO] current_pos is : 753
+2026-08-12 10:29:26,844 [INFO] current_pos is : 1677
+2026-08-12 10:29:27,834 [INFO] current_pos is : 2666
+2026-08-12 10:29:28,438 [INFO] current_pos is : 3207
+2026-08-12 10:29:28,665 [INFO] current_pos is : 4156
+2026-08-12 10:29:29,104 [INFO] current_pos is : 4711
+2026-08-12 10:29:29,315 [INFO] current_pos is : 5475
+2026-08-12 10:29:29,908 [INFO] current_pos is : 6057
+2026-08-12 10:29:30,560 [INFO] current_pos is : 6966
+2026-08-12 10:29:31,095 [INFO] current_pos is : 7563
+2026-08-12 10:29:32,177 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:29:32,177 [INFO]   [scroll] Current Position is : 7563
+2026-08-12 10:29:32,179 [INFO]   [scroll] new_height 1 is : 7366
+2026-08-12 10:29:37,183 [INFO] current_pos is : 8480
+2026-08-12 10:29:37,679 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:29:37,679 [INFO]   [scroll] Current Position is : 8480
+2026-08-12 10:29:37,679 [INFO]   [scroll] new_height 1 is : 7366
+2026-08-12 10:29:42,685 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:29:47,692 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:30:07,984 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:30:07,996 [INFO] KUNG FU WORKS !!!! price is Rp 600,000
+2026-08-12 10:30:10,003 [INFO] span found
+2026-08-12 10:30:10,013 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:30:20,017 [INFO]   Sleeping 5.8s …
+2026-08-12 10:30:25,811 [INFO] Stratified sampling start at today + 30 days
+2026-08-12 10:30:25,811 [INFO] Scraping Early Book Mode
+2026-08-12 10:30:25,811 [INFO]   Visiting: https://www.booking.com/hotel/id/guest-house-abimanyu.html
+2026-08-12 10:30:25,811 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/guest-house-abimanyu.html?checkin=2026-09-11&checkout=2026-09-12&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:30:37,875 [INFO]   Scraping : https://www.booking.com/hotel/id/guest-house-abimanyu.html?checkin=2026-09-11&checkout=2026-09-12&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:30:37,888 [INFO] Total <tr> rows found: 1
+2026-08-12 10:30:37,909 [INFO] room_link found
+2026-08-12 10:30:37,922 [INFO] room type info eb : Three-Bedroom House
+2026-08-12 10:30:39,930 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:30:39,931 [INFO] current_pos is : 525
+2026-08-12 10:30:40,399 [INFO] current_pos is : 1461
+2026-08-12 10:30:40,566 [INFO] current_pos is : 2053
+2026-08-12 10:30:41,420 [INFO] current_pos is : 2907
+2026-08-12 10:30:41,975 [INFO] current_pos is : 3547
+2026-08-12 10:30:42,615 [INFO] current_pos is : 4100
+2026-08-12 10:30:43,017 [INFO] current_pos is : 4986
+2026-08-12 10:30:43,630 [INFO] current_pos is : 5561
+2026-08-12 10:30:44,173 [INFO] current_pos is : 6397
+2026-08-12 10:30:44,554 [INFO] current_pos is : 7352
+2026-08-12 10:30:45,361 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:30:45,361 [INFO]   [scroll] Current Position is : 7352
+2026-08-12 10:30:45,361 [INFO]   [scroll] new_height 1 is : 7350
+2026-08-12 10:30:50,368 [INFO] current_pos is : 8041
+2026-08-12 10:30:50,898 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:30:50,898 [INFO]   [scroll] Current Position is : 8041
+2026-08-12 10:30:50,898 [INFO]   [scroll] new_height 1 is : 7350
+2026-08-12 10:30:55,905 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:31:00,913 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:31:21,208 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:31:21,221 [INFO] KUNG FU WORKS !!!! price is Rp 700,000
+2026-08-12 10:31:23,228 [INFO] span found
+2026-08-12 10:31:23,239 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:31:33,241 [INFO]   Sleeping 5.1s …
+2026-08-12 10:31:38,389 [INFO] [2/3] Scraping …
+2026-08-12 10:31:38,389 [INFO] Stratified sampling start at today + 3 days
+2026-08-12 10:31:38,389 [INFO] Scraping last minute mode.
+2026-08-12 10:31:38,390 [INFO]   Visiting: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html
+2026-08-12 10:31:40,573 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?checkin=2026-08-15&checkout=2026-08-16&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:31:45,644 [INFO] villa/hotel = 2 and rating is: 3
+2026-08-12 10:31:50,649 [INFO]   Scraping : https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?checkin=2026-08-15&checkout=2026-08-16&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:31:50,663 [INFO] Total <tr> rows found: 8
+2026-08-12 10:31:50,682 [INFO] room_link found
+2026-08-12 10:31:50,694 [INFO] room_type is Superior Double Room
+2026-08-12 10:31:52,702 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:31:52,706 [INFO] current_pos is : 970
+2026-08-12 10:31:53,311 [INFO] current_pos is : 1943
+2026-08-12 10:31:53,710 [INFO] current_pos is : 2679
+2026-08-12 10:31:53,963 [INFO] current_pos is : 3386
+2026-08-12 10:31:54,477 [INFO] current_pos is : 4156
+2026-08-12 10:31:54,932 [INFO] current_pos is : 4663
+2026-08-12 10:31:55,414 [INFO] current_pos is : 5384
+2026-08-12 10:31:55,546 [INFO] current_pos is : 6272
+2026-08-12 10:31:55,714 [INFO] current_pos is : 7113
+2026-08-12 10:31:56,034 [INFO] current_pos is : 7866
+2026-08-12 10:31:56,431 [INFO] current_pos is : 8391
+2026-08-12 10:31:56,921 [INFO] current_pos is : 8891
+2026-08-12 10:31:57,489 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:31:57,490 [INFO]   [scroll] Current Position is : 8891
+2026-08-12 10:31:57,490 [INFO]   [scroll] new_height 1 is : 8490
+2026-08-12 10:32:02,496 [INFO] current_pos is : 9735
+2026-08-12 10:32:02,718 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:32:02,718 [INFO]   [scroll] Current Position is : 9735
+2026-08-12 10:32:02,719 [INFO]   [scroll] new_height 1 is : 8490
+2026-08-12 10:32:07,724 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:32:12,732 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:32:33,028 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:32:33,046 [INFO] KUNG-FU WORKS!!!! price is Rp 973,196
+2026-08-12 10:32:35,054 [INFO] span found
+2026-08-12 10:32:35,065 [INFO] room info ['Select Rooms']
+2026-08-12 10:32:45,084 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:32:47,091 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:32:47,094 [INFO] current_pos is : 663
+2026-08-12 10:32:47,390 [INFO] current_pos is : 1498
+2026-08-12 10:32:47,924 [INFO] current_pos is : 2001
+2026-08-12 10:32:48,379 [INFO] current_pos is : 2976
+2026-08-12 10:32:48,905 [INFO] current_pos is : 3727
+2026-08-12 10:32:49,574 [INFO] current_pos is : 4255
+2026-08-12 10:32:49,731 [INFO] current_pos is : 4938
+2026-08-12 10:32:50,428 [INFO] current_pos is : 5599
+2026-08-12 10:32:51,004 [INFO] current_pos is : 6134
+2026-08-12 10:32:51,490 [INFO] current_pos is : 6981
+2026-08-12 10:32:51,824 [INFO] current_pos is : 7542
+2026-08-12 10:32:52,309 [INFO] current_pos is : 8433
+2026-08-12 10:32:52,861 [INFO] current_pos is : 9280
+2026-08-12 10:32:53,136 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:32:53,136 [INFO]   [scroll] Current Position is : 9280
+2026-08-12 10:32:53,137 [INFO]   [scroll] new_height 1 is : 8490
+2026-08-12 10:32:58,142 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:33:03,150 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:33:23,448 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:33:23,466 [INFO] KUNG-FU WORKS!!!! price is Rp 1,024,417
+2026-08-12 10:33:25,474 [INFO] span found
+2026-08-12 10:33:25,485 [INFO] room info ['Select Rooms']
+2026-08-12 10:33:35,504 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:33:37,511 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:33:37,515 [INFO] current_pos is : 800
+2026-08-12 10:33:37,734 [INFO] current_pos is : 1741
+2026-08-12 10:33:38,265 [INFO] current_pos is : 2588
+2026-08-12 10:33:38,593 [INFO] current_pos is : 3345
+2026-08-12 10:33:38,800 [INFO] current_pos is : 3891
+2026-08-12 10:33:39,431 [INFO] current_pos is : 4755
+2026-08-12 10:33:39,563 [INFO] current_pos is : 5490
+2026-08-12 10:33:40,190 [INFO] current_pos is : 6326
+2026-08-12 10:33:40,896 [INFO] current_pos is : 7264
+2026-08-12 10:33:41,635 [INFO] current_pos is : 7962
+2026-08-12 10:33:41,882 [INFO] current_pos is : 8911
+2026-08-12 10:33:42,552 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:33:42,552 [INFO]   [scroll] Current Position is : 8911
+2026-08-12 10:33:42,552 [INFO]   [scroll] new_height 1 is : 8490
+2026-08-12 10:33:47,558 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:33:52,566 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:34:12,864 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:34:12,887 [INFO] KUNG-FU WORKS!!!! price is Rp 932,377
+2026-08-12 10:34:14,895 [INFO] span found
+2026-08-12 10:34:14,906 [INFO] room info ['Select Rooms']
+2026-08-12 10:34:24,924 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:34:26,932 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:34:26,937 [INFO] current_pos is : 837
+2026-08-12 10:34:27,604 [INFO] current_pos is : 1681
+2026-08-12 10:34:27,998 [INFO] current_pos is : 2254
+2026-08-12 10:34:29,031 [INFO] current_pos is : 3003
+2026-08-12 10:34:29,204 [INFO] current_pos is : 3906
+2026-08-12 10:34:29,647 [INFO] current_pos is : 4455
+2026-08-12 10:34:30,029 [INFO] current_pos is : 5360
+2026-08-12 10:34:30,681 [INFO] current_pos is : 6208
+2026-08-12 10:34:31,315 [INFO] current_pos is : 6993
+2026-08-12 10:34:31,463 [INFO] current_pos is : 7911
+2026-08-12 10:34:31,817 [INFO] current_pos is : 8690
+2026-08-12 10:34:32,451 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:34:32,451 [INFO]   [scroll] Current Position is : 8690
+2026-08-12 10:34:32,451 [INFO]   [scroll] new_height 1 is : 8490
+2026-08-12 10:34:37,457 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:34:42,465 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:35:02,775 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:35:02,796 [INFO] KUNG-FU WORKS!!!! price is Rp 1,157,750
+2026-08-12 10:35:04,805 [INFO] span found
+2026-08-12 10:35:04,815 [INFO] room info ['Select Rooms']
+2026-08-12 10:35:14,837 [INFO] room_link found
+2026-08-12 10:35:14,848 [INFO] room_type is Suite
+2026-08-12 10:35:16,856 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:35:16,860 [INFO] current_pos is : 579
+2026-08-12 10:35:17,279 [INFO] current_pos is : 1297
+2026-08-12 10:35:17,885 [INFO] current_pos is : 1922
+2026-08-12 10:35:18,416 [INFO] current_pos is : 2545
+2026-08-12 10:35:18,641 [INFO] current_pos is : 3405
+2026-08-12 10:35:18,809 [INFO] current_pos is : 3937
+2026-08-12 10:35:19,189 [INFO] current_pos is : 4570
+2026-08-12 10:35:19,400 [INFO] current_pos is : 5427
+2026-08-12 10:35:19,658 [INFO] current_pos is : 6183
+2026-08-12 10:35:19,790 [INFO] current_pos is : 6919
+2026-08-12 10:35:20,087 [INFO] current_pos is : 7685
+2026-08-12 10:35:20,463 [INFO] current_pos is : 8318
+2026-08-12 10:35:20,730 [INFO] current_pos is : 8890
+2026-08-12 10:35:21,045 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:35:21,045 [INFO]   [scroll] Current Position is : 8890
+2026-08-12 10:35:21,045 [INFO]   [scroll] new_height 1 is : 8490
+2026-08-12 10:35:26,052 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:35:31,061 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:35:51,356 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:35:51,374 [INFO] KUNG-FU WORKS!!!! price is Rp 1,016,893
+2026-08-12 10:35:53,382 [INFO] span found
+2026-08-12 10:35:53,392 [INFO] room info ['Select Rooms']
+2026-08-12 10:36:03,411 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:36:05,418 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:36:05,422 [INFO] current_pos is : 754
+2026-08-12 10:36:05,572 [INFO] current_pos is : 1404
+2026-08-12 10:36:06,160 [INFO] current_pos is : 2285
+2026-08-12 10:36:06,301 [INFO] current_pos is : 3031
+2026-08-12 10:36:06,877 [INFO] current_pos is : 3617
+2026-08-12 10:36:07,038 [INFO] current_pos is : 4192
+2026-08-12 10:36:07,457 [INFO] current_pos is : 5113
+2026-08-12 10:36:08,032 [INFO] current_pos is : 5758
+2026-08-12 10:36:09,130 [INFO] current_pos is : 6361
+2026-08-12 10:36:09,773 [INFO] current_pos is : 6893
+2026-08-12 10:36:09,998 [INFO] current_pos is : 7739
+2026-08-12 10:36:11,088 [INFO] current_pos is : 8447
+2026-08-12 10:36:11,390 [INFO] current_pos is : 9109
+2026-08-12 10:36:11,711 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:36:11,711 [INFO]   [scroll] Current Position is : 9109
+2026-08-12 10:36:11,711 [INFO]   [scroll] new_height 1 is : 8490
+2026-08-12 10:36:16,718 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:36:21,725 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:36:42,024 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:36:42,041 [INFO] KUNG-FU WORKS!!!! price is Rp 1,070,413
+2026-08-12 10:36:44,048 [INFO] span found
+2026-08-12 10:36:44,060 [INFO] room info ['Select Rooms']
+2026-08-12 10:36:54,078 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:36:56,085 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:36:56,089 [INFO] current_pos is : 572
+2026-08-12 10:36:56,483 [INFO] current_pos is : 1097
+2026-08-12 10:36:57,035 [INFO] current_pos is : 1952
+2026-08-12 10:36:57,340 [INFO] current_pos is : 2546
+2026-08-12 10:36:57,867 [INFO] current_pos is : 3173
+2026-08-12 10:36:58,214 [INFO] current_pos is : 3947
+2026-08-12 10:36:58,577 [INFO] current_pos is : 4629
+2026-08-12 10:36:59,379 [INFO] current_pos is : 5498
+2026-08-12 10:37:00,055 [INFO] current_pos is : 6085
+2026-08-12 10:37:00,546 [INFO] current_pos is : 6713
+2026-08-12 10:37:00,818 [INFO] current_pos is : 7580
+2026-08-12 10:37:01,015 [INFO] current_pos is : 8113
+2026-08-12 10:37:01,209 [INFO] current_pos is : 8999
+2026-08-12 10:37:01,707 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:37:01,707 [INFO]   [scroll] Current Position is : 8999
+2026-08-12 10:37:01,707 [INFO]   [scroll] new_height 1 is : 8490
+2026-08-12 10:37:06,713 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:37:11,720 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:37:32,021 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:37:32,038 [INFO] KUNG-FU WORKS!!!! price is Rp 1,173,013
+2026-08-12 10:37:34,046 [INFO] span found
+2026-08-12 10:37:34,058 [INFO] room info ['Select Rooms']
+2026-08-12 10:37:44,075 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:37:46,084 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:37:46,087 [INFO] current_pos is : 589
+2026-08-12 10:37:46,578 [INFO] current_pos is : 1497
+2026-08-12 10:37:47,054 [INFO] current_pos is : 2354
+2026-08-12 10:37:47,494 [INFO] current_pos is : 3086
+2026-08-12 10:37:47,962 [INFO] current_pos is : 4028
+2026-08-12 10:37:48,173 [INFO] current_pos is : 4926
+2026-08-12 10:37:49,150 [INFO] current_pos is : 5627
+2026-08-12 10:37:49,717 [INFO] current_pos is : 6597
+2026-08-12 10:37:50,818 [INFO] current_pos is : 7410
+2026-08-12 10:37:51,398 [INFO] current_pos is : 8059
+2026-08-12 10:37:51,885 [INFO] current_pos is : 8911
+2026-08-12 10:37:52,176 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:37:52,176 [INFO]   [scroll] Current Position is : 8911
+2026-08-12 10:37:52,176 [INFO]   [scroll] new_height 1 is : 8490
+2026-08-12 10:37:57,183 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:38:02,190 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:38:22,481 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:38:22,499 [INFO] KUNG-FU WORKS!!!! price is Rp 1,454,831
+2026-08-12 10:38:24,506 [INFO] span found
+2026-08-12 10:38:24,517 [INFO] room info ['Select Rooms']
+2026-08-12 10:38:34,518 [INFO]   Sleeping 5.4s …
+2026-08-12 10:38:39,915 [INFO] Stratified sampling start at today + 7 days
+2026-08-12 10:38:39,915 [INFO] Scraping last minute mode.
+2026-08-12 10:38:39,915 [INFO]   Visiting: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html
+2026-08-12 10:38:42,455 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?checkin=2026-08-19&checkout=2026-08-20&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:38:47,531 [INFO] villa/hotel = 2 and rating is: 3
+2026-08-12 10:38:52,538 [INFO]   Scraping : https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?checkin=2026-08-19&checkout=2026-08-20&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:38:52,551 [INFO] Total <tr> rows found: 8
+2026-08-12 10:38:52,571 [INFO] room_link found
+2026-08-12 10:38:52,583 [INFO] room_type is Superior Double Room
+2026-08-12 10:38:54,591 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:38:54,594 [INFO] current_pos is : 985
+2026-08-12 10:38:54,912 [INFO] current_pos is : 1584
+2026-08-12 10:38:55,363 [INFO] current_pos is : 2205
+2026-08-12 10:38:55,722 [INFO] current_pos is : 2952
+2026-08-12 10:38:56,262 [INFO] current_pos is : 3570
+2026-08-12 10:38:56,553 [INFO] current_pos is : 4468
+2026-08-12 10:38:56,854 [INFO] current_pos is : 5297
+2026-08-12 10:38:57,192 [INFO] current_pos is : 5835
+2026-08-12 10:38:57,545 [INFO] current_pos is : 6582
+2026-08-12 10:38:57,896 [INFO] current_pos is : 7160
+2026-08-12 10:38:58,365 [INFO] current_pos is : 8030
+2026-08-12 10:38:58,629 [INFO] current_pos is : 8878
+2026-08-12 10:38:58,959 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:38:58,959 [INFO]   [scroll] Current Position is : 8878
+2026-08-12 10:38:58,959 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:39:03,965 [INFO] current_pos is : 9722
+2026-08-12 10:39:04,112 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:39:04,113 [INFO]   [scroll] Current Position is : 9722
+2026-08-12 10:39:04,113 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:39:09,117 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:39:14,124 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:39:34,400 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:39:34,417 [INFO] KUNG-FU WORKS!!!! price is Rp 973,196
+2026-08-12 10:39:36,425 [INFO] span found
+2026-08-12 10:39:36,444 [INFO] room info ['Select Rooms']
+2026-08-12 10:39:46,462 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:39:48,469 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:39:48,473 [INFO] current_pos is : 884
+2026-08-12 10:39:48,706 [INFO] current_pos is : 1797
+2026-08-12 10:39:49,416 [INFO] current_pos is : 2504
+2026-08-12 10:39:49,677 [INFO] current_pos is : 3317
+2026-08-12 10:39:50,139 [INFO] current_pos is : 4079
+2026-08-12 10:39:50,454 [INFO] current_pos is : 4928
+2026-08-12 10:39:50,876 [INFO] current_pos is : 5869
+2026-08-12 10:39:51,385 [INFO] current_pos is : 6727
+2026-08-12 10:39:51,612 [INFO] current_pos is : 7589
+2026-08-12 10:39:52,056 [INFO] current_pos is : 8589
+2026-08-12 10:39:52,487 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:39:52,487 [INFO]   [scroll] Current Position is : 8589
+2026-08-12 10:39:52,487 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:39:57,493 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:40:02,502 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:40:22,801 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:40:22,819 [INFO] KUNG-FU WORKS!!!! price is Rp 1,024,417
+2026-08-12 10:40:24,826 [INFO] span found
+2026-08-12 10:40:24,838 [INFO] room info ['Select Rooms']
+2026-08-12 10:40:34,856 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:40:36,862 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:40:36,867 [INFO] current_pos is : 809
+2026-08-12 10:40:37,538 [INFO] current_pos is : 1796
+2026-08-12 10:40:38,176 [INFO] current_pos is : 2503
+2026-08-12 10:40:38,739 [INFO] current_pos is : 3117
+2026-08-12 10:40:39,341 [INFO] current_pos is : 3965
+2026-08-12 10:40:39,803 [INFO] current_pos is : 4894
+2026-08-12 10:40:41,038 [INFO] current_pos is : 5880
+2026-08-12 10:40:41,164 [INFO] current_pos is : 6816
+2026-08-12 10:40:41,656 [INFO] current_pos is : 7712
+2026-08-12 10:40:42,241 [INFO] current_pos is : 8322
+2026-08-12 10:40:42,715 [INFO] current_pos is : 9064
+2026-08-12 10:40:43,333 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:40:43,341 [INFO]   [scroll] Current Position is : 9064
+2026-08-12 10:40:43,341 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:40:48,347 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:40:53,354 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:41:13,637 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:41:13,654 [INFO] KUNG-FU WORKS!!!! price is Rp 932,377
+2026-08-12 10:41:15,661 [INFO] span found
+2026-08-12 10:41:15,671 [INFO] room info ['Select Rooms']
+2026-08-12 10:41:25,687 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:41:27,695 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:41:27,699 [INFO] current_pos is : 929
+2026-08-12 10:41:28,184 [INFO] current_pos is : 1559
+2026-08-12 10:41:28,729 [INFO] current_pos is : 2487
+2026-08-12 10:41:28,976 [INFO] current_pos is : 3275
+2026-08-12 10:41:29,131 [INFO] current_pos is : 4101
+2026-08-12 10:41:29,600 [INFO] current_pos is : 4614
+2026-08-12 10:41:29,871 [INFO] current_pos is : 5613
+2026-08-12 10:41:30,271 [INFO] current_pos is : 6440
+2026-08-12 10:41:30,823 [INFO] current_pos is : 7208
+2026-08-12 10:41:31,385 [INFO] current_pos is : 7879
+2026-08-12 10:41:31,636 [INFO] current_pos is : 8525
+2026-08-12 10:41:32,592 [INFO] current_pos is : 9085
+2026-08-12 10:41:33,138 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:41:33,138 [INFO]   [scroll] Current Position is : 9085
+2026-08-12 10:41:33,138 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:41:38,143 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:41:43,151 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:42:03,418 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:42:03,434 [INFO] KUNG-FU WORKS!!!! price is Rp 1,157,750
+2026-08-12 10:42:05,441 [INFO] span found
+2026-08-12 10:42:05,451 [INFO] room info ['Select Rooms']
+2026-08-12 10:42:15,474 [INFO] room_link found
+2026-08-12 10:42:15,485 [INFO] room_type is Suite
+2026-08-12 10:42:17,491 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:42:17,495 [INFO] current_pos is : 967
+2026-08-12 10:42:18,000 [INFO] current_pos is : 1496
+2026-08-12 10:42:18,598 [INFO] current_pos is : 2349
+2026-08-12 10:42:19,109 [INFO] current_pos is : 3244
+2026-08-12 10:42:19,763 [INFO] current_pos is : 4207
+2026-08-12 10:42:19,954 [INFO] current_pos is : 5002
+2026-08-12 10:42:20,783 [INFO] current_pos is : 5754
+2026-08-12 10:42:21,123 [INFO] current_pos is : 6305
+2026-08-12 10:42:21,463 [INFO] current_pos is : 6909
+2026-08-12 10:42:21,674 [INFO] current_pos is : 7467
+2026-08-12 10:42:21,833 [INFO] current_pos is : 8294
+2026-08-12 10:42:22,141 [INFO] current_pos is : 8996
+2026-08-12 10:42:22,429 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:42:22,429 [INFO]   [scroll] Current Position is : 8996
+2026-08-12 10:42:22,429 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:42:27,435 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:42:32,443 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:42:52,724 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:42:52,740 [INFO] KUNG-FU WORKS!!!! price is Rp 1,255,423
+2026-08-12 10:42:54,747 [INFO] span found
+2026-08-12 10:42:54,757 [INFO] room info ['Select Rooms']
+2026-08-12 10:43:04,773 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:43:06,779 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:43:06,783 [INFO] current_pos is : 979
+2026-08-12 10:43:07,136 [INFO] current_pos is : 1880
+2026-08-12 10:43:07,463 [INFO] current_pos is : 2618
+2026-08-12 10:43:07,826 [INFO] current_pos is : 3529
+2026-08-12 10:43:08,090 [INFO] current_pos is : 4346
+2026-08-12 10:43:08,497 [INFO] current_pos is : 4986
+2026-08-12 10:43:08,764 [INFO] current_pos is : 5806
+2026-08-12 10:43:09,336 [INFO] current_pos is : 6470
+2026-08-12 10:43:09,870 [INFO] current_pos is : 7282
+2026-08-12 10:43:10,423 [INFO] current_pos is : 8081
+2026-08-12 10:43:11,174 [INFO] current_pos is : 8827
+2026-08-12 10:43:11,801 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:43:11,801 [INFO]   [scroll] Current Position is : 8827
+2026-08-12 10:43:11,801 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:43:16,808 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:43:21,815 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:43:42,083 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:43:42,100 [INFO] KUNG-FU WORKS!!!! price is Rp 1,321,497
+2026-08-12 10:43:44,106 [INFO] span found
+2026-08-12 10:43:44,118 [INFO] room info ['Select Rooms']
+2026-08-12 10:43:54,135 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:43:56,141 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:43:56,145 [INFO] current_pos is : 513
+2026-08-12 10:43:56,809 [INFO] current_pos is : 1370
+2026-08-12 10:43:57,392 [INFO] current_pos is : 2305
+2026-08-12 10:43:57,577 [INFO] current_pos is : 3029
+2026-08-12 10:43:58,144 [INFO] current_pos is : 3600
+2026-08-12 10:43:59,115 [INFO] current_pos is : 4125
+2026-08-12 10:43:59,264 [INFO] current_pos is : 4640
+2026-08-12 10:43:59,545 [INFO] current_pos is : 5443
+2026-08-12 10:43:59,893 [INFO] current_pos is : 6298
+2026-08-12 10:44:00,012 [INFO] current_pos is : 6954
+2026-08-12 10:44:00,447 [INFO] current_pos is : 7745
+2026-08-12 10:44:00,637 [INFO] current_pos is : 8426
+2026-08-12 10:44:01,340 [INFO] current_pos is : 9337
+2026-08-12 10:44:01,657 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:44:01,657 [INFO]   [scroll] Current Position is : 9337
+2026-08-12 10:44:01,658 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:44:06,663 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:44:11,671 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:44:31,947 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:44:31,964 [INFO] KUNG-FU WORKS!!!! price is Rp 1,173,013
+2026-08-12 10:44:33,970 [INFO] span found
+2026-08-12 10:44:33,981 [INFO] room info ['Select Rooms']
+2026-08-12 10:44:43,998 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:44:46,005 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:44:46,008 [INFO] current_pos is : 872
+2026-08-12 10:44:46,187 [INFO] current_pos is : 1579
+2026-08-12 10:44:46,865 [INFO] current_pos is : 2316
+2026-08-12 10:44:47,300 [INFO] current_pos is : 2925
+2026-08-12 10:44:47,719 [INFO] current_pos is : 3747
+2026-08-12 10:44:47,834 [INFO] current_pos is : 4672
+2026-08-12 10:44:48,154 [INFO] current_pos is : 5192
+2026-08-12 10:44:48,985 [INFO] current_pos is : 6013
+2026-08-12 10:44:49,198 [INFO] current_pos is : 6552
+2026-08-12 10:44:49,790 [INFO] current_pos is : 7267
+2026-08-12 10:44:50,196 [INFO] current_pos is : 7998
+2026-08-12 10:44:50,723 [INFO] current_pos is : 8944
+2026-08-12 10:44:51,282 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:44:51,282 [INFO]   [scroll] Current Position is : 8944
+2026-08-12 10:44:51,282 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:44:56,287 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:45:01,293 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:45:21,557 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:45:21,572 [INFO] KUNG-FU WORKS!!!! price is Rp 1,178,413
+2026-08-12 10:45:23,578 [INFO] span found
+2026-08-12 10:45:23,588 [INFO] room info ['Select Rooms']
+2026-08-12 10:45:33,591 [INFO]   Sleeping 5.6s …
+2026-08-12 10:45:39,227 [INFO] Stratified sampling start at today + 14 days
+2026-08-12 10:45:39,227 [INFO] Scraping Early Book Mode
+2026-08-12 10:45:39,227 [INFO]   Visiting: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html
+2026-08-12 10:45:39,228 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?checkin=2026-08-26&checkout=2026-08-27&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:45:51,547 [INFO]   Scraping : https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?checkin=2026-08-26&checkout=2026-08-27&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:45:51,559 [INFO] Total <tr> rows found: 8
+2026-08-12 10:45:51,578 [INFO] room_link found
+2026-08-12 10:45:51,590 [INFO] room type info eb : Superior Double Room
+2026-08-12 10:45:53,596 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:45:53,599 [INFO] current_pos is : 760
+2026-08-12 10:45:54,247 [INFO] current_pos is : 1412
+2026-08-12 10:45:54,896 [INFO] current_pos is : 2004
+2026-08-12 10:45:55,343 [INFO] current_pos is : 2526
+2026-08-12 10:45:55,600 [INFO] current_pos is : 3493
+2026-08-12 10:45:56,699 [INFO] current_pos is : 4245
+2026-08-12 10:45:56,869 [INFO] current_pos is : 4864
+2026-08-12 10:45:57,199 [INFO] current_pos is : 5742
+2026-08-12 10:45:57,739 [INFO] current_pos is : 6313
+2026-08-12 10:45:58,343 [INFO] current_pos is : 6849
+2026-08-12 10:45:58,622 [INFO] current_pos is : 7692
+2026-08-12 10:45:59,001 [INFO] current_pos is : 8470
+2026-08-12 10:45:59,617 [INFO] current_pos is : 9339
+2026-08-12 10:46:00,584 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:46:00,584 [INFO]   [scroll] Current Position is : 9339
+2026-08-12 10:46:00,584 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:46:05,589 [INFO] current_pos is : 9906
+2026-08-12 10:46:06,243 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:46:06,243 [INFO]   [scroll] Current Position is : 9906
+2026-08-12 10:46:06,244 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:46:11,249 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:46:16,255 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:46:36,526 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:46:36,541 [INFO] KUNG FU WORKS !!!! price is Rp 973,196
+2026-08-12 10:46:38,548 [INFO] span found
+2026-08-12 10:46:38,558 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:46:48,578 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:46:50,585 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:46:50,588 [INFO] current_pos is : 706
+2026-08-12 10:46:51,082 [INFO] current_pos is : 1596
+2026-08-12 10:46:51,639 [INFO] current_pos is : 2370
+2026-08-12 10:46:51,797 [INFO] current_pos is : 3243
+2026-08-12 10:46:52,194 [INFO] current_pos is : 4159
+2026-08-12 10:46:52,901 [INFO] current_pos is : 4780
+2026-08-12 10:46:53,437 [INFO] current_pos is : 5618
+2026-08-12 10:46:53,693 [INFO] current_pos is : 6216
+2026-08-12 10:46:54,361 [INFO] current_pos is : 7190
+2026-08-12 10:46:54,688 [INFO] current_pos is : 8173
+2026-08-12 10:46:54,881 [INFO] current_pos is : 8731
+2026-08-12 10:46:55,481 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:46:55,481 [INFO]   [scroll] Current Position is : 8731
+2026-08-12 10:46:55,481 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:47:00,486 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:47:05,494 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:47:25,767 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:47:25,782 [INFO] KUNG FU WORKS !!!! price is Rp 1,024,417
+2026-08-12 10:47:27,788 [INFO] span found
+2026-08-12 10:47:27,799 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:47:37,817 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:47:39,824 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:47:39,828 [INFO] current_pos is : 541
+2026-08-12 10:47:39,983 [INFO] current_pos is : 1089
+2026-08-12 10:47:40,490 [INFO] current_pos is : 1785
+2026-08-12 10:47:40,802 [INFO] current_pos is : 2537
+2026-08-12 10:47:41,263 [INFO] current_pos is : 3431
+2026-08-12 10:47:42,402 [INFO] current_pos is : 4199
+2026-08-12 10:47:42,635 [INFO] current_pos is : 5036
+2026-08-12 10:47:42,872 [INFO] current_pos is : 5900
+2026-08-12 10:47:43,306 [INFO] current_pos is : 6835
+2026-08-12 10:47:43,911 [INFO] current_pos is : 7615
+2026-08-12 10:47:44,526 [INFO] current_pos is : 8294
+2026-08-12 10:47:45,074 [INFO] current_pos is : 9080
+2026-08-12 10:47:45,402 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:47:45,402 [INFO]   [scroll] Current Position is : 9080
+2026-08-12 10:47:45,402 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:47:50,407 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:47:55,414 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:48:15,697 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:48:15,711 [INFO] KUNG FU WORKS !!!! price is Rp 932,377
+2026-08-12 10:48:17,718 [INFO] span found
+2026-08-12 10:48:17,730 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:48:27,747 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:48:29,754 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:48:29,757 [INFO] current_pos is : 893
+2026-08-12 10:48:30,015 [INFO] current_pos is : 1433
+2026-08-12 10:48:30,621 [INFO] current_pos is : 2180
+2026-08-12 10:48:31,110 [INFO] current_pos is : 2911
+2026-08-12 10:48:31,588 [INFO] current_pos is : 3814
+2026-08-12 10:48:31,855 [INFO] current_pos is : 4800
+2026-08-12 10:48:32,438 [INFO] current_pos is : 5759
+2026-08-12 10:48:33,138 [INFO] current_pos is : 6625
+2026-08-12 10:48:33,450 [INFO] current_pos is : 7422
+2026-08-12 10:48:33,653 [INFO] current_pos is : 8416
+2026-08-12 10:48:33,861 [INFO] current_pos is : 9069
+2026-08-12 10:48:34,132 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:48:34,132 [INFO]   [scroll] Current Position is : 9069
+2026-08-12 10:48:34,132 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:48:39,138 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:48:44,144 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:49:04,412 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:49:04,427 [INFO] KUNG FU WORKS !!!! price is Rp 1,157,750
+2026-08-12 10:49:06,433 [INFO] span found
+2026-08-12 10:49:06,444 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:49:16,471 [INFO] room_link found
+2026-08-12 10:49:16,483 [INFO] room type info eb : Suite
+2026-08-12 10:49:18,490 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:49:18,493 [INFO] current_pos is : 605
+2026-08-12 10:49:19,062 [INFO] current_pos is : 1376
+2026-08-12 10:49:19,540 [INFO] current_pos is : 2191
+2026-08-12 10:49:20,577 [INFO] current_pos is : 3050
+2026-08-12 10:49:21,235 [INFO] current_pos is : 3591
+2026-08-12 10:49:21,558 [INFO] current_pos is : 4389
+2026-08-12 10:49:21,898 [INFO] current_pos is : 5359
+2026-08-12 10:49:22,326 [INFO] current_pos is : 6131
+2026-08-12 10:49:22,927 [INFO] current_pos is : 6775
+2026-08-12 10:49:23,448 [INFO] current_pos is : 7410
+2026-08-12 10:49:24,302 [INFO] current_pos is : 8197
+2026-08-12 10:49:24,876 [INFO] current_pos is : 8773
+2026-08-12 10:49:25,072 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:49:25,072 [INFO]   [scroll] Current Position is : 8773
+2026-08-12 10:49:25,072 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:49:30,077 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:49:35,084 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:49:55,389 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:49:55,404 [INFO] KUNG FU WORKS !!!! price is Rp 1,255,423
+2026-08-12 10:49:57,411 [INFO] span found
+2026-08-12 10:49:57,422 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:50:07,438 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:50:09,444 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:50:09,447 [INFO] current_pos is : 755
+2026-08-12 10:50:09,887 [INFO] current_pos is : 1751
+2026-08-12 10:50:10,337 [INFO] current_pos is : 2299
+2026-08-12 10:50:10,937 [INFO] current_pos is : 3291
+2026-08-12 10:50:11,292 [INFO] current_pos is : 3974
+2026-08-12 10:50:11,732 [INFO] current_pos is : 4863
+2026-08-12 10:50:11,960 [INFO] current_pos is : 5615
+2026-08-12 10:50:12,072 [INFO] current_pos is : 6280
+2026-08-12 10:50:12,240 [INFO] current_pos is : 6930
+2026-08-12 10:50:12,650 [INFO] current_pos is : 7507
+2026-08-12 10:50:13,144 [INFO] current_pos is : 8373
+2026-08-12 10:50:13,325 [INFO] current_pos is : 8908
+2026-08-12 10:50:13,488 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:50:13,488 [INFO]   [scroll] Current Position is : 8908
+2026-08-12 10:50:13,488 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:50:18,494 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:50:23,500 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:50:43,782 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:50:43,800 [INFO] KUNG FU WORKS !!!! price is Rp 1,321,497
+2026-08-12 10:50:45,808 [INFO] span found
+2026-08-12 10:50:45,819 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:50:55,836 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:50:57,842 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:50:57,846 [INFO] current_pos is : 600
+2026-08-12 10:50:58,201 [INFO] current_pos is : 1508
+2026-08-12 10:50:59,071 [INFO] current_pos is : 2458
+2026-08-12 10:50:59,289 [INFO] current_pos is : 3337
+2026-08-12 10:50:59,700 [INFO] current_pos is : 3962
+2026-08-12 10:50:59,943 [INFO] current_pos is : 4649
+2026-08-12 10:51:00,263 [INFO] current_pos is : 5357
+2026-08-12 10:51:00,914 [INFO] current_pos is : 6091
+2026-08-12 10:51:01,577 [INFO] current_pos is : 6844
+2026-08-12 10:51:02,065 [INFO] current_pos is : 7640
+2026-08-12 10:51:02,604 [INFO] current_pos is : 8533
+2026-08-12 10:51:03,286 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:51:03,286 [INFO]   [scroll] Current Position is : 8533
+2026-08-12 10:51:03,286 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:51:08,291 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:51:13,299 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:51:33,574 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:51:33,588 [INFO] KUNG FU WORKS !!!! price is Rp 1,173,013
+2026-08-12 10:51:35,595 [INFO] span found
+2026-08-12 10:51:35,607 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:51:45,623 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:51:47,630 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:51:47,634 [INFO] current_pos is : 899
+2026-08-12 10:51:47,827 [INFO] current_pos is : 1833
+2026-08-12 10:51:48,505 [INFO] current_pos is : 2418
+2026-08-12 10:51:49,041 [INFO] current_pos is : 3342
+2026-08-12 10:51:49,188 [INFO] current_pos is : 4321
+2026-08-12 10:51:49,459 [INFO] current_pos is : 5097
+2026-08-12 10:51:50,147 [INFO] current_pos is : 6007
+2026-08-12 10:51:50,536 [INFO] current_pos is : 6812
+2026-08-12 10:51:50,763 [INFO] current_pos is : 7732
+2026-08-12 10:51:51,270 [INFO] current_pos is : 8346
+2026-08-12 10:51:51,498 [INFO] current_pos is : 9048
+2026-08-12 10:51:52,174 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:51:52,174 [INFO]   [scroll] Current Position is : 9048
+2026-08-12 10:51:52,174 [INFO]   [scroll] new_height 1 is : 8533
+2026-08-12 10:51:57,180 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:52:02,187 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:52:22,469 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:52:22,483 [INFO] KUNG FU WORKS !!!! price is Rp 1,178,413
+2026-08-12 10:52:24,490 [INFO] span found
+2026-08-12 10:52:24,502 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:52:34,503 [INFO]   Sleeping 5.1s …
+2026-08-12 10:52:39,591 [INFO] Stratified sampling start at today + 30 days
+2026-08-12 10:52:39,591 [INFO] Scraping Early Book Mode
+2026-08-12 10:52:39,591 [INFO]   Visiting: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html
+2026-08-12 10:52:39,592 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?checkin=2026-09-11&checkout=2026-09-12&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:52:51,872 [INFO]   Scraping : https://www.booking.com/hotel/id/adhidrawa-ubud-ubud.html?checkin=2026-09-11&checkout=2026-09-12&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:52:51,885 [INFO] Total <tr> rows found: 8
+2026-08-12 10:52:51,904 [INFO] room_link found
+2026-08-12 10:52:51,913 [INFO] room type info eb : Superior Double Room
+2026-08-12 10:52:53,920 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:52:53,924 [INFO] current_pos is : 555
+2026-08-12 10:52:54,048 [INFO] current_pos is : 1338
+2026-08-12 10:52:54,192 [INFO] current_pos is : 1929
+2026-08-12 10:52:54,655 [INFO] current_pos is : 2490
+2026-08-12 10:52:54,771 [INFO] current_pos is : 3107
+2026-08-12 10:52:54,895 [INFO] current_pos is : 4095
+2026-08-12 10:52:55,276 [INFO] current_pos is : 4867
+2026-08-12 10:52:55,737 [INFO] current_pos is : 5541
+2026-08-12 10:52:56,258 [INFO] current_pos is : 6343
+2026-08-12 10:52:56,674 [INFO] current_pos is : 6994
+2026-08-12 10:52:57,026 [INFO] current_pos is : 7504
+2026-08-12 10:52:57,164 [INFO] current_pos is : 8156
+2026-08-12 10:52:57,774 [INFO] current_pos is : 8997
+2026-08-12 10:52:58,437 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:52:58,437 [INFO]   [scroll] Current Position is : 8997
+2026-08-12 10:52:58,437 [INFO]   [scroll] new_height 1 is : 8595
+2026-08-12 10:53:03,443 [INFO] current_pos is : 9709
+2026-08-12 10:53:03,842 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:53:03,842 [INFO]   [scroll] Current Position is : 9709
+2026-08-12 10:53:03,842 [INFO]   [scroll] new_height 1 is : 8595
+2026-08-12 10:53:08,848 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:53:13,856 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:53:34,123 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:53:34,138 [INFO] KUNG FU WORKS !!!! price is Rp 973,196
+2026-08-12 10:53:36,145 [INFO] span found
+2026-08-12 10:53:36,156 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:53:46,173 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:53:48,180 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:53:48,184 [INFO] current_pos is : 897
+2026-08-12 10:53:48,383 [INFO] current_pos is : 1879
+2026-08-12 10:53:48,579 [INFO] current_pos is : 2691
+2026-08-12 10:53:49,653 [INFO] current_pos is : 3280
+2026-08-12 10:53:49,964 [INFO] current_pos is : 4028
+2026-08-12 10:53:50,115 [INFO] current_pos is : 4596
+2026-08-12 10:53:50,236 [INFO] current_pos is : 5450
+2026-08-12 10:53:50,478 [INFO] current_pos is : 5996
+2026-08-12 10:53:51,036 [INFO] current_pos is : 6506
+2026-08-12 10:53:51,273 [INFO] current_pos is : 7251
+2026-08-12 10:53:51,438 [INFO] current_pos is : 8153
+2026-08-12 10:53:51,592 [INFO] current_pos is : 8793
+2026-08-12 10:53:51,895 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:53:51,895 [INFO]   [scroll] Current Position is : 8793
+2026-08-12 10:53:51,895 [INFO]   [scroll] new_height 1 is : 8595
+2026-08-12 10:53:56,900 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:54:01,908 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:54:22,188 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:54:22,205 [INFO] KUNG FU WORKS !!!! price is Rp 1,024,417
+2026-08-12 10:54:24,211 [INFO] span found
+2026-08-12 10:54:24,222 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:54:34,239 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:54:36,246 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:54:36,249 [INFO] current_pos is : 514
+2026-08-12 10:54:36,548 [INFO] current_pos is : 1207
+2026-08-12 10:54:36,924 [INFO] current_pos is : 1922
+2026-08-12 10:54:37,350 [INFO] current_pos is : 2543
+2026-08-12 10:54:37,851 [INFO] current_pos is : 3276
+2026-08-12 10:54:38,445 [INFO] current_pos is : 3813
+2026-08-12 10:54:38,665 [INFO] current_pos is : 4782
+2026-08-12 10:54:39,300 [INFO] current_pos is : 5611
+2026-08-12 10:54:39,827 [INFO] current_pos is : 6320
+2026-08-12 10:54:40,045 [INFO] current_pos is : 7026
+2026-08-12 10:54:40,699 [INFO] current_pos is : 7760
+2026-08-12 10:54:41,170 [INFO] current_pos is : 8718
+2026-08-12 10:54:41,378 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:54:41,378 [INFO]   [scroll] Current Position is : 8718
+2026-08-12 10:54:41,378 [INFO]   [scroll] new_height 1 is : 8595
+2026-08-12 10:54:46,384 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:54:51,392 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:55:11,669 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:55:11,684 [INFO] KUNG FU WORKS !!!! price is Rp 1,151,083
+2026-08-12 10:55:13,692 [INFO] span found
+2026-08-12 10:55:13,703 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:55:23,720 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:55:25,727 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:55:25,730 [INFO] current_pos is : 737
+2026-08-12 10:55:26,395 [INFO] current_pos is : 1564
+2026-08-12 10:55:26,867 [INFO] current_pos is : 2187
+2026-08-12 10:55:27,107 [INFO] current_pos is : 3015
+2026-08-12 10:55:27,263 [INFO] current_pos is : 3989
+2026-08-12 10:55:27,384 [INFO] current_pos is : 4734
+2026-08-12 10:55:28,004 [INFO] current_pos is : 5646
+2026-08-12 10:55:29,068 [INFO] current_pos is : 6538
+2026-08-12 10:55:29,289 [INFO] current_pos is : 7247
+2026-08-12 10:55:29,759 [INFO] current_pos is : 8238
+2026-08-12 10:55:30,617 [INFO] current_pos is : 9152
+2026-08-12 10:55:31,146 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:55:31,147 [INFO]   [scroll] Current Position is : 9152
+2026-08-12 10:55:31,147 [INFO]   [scroll] new_height 1 is : 8595
+2026-08-12 10:55:36,153 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:55:41,161 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:56:01,433 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:56:01,448 [INFO] KUNG FU WORKS !!!! price is Rp 1,157,750
+2026-08-12 10:56:03,455 [INFO] span found
+2026-08-12 10:56:03,464 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:56:13,488 [INFO] room_link found
+2026-08-12 10:56:13,500 [INFO] room type info eb : Suite
+2026-08-12 10:56:15,507 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:56:15,511 [INFO] current_pos is : 543
+2026-08-12 10:56:16,042 [INFO] current_pos is : 1144
+2026-08-12 10:56:16,329 [INFO] current_pos is : 1784
+2026-08-12 10:56:16,834 [INFO] current_pos is : 2551
+2026-08-12 10:56:17,321 [INFO] current_pos is : 3098
+2026-08-12 10:56:17,562 [INFO] current_pos is : 4063
+2026-08-12 10:56:18,011 [INFO] current_pos is : 4979
+2026-08-12 10:56:18,219 [INFO] current_pos is : 5869
+2026-08-12 10:56:18,790 [INFO] current_pos is : 6783
+2026-08-12 10:56:19,381 [INFO] current_pos is : 7306
+2026-08-12 10:56:20,473 [INFO] current_pos is : 8202
+2026-08-12 10:56:21,007 [INFO] current_pos is : 9146
+2026-08-12 10:56:21,826 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:56:21,826 [INFO]   [scroll] Current Position is : 9146
+2026-08-12 10:56:21,826 [INFO]   [scroll] new_height 1 is : 8595
+2026-08-12 10:56:26,832 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:56:31,840 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:56:52,122 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:56:52,138 [INFO] KUNG FU WORKS !!!! price is Rp 1,255,423
+2026-08-12 10:56:54,144 [INFO] span found
+2026-08-12 10:56:54,154 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:57:04,171 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:57:06,179 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:57:06,183 [INFO] current_pos is : 811
+2026-08-12 10:57:07,204 [INFO] current_pos is : 1523
+2026-08-12 10:57:08,029 [INFO] current_pos is : 2109
+2026-08-12 10:57:08,355 [INFO] current_pos is : 3017
+2026-08-12 10:57:08,867 [INFO] current_pos is : 3812
+2026-08-12 10:57:09,352 [INFO] current_pos is : 4329
+2026-08-12 10:57:09,759 [INFO] current_pos is : 4971
+2026-08-12 10:57:10,404 [INFO] current_pos is : 5881
+2026-08-12 10:57:10,562 [INFO] current_pos is : 6823
+2026-08-12 10:57:11,228 [INFO] current_pos is : 7350
+2026-08-12 10:57:11,923 [INFO] current_pos is : 7996
+2026-08-12 10:57:12,564 [INFO] current_pos is : 8886
+2026-08-12 10:57:12,845 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:57:12,845 [INFO]   [scroll] Current Position is : 8886
+2026-08-12 10:57:12,845 [INFO]   [scroll] new_height 1 is : 8595
+2026-08-12 10:57:17,851 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:57:22,858 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:57:43,140 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:57:43,156 [INFO] KUNG FU WORKS !!!! price is Rp 1,321,497
+2026-08-12 10:57:45,164 [INFO] span found
+2026-08-12 10:57:45,176 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:57:55,194 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:57:57,200 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:57:57,204 [INFO] current_pos is : 588
+2026-08-12 10:57:57,810 [INFO] current_pos is : 1220
+2026-08-12 10:57:58,148 [INFO] current_pos is : 2091
+2026-08-12 10:57:58,404 [INFO] current_pos is : 2973
+2026-08-12 10:57:59,152 [INFO] current_pos is : 3497
+2026-08-12 10:57:59,875 [INFO] current_pos is : 4324
+2026-08-12 10:58:00,509 [INFO] current_pos is : 5239
+2026-08-12 10:58:00,937 [INFO] current_pos is : 5916
+2026-08-12 10:58:01,635 [INFO] current_pos is : 6648
+2026-08-12 10:58:01,823 [INFO] current_pos is : 7347
+2026-08-12 10:58:02,372 [INFO] current_pos is : 8310
+2026-08-12 10:58:03,007 [INFO] current_pos is : 8881
+2026-08-12 10:58:03,435 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:58:03,435 [INFO]   [scroll] Current Position is : 8881
+2026-08-12 10:58:03,435 [INFO]   [scroll] new_height 1 is : 8595
+2026-08-12 10:58:08,442 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:58:13,449 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:58:33,733 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:58:33,749 [INFO] KUNG FU WORKS !!!! price is Rp 1,448,164
+2026-08-12 10:58:35,756 [INFO] span found
+2026-08-12 10:58:35,766 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:58:45,783 [INFO] NoSuchElementException (1) triggered!!!
+2026-08-12 10:58:47,790 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:58:47,793 [INFO] current_pos is : 634
+2026-08-12 10:58:47,908 [INFO] current_pos is : 1482
+2026-08-12 10:58:48,511 [INFO] current_pos is : 2177
+2026-08-12 10:58:49,101 [INFO] current_pos is : 2904
+2026-08-12 10:58:49,219 [INFO] current_pos is : 3766
+2026-08-12 10:58:49,595 [INFO] current_pos is : 4314
+2026-08-12 10:58:49,790 [INFO] current_pos is : 4820
+2026-08-12 10:58:50,228 [INFO] current_pos is : 5723
+2026-08-12 10:58:50,866 [INFO] current_pos is : 6586
+2026-08-12 10:58:51,491 [INFO] current_pos is : 7190
+2026-08-12 10:58:51,794 [INFO] current_pos is : 7804
+2026-08-12 10:58:52,447 [INFO] current_pos is : 8354
+2026-08-12 10:58:52,831 [INFO] current_pos is : 8995
+2026-08-12 10:58:53,455 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 10:58:53,455 [INFO]   [scroll] Current Position is : 8995
+2026-08-12 10:58:53,455 [INFO]   [scroll] new_height 1 is : 8595
+2026-08-12 10:58:58,461 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 10:59:03,468 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 10:59:23,744 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 10:59:23,758 [INFO] KUNG FU WORKS !!!! price is Rp 1,454,831
+2026-08-12 10:59:25,765 [INFO] span found
+2026-08-12 10:59:25,774 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 10:59:35,776 [INFO]   Sleeping 5.3s …
+2026-08-12 10:59:41,076 [INFO] [3/3] Scraping …
+2026-08-12 10:59:41,076 [INFO] Stratified sampling start at today + 3 days
+2026-08-12 10:59:41,076 [INFO] Scraping last minute mode.
+2026-08-12 10:59:41,076 [INFO]   Visiting: https://www.booking.com/hotel/id/adi-s-guest-house.html
+2026-08-12 10:59:42,944 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/adi-s-guest-house.html?checkin=2026-08-15&checkout=2026-08-16&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:59:48,170 [INFO] villa/hotel = 2 and rating is: 3
+2026-08-12 10:59:53,184 [INFO]   Scraping : https://www.booking.com/hotel/id/adi-s-guest-house.html?checkin=2026-08-15&checkout=2026-08-16&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 10:59:53,195 [INFO] Total <tr> rows found: 1
+2026-08-12 10:59:53,213 [INFO] room_link found
+2026-08-12 10:59:53,224 [INFO] room_type is Double Room
+2026-08-12 10:59:55,231 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 10:59:55,235 [INFO] current_pos is : 521
+2026-08-12 10:59:55,634 [INFO] current_pos is : 1195
+2026-08-12 10:59:56,612 [INFO] current_pos is : 1918
+2026-08-12 10:59:56,790 [INFO] current_pos is : 2723
+2026-08-12 10:59:57,428 [INFO] current_pos is : 3523
+2026-08-12 10:59:57,899 [INFO] current_pos is : 4184
+2026-08-12 10:59:58,540 [INFO] current_pos is : 5094
+2026-08-12 10:59:59,340 [INFO] current_pos is : 5843
+2026-08-12 10:59:59,648 [INFO] current_pos is : 6826
+2026-08-12 11:00:00,420 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 11:00:00,420 [INFO]   [scroll] Current Position is : 6826
+2026-08-12 11:00:00,420 [INFO]   [scroll] new_height 1 is : 6406
+2026-08-12 11:00:05,426 [INFO] current_pos is : 7674
+2026-08-12 11:00:06,111 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 11:00:06,111 [INFO]   [scroll] Current Position is : 7674
+2026-08-12 11:00:06,111 [INFO]   [scroll] new_height 1 is : 6406
+2026-08-12 11:00:11,116 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 11:00:16,124 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 11:00:36,420 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 11:00:36,437 [INFO] KUNG-FU WORKS!!!! price is Rp 593,434
+2026-08-12 11:00:38,445 [INFO] span found
+2026-08-12 11:00:38,456 [INFO] room info ['Select Rooms']
+2026-08-12 11:00:48,458 [INFO]   Sleeping 6.9s …
+2026-08-12 11:00:55,378 [INFO] Stratified sampling start at today + 7 days
+2026-08-12 11:00:55,378 [INFO] Scraping last minute mode.
+2026-08-12 11:00:55,378 [INFO]   Visiting: https://www.booking.com/hotel/id/adi-s-guest-house.html
+2026-08-12 11:00:57,728 [INFO] [DEBUG] Specific URL 1: https://www.booking.com/hotel/id/adi-s-guest-house.html?checkin=2026-08-19&checkout=2026-08-20&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 11:01:02,795 [INFO] villa/hotel = 2 and rating is: 3
+2026-08-12 11:01:07,800 [INFO]   Scraping : https://www.booking.com/hotel/id/adi-s-guest-house.html?checkin=2026-08-19&checkout=2026-08-20&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 11:01:07,812 [INFO] Total <tr> rows found: 1
+2026-08-12 11:01:07,832 [INFO] room_link found
+2026-08-12 11:01:07,843 [INFO] room_type is Double Room
+2026-08-12 11:01:09,850 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 11:01:09,855 [INFO] current_pos is : 823
+2026-08-12 11:01:10,432 [INFO] current_pos is : 1489
+2026-08-12 11:01:10,775 [INFO] current_pos is : 2345
+2026-08-12 11:01:11,132 [INFO] current_pos is : 3271
+2026-08-12 11:01:11,338 [INFO] current_pos is : 3851
+2026-08-12 11:01:11,840 [INFO] current_pos is : 4421
+2026-08-12 11:01:12,163 [INFO] current_pos is : 4965
+2026-08-12 11:01:12,810 [INFO] current_pos is : 5893
+2026-08-12 11:01:13,463 [INFO] current_pos is : 6483
+2026-08-12 11:01:13,959 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 11:01:13,959 [INFO]   [scroll] Current Position is : 6483
+2026-08-12 11:01:13,959 [INFO]   [scroll] new_height 1 is : 6422
+2026-08-12 11:01:18,965 [INFO] current_pos is : 7471
+2026-08-12 11:01:19,480 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 11:01:19,480 [INFO]   [scroll] Current Position is : 7471
+2026-08-12 11:01:19,480 [INFO]   [scroll] new_height 1 is : 6422
+2026-08-12 11:01:24,490 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 11:01:29,498 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 11:01:49,839 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 11:01:49,865 [INFO] KUNG-FU WORKS!!!! price is Rp 593,434
+2026-08-12 11:01:51,866 [INFO] span found
+2026-08-12 11:01:51,884 [INFO] room info ['Select Rooms']
+2026-08-12 11:02:01,887 [INFO]   Sleeping 6.2s …
+2026-08-12 11:02:08,098 [INFO] Stratified sampling start at today + 14 days
+2026-08-12 11:02:08,098 [INFO] Scraping Early Book Mode
+2026-08-12 11:02:08,098 [INFO]   Visiting: https://www.booking.com/hotel/id/adi-s-guest-house.html
+2026-08-12 11:02:08,098 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/adi-s-guest-house.html?checkin=2026-08-26&checkout=2026-08-27&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 11:02:20,715 [INFO]   Scraping : https://www.booking.com/hotel/id/adi-s-guest-house.html?checkin=2026-08-26&checkout=2026-08-27&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 11:02:20,726 [INFO] Total <tr> rows found: 1
+2026-08-12 11:02:20,748 [INFO] room_link found
+2026-08-12 11:02:20,759 [INFO] room type info eb : Double Room
+2026-08-12 11:02:22,767 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 11:02:22,774 [INFO] current_pos is : 732
+2026-08-12 11:02:22,918 [INFO] current_pos is : 1336
+2026-08-12 11:02:23,487 [INFO] current_pos is : 1884
+2026-08-12 11:02:23,654 [INFO] current_pos is : 2562
+2026-08-12 11:02:24,205 [INFO] current_pos is : 3344
+2026-08-12 11:02:24,681 [INFO] current_pos is : 3980
+2026-08-12 11:02:24,916 [INFO] current_pos is : 4532
+2026-08-12 11:02:25,091 [INFO] current_pos is : 5124
+2026-08-12 11:02:25,588 [INFO] current_pos is : 6122
+2026-08-12 11:02:25,835 [INFO] current_pos is : 6833
+2026-08-12 11:02:26,529 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 11:02:26,529 [INFO]   [scroll] Current Position is : 6833
+2026-08-12 11:02:26,529 [INFO]   [scroll] new_height 1 is : 6422
+2026-08-12 11:02:31,534 [INFO] current_pos is : 7548
+2026-08-12 11:02:31,761 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 11:02:31,761 [INFO]   [scroll] Current Position is : 7548
+2026-08-12 11:02:31,761 [INFO]   [scroll] new_height 1 is : 6422
+2026-08-12 11:02:36,768 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 11:02:41,777 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 11:03:02,106 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 11:03:02,129 [INFO] KUNG FU WORKS !!!! price is Rp 593,434
+2026-08-12 11:03:04,138 [INFO] span found
+2026-08-12 11:03:04,152 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 11:03:14,153 [INFO]   Sleeping 5.8s …
+2026-08-12 11:03:19,934 [INFO] Stratified sampling start at today + 30 days
+2026-08-12 11:03:19,934 [INFO] Scraping Early Book Mode
+2026-08-12 11:03:19,934 [INFO]   Visiting: https://www.booking.com/hotel/id/adi-s-guest-house.html
+2026-08-12 11:03:19,934 [INFO] [DEBUG] Specific URL 2: https://www.booking.com/hotel/id/adi-s-guest-house.html?checkin=2026-09-11&checkout=2026-09-12&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 11:03:32,237 [INFO]   Scraping : https://www.booking.com/hotel/id/adi-s-guest-house.html?checkin=2026-09-11&checkout=2026-09-12&group_adults=2&req_adults=2&no_rooms=1&group_children=0
+2026-08-12 11:03:32,251 [INFO] Total <tr> rows found: 1
+2026-08-12 11:03:32,272 [INFO] room_link found
+2026-08-12 11:03:32,285 [INFO] room type info eb : Double Room
+2026-08-12 11:03:34,294 [INFO] trigger scrolling to fight lazy loader
+2026-08-12 11:03:34,294 [INFO] current_pos is : 976
+2026-08-12 11:03:34,864 [INFO] current_pos is : 1742
+2026-08-12 11:03:35,414 [INFO] current_pos is : 2371
+2026-08-12 11:03:35,834 [INFO] current_pos is : 2986
+2026-08-12 11:03:36,106 [INFO] current_pos is : 3962
+2026-08-12 11:03:36,326 [INFO] current_pos is : 4863
+2026-08-12 11:03:36,501 [INFO] current_pos is : 5843
+2026-08-12 11:03:36,781 [INFO] current_pos is : 6834
+2026-08-12 11:03:37,038 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 11:03:37,038 [INFO]   [scroll] Current Position is : 6834
+2026-08-12 11:03:37,038 [INFO]   [scroll] new_height 1 is : 6406
+2026-08-12 11:03:42,050 [INFO] current_pos is : 7829
+2026-08-12 11:03:42,307 [INFO]   [scroll] Scroll past current bottom
+2026-08-12 11:03:42,307 [INFO]   [scroll] Current Position is : 7829
+2026-08-12 11:03:42,307 [INFO]   [scroll] new_height 1 is : 6406
+2026-08-12 11:03:47,314 [INFO]   [scroll] Scroll make sure 1 times
+2026-08-12 11:03:52,326 [INFO]   [scroll] Reached stable bottom.
+2026-08-12 11:04:12,653 [INFO] Price extraction method 1 not succeed, trying second method
+2026-08-12 11:04:12,674 [INFO] KUNG FU WORKS !!!! price is Rp 593,434
+2026-08-12 11:04:14,678 [INFO] span found
+2026-08-12 11:04:14,696 [INFO] notes info eb : ['Select Rooms']
+2026-08-12 11:04:24,697 [INFO]   Sleeping 5.1s …
+2026-08-12 11:04:29,809 [INFO] Flushed batch of 6 records.
+2026-08-12 11:04:29,815 [INFO] Flushed batch EB of 6 records.
+2026-08-12 11:04:29,815 [INFO] [CUSTOMER ONLY - URL LIST] Session complete.
+2026-08-12 11:04:29,815 [INFO] Finish processing URL listed competitor.
+2026-08-12 11:04:29,815 [INFO] ==================================================
+2026-08-12 11:04:32,229 [INFO] Temp profile directory removed.
+2026-08-12 11:04:32,229 [INFO] Driver shut down. Session END.
+2026-08-12 11:04:32,229 [INFO] ==================================================

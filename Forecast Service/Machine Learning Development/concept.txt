@@ -1,0 +1,48 @@
+concept untuk model machine learning:
+1. Masing-masing properti memiliki modelnya sendiri2, jadi kalo ada 200 properti maka ada 200 machine learning model.
+Kelebihan: 
+    a. Sangat presisi karena setiap properti memiliki modelnya sendiri2, karena setiap properti pasti juga memiliki 
+    karakternya masing2.
+    b. Fleksibilitas tinggi karena Engineer bisa mengatur parameter per properti.
+    c. Kecepatan proses tinggi.
+Kelemahan: 
+    a. Akan memakan memori banyak kedepannya.
+    b. Kesulitan untuk memaintenance model (bayangkan 1000 properti berarti ada 1000 model yang harus dimaintenance), Maintenance
+    maksudnya adalah mengupdate model dengan data terbaru.
+Summary:
+    Konsep ini mengutamakan Akurasi, dan Kecepatan runtime, tapi mengorbankan Memori penyimpanan dan Kemudahan Maintenance.
+
+2. Setiap kali user melakukan request, model Machine Learning dibuat dari awal, ditraining ulang dari data yang ada,
+baru kemudian melakukan prediksi, setelah prediksi selesai model didelete/destroy sampai pemanggilan selanjutnya.
+Kelebihan:
+    a. Tidak memakan memori banyak.
+    b. Maintenance Model dan program akan lebih mudah karena script yang ada hanya 1-2 scripts saja.
+Kelemahan:
+    a. Akurasi tidak sebaik kasus pertama, walaupun model dibangun dari awal per kasus tapi setting parameter bersifat global
+    artinya setiap properti berlandaskan pada satu settingan parameter. Bisa saja kita bangun sebuah dictionary untuk menyimpan
+    parameter per properti yang akan diinject ke model saat rekonstruksi, tapi ini memakan memori.
+    b. Waktu pemrosesan akan sangat lama, atau waktu antara request user dengan hasil output akan sangat lama karena Model
+    dibangun dan ditraining dari awal.
+Summary:
+    Konsep ini mengutamakan minimalisir penggunaan storage capacity, dan kemudahan Maintenance program namun sedikit 
+    mengorbankan akurasi, dan yang terparah sangat mengorbankan kecepatan runtime.
+
+3. Model awalnya dibangun dan ditraining dengan beberapa sample properti kemudian disimpan dalam memori. Parameter per properti 
+disimpan juga dalam bentuk dictionary dalam memori. Ketika ada request untuk prediksi sebuah properti, model yang sudah ditraining
+diloading beserta parameter unik (tergantung propertinya), iterasi hanya akan mengupdate weights pada model agar relevan dengan data
+properti terbaru sebelum memberi prediksi.
+Kelebihan:
+    a. Akurasi lebih baik dari kasus kedua tapi sedikit di bawah kasus pertama. Karena parameter per properti bisa disimpan dalam 
+    memori sehingga dapat model dapat diadjust sesuai properti. Akurasi bisa saja sama atau mendekati kasus pertama dengan syarat 
+    jumlah step "update wights" harus cukup untuk mencapai nilai konvergen namun tidak kebanyakan juga sehingga mengorbankan 
+    runtime.
+    b. Model masih relatif mudah dimaintenance. Mungkin setiap bulannya model perlu di-retraining lagi dengan beberapa sample 
+    property.
+Kelemahan:
+    a. Tentunya penggunaan akan ada konsumsi penyimpanan memori, namun tidak seboros kasus pertama, karena cukup menyimpan 1 model
+    beserta dictionaries parameters.
+    b. Runtime tidak secepat kasus pertama, tapi tidak separah kasus kedua juga, karena model hanya perlu direcall dan diupdate
+    weightsnya dengan data terbaru.
+Summary: 
+    Konsep ini merupakan kompromi case 1 dan 2. Akurasi masih baik dan maintenance masih cukup mudah, akan ada konsumsi memori tapi
+    tidak sebesar case 1. Runtime konsep ini juga tidak separah case 2 tapi sudah jelas akan lebih lambat dari case 1.

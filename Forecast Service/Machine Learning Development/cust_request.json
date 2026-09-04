@@ -1,0 +1,8 @@
+{
+    "job_identification": "202602231737MACL4022",
+    "received_at": "2026-02-23T09:37:42.126218",
+    "data": {
+        "customer_id": 2,
+        "predict_days": 28
+    }
+}

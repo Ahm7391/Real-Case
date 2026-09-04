@@ -1,0 +1,770 @@
+[
+    {
+        "properties_name": "The Villas Umalas",
+        "competitor_id": 1
+    },
+    {
+        "properties_name": "Manca Villa",
+        "competitor_id": 2
+    },
+    {
+        "properties_name": "The Canggu Boutique Villas & Spa",
+        "competitor_id": 3
+    },
+    {
+        "properties_name": "Volcano Terrace",
+        "competitor_id": 7
+    },
+    {
+        "properties_name": "Batur Homestay",
+        "competitor_id": 10
+    },
+    {
+        "properties_name": "Pondok Bali Cottage",
+        "competitor_id": 11
+    },
+    {
+        "properties_name": "Bintang House Kintamani",
+        "competitor_id": 22
+    },
+    {
+        "properties_name": "Black Lava Hostel & Lodge",
+        "competitor_id": 23
+    },
+    {
+        "properties_name": "Reddoorz @ Panglima Sudirman",
+        "competitor_id": 25
+    },
+    {
+        "properties_name": "Kertajaya Residence Syariah Surabaya",
+        "competitor_id": 27
+    },
+    {
+        "properties_name": "Bogor Icon Apartment",
+        "competitor_id": 42
+    },
+    {
+        "properties_name": "Hotel Semeru",
+        "competitor_id": 43
+    },
+    {
+        "properties_name": "Victory Munggu",
+        "competitor_id": 44
+    },
+    {
+        "properties_name": "Villa Alisha Pererenan",
+        "competitor_id": 45
+    },
+    {
+        "properties_name": "Igloo Glamping Bali",
+        "competitor_id": 49
+    },
+    {
+        "properties_name": "Sanata Yoga Guesthouse",
+        "competitor_id": 50
+    },
+    {
+        "properties_name": "Canggu Bona Kubu",
+        "competitor_id": 51
+    },
+    {
+        "properties_name": "Nari Homestay",
+        "competitor_id": 52
+    },
+    {
+        "properties_name": "Harmoni Guesthouse",
+        "competitor_id": 56
+    },
+    {
+        "properties_name": "Hotel Manyar",
+        "competitor_id": 57
+    },
+    {
+        "properties_name": "Berlian Abadi",
+        "competitor_id": 58
+    },
+    {
+        "properties_name": "Uno Hotel Surabaya",
+        "competitor_id": 64
+    },
+    {
+        "properties_name": "OYO 2354 3 Point Residence",
+        "competitor_id": 65
+    },
+    {
+        "properties_name": "Bumi Banyu Bening Syariah",
+        "competitor_id": 66
+    },
+    {
+        "properties_name": "Bliss Ubud Abangan",
+        "competitor_id": 67
+    },
+    {
+        "properties_name": "Alam Terrace Cottages",
+        "competitor_id": 68
+    },
+    {
+        "properties_name": "Abipraya",
+        "competitor_id": 69
+    },
+    {
+        "properties_name": "Bali Astetic Villa",
+        "competitor_id": 70
+    },
+    {
+        "properties_name": "Batur Green Hill",
+        "competitor_id": 71
+    },
+    {
+        "properties_name": "Sunset Hill Cottage",
+        "competitor_id": 84
+    },
+    {
+        "properties_name": "Nusa Penida Pudak Nature Bungalow",
+        "competitor_id": 85
+    },
+    {
+        "properties_name": "Dekara Cottages",
+        "competitor_id": 86
+    },
+    {
+        "properties_name": "OYO Flagship 3688 Pot Art",
+        "competitor_id": 93
+    },
+    {
+        "properties_name": "OYO 1086 2oscar",
+        "competitor_id": 94
+    },
+    {
+        "properties_name": "RedDoorz @ Kertajaya Surabaya",
+        "competitor_id": 95
+    },
+    {
+        "properties_name": "The Rinaya Canggu",
+        "competitor_id": 96
+    },
+    {
+        "properties_name": "Asung Guesthouse",
+        "competitor_id": 97
+    },
+    {
+        "properties_name": "Canggu Dream Village",
+        "competitor_id": 98
+    },
+    {
+        "properties_name": "Noormans Hotel Semarang",
+        "competitor_id": 99
+    },
+    {
+        "properties_name": "Hotel Candi Indah",
+        "competitor_id": 101
+    },
+    {
+        "properties_name": "Jero Ratna Homestay",
+        "competitor_id": 102
+    },
+    {
+        "properties_name": "Ratna House",
+        "competitor_id": 103
+    },
+    {
+        "properties_name": "Soka Homestay",
+        "competitor_id": 104
+    },
+    {
+        "properties_name": "Cempaka 3 Inn",
+        "competitor_id": 108
+    },
+    {
+        "properties_name": "Danasari Homestay",
+        "competitor_id": 113
+    },
+    {
+        "properties_name": "Sukma Guesthouse",
+        "competitor_id": 114
+    },
+    {
+        "properties_name": "Dewi Antara Homestay",
+        "competitor_id": 115
+    },
+    {
+        "properties_name": "Dajan Buyan Homestay",
+        "competitor_id": 119
+    },
+    {
+        "properties_name": "Umah lumbung bedugul",
+        "competitor_id": 120
+    },
+    {
+        "properties_name": "Umah Lumbung Bedugul",
+        "competitor_id": 120
+    },
+    {
+        "properties_name": "Puri Canggu Rooms ll",
+        "competitor_id": 121
+    },
+    {
+        "properties_name": "Grandpa Resort",
+        "competitor_id": 122
+    },
+    {
+        "properties_name": "Capila Villa Bali",
+        "competitor_id": 130
+    },
+    {
+        "properties_name": "Japa Guesthouse",
+        "competitor_id": 132
+    },
+    {
+        "properties_name": "Villa Danu",
+        "competitor_id": 136
+    },
+    {
+        "properties_name": "Guest House The Argopuro",
+        "competitor_id": 137
+    },
+    {
+        "properties_name": "Mojopahit Residence",
+        "competitor_id": 138
+    },
+    {
+        "properties_name": "U Tube Hotel",
+        "competitor_id": 147
+    },
+    {
+        "properties_name": "Uma Manyar Sunset Villa",
+        "competitor_id": 151
+    },
+    {
+        "properties_name": "Ubud Chez Nyoman",
+        "competitor_id": 152
+    },
+    {
+        "properties_name": "Bakung Beach Resort",
+        "competitor_id": 153
+    },
+    {
+        "properties_name": "Palm Beach Hotel Bali",
+        "competitor_id": 154
+    },
+    {
+        "properties_name": "Angkul Angkul Segara Beach Kuta",
+        "competitor_id": 155
+    },
+    {
+        "properties_name": "Adiwana Warnakali Resort",
+        "competitor_id": 156
+    },
+    {
+        "properties_name": "Semabu Hills Hotel Nusa Penida",
+        "competitor_id": 157
+    },
+    {
+        "properties_name": "The Kalangan",
+        "competitor_id": 159
+    },
+    {
+        "properties_name": "Munari Resort and Spa Ubud",
+        "competitor_id": 160
+    },
+    {
+        "properties_name": "Ubud Sky",
+        "competitor_id": 161
+    },
+    {
+        "properties_name": "Wijaya Guesthouse",
+        "competitor_id": 162
+    },
+    {
+        "properties_name": "Nita Guest House Bali",
+        "competitor_id": 163
+    },
+    {
+        "properties_name": "Bali Laksita Homestay",
+        "competitor_id": 164
+    },
+    {
+        "properties_name": "Tirtha Canggu Suites",
+        "competitor_id": 167
+    },
+    {
+        "properties_name": "BRAW Inn Canggu",
+        "competitor_id": 168
+    },
+    {
+        "properties_name": "Sunrise Penida Hill",
+        "competitor_id": 169
+    },
+    {
+        "properties_name": "Camar Cottage & Hostel",
+        "competitor_id": 170
+    },
+    {
+        "properties_name": "Abasan Hill Hotel and Spa",
+        "competitor_id": 171
+    },
+    {
+        "properties_name": "Hotel Cahaya 3",
+        "competitor_id": 172
+    },
+    {
+        "properties_name": "RedDoorz Near Juanda International Airport 2",
+        "competitor_id": 173
+    },
+    {
+        "properties_name": "Nova Guest House",
+        "competitor_id": 174
+    },
+    {
+        "properties_name": "Euforia Guest House",
+        "competitor_id": 175
+    },
+    {
+        "properties_name": "Wasabi Hotel",
+        "competitor_id": 176
+    },
+    {
+        "properties_name": "Murai Guest House",
+        "competitor_id": 179
+    },
+    {
+        "properties_name": "Mount Batur Villa",
+        "competitor_id": 182
+    },
+    {
+        "properties_name": "OYO 3132 Mahkota Sivali",
+        "competitor_id": 185
+    },
+    {
+        "properties_name": "The Paving Villa",
+        "competitor_id": 190
+    },
+    {
+        "properties_name": "Canggu Nadi Guest House",
+        "competitor_id": 191
+    },
+    {
+        "properties_name": "Rumah Kita",
+        "competitor_id": 192
+    },
+    {
+        "properties_name": "Keramas Surf Camp",
+        "competitor_id": 197
+    },
+    {
+        "properties_name": "The Uma Guesthouse",
+        "competitor_id": 200
+    },
+    {
+        "properties_name": "D'canggu homestay",
+        "competitor_id": 204
+    },
+    {
+        "properties_name": "Tyana private Room",
+        "competitor_id": 205
+    },
+    {
+        "properties_name": "ASTON INN Mataram",
+        "competitor_id": 213
+    },
+    {
+        "properties_name": "Almira Homestay Ambon Mitra RedDoorz",
+        "competitor_id": 219
+    },
+    {
+        "properties_name": "Amerta Home Stay",
+        "competitor_id": 220
+    },
+    {
+        "properties_name": "Bali Dream Costel",
+        "competitor_id": 222
+    },
+    {
+        "properties_name": "Villa Ana",
+        "competitor_id": 223
+    },
+    {
+        "properties_name": "RedLiving Apartment Green lake View Ciputat- Aurora Rooms",
+        "competitor_id": 227
+    },
+    {
+        "properties_name": "The Lonceng By Sila Dharma Mesari Management",
+        "competitor_id": 231
+    },
+    {
+        "properties_name": "Bima Sakti House Canggu",
+        "competitor_id": 232
+    },
+    {
+        "properties_name": "Surf Motel",
+        "competitor_id": 233
+    },
+    {
+        "properties_name": "Pererenan Nengah Guest House Canggu",
+        "competitor_id": 234
+    },
+    {
+        "properties_name": "Gading Guest House",
+        "competitor_id": 238
+    },
+    {
+        "properties_name": "Cleo Hotel Jemursari Surabaya",
+        "competitor_id": 240
+    },
+    {
+        "properties_name": "Amaris Hotel Margorejo Surabaya",
+        "competitor_id": 241
+    },
+    {
+        "properties_name": "Charisma Homestay",
+        "competitor_id": 242
+    },
+    {
+        "properties_name": "Kencana Garden",
+        "competitor_id": 243
+    },
+    {
+        "properties_name": "Bale Gede Lembongan",
+        "competitor_id": 244
+    },
+    {
+        "properties_name": "The Palm Grove Villas",
+        "competitor_id": 245
+    },
+    {
+        "properties_name": "Adiputra Guesthouse 2",
+        "competitor_id": 249
+    },
+    {
+        "properties_name": "RedDoorz near AMIKOM Yogyakarta",
+        "competitor_id": 252
+    },
+    {
+        "properties_name": "Koolkost near Stadion Maguwoharjo",
+        "competitor_id": 253
+    },
+    {
+        "properties_name": "Rumah Nyaman Back Packer",
+        "competitor_id": 260
+    },
+    {
+        "properties_name": "Ayuning Guest House Syariah Semarang Mitra RedDoorz",
+        "competitor_id": 261
+    },
+    {
+        "properties_name": "CK Residence Syariah",
+        "competitor_id": 262
+    },
+    {
+        "properties_name": "Astani Family Home",
+        "competitor_id": 263
+    },
+    {
+        "properties_name": "Syakirah Guest House Syariah",
+        "competitor_id": 264
+    },
+    {
+        "properties_name": "Homestay Sakinah Syariah Mitra RedDoorz",
+        "competitor_id": 265
+    },
+    {
+        "properties_name": "Dana's House",
+        "competitor_id": 266
+    },
+    {
+        "properties_name": "Fabel Homestay",
+        "competitor_id": 267
+    },
+    {
+        "properties_name": "RedDoorz Plus near Palembang Square Mall",
+        "competitor_id": 268
+    },
+    {
+        "properties_name": "Kerangga Homestay Syariah RedPartner",
+        "competitor_id": 269
+    },
+    {
+        "properties_name": "OYO 93720 3d Residence",
+        "competitor_id": 270
+    },
+    {
+        "properties_name": "Cove T63",
+        "competitor_id": 271
+    },
+    {
+        "properties_name": "Cozy Residence Tomang",
+        "competitor_id": 272
+    },
+    {
+        "properties_name": "OYO 1487 Residence Khoe",
+        "competitor_id": 273
+    },
+    {
+        "properties_name": "Maple Hotel Grogol",
+        "competitor_id": 274
+    },
+    {
+        "properties_name": "Social Hub by TwoSpaces",
+        "competitor_id": 275
+    },
+    {
+        "properties_name": "Hotel Andita Syariah",
+        "competitor_id": 276
+    },
+    {
+        "properties_name": "Grand Inna Tunjungan",
+        "competitor_id": 277
+    },
+    {
+        "properties_name": "Nite & Day Surabaya - Kedungdoro",
+        "competitor_id": 278
+    },
+    {
+        "properties_name": "Canggu Wooden Green Paradise",
+        "competitor_id": 279
+    },
+    {
+        "properties_name": "D'jineng Rice Terrace Canggu",
+        "competitor_id": 280
+    },
+    {
+        "properties_name": "Mai Mucuk Lumbung",
+        "competitor_id": 281
+    },
+    {
+        "properties_name": "De Dukuh Guest House",
+        "competitor_id": 282
+    },
+    {
+        "properties_name": "Berlian Inn Kuta Beach",
+        "competitor_id": 283
+    },
+    {
+        "properties_name": "Arnaya Homestay",
+        "competitor_id": 284
+    },
+    {
+        "properties_name": "Twin Island Villas & Dive Resort",
+        "competitor_id": 285
+    },
+    {
+        "properties_name": "D'Lesung Villas Lembongan",
+        "competitor_id": 286
+    },
+    {
+        "properties_name": "Bukit Permata Lembongan",
+        "competitor_id": 287
+    },
+    {
+        "properties_name": "Rinjani Garden",
+        "competitor_id": 289
+    },
+    {
+        "properties_name": "Tulus Hati Ubud Retreat & Spa",
+        "competitor_id": 291
+    },
+    {
+        "properties_name": "Sanga Suites",
+        "competitor_id": 292
+    },
+    {
+        "properties_name": "LeGreen Suite Waihaong",
+        "competitor_id": 297
+    },
+    {
+        "properties_name": "Rumaruma Farvet Residence",
+        "competitor_id": 299
+    },
+    {
+        "properties_name": "The Green Ponci Bedugul",
+        "competitor_id": 303
+    },
+    {
+        "properties_name": "Strawberry Hill Hotel & Restaurant",
+        "competitor_id": 304
+    },
+    {
+        "properties_name": "The Kd Suites & Coffee Shop",
+        "competitor_id": 308
+    },
+    {
+        "properties_name": "The Ume",
+        "competitor_id": 309
+    },
+    {
+        "properties_name": "The Djakarta Anandita Syariah Hotel",
+        "competitor_id": 310
+    },
+    {
+        "properties_name": "Urbanview Hotel Gading Kencana Samarinda by RedDoorz",
+        "competitor_id": 311
+    },
+    {
+        "properties_name": "Roommates Hostel Canggu by Ini Vie Hospitality",
+        "competitor_id": 313
+    },
+    {
+        "properties_name": "Jonsen Homestay",
+        "competitor_id": 314
+    },
+    {
+        "properties_name": "Andi Beach House",
+        "competitor_id": 315
+    },
+    {
+        "properties_name": "Lembah Rinjani Villa & Resto by ecommerceloka",
+        "competitor_id": 316
+    },
+    {
+        "properties_name": "Masmara Resort Canggu",
+        "competitor_id": 320
+    },
+    {
+        "properties_name": "Rhythm & Rumble",
+        "competitor_id": 321
+    },
+    {
+        "properties_name": "Eastin Ashta Resort Canggu",
+        "competitor_id": 322
+    },
+    {
+        "properties_name": "RedDoorz @ Tanjung Sari Surabaya",
+        "competitor_id": 323
+    },
+    {
+        "properties_name": "Promosia Guest House",
+        "competitor_id": 324
+    },
+    {
+        "properties_name": "RedDoorz near Lenmarc Mall Surabaya",
+        "competitor_id": 325
+    },
+    {
+        "properties_name": "Keramas Sacred River Retreat Resort and Villa",
+        "competitor_id": 329
+    },
+    {
+        "properties_name": "Villa Casablanca Surf Keramas",
+        "competitor_id": 330
+    },
+    {
+        "properties_name": "Green Vanilla Bungalow",
+        "competitor_id": 335
+    },
+    {
+        "properties_name": "Taman Unique Hotel",
+        "competitor_id": 338
+    },
+    {
+        "properties_name": "Popitan Garden Campground & Glamping Bedugul",
+        "competitor_id": 340
+    },
+    {
+        "properties_name": "Segara Wangi Beach Cottages",
+        "competitor_id": 341
+    },
+    {
+        "properties_name": "Ashyana Candidasa Beach Resort",
+        "competitor_id": 342
+    },
+    {
+        "properties_name": "Bali Palms Resort",
+        "competitor_id": 343
+    },
+    {
+        "properties_name": "Kubu Indah Homestay Sanur",
+        "competitor_id": 344
+    },
+    {
+        "properties_name": "Svarna Hotel",
+        "competitor_id": 345
+    },
+    {
+        "properties_name": "Gazebo Beach Hotel",
+        "competitor_id": 346
+    },
+    {
+        "properties_name": "Rayz UMM Hotel Malang",
+        "competitor_id": 350
+    },
+    {
+        "properties_name": "Favehotel Malang",
+        "competitor_id": 352
+    },
+    {
+        "properties_name": "Louto Dmell Guesthouse",
+        "competitor_id": 354
+    },
+    {
+        "properties_name": "Cening Ayu Sanur",
+        "competitor_id": 355
+    },
+    {
+        "properties_name": "Kaja Villa",
+        "competitor_id": 358
+    },
+    {
+        "properties_name": "Prema Ubud Romantic Villas",
+        "competitor_id": 361
+    },
+    {
+        "properties_name": "RAMP COTTAGE",
+        "competitor_id": 363
+    },
+    {
+        "properties_name": "Dayuh House",
+        "competitor_id": 364
+    },
+    {
+        "properties_name": "CBG INN RedPartner near Stasiun Solo balapan",
+        "competitor_id": 366
+    },
+    {
+        "properties_name": "The Peace Arta Bungalow",
+        "competitor_id": 367
+    },
+    {
+        "properties_name": "Umah Putih",
+        "competitor_id": 368
+    },
+    {
+        "properties_name": "Nushe Hostel",
+        "competitor_id": 369
+    },
+    {
+        "properties_name": "Santhara Canggu Wooden House",
+        "competitor_id": 374
+    },
+    {
+        "properties_name": "TNC Residence Syariah Mataram",
+        "competitor_id": 375
+    },
+    {
+        "properties_name": "Stardust Villas Nusa Lembongan",
+        "competitor_id": 376
+    },
+    {
+        "properties_name": "Seaside Huts Lembongan",
+        "competitor_id": 377
+    },
+    {
+        "properties_name": "Hotel Dewata Indah Denpasar Mitra RedDoorz",
+        "competitor_id": 378
+    },
+    {
+        "properties_name": "Duyung Homestay",
+        "competitor_id": 379
+    },
+    {
+        "properties_name": "Asoka Hotel & Suite",
+        "competitor_id": 380
+    },
+    {
+        "properties_name": "Sekar Waru Homestay",
+        "competitor_id": 381
+    },
+    {
+        "properties_name": "Pondok Lulik",
+        "competitor_id": 383
+    }
+]

@@ -1,0 +1,271 @@
+15:48:48 [INFO] Auto-detected Chrome (registry): 151.0.7922.76 → major version 151
+15:48:52 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:48:53 [INFO] UC Chrome started in headed mode via Xvfb
+15:48:53 [INFO] Updating only competitor mode.
+15:48:54 [INFO] Driver shut down. Session END.
+15:48:54 [INFO] ==================================================
+15:49:45 [INFO] Auto-detected Chrome (registry): 151.0.7922.76 → major version 151
+15:49:49 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:49:49 [INFO] UC Chrome started in headed mode via Xvfb
+15:49:49 [INFO] Updating only competitor mode.
+15:49:50 [INFO] Searching manually through list.
+15:49:50 [INFO] cross_check is : AA Fashion
+
+15:49:50 [INFO] Found last checkpoint!!!
+15:49:50 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+15:49:50 [INFO] [1/2] Scraping …
+15:50:22 [INFO] Saved URL https://www.tiket.com/en-id/hotel/indonesia/abams-gili-air-505001653012931074
+15:50:22 [INFO] [2/2] Scraping …
+15:50:52 [INFO] Finish processing URL named competitor.
+15:50:52 [INFO] ==================================================
+15:50:53 [INFO] Driver shut down. Session END.
+15:50:53 [INFO] ==================================================
+15:51:46 [INFO] Auto-detected Chrome (registry): 151.0.7922.76 → major version 151
+15:51:50 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:51:51 [INFO] UC Chrome started in headed mode via Xvfb
+15:51:51 [INFO] Updating only competitor mode.
+15:51:51 [INFO] Searching manually through list.
+15:51:51 [INFO] cross_check is : Abams Gili Air
+
+15:51:51 [INFO] Found last checkpoint!!!
+15:51:51 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+15:51:51 [INFO] [1/2] Scraping …
+15:52:08 [INFO] [2/2] Scraping …
+15:52:32 [INFO] Finish processing URL named competitor.
+15:52:32 [INFO] ==================================================
+15:52:33 [INFO] Driver shut down. Session END.
+15:52:33 [INFO] ==================================================
+15:52:58 [INFO] Auto-detected Chrome (registry): 151.0.7922.76 → major version 151
+15:53:01 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:53:02 [INFO] UC Chrome started in headed mode via Xvfb
+15:53:02 [INFO] Updating only competitor mode.
+15:53:02 [INFO] Searching manually through list.
+15:53:02 [INFO] cross_check is : Abams Gili Air
+
+15:53:02 [INFO] Found last checkpoint!!!
+15:53:02 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+15:53:02 [INFO] [1/2] Scraping …
+15:53:32 [INFO] [2/2] Scraping …
+15:54:01 [INFO] Saved URL https://www.tiket.com/en-id/hotel/indonesia/adhidrawa-ubud-805001748217922656
+15:54:01 [INFO] Finish processing URL named competitor.
+15:54:01 [INFO] ==================================================
+15:54:02 [INFO] Driver shut down. Session END.
+15:54:02 [INFO] ==================================================
+15:54:33 [INFO] Auto-detected Chrome (registry): 151.0.7922.76 → major version 151
+15:54:38 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:54:39 [INFO] UC Chrome started in headed mode via Xvfb
+15:54:39 [INFO] Updating only competitor mode.
+15:54:39 [INFO] Searching manually through list.
+15:54:39 [INFO] cross_check is : Adhidrawa Ubud
+
+15:54:39 [INFO] Found last checkpoint!!!
+15:54:39 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+15:54:39 [INFO] [1/2] Scraping …
+15:55:13 [INFO] Saved URL https://www.tiket.com/en-id/hotel/indonesia/adi-s-guest-house-906001782372252616
+15:55:13 [INFO] [2/2] Scraping …
+15:56:00 [INFO] Finish processing URL named competitor.
+15:56:00 [INFO] ==================================================
+15:56:01 [INFO] Driver shut down. Session END.
+15:56:01 [INFO] ==================================================
+11:57:00 [INFO] Auto-detected Chrome (registry): 151.0.7922.110 → major version 151
+11:57:04 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+11:57:05 [INFO] UC Chrome started in headed mode via Xvfb
+13:10:41 [INFO] Auto-detected Chrome (registry): 151.0.7922.110 → major version 151
+13:10:45 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+13:10:46 [INFO] UC Chrome started in headed mode via Xvfb
+14:20:44 [INFO] Auto-detected Chrome (registry): 151.0.7922.110 → major version 151
+14:20:49 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+14:20:50 [INFO] UC Chrome started in headed mode via Xvfb
+15:54:03 [INFO] Auto-detected Chrome (registry): 151.0.7922.110 → major version 151
+15:54:07 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:54:08 [INFO] UC Chrome started in headed mode via Xvfb
+15:56:02 [INFO] Auto-detected Chrome (registry): 151.0.7922.110 → major version 151
+15:56:05 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:56:06 [INFO] UC Chrome started in headed mode via Xvfb
+16:11:03 [INFO] Auto-detected Chrome (registry): 151.0.7922.110 → major version 151
+16:11:07 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+16:11:08 [INFO] UC Chrome started in headed mode via Xvfb
+16:19:17 [INFO] Auto-detected Chrome (registry): 151.0.7922.110 → major version 151
+16:19:21 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+16:19:21 [INFO] UC Chrome started in headed mode via Xvfb
+16:56:30 [INFO] Auto-detected Chrome (registry): 151.0.7922.110 → major version 151
+16:56:34 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+16:56:35 [INFO] UC Chrome started in headed mode via Xvfb
+16:56:35 [INFO] Updating only competitor mode.
+16:56:35 [INFO] Searching through all URLs that available.
+16:56:35 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+16:56:35 [INFO] [1/3] Scraping …
+16:56:35 [INFO] Stratified sampling start at today + 3 days
+16:56:35 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/abams-gili-air-505001653012931074?checkin=2026-08-15&checkout=2026-08-16&adult=2&room=1&night=1
+16:56:43 [INFO] property name is: Abams Gili Air
+16:56:43 [INFO] The availability on current date is not available, renew the date range.
+16:56:54 [INFO] The availability on current date is not available, renew the date range.
+16:57:10 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+16:57:10 [INFO] Address: Dusun Gili Air, Gili Indah, Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Barat
+16:57:15 [INFO] Stratified sampling start at today + 7 days
+16:57:15 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/abams-gili-air-505001653012931074?checkin=2026-08-19&checkout=2026-08-20&adult=2&room=1&night=1
+16:57:20 [INFO] property name is: Abams Gili Air
+16:57:20 [INFO] The availability on current date is not available, renew the date range.
+16:57:30 [INFO] The availability on current date is not available, renew the date range.
+16:57:46 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+16:57:46 [INFO] Address: Dusun Gili Air, Gili Indah, Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Barat
+16:57:51 [INFO] Stratified sampling start at today + 14 days
+16:57:51 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/abams-gili-air-505001653012931074?checkin=2026-08-26&checkout=2026-08-27&adult=2&room=1&night=1
+16:57:57 [INFO] property name is: Abams Gili Air
+16:57:57 [INFO] The availability on current date is not available, renew the date range.
+16:58:06 [INFO] The availability on current date is not available, renew the date range.
+16:58:23 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+16:58:23 [INFO] Address: Dusun Gili Air, Gili Indah, Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Barat
+16:58:28 [INFO] Stratified sampling start at today + 30 days
+16:58:28 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/abams-gili-air-505001653012931074?checkin=2026-09-11&checkout=2026-09-12&adult=2&room=1&night=1
+16:58:33 [INFO] property name is: Abams Gili Air
+16:58:33 [INFO] The availability on current date is not available, renew the date range.
+16:58:44 [INFO] The availability on current date is not available, renew the date range.
+16:59:00 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+16:59:00 [INFO] Address: Dusun Gili Air, Gili Indah, Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Barat
+16:59:05 [INFO] [2/3] Scraping …
+16:59:05 [INFO] Stratified sampling start at today + 3 days
+16:59:05 [INFO]   Visiting: https://www.tiket.com/id-id/hotel/indonesia/abimanyu-guest-house-809001758085929920?checkin=2026-08-15&checkout=2026-08-16&adult=2&room=1&night=1
+16:59:12 [INFO] property name is: Abimanyu Guest House
+16:59:12 [INFO] The availability on current date is not available, renew the date range.
+16:59:43 [INFO] Room may be available!!!!
+16:59:43 [INFO] Scrolling to trigger lazy-load before room scan...
+16:59:49 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+16:59:54 [INFO] Total room rows found: 1
+16:59:59 [INFO] room_type name is: Double di Kamar Deluks dengan Pemandangan Taman
+17:00:04 [INFO] bed_type name is: Double
+17:00:04 [INFO] extra_features name is: ['Kamar bebas asap rokok']
+17:00:04 [INFO] breakfast name is: ['Sarapan tidak tersedia']
+17:00:06 [INFO] discounted_price is: IDR 260.773
+17:00:11 [INFO] Stratified sampling start at today + 7 days
+17:00:11 [INFO]   Visiting: https://www.tiket.com/id-id/hotel/indonesia/abimanyu-guest-house-809001758085929920?checkin=2026-08-19&checkout=2026-08-20&adult=2&room=1&night=1
+17:00:18 [INFO] property name is: Abimanyu Guest House
+17:00:39 [INFO] Room may be available!!!!
+17:00:39 [INFO] Scrolling to trigger lazy-load before room scan...
+17:00:45 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+17:00:50 [INFO] Total room rows found: 1
+17:00:55 [INFO] room_type name is: Double di Kamar Deluks dengan Pemandangan Taman
+17:01:00 [INFO] bed_type name is: Double
+17:01:00 [INFO] extra_features name is: ['Kamar bebas asap rokok']
+17:01:00 [INFO] breakfast name is: ['Sarapan tidak tersedia']
+17:01:01 [INFO] discounted_price is: IDR 260.773
+17:01:06 [INFO] Stratified sampling start at today + 14 days
+17:01:06 [INFO]   Visiting: https://www.tiket.com/id-id/hotel/indonesia/abimanyu-guest-house-809001758085929920?checkin=2026-08-26&checkout=2026-08-27&adult=2&room=1&night=1
+17:01:12 [INFO] property name is: Abimanyu Guest House
+17:01:12 [INFO] The availability on current date is not available, renew the date range.
+17:01:22 [INFO] The availability on current date is not available, renew the date range.
+17:01:53 [INFO] Room may be available!!!!
+17:01:53 [INFO] Scrolling to trigger lazy-load before room scan...
+17:01:59 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+17:02:04 [INFO] Total room rows found: 1
+17:02:09 [INFO] room_type name is: +8 lainnya
+17:02:14 [INFO] bed_type name is: Double
+17:02:14 [INFO] extra_features name is: ['Kamar bebas asap rokok']
+17:02:14 [INFO] breakfast name is: ['Sarapan tidak tersedia']
+17:02:16 [INFO] discounted_price is: IDR 260.773
+17:02:21 [INFO] Stratified sampling start at today + 30 days
+17:02:21 [INFO]   Visiting: https://www.tiket.com/id-id/hotel/indonesia/abimanyu-guest-house-809001758085929920?checkin=2026-09-11&checkout=2026-09-12&adult=2&room=1&night=1
+17:02:28 [INFO] property name is: Abimanyu Guest House
+17:02:48 [INFO] Room may be available!!!!
+17:02:48 [INFO] Scrolling to trigger lazy-load before room scan...
+17:02:54 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+17:02:59 [INFO] Total room rows found: 1
+17:03:04 [INFO] room_type name is: +8 lainnya
+17:03:09 [INFO] bed_type name is: Double
+17:03:09 [INFO] extra_features name is: ['Kamar bebas asap rokok']
+17:03:09 [INFO] breakfast name is: ['Sarapan tidak tersedia']
+17:03:11 [INFO] discounted_price is: IDR 260.773
+17:03:16 [INFO] [3/3] Scraping …
+17:03:16 [INFO] Stratified sampling start at today + 3 days
+17:03:16 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/adhidrawa-ubud-805001748217922656?checkin=2026-08-15&checkout=2026-08-16&adult=2&room=1&night=1
+17:03:24 [INFO] property name is: Adhidrawa Ubud
+17:03:44 [INFO] Room may be available!!!!
+17:03:44 [INFO] Scrolling to trigger lazy-load before room scan...
+17:03:50 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+17:03:55 [INFO] Total room rows found: 3
+17:04:00 [INFO] room_type name is: King in Superior Room with Valley View
+17:04:05 [INFO] bed_type name is: King
+17:04:05 [INFO] extra_features name is: ['Non-smoking Room']
+17:04:05 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'No breakfast']
+17:04:07 [INFO] discounted_price is: IDR 339,100
+17:04:12 [INFO] room_type name is: King in Suite with Valley View
+17:04:17 [INFO] bed_type name is: King
+17:04:17 [INFO] extra_features name is: ['Non-smoking Room']
+17:04:17 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'No breakfast']
+17:04:19 [INFO] discounted_price is: IDR 433,233
+17:04:24 [INFO] room_type name is: King in Suite with Valley View
+17:04:29 [INFO] bed_type name is: King
+17:04:29 [INFO] extra_features name is: ['Non-smoking Room']
+17:04:29 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+17:04:30 [INFO] discounted_price is: IDR 492,893
+17:04:35 [INFO] Stratified sampling start at today + 7 days
+17:04:35 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/adhidrawa-ubud-805001748217922656?checkin=2026-08-19&checkout=2026-08-20&adult=2&room=1&night=1
+17:04:40 [INFO] property name is: Adhidrawa Ubud
+17:05:00 [INFO] Room may be available!!!!
+17:05:00 [INFO] Scrolling to trigger lazy-load before room scan...
+17:05:06 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+17:05:11 [INFO] Total room rows found: 3
+17:05:17 [INFO] room_type name is: King in Superior Room with Valley View
+17:05:22 [INFO] bed_type name is: King
+17:05:22 [INFO] extra_features name is: ['Non-smoking Room']
+17:05:22 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'No breakfast']
+17:05:23 [INFO] discounted_price is: IDR 339,100
+17:05:28 [INFO] room_type name is: King in Suite with Valley View
+17:05:33 [INFO] bed_type name is: King
+17:05:33 [INFO] extra_features name is: ['Non-smoking Room']
+17:05:33 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'No breakfast']
+17:05:35 [INFO] discounted_price is: IDR 433,233
+17:05:40 [INFO] room_type name is: King in Suite with Valley View
+17:05:45 [INFO] bed_type name is: King
+17:05:45 [INFO] extra_features name is: ['Non-smoking Room']
+17:05:45 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+17:05:47 [INFO] discounted_price is: IDR 500,456
+17:05:52 [INFO] Stratified sampling start at today + 14 days
+17:05:52 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/adhidrawa-ubud-805001748217922656?checkin=2026-08-26&checkout=2026-08-27&adult=2&room=1&night=1
+17:05:57 [INFO] property name is: Adhidrawa Ubud
+17:06:18 [INFO] Room may be available!!!!
+17:06:18 [INFO] Scrolling to trigger lazy-load before room scan...
+17:06:24 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+17:06:29 [INFO] Total room rows found: 3
+17:06:34 [INFO] room_type name is: King in Superior Room with Valley View
+17:06:39 [INFO] bed_type name is: King
+17:06:39 [INFO] extra_features name is: ['Non-smoking Room']
+17:06:39 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'No breakfast']
+17:06:41 [INFO] discounted_price is: IDR 339,100
+17:06:46 [INFO] room_type name is: King in Suite with Valley View
+17:06:51 [INFO] bed_type name is: King
+17:06:51 [INFO] extra_features name is: ['Non-smoking Room']
+17:06:51 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'No breakfast']
+17:06:52 [INFO] discounted_price is: IDR 433,233
+17:06:57 [INFO] room_type name is: King in Suite with Valley View
+17:07:02 [INFO] bed_type name is: King
+17:07:02 [INFO] extra_features name is: ['Non-smoking Room']
+17:07:02 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+17:07:04 [INFO] discounted_price is: IDR 492,893
+17:07:09 [INFO] Stratified sampling start at today + 30 days
+17:07:09 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/adhidrawa-ubud-805001748217922656?checkin=2026-09-11&checkout=2026-09-12&adult=2&room=1&night=1
+17:07:17 [INFO] property name is: Adhidrawa Ubud
+17:07:37 [INFO] Room may be available!!!!
+17:07:37 [INFO] Scrolling to trigger lazy-load before room scan...
+17:07:43 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+17:07:48 [INFO] Total room rows found: 3
+17:07:53 [INFO] room_type name is: King in Superior Room with Valley View
+17:07:58 [INFO] bed_type name is: King
+17:07:58 [INFO] extra_features name is: ['Non-smoking Room']
+17:07:58 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'No breakfast']
+17:08:00 [INFO] discounted_price is: IDR 339,100
+17:08:05 [INFO] room_type name is: King in Suite with Valley View
+17:08:10 [INFO] bed_type name is: King
+17:08:10 [INFO] extra_features name is: ['Non-smoking Room']
+17:08:10 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'No breakfast']
+17:08:11 [INFO] discounted_price is: IDR 433,233
+17:08:16 [INFO] room_type name is: King in Suite with Valley View
+17:08:21 [INFO] bed_type name is: King
+17:08:21 [INFO] extra_features name is: ['Non-smoking Room']
+17:08:21 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+17:08:23 [INFO] discounted_price is: IDR 492,893
+17:08:28 [INFO] [DEBUG] Session complete.
+17:08:28 [INFO] Finish processing URL listed competitor.
+17:08:28 [INFO] ==================================================
+17:08:29 [INFO] Driver shut down. Session END.
+17:08:29 [INFO] ==================================================

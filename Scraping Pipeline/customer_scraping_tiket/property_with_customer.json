@@ -1,0 +1,1678 @@
+[
+    {
+        "properties_name": "AA Fashion",
+        "customer_id": 90
+    },
+    {
+        "properties_name": "Abams Gili Air",
+        "customer_id": 313
+    },
+    {
+        "properties_name": "Abimanyu Guest House",
+        "customer_id": 353
+    },
+    {
+        "properties_name": "Adhidrawa Ubud",
+        "customer_id": 306
+    },
+    {
+        "properties_name": "Adi S Guest House",
+        "customer_id": 419
+    },
+    {
+        "properties_name": "Adrina's Villa",
+        "customer_id": 254
+    },
+    {
+        "properties_name": "Adrina's Villa Nusa Dua by Moria",
+        "customer_id": 309
+    },
+    {
+        "properties_name": "Aeena Homestay",
+        "customer_id": 274
+    },
+    {
+        "properties_name": "Agung Wiwin Homestay",
+        "customer_id": 132
+    },
+    {
+        "properties_name": "Ajanta Villas",
+        "customer_id": 31
+    },
+    {
+        "properties_name": "Alam Bidadari Seminyak",
+        "customer_id": 119
+    },
+    {
+        "properties_name": "Alam Caldera Camp & Resto",
+        "customer_id": 243
+    },
+    {
+        "properties_name": "Alam Puisi Villa",
+        "customer_id": 120
+    },
+    {
+        "properties_name": "Aldeoz Grand Kancana",
+        "customer_id": 50
+    },
+    {
+        "properties_name": "Alinn Villa",
+        "customer_id": 423
+    },
+    {
+        "properties_name": "Alron Hotel Kuta",
+        "customer_id": 255
+    },
+    {
+        "properties_name": "Alto Homestay",
+        "customer_id": 216
+    },
+    {
+        "properties_name": "Amarell Ubud",
+        "customer_id": 346
+    },
+    {
+        "properties_name": "Ambon Residence Syariah",
+        "customer_id": 159
+    },
+    {
+        "properties_name": "Amelle Villa Canggu",
+        "customer_id": 51
+    },
+    {
+        "properties_name": "Amina Hills View",
+        "customer_id": 17
+    },
+    {
+        "properties_name": "And Dita Glamping",
+        "customer_id": 354
+    },
+    {
+        "properties_name": "Anny Guesthouse",
+        "customer_id": 139
+    },
+    {
+        "properties_name": "Anny Guest House 2",
+        "customer_id": 329
+    },
+    {
+        "properties_name": "Antara Sunset Road",
+        "customer_id": 168
+    },
+    {
+        "properties_name": "Apartment Kak Okoh",
+        "customer_id": 263
+    },
+    {
+        "properties_name": "Apartment Metropolitan Park",
+        "customer_id": 285
+    },
+    {
+        "properties_name": "Ara Inn Bed and Breakfast",
+        "customer_id": 111
+    },
+    {
+        "properties_name": "AraInn Bed And Breakfast Prigen",
+        "customer_id": 160
+    },
+    {
+        "properties_name": "Ardhya Guesthouse Syariah",
+        "customer_id": 15
+    },
+    {
+        "properties_name": "Arimbi Stay Surabaya",
+        "customer_id": 41
+    },
+    {
+        "properties_name": "Art Canggu Hostel",
+        "customer_id": 77
+    },
+    {
+        "properties_name": "Arum Hideaway",
+        "customer_id": 431
+    },
+    {
+        "properties_name": "Asia Room at Green lake view apartment",
+        "customer_id": 212
+    },
+    {
+        "properties_name": "Aurora Rooms at Apartment Mahakam",
+        "customer_id": 264
+    },
+    {
+        "properties_name": "aurora Rooms Mutiara",
+        "customer_id": 265
+    },
+    {
+        "properties_name": "Aurora Rooms Riverdale",
+        "customer_id": 266
+    },
+    {
+        "properties_name": "Avi Hotel Surabaya",
+        "customer_id": 43
+    },
+    {
+        "properties_name": "Bale Gede Luxury Villa",
+        "customer_id": 308
+    },
+    {
+        "properties_name": "Bali Astetic Villa",
+        "customer_id": 96
+    },
+    {
+        "properties_name": "Bali Bata Guest House Canggu",
+        "customer_id": 237
+    },
+    {
+        "properties_name": "Bali Bay By Urban Haven",
+        "customer_id": 359
+    },
+    {
+        "properties_name": "Bali Easy Living",
+        "customer_id": 6
+    },
+    {
+        "properties_name": "Bali Laksita Homestay",
+        "customer_id": 101
+    },
+    {
+        "properties_name": "Bali Villa Ungasan",
+        "customer_id": 45
+    },
+    {
+        "properties_name": "Bamboo Mount Batur",
+        "customer_id": 122
+    },
+    {
+        "properties_name": "Batur Bamboo Cabin",
+        "customer_id": 63
+    },
+    {
+        "properties_name": "Batur Caldera Guesthouse",
+        "customer_id": 71
+    },
+    {
+        "properties_name": "Batur corner",
+        "customer_id": 299
+    },
+    {
+        "properties_name": "Bening Asri Guesthouse",
+        "customer_id": 134
+    },
+    {
+        "properties_name": "Bhuana Agung Villa & Restaurant",
+        "customer_id": 92
+    },
+    {
+        "properties_name": "Bidari Hotel Lombok",
+        "customer_id": 251
+    },
+    {
+        "properties_name": "Bintang Khanida Syariah",
+        "customer_id": 154
+    },
+    {
+        "properties_name": "Blanjong Homestay Sanur",
+        "customer_id": 7
+    },
+    {
+        "properties_name": "Bonero Bojonegoro by Bookandlink",
+        "customer_id": 83
+    },
+    {
+        "properties_name": "Break Villa Kintamani",
+        "customer_id": 62
+    },
+    {
+        "properties_name": "Break Villa Kintamani",
+        "customer_id": 377
+    },
+    {
+        "properties_name": "Bukit Langit Campventure",
+        "customer_id": 343
+    },
+    {
+        "properties_name": "Bukit Sion Room & Tour",
+        "customer_id": 244
+    },
+    {
+        "properties_name": "Bukit Surga Camping",
+        "customer_id": 18
+    },
+    {
+        "properties_name": "Bumi Banyu Bening Syariah",
+        "customer_id": 98
+    },
+    {
+        "properties_name": "Butterfly Bali Glamping",
+        "customer_id": 348
+    },
+    {
+        "properties_name": "Butterfly Guest House Canggu",
+        "customer_id": 426
+    },
+    {
+        "properties_name": "Calliandra Homestay",
+        "customer_id": 150
+    },
+    {
+        "properties_name": "Candra Loka Studio & Apartement by The Loka",
+        "customer_id": 206
+    },
+    {
+        "properties_name": "Canggu Kayuma House",
+        "customer_id": 167
+    },
+    {
+        "properties_name": "Casa Batubelig",
+        "customer_id": 131
+    },
+    {
+        "properties_name": "Casa Batu Belig",
+        "customer_id": 415
+    },
+    {
+        "properties_name": "Casa Batu Mejan",
+        "customer_id": 416
+    },
+    {
+        "properties_name": "Casa Bella Homestay",
+        "customer_id": 371
+    },
+    {
+        "properties_name": "Casa De Arya",
+        "customer_id": 403
+    },
+    {
+        "properties_name": "Casa Natura",
+        "customer_id": 230
+    },
+    {
+        "properties_name": "Casa Rani Beach Inn",
+        "customer_id": 242
+    },
+    {
+        "properties_name": "Catur Glamping Bedugul",
+        "customer_id": 421
+    },
+    {
+        "properties_name": "Cening Bagus Bungalow",
+        "customer_id": 234
+    },
+    {
+        "properties_name": "Center Point",
+        "customer_id": 407
+    },
+    {
+        "properties_name": "Classic Herman by Broga",
+        "customer_id": 99
+    },
+    {
+        "properties_name": "Costel Sahabat Bandara",
+        "customer_id": 312
+    },
+    {
+        "properties_name": "Cozynest Tenggilis",
+        "customer_id": 198
+    },
+    {
+        "properties_name": "Crystal Flow Guesthouse & Apartment",
+        "customer_id": 351
+    },
+    {
+        "properties_name": "Daun Lebar Villa",
+        "customer_id": 240
+    },
+    {
+        "properties_name": "Da Vici",
+        "customer_id": 382
+    },
+    {
+        "properties_name": "Dayuh House",
+        "customer_id": 213
+    },
+    {
+        "properties_name": "D'Canggu Homestay",
+        "customer_id": 81
+    },
+    {
+        "properties_name": "De Balen Soultan Hotel",
+        "customer_id": 269
+    },
+    {
+        "properties_name": "Deep Roots Dive & Yoga Resort",
+        "customer_id": 424
+    },
+    {
+        "properties_name": "De Metra Villa",
+        "customer_id": 89
+    },
+    {
+        "properties_name": "Desya Member Of Kingkost",
+        "customer_id": 180
+    },
+    {
+        "properties_name": "Discovery Candidasa",
+        "customer_id": 40
+    },
+    {
+        "properties_name": "D'jineng Rice Teras Canggu",
+        "customer_id": 375
+    },
+    {
+        "properties_name": "D'Jineng Rice Terrace Bungalows",
+        "customer_id": 114
+    },
+    {
+        "properties_name": "D'Muncuk Huts Lembongan",
+        "customer_id": 155
+    },
+    {
+        "properties_name": "Dolce Farniente",
+        "customer_id": 356
+    },
+    {
+        "properties_name": "Duaraloka Sanur",
+        "customer_id": 152
+    },
+    {
+        "properties_name": "Dusun Ubud",
+        "customer_id": 210
+    },
+    {
+        "properties_name": "Dwaraloka Retreat Ubud",
+        "customer_id": 140
+    },
+    {
+        "properties_name": "EcoEd House",
+        "customer_id": 335
+    },
+    {
+        "properties_name": "E-Kost Bayeman",
+        "customer_id": 186
+    },
+    {
+        "properties_name": "E-Kost Candi gebang by ecommerceLoka",
+        "customer_id": 189
+    },
+    {
+        "properties_name": "E-Kost Karang Jati 3 by ecommerceLoka",
+        "customer_id": 190
+    },
+    {
+        "properties_name": "Elemento Homestay",
+        "customer_id": 318
+    },
+    {
+        "properties_name": "Ellora Villa",
+        "customer_id": 30
+    },
+    {
+        "properties_name": "Emwe Clinic",
+        "customer_id": 70
+    },
+    {
+        "properties_name": "Esterin Ubud",
+        "customer_id": 5
+    },
+    {
+        "properties_name": "Esterin Villa Seminyak",
+        "customer_id": 4
+    },
+    {
+        "properties_name": "Feels Like Home",
+        "customer_id": 267
+    },
+    {
+        "properties_name": "FIERIS VALLEY LUXURY VILLA",
+        "customer_id": 434
+    },
+    {
+        "properties_name": "Fingers Studio Apartment",
+        "customer_id": 97
+    },
+    {
+        "properties_name": "Frangipani House and Spa",
+        "customer_id": 128
+    },
+    {
+        "properties_name": "Fuji Panorama by Marketpedia",
+        "customer_id": 54
+    },
+    {
+        "properties_name": "Full Moon Villa Ungasan",
+        "customer_id": 52
+    },
+    {
+        "properties_name": "Gadang Villa",
+        "customer_id": 392
+    },
+    {
+        "properties_name": "Garden Hill Kintamani",
+        "customer_id": 406
+    },
+    {
+        "properties_name": "Gems Villa By Moria",
+        "customer_id": 271
+    },
+    {
+        "properties_name": "Giri Palma Hotel Malang",
+        "customer_id": 20
+    },
+    {
+        "properties_name": "Glamor Kintamani",
+        "customer_id": 385
+    },
+    {
+        "properties_name": "G Land Backpacker",
+        "customer_id": 143
+    },
+    {
+        "properties_name": "Gobah Homestay",
+        "customer_id": 383
+    },
+    {
+        "properties_name": "Golden Ganesha",
+        "customer_id": 129
+    },
+    {
+        "properties_name": "Great Bali Villa",
+        "customer_id": 113
+    },
+    {
+        "properties_name": "Green Hill by Polumb Garden",
+        "customer_id": 432
+    },
+    {
+        "properties_name": "Green Rasuna Residence",
+        "customer_id": 147
+    },
+    {
+        "properties_name": "Griya Al Mukmin",
+        "customer_id": 310
+    },
+    {
+        "properties_name": "Griya D'Carik",
+        "customer_id": 258
+    },
+    {
+        "properties_name": "Griya Helin",
+        "customer_id": 412
+    },
+    {
+        "properties_name": "Griya Kandel",
+        "customer_id": 135
+    },
+    {
+        "properties_name": "Griya Nina Syariah",
+        "customer_id": 12
+    },
+    {
+        "properties_name": "Guest House Anggerk BSD",
+        "customer_id": 408
+    },
+    {
+        "properties_name": "Gula Busa Guest House",
+        "customer_id": 340
+    },
+    {
+        "properties_name": "Gunung Dago Resort Bogor",
+        "customer_id": 100
+    },
+    {
+        "properties_name": "Gura Homestay",
+        "customer_id": 284
+    },
+    {
+        "properties_name": "Hayana Villa",
+        "customer_id": 399
+    },
+    {
+        "properties_name": "Heliconia Villa Seminyak",
+        "customer_id": 46
+    },
+    {
+        "properties_name": "Hideaway Villa Bali",
+        "customer_id": 418
+    },
+    {
+        "properties_name": "Hideout Kintamani",
+        "customer_id": 411
+    },
+    {
+        "properties_name": "Homestay at Kingkost Karangjati",
+        "customer_id": 179
+    },
+    {
+        "properties_name": "Homestay at Kingkost Kenari Kudus",
+        "customer_id": 182
+    },
+    {
+        "properties_name": "Homestay at Kingkost Mayong",
+        "customer_id": 188
+    },
+    {
+        "properties_name": "Homestay at Kingkost Nandan",
+        "customer_id": 196
+    },
+    {
+        "properties_name": "Homestay at Kingkost Nogotirto",
+        "customer_id": 187
+    },
+    {
+        "properties_name": "Homestay At KINGKOST Wonocatur",
+        "customer_id": 191
+    },
+    {
+        "properties_name": "Homestay Komodo Mountain View",
+        "customer_id": 307
+    },
+    {
+        "properties_name": "Homestay Sukses Tambora",
+        "customer_id": 207
+    },
+    {
+        "properties_name": "Homy House",
+        "customer_id": 156
+    },
+    {
+        "properties_name": "Hotel Grand Taufik",
+        "customer_id": 393
+    },
+    {
+        "properties_name": "Hotel Jogja Bukittinggi",
+        "customer_id": 158
+    },
+    {
+        "properties_name": "Hotel Mahkota Plengkung",
+        "customer_id": 21
+    },
+    {
+        "properties_name": "Hotel Mega dana",
+        "customer_id": 278
+    },
+    {
+        "properties_name": "Hotel Tirtonadi Permai",
+        "customer_id": 259
+    },
+    {
+        "properties_name": "Hotel UNO Surabaya",
+        "customer_id": 38
+    },
+    {
+        "properties_name": "IB Homestay Syariah by EcommerceLoka",
+        "customer_id": 336
+    },
+    {
+        "properties_name": "Ijen Menjangan",
+        "customer_id": 373
+    },
+    {
+        "properties_name": "Istha Puri Ketewel",
+        "customer_id": 142
+    },
+    {
+        "properties_name": "Ivy Canggu",
+        "customer_id": 293
+    },
+    {
+        "properties_name": "Japa Guesthouse",
+        "customer_id": 103
+    },
+    {
+        "properties_name": "Japlen Rooms",
+        "customer_id": 395
+    },
+    {
+        "properties_name": "Jazz Rooms",
+        "customer_id": 321
+    },
+    {
+        "properties_name": "Jempana View",
+        "customer_id": 93
+    },
+    {
+        "properties_name": "Jero Delod Guesthouse",
+        "customer_id": 136
+    },
+    {
+        "properties_name": "Jero Harum Homestay",
+        "customer_id": 169
+    },
+    {
+        "properties_name": "Jero Kelodan Villa",
+        "customer_id": 292
+    },
+    {
+        "properties_name": "Joni Ubud Hostel",
+        "customer_id": 315
+    },
+    {
+        "properties_name": "Kaiarasa suites and villa",
+        "customer_id": 389
+    },
+    {
+        "properties_name": "Kamandhani Suite",
+        "customer_id": 118
+    },
+    {
+        "properties_name": "Kamani Cabin",
+        "customer_id": 430
+    },
+    {
+        "properties_name": "Kampung Canggu By The Loka",
+        "customer_id": 194
+    },
+    {
+        "properties_name": "Karang Lila Bhuana",
+        "customer_id": 48
+    },
+    {
+        "properties_name": "Karnesan",
+        "customer_id": 429
+    },
+    {
+        "properties_name": "Kasmarani Homestay",
+        "customer_id": 184
+    },
+    {
+        "properties_name": "Kasmi Mount Batur",
+        "customer_id": 361
+    },
+    {
+        "properties_name": "Kayu Jati Cottage",
+        "customer_id": 365
+    },
+    {
+        "properties_name": "Kebun Impian",
+        "customer_id": 330
+    },
+    {
+        "properties_name": "Kemari Guest House",
+        "customer_id": 374
+    },
+    {
+        "properties_name": "Kencana Garden",
+        "customer_id": 202
+    },
+    {
+        "properties_name": "Kingkost Malioboro",
+        "customer_id": 181
+    },
+    {
+        "properties_name": "Kingkost Tinosidin",
+        "customer_id": 250
+    },
+    {
+        "properties_name": "King Sanur Villa",
+        "customer_id": 235
+    },
+    {
+        "properties_name": "KOA",
+        "customer_id": 221
+    },
+    {
+        "properties_name": "Komala Homestay",
+        "customer_id": 104
+    },
+    {
+        "properties_name": "Kose Ubud Villa",
+        "customer_id": 381
+    },
+    {
+        "properties_name": "Kost Exclusive Omah Sinten Palagan",
+        "customer_id": 427
+    },
+    {
+        "properties_name": "Kost Griya Asri",
+        "customer_id": 164
+    },
+    {
+        "properties_name": "Kost Griya Hikari",
+        "customer_id": 205
+    },
+    {
+        "properties_name": "Kost Griya Marina",
+        "customer_id": 245
+    },
+    {
+        "properties_name": "Kost Karangjati 3 by Omah Sinten",
+        "customer_id": 428
+    },
+    {
+        "properties_name": "Kozy 15 Guesthouse",
+        "customer_id": 173
+    },
+    {
+        "properties_name": "Kubu Dangin Guest House",
+        "customer_id": 279
+    },
+    {
+        "properties_name": "Kubu D'Carik Villa and Bungalow",
+        "customer_id": 121
+    },
+    {
+        "properties_name": "Kubu Kecubung Villa",
+        "customer_id": 401
+    },
+    {
+        "properties_name": "Kusuma Apartment Canggu",
+        "customer_id": 369
+    },
+    {
+        "properties_name": "Kusuma Guest House II",
+        "customer_id": 368
+    },
+    {
+        "properties_name": "Kususma Guest House I",
+        "customer_id": 367
+    },
+    {
+        "properties_name": "Kuta One Party Hotel",
+        "customer_id": 201
+    },
+    {
+        "properties_name": "Kuta Scooter Rental",
+        "customer_id": 74
+    },
+    {
+        "properties_name": "Kuta Suci Guesthouse",
+        "customer_id": 166
+    },
+    {
+        "properties_name": "La Jempana",
+        "customer_id": 141
+    },
+    {
+        "properties_name": "Lake Batur Villa",
+        "customer_id": 349
+    },
+    {
+        "properties_name": "Lanussa Hill Villa",
+        "customer_id": 171
+    },
+    {
+        "properties_name": "La Pino Batur",
+        "customer_id": 260
+    },
+    {
+        "properties_name": "La Pino Batur",
+        "customer_id": 372
+    },
+    {
+        "properties_name": "La Varuna",
+        "customer_id": 283
+    },
+    {
+        "properties_name": "Lavilla 10",
+        "customer_id": 223
+    },
+    {
+        "properties_name": "Lavilla 7",
+        "customer_id": 232
+    },
+    {
+        "properties_name": "Lavilla 8",
+        "customer_id": 233
+    },
+    {
+        "properties_name": "Lavilla 9",
+        "customer_id": 222
+    },
+    {
+        "properties_name": "Lazura Serenite",
+        "customer_id": 384
+    },
+    {
+        "properties_name": "Lega Legi Town House",
+        "customer_id": 68
+    },
+    {
+        "properties_name": "Lembah Rinjani Villa & Resto",
+        "customer_id": 123
+    },
+    {
+        "properties_name": "Lestari Homestay",
+        "customer_id": 69
+    },
+    {
+        "properties_name": "Little Pond",
+        "customer_id": 35
+    },
+    {
+        "properties_name": "Loka Loka Ubud",
+        "customer_id": 153
+    },
+    {
+        "properties_name": "Lombok Garden Hotel",
+        "customer_id": 228
+    },
+    {
+        "properties_name": "Lombok Garden Hotel (not use)",
+        "customer_id": 229
+    },
+    {
+        "properties_name": "Lumbung Sari Hotel Ubud",
+        "customer_id": 66
+    },
+    {
+        "properties_name": "Lumbung Sari Studio",
+        "customer_id": 386
+    },
+    {
+        "properties_name": "Made Ubud Villa",
+        "customer_id": 282
+    },
+    {
+        "properties_name": "Maha Gangga Valley",
+        "customer_id": 162
+    },
+    {
+        "properties_name": "Maha Villa 1 Kertha Mandala",
+        "customer_id": 328
+    },
+    {
+        "properties_name": "Maha Villa II",
+        "customer_id": 394
+    },
+    {
+        "properties_name": "MaHe Glamping Kintamani",
+        "customer_id": 404
+    },
+    {
+        "properties_name": "Maluku Residance",
+        "customer_id": 200
+    },
+    {
+        "properties_name": "Manah Shanti Resort",
+        "customer_id": 91
+    },
+    {
+        "properties_name": "Mandara Villa Ungasan",
+        "customer_id": 1
+    },
+    {
+        "properties_name": "Maria Secrate Villa",
+        "customer_id": 364
+    },
+    {
+        "properties_name": "Maru Fortuna Villa By Maria",
+        "customer_id": 256
+    },
+    {
+        "properties_name": "Merapi Inn",
+        "customer_id": 42
+    },
+    {
+        "properties_name": "Meruhdani Boutique Hotel Ubud",
+        "customer_id": 60
+    },
+    {
+        "properties_name": "Miko Room",
+        "customer_id": 218
+    },
+    {
+        "properties_name": "Mitra Room",
+        "customer_id": 345
+    },
+    {
+        "properties_name": "MJ Villa Sanur",
+        "customer_id": 435
+    },
+    {
+        "properties_name": "Moringa Pandawa Guesthouse",
+        "customer_id": 366
+    },
+    {
+        "properties_name": "Mount Batur Villa",
+        "customer_id": 10
+    },
+    {
+        "properties_name": "Munduk Natrure Lodge",
+        "customer_id": 268
+    },
+    {
+        "properties_name": "Mupu Jana Keramas",
+        "customer_id": 110
+    },
+    {
+        "properties_name": "Musafir Guest House",
+        "customer_id": 249
+    },
+    {
+        "properties_name": "My Dream Bali",
+        "customer_id": 85
+    },
+    {
+        "properties_name": "Natasya Kuta beach Hotel",
+        "customer_id": 422
+    },
+    {
+        "properties_name": "Natural View Sidemen Cottage",
+        "customer_id": 95
+    },
+    {
+        "properties_name": "Nauna Villa Bali",
+        "customer_id": 117
+    },
+    {
+        "properties_name": "Ndalem Katong",
+        "customer_id": 39
+    },
+    {
+        "properties_name": "Neelam Villa By Moria",
+        "customer_id": 280
+    },
+    {
+        "properties_name": "New Daria Villas Seminyak",
+        "customer_id": 157
+    },
+    {
+        "properties_name": "New Jimbaran Hotel",
+        "customer_id": 72
+    },
+    {
+        "properties_name": "New Mandurah Stay",
+        "customer_id": 109
+    },
+    {
+        "properties_name": "Newton Apartment Residence",
+        "customer_id": 161
+    },
+    {
+        "properties_name": "NILUH Private Villas",
+        "customer_id": 138
+    },
+    {
+        "properties_name": "Nivasa Nusa Dua",
+        "customer_id": 82
+    },
+    {
+        "properties_name": "Nusa Dua Bayview",
+        "customer_id": 24
+    },
+    {
+        "properties_name": "Odetta Villa",
+        "customer_id": 301
+    },
+    {
+        "properties_name": "Olivia Guesthouse",
+        "customer_id": 94
+    },
+    {
+        "properties_name": "Omah Dowangan",
+        "customer_id": 252
+    },
+    {
+        "properties_name": "One Degree Sunset Hill",
+        "customer_id": 88
+    },
+    {
+        "properties_name": "Pacung Indah Hotel & Restaurant",
+        "customer_id": 133
+    },
+    {
+        "properties_name": "Pande Permai Guest House",
+        "customer_id": 397
+    },
+    {
+        "properties_name": "PAPADAAN Homestay Syariah Batu",
+        "customer_id": 137
+    },
+    {
+        "properties_name": "Passifika Batu Hijau",
+        "customer_id": 304
+    },
+    {
+        "properties_name": "Pearl Villa By Moria",
+        "customer_id": 272
+    },
+    {
+        "properties_name": "Penida Krusty Hill",
+        "customer_id": 14
+    },
+    {
+        "properties_name": "Pertivi Love",
+        "customer_id": 149
+    },
+    {
+        "properties_name": "Pesantian Villa and Warung",
+        "customer_id": 80
+    },
+    {
+        "properties_name": "Pondok Cap Oleng",
+        "customer_id": 178
+    },
+    {
+        "properties_name": "Pondok Chesia Canggu",
+        "customer_id": 380
+    },
+    {
+        "properties_name": "Pondok Goa Alam",
+        "customer_id": 398
+    },
+    {
+        "properties_name": "Pondok Indah Guesthouse Samarinda",
+        "customer_id": 23
+    },
+    {
+        "properties_name": "Pondok Kana",
+        "customer_id": 238
+    },
+    {
+        "properties_name": "Pondok Lulik",
+        "customer_id": 203
+    },
+    {
+        "properties_name": "Pondok Sayan Homestay",
+        "customer_id": 357
+    },
+    {
+        "properties_name": "Popitan Garden Campground & Glamping Bedugul",
+        "customer_id": 236
+    },
+    {
+        "properties_name": "Prama Beach Guest House by The Loka",
+        "customer_id": 195
+    },
+    {
+        "properties_name": "Pratisarawirya Hotel",
+        "customer_id": 13
+    },
+    {
+        "properties_name": "Pratisarawirya Hotel By The Loka",
+        "customer_id": 396
+    },
+    {
+        "properties_name": "Pulestis Bali Glamping",
+        "customer_id": 350
+    },
+    {
+        "properties_name": "Puri Candi Kuning",
+        "customer_id": 49
+    },
+    {
+        "properties_name": "Puri Canggu Rooms ll",
+        "customer_id": 26
+    },
+    {
+        "properties_name": "Puri Canggu Villas & Room",
+        "customer_id": 25
+    },
+    {
+        "properties_name": "Puri Indrakila",
+        "customer_id": 151
+    },
+    {
+        "properties_name": "Puri Kaja House",
+        "customer_id": 303
+    },
+    {
+        "properties_name": "Puri Uma Dewi Ubud",
+        "customer_id": 344
+    },
+    {
+        "properties_name": "Queenara Local House",
+        "customer_id": 294
+    },
+    {
+        "properties_name": "Regantris Surabaya",
+        "customer_id": 53
+    },
+    {
+        "properties_name": "Revive Bogor Pendopo 45 by Bookandlink",
+        "customer_id": 28
+    },
+    {
+        "properties_name": "Revive Puncak Grand Smesco by Bookandlink",
+        "customer_id": 29
+    },
+    {
+        "properties_name": "Rinjani Garden",
+        "customer_id": 124
+    },
+    {
+        "properties_name": "Rizky Guesthouse",
+        "customer_id": 65
+    },
+    {
+        "properties_name": "Royal escape",
+        "customer_id": 341
+    },
+    {
+        "properties_name": "Royal Garden Villa & Spa Bali",
+        "customer_id": 22
+    },
+    {
+        "properties_name": "Royal Maharani Payogan Ubud",
+        "customer_id": 241
+    },
+    {
+        "properties_name": "Rumah Kita Bali",
+        "customer_id": 376
+    },
+    {
+        "properties_name": "Rumahku Bali",
+        "customer_id": 172
+    },
+    {
+        "properties_name": "Rumah Roda",
+        "customer_id": 287
+    },
+    {
+        "properties_name": "Sakura Guesthouse",
+        "customer_id": 116
+    },
+    {
+        "properties_name": "Samudra Homestay",
+        "customer_id": 261
+    },
+    {
+        "properties_name": "Sandat Bali Villa",
+        "customer_id": 253
+    },
+    {
+        "properties_name": "Sang Giri Mountain Tent Resort",
+        "customer_id": 352
+    },
+    {
+        "properties_name": "Sangrila Grill",
+        "customer_id": 75
+    },
+    {
+        "properties_name": "Sansari Villa Sanur",
+        "customer_id": 378
+    },
+    {
+        "properties_name": "Santhi Graha Guest House",
+        "customer_id": 405
+    },
+    {
+        "properties_name": "Sapta Dala Yoga",
+        "customer_id": 148
+    },
+    {
+        "properties_name": "Saraswati Villa",
+        "customer_id": 219
+    },
+    {
+        "properties_name": "Sarinande Hotel",
+        "customer_id": 175
+    },
+    {
+        "properties_name": "Sau Bali Room",
+        "customer_id": 192
+    },
+    {
+        "properties_name": "SBY Residence",
+        "customer_id": 176
+    },
+    {
+        "properties_name": "S'cape Condotel",
+        "customer_id": 32
+    },
+    {
+        "properties_name": "Sea La Vie Resort Nusa Penida",
+        "customer_id": 107
+    },
+    {
+        "properties_name": "Sedana Guesthouse",
+        "customer_id": 102
+    },
+    {
+        "properties_name": "Sedana Villa Sanur",
+        "customer_id": 400
+    },
+    {
+        "properties_name": "Segara Camp",
+        "customer_id": 115
+    },
+    {
+        "properties_name": "Segara Sadhu Inn Kuta",
+        "customer_id": 11
+    },
+    {
+        "properties_name": "Semarang Cordova Edupartment Suites",
+        "customer_id": 27
+    },
+    {
+        "properties_name": "Semi Villa Berawa",
+        "customer_id": 358
+    },
+    {
+        "properties_name": "Shankara Guest House",
+        "customer_id": 347
+    },
+    {
+        "properties_name": "Siginjae Room",
+        "customer_id": 391
+    },
+    {
+        "properties_name": "Simona Homestay Canggu",
+        "customer_id": 204
+    },
+    {
+        "properties_name": "Singgahan Bungalow",
+        "customer_id": 144
+    },
+    {
+        "properties_name": "Sisilia Lodge",
+        "customer_id": 363
+    },
+    {
+        "properties_name": "Smart Inn",
+        "customer_id": 311
+    },
+    {
+        "properties_name": "Soleil Suites Petitenget",
+        "customer_id": 215
+    },
+    {
+        "properties_name": "Sotis Hotel Management",
+        "customer_id": 112
+    },
+    {
+        "properties_name": "Sri Aksata Ubud Resort",
+        "customer_id": 289
+    },
+    {
+        "properties_name": "Sri Aksata Ubud Resort - Flat",
+        "customer_id": 388
+    },
+    {
+        "properties_name": "Sriwedari House Keramas",
+        "customer_id": 227
+    },
+    {
+        "properties_name": "Star Hill Kintamani",
+        "customer_id": 409
+    },
+    {
+        "properties_name": "Starloka Saba Bali",
+        "customer_id": 170
+    },
+    {
+        "properties_name": "Sukanami Villa Ubud",
+        "customer_id": 177
+    },
+    {
+        "properties_name": "Susi Villa",
+        "customer_id": 295
+    },
+    {
+        "properties_name": "Taman Asta Gangga",
+        "customer_id": 106
+    },
+    {
+        "properties_name": "Tanta Escape",
+        "customer_id": 387
+    },
+    {
+        "properties_name": "Teba House Bisma Ubud",
+        "customer_id": 67
+    },
+    {
+        "properties_name": "Teba House Ubud",
+        "customer_id": 58
+    },
+    {
+        "properties_name": "Telu Telu solo",
+        "customer_id": 248
+    },
+    {
+        "properties_name": "Tempo Doeloe Homestay",
+        "customer_id": 273
+    },
+    {
+        "properties_name": "Teras Kaca",
+        "customer_id": 298
+    },
+    {
+        "properties_name": "The Canggu Boutique Villas & Spa",
+        "customer_id": 64
+    },
+    {
+        "properties_name": "The Clover Residence",
+        "customer_id": 339
+    },
+    {
+        "properties_name": "The Dayuh Villa",
+        "customer_id": 125
+    },
+    {
+        "properties_name": "The Ellen Hotel",
+        "customer_id": 130
+    },
+    {
+        "properties_name": "The Jangkar Canggu",
+        "customer_id": 197
+    },
+    {
+        "properties_name": "The Joglo Beratan",
+        "customer_id": 302
+    },
+    {
+        "properties_name": "The Joglo Beratan (not use)",
+        "customer_id": 55
+    },
+    {
+        "properties_name": "The Kaba Kaba Private Luxury Villa",
+        "customer_id": 246
+    },
+    {
+        "properties_name": "The Kasih Seminyak",
+        "customer_id": 76
+    },
+    {
+        "properties_name": "The Kon\u2019s Villa Bali Seminyak",
+        "customer_id": 145
+    },
+    {
+        "properties_name": "The Munggu Villa",
+        "customer_id": 281
+    },
+    {
+        "properties_name": "The Nani Ubud",
+        "customer_id": 126
+    },
+    {
+        "properties_name": "The Polumb Garden Bedugul",
+        "customer_id": 146
+    },
+    {
+        "properties_name": "The Rinaya Canggu",
+        "customer_id": 16
+    },
+    {
+        "properties_name": "The Studio Seminyak",
+        "customer_id": 33
+    },
+    {
+        "properties_name": "The Swan Villa Anatoly",
+        "customer_id": 247
+    },
+    {
+        "properties_name": "The Tanis Beach Resort",
+        "customer_id": 402
+    },
+    {
+        "properties_name": "The Vasini Smart Boutique Hotel",
+        "customer_id": 57
+    },
+    {
+        "properties_name": "The Watergarden Hotel & Spa Candidasa",
+        "customer_id": 2
+    },
+    {
+        "properties_name": "Tirta Rahayu Camp",
+        "customer_id": 360
+    },
+    {
+        "properties_name": "Tree House",
+        "customer_id": 34
+    },
+    {
+        "properties_name": "Tribhuwana Padma Resort",
+        "customer_id": 410
+    },
+    {
+        "properties_name": "Tude's Family Homestay",
+        "customer_id": 433
+    },
+    {
+        "properties_name": "Turtle Shelter Guesthouse",
+        "customer_id": 286
+    },
+    {
+        "properties_name": "Tutde Guest House",
+        "customer_id": 277
+    },
+    {
+        "properties_name": "Ubud Miko Villas",
+        "customer_id": 209
+    },
+    {
+        "properties_name": "Ubud Sekembang Sari",
+        "customer_id": 44
+    },
+    {
+        "properties_name": "Uma Dawa Resort and Spa Ubud",
+        "customer_id": 84
+    },
+    {
+        "properties_name": "Umah Denadja",
+        "customer_id": 355
+    },
+    {
+        "properties_name": "Umah De Ubud",
+        "customer_id": 47
+    },
+    {
+        "properties_name": "Umah Jati Villa",
+        "customer_id": 413
+    },
+    {
+        "properties_name": "Umah Jati Villa",
+        "customer_id": 414
+    },
+    {
+        "properties_name": "Umah suta Sari",
+        "customer_id": 214
+    },
+    {
+        "properties_name": "Uma Sebatu Ubud",
+        "customer_id": 108
+    },
+    {
+        "properties_name": "Unika Coliving",
+        "customer_id": 425
+    },
+    {
+        "properties_name": "Urban Haven Group",
+        "customer_id": 417
+    },
+    {
+        "properties_name": "Urban Haven Residence",
+        "customer_id": 275
+    },
+    {
+        "properties_name": "Urban Haven Sanur",
+        "customer_id": 208
+    },
+    {
+        "properties_name": "Utama Beach Villas Candidasa",
+        "customer_id": 174
+    },
+    {
+        "properties_name": "Vande Guest House",
+        "customer_id": 337
+    },
+    {
+        "properties_name": "Victory Munggu",
+        "customer_id": 105
+    },
+    {
+        "properties_name": "Villa Aster B3 Sanur",
+        "customer_id": 420
+    },
+    {
+        "properties_name": "Villa-Bay Oman",
+        "customer_id": 78
+    },
+    {
+        "properties_name": "Villa Casa Doreena Canggu By Moria",
+        "customer_id": 291
+    },
+    {
+        "properties_name": "Villa Damai Canggu",
+        "customer_id": 300
+    },
+    {
+        "properties_name": "Villa De Belleza",
+        "customer_id": 183
+    },
+    {
+        "properties_name": "Villa Deva Ubud",
+        "customer_id": 326
+    },
+    {
+        "properties_name": "Villa D'Ruja Ubud",
+        "customer_id": 370
+    },
+    {
+        "properties_name": "Villa Falicia Canggu by Maria",
+        "customer_id": 257
+    },
+    {
+        "properties_name": "Villa Gajah Mas Bedugul",
+        "customer_id": 59
+    },
+    {
+        "properties_name": "Villa Happy Jimbaran",
+        "customer_id": 270
+    },
+    {
+        "properties_name": "Villa Jempana",
+        "customer_id": 9
+    },
+    {
+        "properties_name": "Villa Jempana Kintamani",
+        "customer_id": 379
+    },
+    {
+        "properties_name": "Villa Jepun Segara Giri",
+        "customer_id": 390
+    },
+    {
+        "properties_name": "Villa Kamandari",
+        "customer_id": 325
+    },
+    {
+        "properties_name": "Villa Kamane Ubud",
+        "customer_id": 334
+    },
+    {
+        "properties_name": "Villa Kamida",
+        "customer_id": 127
+    },
+    {
+        "properties_name": "Villa Karasan 5",
+        "customer_id": 239
+    },
+    {
+        "properties_name": "Villa Kasuari Tegalalang",
+        "customer_id": 333
+    },
+    {
+        "properties_name": "Villa Kebun Jeruk Syariah",
+        "customer_id": 56
+    },
+    {
+        "properties_name": "Villa Kuma By Moria",
+        "customer_id": 290
+    },
+    {
+        "properties_name": "Villa Lestari Ubud",
+        "customer_id": 319
+    },
+    {
+        "properties_name": "Villa Lumina B",
+        "customer_id": 8
+    },
+    {
+        "properties_name": "Villa Mangli Monochrome",
+        "customer_id": 61
+    },
+    {
+        "properties_name": "Villa Matanai Candidasa",
+        "customer_id": 3
+    },
+    {
+        "properties_name": "Villa Nara Ubud",
+        "customer_id": 362
+    },
+    {
+        "properties_name": "Villa Ndelik",
+        "customer_id": 314
+    },
+    {
+        "properties_name": "Villa Nusantara",
+        "customer_id": 220
+    },
+    {
+        "properties_name": "Villa Pantai Karang Sanur",
+        "customer_id": 36
+    },
+    {
+        "properties_name": "Villa Sama",
+        "customer_id": 231
+    },
+    {
+        "properties_name": "Villa Sampurna by morian",
+        "customer_id": 296
+    },
+    {
+        "properties_name": "Villa Sansu",
+        "customer_id": 225
+    },
+    {
+        "properties_name": "Villa Santru",
+        "customer_id": 342
+    },
+    {
+        "properties_name": "Villa subak",
+        "customer_id": 226
+    },
+    {
+        "properties_name": "Villa Sukanami Sanur",
+        "customer_id": 165
+    },
+    {
+        "properties_name": "Villa Sundaria",
+        "customer_id": 224
+    },
+    {
+        "properties_name": "Villa Taman diBlayu",
+        "customer_id": 19
+    },
+    {
+        "properties_name": "Villa Tentrem Canggu",
+        "customer_id": 305
+    },
+    {
+        "properties_name": "Villa Tulip Sanur",
+        "customer_id": 332
+    },
+    {
+        "properties_name": "Villa Urip Canggu",
+        "customer_id": 327
+    },
+    {
+        "properties_name": "Villa Wantilan Putih Sanur",
+        "customer_id": 37
+    },
+    {
+        "properties_name": "Villa Wa tu Ubud",
+        "customer_id": 338
+    },
+    {
+        "properties_name": "Villa Wibiseka Batuan",
+        "customer_id": 331
+    },
+    {
+        "properties_name": "Violand Garden Hotel",
+        "customer_id": 211
+    },
+    {
+        "properties_name": "Wanaseta Guest House",
+        "customer_id": 288
+    },
+    {
+        "properties_name": "Warung Gana",
+        "customer_id": 73
+    },
+    {
+        "properties_name": "Wisma Anugrah",
+        "customer_id": 297
+    }
+]
