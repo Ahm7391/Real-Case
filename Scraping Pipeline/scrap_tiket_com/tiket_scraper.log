@@ -1,0 +1,909 @@
+13:44:30 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5CC00E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81bdb4a08aebf53f2d1aaaa9659bce25
+13:44:34 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB477F680>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81bdb4a08aebf53f2d1aaaa9659bce25
+13:44:38 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5CC16D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81bdb4a08aebf53f2d1aaaa9659bce25
+13:45:01 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB4A69040>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b3da73be209e7a3d5fe887dc73bb41e7
+13:45:06 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5418FB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b3da73be209e7a3d5fe887dc73bb41e7
+13:45:10 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB4A68E60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b3da73be209e7a3d5fe887dc73bb41e7
+14:03:24 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5081EB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/4f029686dbf0929f40b94831fec0930d
+14:03:29 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5080BF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/4f029686dbf0929f40b94831fec0930d
+14:03:33 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB50822A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/4f029686dbf0929f40b94831fec0930d
+14:04:01 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB4A0F020>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c2c291e0fec491c9352e5172633214e2
+14:04:05 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB4A0F140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c2c291e0fec491c9352e5172633214e2
+14:04:09 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB4A0F230>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c2c291e0fec491c9352e5172633214e2
+14:26:56 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5E2FC80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8b9ca254248297cfcad57b457086a8bd
+14:27:00 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB4A0F3E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8b9ca254248297cfcad57b457086a8bd
+14:27:04 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5E2F050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8b9ca254248297cfcad57b457086a8bd
+15:21:30 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB735FC20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/6f747b0e6d88224cefb5ea46182b66b2
+15:21:34 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB735F740>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/6f747b0e6d88224cefb5ea46182b66b2
+15:21:38 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB735F500>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/6f747b0e6d88224cefb5ea46182b66b2
+15:22:07 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5E679B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/86618dfa28e5f4a51d38f64cf466898e
+15:22:11 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5E67170>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/86618dfa28e5f4a51d38f64cf466898e
+15:22:15 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5E67350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/86618dfa28e5f4a51d38f64cf466898e
+15:35:47 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5A679E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cc988fd197db51dbcc83985b949e9a4b
+15:35:51 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5A66630>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cc988fd197db51dbcc83985b949e9a4b
+15:35:55 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5A64FE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cc988fd197db51dbcc83985b949e9a4b
+15:48:55 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB510B3E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2bc491c0663d381c60f30ab9950641c9
+15:48:59 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB510AC30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2bc491c0663d381c60f30ab9950641c9
+15:49:03 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB510BE30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2bc491c0663d381c60f30ab9950641c9
+15:49:33 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB510B1A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5d0daf34aaeafdfef60e4745064317b1
+15:49:37 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB510A990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5d0daf34aaeafdfef60e4745064317b1
+15:49:41 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FEB5194230>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5d0daf34aaeafdfef60e4745064317b1
+13:49:43 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EEBCB5F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ee092926102844c6ce51e7fb6f0b8e29
+13:49:47 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EE797680>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ee092926102844c6ce51e7fb6f0b8e29
+13:49:51 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EEBC97C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ee092926102844c6ce51e7fb6f0b8e29
+13:50:52 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EECD9F10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5f05cac2d542ceff4c9f2ed1e2be369f
+13:50:56 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EECDA660>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5f05cac2d542ceff4c9f2ed1e2be369f
+13:51:00 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EECDA390>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5f05cac2d542ceff4c9f2ed1e2be369f
+14:27:46 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EECDA390>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b770fd26f68bc91546a833180982dd27
+14:27:50 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EECD8E30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b770fd26f68bc91546a833180982dd27
+14:27:54 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EECD8B00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b770fd26f68bc91546a833180982dd27
+14:28:25 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9ECE3DD60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/04cc4a756a1d8ca7c130c87765ce9317
+14:28:29 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9ECE3C530>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/04cc4a756a1d8ca7c130c87765ce9317
+14:28:33 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9ECE3C1D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/04cc4a756a1d8ca7c130c87765ce9317
+14:29:02 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EEC6FA10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/da403320cb56011b2367271be51a1de7
+14:29:06 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EEC6F890>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/da403320cb56011b2367271be51a1de7
+14:29:10 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EEC6F5F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/da403320cb56011b2367271be51a1de7
+15:19:37 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EECD8980>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/9e3de8349b4af0132d4ccfc26cb96be5
+15:19:41 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EECD8C80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/9e3de8349b4af0132d4ccfc26cb96be5
+15:19:45 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EECD8AD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/9e3de8349b4af0132d4ccfc26cb96be5
+15:20:15 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EF538A40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/815c8059a75e3f15fbca7b8e4a991b27
+15:20:19 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EF538AA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/815c8059a75e3f15fbca7b8e4a991b27
+15:20:23 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EF538B00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/815c8059a75e3f15fbca7b8e4a991b27
+15:20:53 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EF7AB770>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/dbd4b2d72487268b598b931a297f4ded
+15:20:57 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EF7AB800>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/dbd4b2d72487268b598b931a297f4ded
+15:21:01 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EF7AB290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/dbd4b2d72487268b598b931a297f4ded
+17:34:59 [INFO] Driver shut down. Session END.
+17:34:59 [INFO] ==================================================
+14:15:34 [INFO] ====== WebDriver manager ======
+14:15:35 [INFO] Get LATEST chromedriver version for google-chrome
+14:15:36 [INFO] Get LATEST chromedriver version for google-chrome
+14:15:36 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:15:53 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FCD688C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/527c0e2d0c2b44ae638c228181007879
+14:15:57 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FD053C80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/527c0e2d0c2b44ae638c228181007879
+14:16:01 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FD3E3830>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/527c0e2d0c2b44ae638c228181007879
+14:16:05 [INFO] ====== WebDriver manager ======
+14:16:06 [INFO] Get LATEST chromedriver version for google-chrome
+14:16:06 [INFO] Get LATEST chromedriver version for google-chrome
+14:16:07 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:16:24 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FD4B6C60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/63405ba1fe081d82b9c019c17fb93c22
+14:16:28 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FD4B6F30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/63405ba1fe081d82b9c019c17fb93c22
+14:16:32 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FD4B6F90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/63405ba1fe081d82b9c019c17fb93c22
+14:16:36 [INFO] ====== WebDriver manager ======
+14:16:37 [INFO] Get LATEST chromedriver version for google-chrome
+14:16:37 [INFO] Get LATEST chromedriver version for google-chrome
+14:16:38 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:29:54 [INFO] ====== WebDriver manager ======
+14:29:55 [INFO] Get LATEST chromedriver version for google-chrome
+14:29:56 [INFO] Get LATEST chromedriver version for google-chrome
+14:29:56 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:30:13 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FDBC6F60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/db3fb4f1fd076f5606a6b8354bf46551
+14:30:17 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FDBC6390>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/db3fb4f1fd076f5606a6b8354bf46551
+14:30:21 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FDBC6570>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/db3fb4f1fd076f5606a6b8354bf46551
+14:30:25 [INFO] ====== WebDriver manager ======
+14:30:27 [INFO] Get LATEST chromedriver version for google-chrome
+14:30:27 [INFO] Get LATEST chromedriver version for google-chrome
+14:30:27 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:35:22 [INFO] ====== WebDriver manager ======
+14:35:24 [INFO] Get LATEST chromedriver version for google-chrome
+14:35:24 [INFO] Get LATEST chromedriver version for google-chrome
+14:35:24 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:35:41 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE547290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b494b2f4ba12aa72adf14aa5e399fe6
+14:35:45 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE547B00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b494b2f4ba12aa72adf14aa5e399fe6
+14:35:49 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE5473E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b494b2f4ba12aa72adf14aa5e399fe6
+14:35:53 [INFO] ====== WebDriver manager ======
+14:35:54 [INFO] Get LATEST chromedriver version for google-chrome
+14:35:54 [INFO] Get LATEST chromedriver version for google-chrome
+14:35:55 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:35:58 [INFO] ====== WebDriver manager ======
+14:35:59 [INFO] Get LATEST chromedriver version for google-chrome
+14:35:59 [INFO] Get LATEST chromedriver version for google-chrome
+14:35:59 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:36:16 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE938650>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0595a4634c4c3a92ff4e2435513c616b
+14:36:20 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE938C80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0595a4634c4c3a92ff4e2435513c616b
+14:36:24 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE9398B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0595a4634c4c3a92ff4e2435513c616b
+14:36:29 [INFO] ====== WebDriver manager ======
+14:36:30 [INFO] Get LATEST chromedriver version for google-chrome
+14:36:30 [INFO] Get LATEST chromedriver version for google-chrome
+14:36:30 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:36:47 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE93ADB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ca9c3136b12e423b27b8fedd2c4b6f5a
+14:36:51 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE93B4A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ca9c3136b12e423b27b8fedd2c4b6f5a
+14:36:55 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE93AB70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ca9c3136b12e423b27b8fedd2c4b6f5a
+14:36:59 [INFO] ====== WebDriver manager ======
+14:37:00 [INFO] Get LATEST chromedriver version for google-chrome
+14:37:00 [INFO] Get LATEST chromedriver version for google-chrome
+14:37:00 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:37:17 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE939EB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/6f2230a3f11d37dd2689802f0b691b49
+14:37:21 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE93A150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/6f2230a3f11d37dd2689802f0b691b49
+14:37:25 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE93A600>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/6f2230a3f11d37dd2689802f0b691b49
+14:37:30 [INFO] ====== WebDriver manager ======
+14:37:31 [INFO] Get LATEST chromedriver version for google-chrome
+14:37:31 [INFO] Get LATEST chromedriver version for google-chrome
+14:37:31 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:37:48 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE93BC20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/f8de64e48af62f3019e75be785638efd
+14:37:52 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE939520>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/f8de64e48af62f3019e75be785638efd
+14:37:56 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE939D00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/f8de64e48af62f3019e75be785638efd
+14:38:00 [INFO] ====== WebDriver manager ======
+14:38:01 [INFO] Get LATEST chromedriver version for google-chrome
+14:38:02 [INFO] Get LATEST chromedriver version for google-chrome
+14:38:02 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:38:19 [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE93AB10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ad704cfb6fecbb2552b1ab3c7ad83ac1
+14:38:23 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE93BF50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ad704cfb6fecbb2552b1ab3c7ad83ac1
+14:38:27 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000206FE93BE00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ad704cfb6fecbb2552b1ab3c7ad83ac1
+14:38:31 [INFO] ====== WebDriver manager ======
+14:38:33 [INFO] Get LATEST chromedriver version for google-chrome
+14:38:33 [INFO] Get LATEST chromedriver version for google-chrome
+14:38:33 [INFO] Driver [C:\Users\anton\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+14:52:00 [INFO] Driver shut down. Session END.
+14:52:00 [INFO] ==================================================
+14:02:58 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+14:03:01 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+14:03:02 [INFO] UC Chrome started in headed mode via Xvfb
+14:03:02 [INFO] Updating only competitor mode.
+14:03:02 [INFO] Searching through all URLs that available.
+14:03:02 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/bliss-ubud-abangan
+14:03:02 [INFO] Found last checkpoint!!!
+14:03:02 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+14:03:02 [INFO] [1/1] Scraping …
+14:03:02 [INFO] Stratified sampling start at today + 3 days
+14:03:02 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-16&checkout=2026-07-17&adult=2&room=1&night=1
+14:03:10 [INFO] property name is: Alam Terrace Cottages
+14:03:10 [INFO] The availability on current date is not available, renew the date range.
+14:03:20 [INFO] The availability on current date is not available, renew the date range.
+14:03:35 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+14:03:35 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+14:03:40 [INFO] Stratified sampling start at today + 7 days
+14:03:40 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-20&checkout=2026-07-21&adult=2&room=1&night=1
+14:03:50 [INFO] property name is: Alam Terrace Cottages
+14:03:50 [INFO] The availability on current date is not available, renew the date range.
+14:04:00 [INFO] The availability on current date is not available, renew the date range.
+14:04:15 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+14:04:15 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+14:04:20 [INFO] Stratified sampling start at today + 14 days
+14:04:20 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-27&checkout=2026-07-28&adult=2&room=1&night=1
+14:04:24 [INFO] property name is: Alam Terrace Cottages
+14:04:24 [INFO] The availability on current date is not available, renew the date range.
+14:04:34 [INFO] The availability on current date is not available, renew the date range.
+14:04:48 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+14:04:48 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+14:04:53 [INFO] Stratified sampling start at today + 27 days
+14:04:53 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-08-09&checkout=2026-08-10&adult=2&room=1&night=1
+14:04:57 [INFO] property name is: Alam Terrace Cottages
+14:05:18 [INFO] Room may be available!!!!
+14:05:18 [INFO] Scrolling to trigger lazy-load before room scan...
+14:05:24 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+14:05:29 [INFO] Total room rows found: 1
+14:05:34 [INFO] room_type name is: Double Standard Room with Garden View
+14:05:39 [INFO] bed_type name is: Double
+14:05:39 [INFO] extra_features name is: ['Smoking room']
+14:05:39 [INFO] breakfast name is: ['No breakfast', 'No breakfast']
+14:05:41 [INFO] discounted_price is: IDR 506,344
+14:05:46 [INFO] [DEBUG] Session complete.
+14:05:46 [INFO] Finish processing URL listed competitor.
+14:05:46 [INFO] ==================================================
+14:05:46 [INFO] [DEBUG] TIKET.COM SESSION IS DONE, LET'S CHECK PENDING LIST PROPERTY ON AGODA
+14:05:46 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+14:05:49 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+14:05:50 [INFO] UC Chrome started in headed mode via Xvfb
+14:06:39 [INFO] current_pos is : 467
+14:06:40 [INFO] current_pos is : 1103
+14:06:41 [INFO] current_pos is : 1682
+14:06:41 [INFO] current_pos is : 1990
+14:06:42 [INFO] current_pos is : 2632
+14:06:43 [INFO] current_pos is : 3240
+14:06:45 [INFO] current_pos is : 3586
+14:06:47 [INFO] current_pos is : 3927
+14:06:47 [INFO] current_pos is : 4253
+14:06:48 [INFO] current_pos is : 4950
+14:06:49 [INFO] current_pos is : 5539
+14:06:52 [INFO] current_pos is : 5935
+14:06:52 [INFO] current_pos is : 6417
+14:06:53 [INFO] current_pos is : 6899
+14:06:54 [INFO] current_pos is : 7461
+14:06:55 [INFO] current_pos is : 7944
+14:06:58 [INFO] current_pos is : 8488
+14:07:01 [INFO] current_pos is : 9186
+14:07:01 [INFO] current_pos is : 9770
+14:07:05 [INFO] current_pos is : 10303
+14:07:07 [INFO] current_pos is : 10948
+14:07:07 [INFO]   [scroll] Scroll past current bottom
+14:07:07 [INFO]   [scroll] Current Position is : 10948
+14:07:07 [INFO]   [scroll] new_height 1 is : 10435
+14:07:12 [INFO] current_pos is : 11515
+14:07:13 [INFO]   [scroll] Scroll past current bottom
+14:07:13 [INFO]   [scroll] Current Position is : 11515
+14:07:13 [INFO]   [scroll] new_height 1 is : 10435
+14:07:18 [INFO]   [scroll] Scroll make sure 3 times
+14:07:33 [INFO]   [scroll] Reached stable bottom.
+14:07:44 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+14:07:46 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+14:07:47 [INFO] UC Chrome started in headed mode via Xvfb
+14:08:40 [INFO] current_pos is : 684
+14:08:41 [INFO] current_pos is : 1017
+14:08:41 [INFO] current_pos is : 1610
+14:08:44 [INFO] current_pos is : 2185
+14:08:47 [INFO] current_pos is : 2812
+14:08:48 [INFO] current_pos is : 3122
+14:08:49 [INFO] current_pos is : 3526
+14:08:50 [INFO] current_pos is : 3880
+14:08:52 [INFO] current_pos is : 4181
+14:08:54 [INFO] current_pos is : 4733
+14:08:57 [INFO] current_pos is : 5305
+14:08:57 [INFO] current_pos is : 5773
+14:08:58 [INFO] current_pos is : 6248
+14:08:59 [INFO] current_pos is : 6787
+14:08:59 [INFO] current_pos is : 7291
+14:09:00 [INFO] current_pos is : 7967
+14:09:00 [INFO] current_pos is : 8614
+14:09:01 [INFO] current_pos is : 9126
+14:09:02 [INFO] current_pos is : 9777
+14:09:03 [INFO] current_pos is : 10388
+14:09:03 [INFO] current_pos is : 10759
+14:09:06 [INFO]   [scroll] Scroll past current bottom
+14:09:06 [INFO]   [scroll] Current Position is : 10759
+14:09:06 [INFO]   [scroll] new_height 1 is : 10473
+14:09:11 [INFO]   [scroll] Scroll make sure 3 times
+14:09:26 [INFO]   [scroll] Reached stable bottom.
+14:09:31 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+14:09:34 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+14:09:35 [INFO] UC Chrome started in headed mode via Xvfb
+14:11:25 [INFO] Driver shut down. Session END.
+14:11:25 [INFO] ==================================================
+14:15:40 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+14:15:43 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+14:15:45 [INFO] UC Chrome started in headed mode via Xvfb
+14:15:45 [INFO] Updating only competitor mode.
+14:15:45 [INFO] Searching through all URLs that available.
+14:15:45 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/bliss-ubud-abangan
+14:15:45 [INFO] Found last checkpoint!!!
+14:15:45 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+14:15:45 [INFO] [1/1] Scraping …
+14:15:45 [INFO] Stratified sampling start at today + 3 days
+14:15:45 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-16&checkout=2026-07-17&adult=2&room=1&night=1
+14:15:51 [INFO] property name is: Alam Terrace Cottages
+14:15:51 [INFO] The availability on current date is not available, renew the date range.
+14:16:00 [INFO] The availability on current date is not available, renew the date range.
+14:16:14 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+14:16:14 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+14:16:19 [INFO] Stratified sampling start at today + 7 days
+14:16:19 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-20&checkout=2026-07-21&adult=2&room=1&night=1
+14:16:24 [INFO] property name is: Alam Terrace Cottages
+14:16:24 [INFO] The availability on current date is not available, renew the date range.
+14:16:34 [INFO] The availability on current date is not available, renew the date range.
+14:16:49 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+14:16:49 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+14:16:54 [INFO] Stratified sampling start at today + 14 days
+14:16:54 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-27&checkout=2026-07-28&adult=2&room=1&night=1
+14:17:00 [INFO] property name is: Alam Terrace Cottages
+14:17:00 [INFO] The availability on current date is not available, renew the date range.
+14:17:09 [INFO] The availability on current date is not available, renew the date range.
+14:17:37 [INFO] Room may be available!!!!
+14:17:37 [INFO] Scrolling to trigger lazy-load before room scan...
+14:17:43 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+14:17:48 [INFO] Total room rows found: 1
+14:17:53 [INFO] room_type name is: Double Superior Room with Garden View
+14:17:58 [INFO] bed_type name is: Double
+14:17:58 [INFO] extra_features name is: ['Smoking room']
+14:17:58 [INFO] breakfast name is: ['No breakfast', 'No breakfast']
+14:18:00 [INFO] discounted_price is: IDR 513,491
+14:18:05 [INFO] Stratified sampling start at today + 27 days
+14:18:05 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-08-09&checkout=2026-08-10&adult=2&room=1&night=1
+14:18:10 [INFO] property name is: Alam Terrace Cottages
+14:18:30 [INFO] Room may be available!!!!
+14:18:30 [INFO] Scrolling to trigger lazy-load before room scan...
+14:18:36 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+14:18:41 [INFO] Total room rows found: 1
+14:18:46 [INFO] room_type name is: Double Standard Room with Garden View
+14:18:51 [INFO] bed_type name is: Double
+14:18:51 [INFO] extra_features name is: ['Smoking room']
+14:18:51 [INFO] breakfast name is: ['No breakfast', 'No breakfast']
+14:18:53 [INFO] discounted_price is: IDR 506,344
+14:18:58 [INFO] [DEBUG] Session complete.
+14:18:58 [INFO] Finish processing URL listed competitor.
+14:18:58 [INFO] ==================================================
+14:18:58 [INFO] [DEBUG] TIKET.COM SESSION IS DONE, LET'S CHECK PENDING LIST PROPERTY ON AGODA
+14:18:58 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+14:19:02 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+14:19:03 [INFO] UC Chrome started in headed mode via Xvfb
+14:19:53 [INFO] current_pos is : 427
+14:19:54 [INFO] current_pos is : 859
+14:19:56 [INFO] current_pos is : 1405
+14:19:57 [INFO] current_pos is : 2008
+14:19:58 [INFO] current_pos is : 2564
+14:19:59 [INFO] current_pos is : 2939
+14:20:00 [INFO] current_pos is : 3535
+14:20:01 [INFO] current_pos is : 3944
+14:20:01 [INFO] current_pos is : 4534
+14:20:02 [INFO] current_pos is : 5124
+14:20:05 [INFO] current_pos is : 5712
+14:20:08 [INFO] current_pos is : 6084
+14:20:10 [INFO] current_pos is : 6668
+14:20:14 [INFO] current_pos is : 6980
+14:20:17 [INFO] current_pos is : 7409
+14:20:18 [INFO] current_pos is : 8088
+14:20:19 [INFO] current_pos is : 8479
+14:20:22 [INFO] current_pos is : 8987
+14:20:23 [INFO] current_pos is : 9611
+14:20:24 [INFO] current_pos is : 9935
+14:20:24 [INFO] current_pos is : 10505
+14:20:25 [INFO]   [scroll] Scroll past current bottom
+14:20:25 [INFO]   [scroll] Current Position is : 10505
+14:20:25 [INFO]   [scroll] new_height 1 is : 10191
+14:20:30 [INFO] current_pos is : 10997
+14:20:31 [INFO]   [scroll] Scroll past current bottom
+14:20:31 [INFO]   [scroll] Current Position is : 10997
+14:20:31 [INFO]   [scroll] new_height 1 is : 10191
+14:20:36 [INFO]   [scroll] Scroll make sure 3 times
+14:20:51 [INFO]   [scroll] Reached stable bottom.
+14:21:01 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+14:21:05 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+14:21:07 [INFO] UC Chrome started in headed mode via Xvfb
+14:23:00 [INFO] Driver shut down. Session END.
+14:23:00 [INFO] ==================================================
+15:08:31 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+15:08:37 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:08:38 [INFO] UC Chrome started in headed mode via Xvfb
+15:08:38 [INFO] Updating only competitor mode.
+15:08:38 [INFO] Searching through all URLs that available.
+15:08:38 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/bliss-ubud-abangan
+15:08:38 [INFO] Found last checkpoint!!!
+15:08:38 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+15:08:38 [INFO] [1/25] Scraping …
+15:08:38 [INFO] Stratified sampling start at today + 3 days
+15:08:38 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-16&checkout=2026-07-17&adult=2&room=1&night=1
+15:08:44 [INFO] property name is: Alam Terrace Cottages
+15:08:44 [INFO] The availability on current date is not available, renew the date range.
+15:08:53 [INFO] The availability on current date is not available, renew the date range.
+15:09:07 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+15:09:07 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+15:09:12 [INFO] Stratified sampling start at today + 7 days
+15:09:12 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-20&checkout=2026-07-21&adult=2&room=1&night=1
+15:09:19 [INFO] property name is: Alam Terrace Cottages
+15:09:19 [INFO] The availability on current date is not available, renew the date range.
+15:09:27 [INFO] The availability on current date is not available, renew the date range.
+15:09:41 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+15:09:41 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+15:09:46 [INFO] Stratified sampling start at today + 14 days
+15:09:46 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-27&checkout=2026-07-28&adult=2&room=1&night=1
+15:09:56 [INFO] property name is: Alam Terrace Cottages
+15:09:56 [INFO] The availability on current date is not available, renew the date range.
+15:10:04 [INFO] The availability on current date is not available, renew the date range.
+15:10:33 [INFO] Room may be available!!!!
+15:10:33 [INFO] Scrolling to trigger lazy-load before room scan...
+15:10:39 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+15:10:44 [INFO] Total room rows found: 1
+15:10:49 [INFO] room_type name is: Double Superior Room with Garden View
+15:10:54 [INFO] bed_type name is: Double
+15:10:54 [INFO] extra_features name is: ['Smoking room']
+15:10:54 [INFO] breakfast name is: ['No breakfast', 'No breakfast']
+15:10:56 [INFO] discounted_price is: IDR 513,491
+15:11:01 [INFO] Stratified sampling start at today + 30 days
+15:11:01 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-08-12&checkout=2026-08-13&adult=2&room=1&night=1
+15:11:05 [INFO] property name is: Alam Terrace Cottages
+15:11:25 [INFO] Room may be available!!!!
+15:11:25 [INFO] Scrolling to trigger lazy-load before room scan...
+15:11:31 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+15:11:36 [INFO] Total room rows found: 1
+15:11:41 [INFO] room_type name is: Double Superior Room with Garden View
+15:11:46 [INFO] bed_type name is: Double
+15:11:46 [INFO] extra_features name is: ['Smoking room']
+15:11:46 [INFO] breakfast name is: ['No breakfast', 'No breakfast']
+15:11:48 [INFO] discounted_price is: IDR 591,645
+15:11:53 [INFO] [2/25] Scraping …
+15:11:53 [INFO] Stratified sampling start at today + 3 days
+15:11:53 [INFO]   Visiting: https://www.tiket.com/en-id/homes/indonesia/bali-astetic-villa?checkin=2026-07-16&checkout=2026-07-17&adult=2&room=1&night=1
+15:11:58 [INFO] property name is: Bali Astetic Villa
+15:12:03 [INFO] The availability on current date is not available, renew the date range.
+15:12:07 [INFO] Finish processing URL listed competitor.
+15:12:07 [INFO] ==================================================
+15:12:08 [INFO] Driver shut down. Session END.
+15:12:08 [INFO] ==================================================
+15:12:45 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+15:12:49 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:12:50 [INFO] UC Chrome started in headed mode via Xvfb
+15:12:50 [INFO] Updating only competitor mode.
+15:12:50 [INFO] Searching through all URLs that available.
+15:12:50 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/bliss-ubud-abangan
+15:12:50 [INFO] Found last checkpoint!!!
+15:12:50 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+15:12:50 [INFO] [1/1] Scraping …
+15:12:50 [INFO] Stratified sampling start at today + 3 days
+15:12:50 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-16&checkout=2026-07-17&adult=2&room=1&night=1
+15:12:55 [INFO] property name is: Alam Terrace Cottages
+15:12:55 [INFO] The availability on current date is not available, renew the date range.
+15:13:04 [INFO] The availability on current date is not available, renew the date range.
+15:13:18 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+15:13:18 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+15:13:23 [INFO] Stratified sampling start at today + 7 days
+15:13:23 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-20&checkout=2026-07-21&adult=2&room=1&night=1
+15:13:32 [INFO] property name is: Alam Terrace Cottages
+15:13:32 [INFO] The availability on current date is not available, renew the date range.
+15:13:41 [INFO] The availability on current date is not available, renew the date range.
+15:13:54 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+15:13:54 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+15:13:59 [INFO] Stratified sampling start at today + 14 days
+15:13:59 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-27&checkout=2026-07-28&adult=2&room=1&night=1
+15:14:04 [INFO] property name is: Alam Terrace Cottages
+15:14:04 [INFO] The availability on current date is not available, renew the date range.
+15:14:13 [INFO] The availability on current date is not available, renew the date range.
+15:14:44 [INFO] Room may be available!!!!
+15:14:44 [INFO] Scrolling to trigger lazy-load before room scan...
+15:14:50 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+15:14:55 [INFO] Total room rows found: 1
+15:15:00 [INFO] room_type name is: Double Superior Room with Garden View
+15:15:05 [INFO] bed_type name is: Double
+15:15:05 [INFO] extra_features name is: ['Smoking room']
+15:15:05 [INFO] breakfast name is: ['No breakfast', 'No breakfast']
+15:15:06 [INFO] discounted_price is: IDR 513,491
+15:15:11 [INFO] Stratified sampling start at today + 30 days
+15:15:11 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-08-12&checkout=2026-08-13&adult=2&room=1&night=1
+15:15:16 [INFO] property name is: Alam Terrace Cottages
+15:15:36 [INFO] Room may be available!!!!
+15:15:36 [INFO] Scrolling to trigger lazy-load before room scan...
+15:15:42 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+15:15:47 [INFO] Total room rows found: 1
+15:15:52 [INFO] room_type name is: Double Superior Room with Garden View
+15:15:57 [INFO] bed_type name is: Double
+15:15:57 [INFO] extra_features name is: ['Smoking room']
+15:15:57 [INFO] breakfast name is: ['No breakfast', 'No breakfast']
+15:15:59 [INFO] discounted_price is: IDR 591,645
+15:16:04 [INFO] [DEBUG] Session complete.
+15:16:04 [INFO] Finish processing URL listed competitor.
+15:16:04 [INFO] ==================================================
+15:16:05 [INFO] Driver shut down. Session END.
+15:16:05 [INFO] ==================================================
+15:21:08 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+15:21:11 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:21:12 [INFO] UC Chrome started in headed mode via Xvfb
+15:21:12 [INFO] Updating only competitor mode.
+15:21:12 [INFO] Searching through all URLs that available.
+15:21:12 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages
+
+15:21:12 [INFO] Found last checkpoint!!!
+15:21:12 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+15:21:12 [INFO] [1/1] Scraping …
+15:21:12 [INFO] Stratified sampling start at today + 3 days
+15:21:12 [INFO]   Visiting: https://www.tiket.com/en-id/homes/indonesia/bali-astetic-villa?checkin=2026-07-16&checkout=2026-07-17&adult=2&room=1&night=1
+15:21:18 [INFO] property name is: Bali Astetic Villa
+15:21:23 [INFO] The availability on current date is not available, renew the date range.
+15:21:36 [INFO] The availability on current date is not available, renew the date range.
+15:21:41 [INFO] Finish processing URL listed competitor.
+15:21:41 [INFO] ==================================================
+15:22:03 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+15:22:07 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:22:08 [INFO] UC Chrome started in headed mode via Xvfb
+15:22:08 [INFO] Updating only competitor mode.
+15:22:08 [INFO] Searching through all URLs that available.
+15:22:08 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/bliss-ubud-abangan
+15:22:08 [INFO] Found last checkpoint!!!
+15:22:08 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+15:22:08 [INFO] [1/1] Scraping …
+15:22:08 [INFO] Stratified sampling start at today + 3 days
+15:22:08 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-16&checkout=2026-07-17&adult=2&room=1&night=1
+15:22:14 [INFO] property name is: Alam Terrace Cottages
+15:22:14 [INFO] The availability on current date is not available, renew the date range.
+15:22:22 [INFO] The availability on current date is not available, renew the date range.
+15:22:36 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+15:22:36 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+15:22:41 [INFO] Stratified sampling start at today + 7 days
+15:22:41 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-20&checkout=2026-07-21&adult=2&room=1&night=1
+15:22:46 [INFO] property name is: Alam Terrace Cottages
+15:22:46 [INFO] The availability on current date is not available, renew the date range.
+15:22:55 [INFO] The availability on current date is not available, renew the date range.
+15:23:09 [INFO] Caught a runtime error: Trials changing date exceeding limits (3) times., later we will check with Agoda.
+15:23:09 [INFO] Address: Jalan Bisma, Ubud, Bali, ID
+15:23:14 [INFO] Stratified sampling start at today + 14 days
+15:23:14 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-07-27&checkout=2026-07-28&adult=2&room=1&night=1
+15:23:18 [INFO] property name is: Alam Terrace Cottages
+15:23:18 [INFO] The availability on current date is not available, renew the date range.
+15:23:26 [INFO] The availability on current date is not available, renew the date range.
+15:23:55 [INFO] Room may be available!!!!
+15:23:55 [INFO] Scrolling to trigger lazy-load before room scan...
+15:24:01 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+15:24:06 [INFO] Total room rows found: 1
+15:24:11 [INFO] room_type name is: Double Superior Room with Garden View
+15:24:16 [INFO] bed_type name is: Double
+15:24:16 [INFO] extra_features name is: ['Smoking room']
+15:24:16 [INFO] breakfast name is: ['No breakfast', 'No breakfast']
+15:24:18 [INFO] discounted_price is: IDR 513,491
+15:24:23 [INFO] Stratified sampling start at today + 30 days
+15:24:23 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages?checkin=2026-08-12&checkout=2026-08-13&adult=2&room=1&night=1
+15:24:28 [INFO] property name is: Alam Terrace Cottages
+15:24:48 [INFO] Room may be available!!!!
+15:24:48 [INFO] Scrolling to trigger lazy-load before room scan...
+15:24:54 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+15:24:59 [INFO] Total room rows found: 1
+15:25:04 [INFO] room_type name is: Double Superior Room with Garden View
+15:25:09 [INFO] bed_type name is: Double
+15:25:09 [INFO] extra_features name is: ['Smoking room']
+15:25:09 [INFO] breakfast name is: ['No breakfast', 'No breakfast']
+15:25:11 [INFO] discounted_price is: IDR 591,645
+15:25:16 [INFO] [DEBUG] Session complete.
+15:25:16 [INFO] Finish processing URL listed competitor.
+15:25:16 [INFO] ==================================================
+15:25:17 [INFO] Driver shut down. Session END.
+15:25:17 [INFO] ==================================================
+15:55:18 [INFO] Auto-detected Chrome (registry): 150.0.7871.101 → major version 150
+15:55:21 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+15:55:24 [INFO] UC Chrome started in headed mode via Xvfb
+16:03:15 [INFO] Auto-detected Chrome (registry): 150.0.7871.125 → major version 150
+16:03:18 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+16:03:19 [INFO] UC Chrome started in headed mode via Xvfb
+16:53:28 [INFO] Auto-detected Chrome (registry): 150.0.7871.125 → major version 150
+16:53:37 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+16:53:37 [INFO] UC Chrome started in headed mode via Xvfb
+11:06:01 [INFO] Auto-detected Chrome (registry): 151.0.7922.110 → major version 151
+11:06:04 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+11:06:06 [INFO] UC Chrome started in headed mode via Xvfb
+11:06:06 [INFO] Updating only competitor mode.
+11:06:06 [INFO] Searching through all URLs that available.
+11:06:06 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/reddoorz-kertajaya-surabaya-205001558717238951
+11:06:06 [INFO] last line is : https://www.tiket.com/en-id/hotel/indonesia/pondok-lulik-homestay-canggu-701001704786629479
+11:06:06 [INFO] Found last checkpoint!!!
+11:06:06 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+11:06:06 [INFO] [1/25] Scraping …
+11:06:06 [INFO] Stratified sampling start at today + 3 days
+11:06:06 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/reddoorz-kertajaya-surabaya-205001558717238951?checkin=2026-08-29&checkout=2026-08-30&adult=2&room=1&night=1
+11:06:12 [INFO] property name is: RedDoorz @ Kertajaya Surabaya
+11:06:33 [INFO] Room may be available!!!!
+11:06:33 [INFO] Scrolling to trigger lazy-load before room scan...
+11:06:39 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+11:06:44 [INFO] Total room rows found: 3
+11:06:49 [INFO] room_type name is: 
+11:06:54 [INFO] bed_type name is: 
+11:06:54 [INFO] extra_features name is: None
+11:06:54 [INFO] breakfast name is: None
+11:06:54 [INFO] discounted_price is: None
+11:06:59 [INFO] room_type name is: 
+11:07:04 [INFO] bed_type name is: None
+11:07:04 [INFO] extra_features name is: None
+11:07:04 [INFO] breakfast name is: None
+11:07:04 [INFO] discounted_price is: None
+11:07:09 [INFO] room_type name is: 
+11:07:14 [INFO] bed_type name is: 
+11:07:14 [INFO] extra_features name is: None
+11:07:14 [INFO] breakfast name is: None
+11:07:14 [INFO] discounted_price is: None
+11:07:19 [INFO] Stratified sampling start at today + 7 days
+11:07:19 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/reddoorz-kertajaya-surabaya-205001558717238951?checkin=2026-09-02&checkout=2026-09-03&adult=2&room=1&night=1
+11:07:24 [INFO] property name is: RedDoorz @ Kertajaya Surabaya
+11:07:29 [INFO] Finish processing URL listed competitor.
+11:07:29 [INFO] ==================================================
+11:08:23 [INFO] Auto-detected Chrome (registry): 151.0.7922.174 → major version 151
+11:08:26 [INFO] Driver shut down. Session END.
+11:08:26 [INFO] ==================================================
+11:08:47 [INFO] Auto-detected Chrome (registry): 151.0.7922.174 → major version 151
+11:08:51 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+11:08:52 [INFO] UC Chrome started in headed mode via Xvfb
+11:08:52 [INFO] Updating only competitor mode.
+11:08:52 [INFO] Searching through all URLs that available.
+11:08:52 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/the-rinaya-canggu-by-ecommerceloka-711001731907473479
+
+11:08:52 [INFO] last line is : https://www.tiket.com/en-id/hotel/indonesia/pondok-lulik-homestay-canggu-701001704786629479
+11:08:52 [INFO] Found last checkpoint!!!
+11:08:52 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+11:08:52 [INFO] [1/25] Scraping …
+11:08:52 [INFO] Stratified sampling start at today + 3 days
+11:08:52 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/the-rinaya-canggu-by-ecommerceloka-711001731907473479?checkin=2026-08-29&checkout=2026-08-30&adult=2&room=1&night=1
+11:08:57 [INFO] property name is: The Rinaya Canggu by ecommerceloka
+11:09:17 [INFO] Room may be available!!!!
+11:09:17 [INFO] Scrolling to trigger lazy-load before room scan...
+11:09:23 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+11:09:28 [INFO] Total room rows found: 24
+11:09:33 [INFO] room_type name is: 
+11:09:38 [INFO] bed_type name is: 
+11:09:38 [INFO] extra_features name is: None
+11:09:38 [INFO] breakfast name is: None
+11:09:38 [INFO] discounted_price is: None
+11:09:44 [INFO] room_type name is: 
+11:09:49 [INFO] bed_type name is: 
+11:09:49 [INFO] extra_features name is: None
+11:09:49 [INFO] breakfast name is: None
+11:09:49 [INFO] discounted_price is: None
+11:09:54 [INFO] room_type name is: 
+11:09:59 [INFO] bed_type name is: 
+11:09:59 [INFO] extra_features name is: None
+11:09:59 [INFO] breakfast name is: None
+11:09:59 [INFO] discounted_price is: None
+11:10:04 [INFO] room_type name is: 
+11:10:09 [INFO] bed_type name is: 
+11:10:09 [INFO] extra_features name is: None
+11:10:09 [INFO] breakfast name is: None
+11:10:09 [INFO] discounted_price is: None
+11:10:14 [INFO] room_type name is: 
+11:10:19 [INFO] bed_type name is: 
+11:10:19 [INFO] extra_features name is: None
+11:10:20 [INFO] breakfast name is: None
+11:10:20 [INFO] discounted_price is: None
+11:10:25 [INFO] room_type name is: 
+11:10:30 [INFO] bed_type name is: 
+11:10:30 [INFO] extra_features name is: None
+11:10:30 [INFO] breakfast name is: None
+11:10:30 [INFO] discounted_price is: None
+11:10:35 [INFO] room_type name is: Twin Superior Room with Garden View
+11:10:40 [INFO] bed_type name is: Twin
+11:10:40 [INFO] extra_features name is: ['Non-smoking Room']
+11:10:40 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+11:10:40 [INFO] discounted_price is: None
+11:10:45 [INFO] room_type name is: Double Deluxe Room
+11:10:50 [INFO] bed_type name is: Double
+11:10:50 [INFO] extra_features name is: None
+11:10:50 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:10:51 [INFO] Finish processing URL listed competitor.
+11:10:51 [INFO] ==================================================
+11:10:51 [INFO] Driver shut down. Session END.
+11:10:51 [INFO] ==================================================
+11:10:55 [INFO] Auto-detected Chrome (registry): 151.0.7922.174 → major version 151
+11:10:58 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+11:10:59 [INFO] UC Chrome started in headed mode via Xvfb
+11:10:59 [INFO] Updating only competitor mode.
+11:10:59 [INFO] Searching through all URLs that available.
+11:10:59 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/the-rinaya-canggu-by-ecommerceloka-711001731907473479
+
+11:10:59 [INFO] last line is : https://www.tiket.com/en-id/hotel/indonesia/pondok-lulik-homestay-canggu-701001704786629479
+11:10:59 [INFO] Found last checkpoint!!!
+11:10:59 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+11:10:59 [INFO] [1/25] Scraping …
+11:10:59 [INFO] Stratified sampling start at today + 3 days
+11:10:59 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/the-rinaya-canggu-by-ecommerceloka-711001731907473479?checkin=2026-08-29&checkout=2026-08-30&adult=2&room=1&night=1
+11:11:06 [INFO] property name is: The Rinaya Canggu by ecommerceloka
+11:11:27 [INFO] Room may be available!!!!
+11:11:27 [INFO] Scrolling to trigger lazy-load before room scan...
+11:11:33 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+11:11:38 [INFO] Total room rows found: 24
+11:11:43 [INFO] room_type name is: Double Superior Room
+11:11:48 [INFO] bed_type name is: Double
+11:11:48 [INFO] extra_features name is: None
+11:11:48 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:11:48 [INFO] discounted_price is: None
+11:11:53 [INFO] room_type name is: Twin Superior Room
+11:11:58 [INFO] bed_type name is: Twin
+11:11:58 [INFO] extra_features name is: None
+11:11:58 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:11:58 [INFO] discounted_price is: None
+11:12:03 [INFO] room_type name is: Twin Superior Room with Garden View
+11:12:08 [INFO] bed_type name is: Twin
+11:12:08 [INFO] extra_features name is: None
+11:12:08 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+11:12:08 [INFO] discounted_price is: None
+11:12:13 [INFO] room_type name is: Double Superior Room
+11:12:18 [INFO] bed_type name is: Double
+11:12:18 [INFO] extra_features name is: None
+11:12:18 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:12:18 [INFO] discounted_price is: None
+11:12:24 [INFO] room_type name is: Twin Superior Room
+11:12:29 [INFO] bed_type name is: Twin
+11:12:29 [INFO] extra_features name is: None
+11:12:29 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:12:29 [INFO] discounted_price is: None
+11:12:34 [INFO] room_type name is: Double Superior Room with City View
+11:12:39 [INFO] bed_type name is: Double
+11:12:39 [INFO] extra_features name is: ['Non-smoking Room']
+11:12:39 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:12:39 [INFO] discounted_price is: None
+11:12:44 [INFO] room_type name is: Twin Superior Room with Garden View
+11:12:49 [INFO] bed_type name is: Twin
+11:12:49 [INFO] extra_features name is: ['Non-smoking Room']
+11:12:49 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+11:12:49 [INFO] discounted_price is: None
+11:12:54 [INFO] room_type name is: Double Deluxe Room
+11:12:59 [INFO] bed_type name is: Double
+11:12:59 [INFO] extra_features name is: None
+11:12:59 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:12:59 [INFO] discounted_price is: None
+11:13:04 [INFO] room_type name is: Deluxe Room
+11:13:09 [INFO] bed_type name is: None
+11:13:09 [INFO] extra_features name is: None
+11:13:09 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:13:09 [INFO] discounted_price is: None
+11:13:14 [INFO] room_type name is: Twin Deluxe Room with Pool View
+11:13:20 [INFO] bed_type name is: Twin
+11:13:20 [INFO] extra_features name is: None
+11:13:20 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+11:13:20 [INFO] discounted_price is: None
+11:13:25 [INFO] room_type name is: Double Deluxe Room with Pool View
+11:13:30 [INFO] bed_type name is: Double
+11:13:30 [INFO] extra_features name is: None
+11:13:30 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+11:13:30 [INFO] discounted_price is: None
+11:13:35 [INFO] room_type name is: Twin Deluxe Room
+11:13:40 [INFO] bed_type name is: Twin
+11:13:40 [INFO] extra_features name is: None
+11:13:40 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:13:40 [INFO] discounted_price is: None
+11:13:45 [INFO] room_type name is: Double Deluxe Room
+11:13:50 [INFO] bed_type name is: Double
+11:13:50 [INFO] extra_features name is: None
+11:13:50 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:13:50 [INFO] discounted_price is: None
+11:13:55 [INFO] room_type name is: Double Superior Room
+11:14:00 [INFO] bed_type name is: Double
+11:14:00 [INFO] extra_features name is: None
+11:14:00 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:14:00 [INFO] discounted_price is: None
+11:14:05 [INFO] room_type name is: Twin Superior Room
+11:14:11 [INFO] bed_type name is: Twin
+11:14:11 [INFO] extra_features name is: None
+11:14:11 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:14:11 [INFO] discounted_price is: None
+11:14:16 [INFO] room_type name is: Twin Deluxe Room with Pool View
+11:14:21 [INFO] bed_type name is: Twin
+11:14:21 [INFO] extra_features name is: ['Non-smoking Room']
+11:14:21 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+11:14:21 [INFO] discounted_price is: None
+11:14:26 [INFO] room_type name is: Double Deluxe Room with Pool View
+11:14:31 [INFO] bed_type name is: Double
+11:14:31 [INFO] extra_features name is: ['Non-smoking Room']
+11:14:31 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+11:14:31 [INFO] discounted_price is: None
+11:14:36 [INFO] room_type name is: Twin Superior Room
+11:14:41 [INFO] bed_type name is: Twin
+11:14:41 [INFO] extra_features name is: ['Non-smoking Room']
+11:14:41 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:14:41 [INFO] discounted_price is: None
+11:14:46 [INFO] room_type name is: Double Superior Room
+11:14:52 [INFO] bed_type name is: Double
+11:14:52 [INFO] extra_features name is: ['Non-smoking Room']
+11:14:52 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:14:52 [INFO] discounted_price is: None
+11:14:57 [INFO] room_type name is: Double Deluxe Room
+11:15:02 [INFO] bed_type name is: Double
+11:15:02 [INFO] extra_features name is: None
+11:15:02 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:15:02 [INFO] discounted_price is: None
+11:15:07 [INFO] room_type name is: Twin Deluxe Room
+11:15:12 [INFO] bed_type name is: Twin
+11:15:12 [INFO] extra_features name is: None
+11:15:12 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:15:12 [INFO] discounted_price is: None
+11:15:17 [INFO] room_type name is: Double Deluxe Room with Pool View
+11:15:22 [INFO] bed_type name is: Double
+11:15:22 [INFO] extra_features name is: ['Non-smoking Room']
+11:15:22 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:15:22 [INFO] discounted_price is: None
+11:15:27 [INFO] room_type name is: Twin Deluxe Room with Pool View
+11:15:28 [INFO] Finish processing URL listed competitor.
+11:15:28 [INFO] ==================================================
+11:32:01 [INFO] Auto-detected Chrome (registry): 151.0.7922.174 → major version 151
+11:32:05 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+11:32:06 [INFO] UC Chrome started in headed mode via Xvfb
+11:32:06 [INFO] Updating only competitor mode.
+11:32:06 [INFO] Searching through all URLs that available.
+11:32:06 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/the-rinaya-canggu-by-ecommerceloka-711001731907473479
+
+11:32:06 [INFO] last line is : https://www.tiket.com/en-id/hotel/indonesia/pondok-lulik-homestay-canggu-701001704786629479
+11:32:06 [INFO] Found last checkpoint!!!
+11:32:06 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+11:32:06 [INFO] [1/25] Scraping …
+11:32:06 [INFO] Stratified sampling start at today + 3 days
+11:32:06 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/the-rinaya-canggu-by-ecommerceloka-711001731907473479?checkin=2026-08-29&checkout=2026-08-30&adult=2&room=1&night=1
+11:32:13 [INFO] property name is: The Rinaya Canggu by ecommerceloka
+11:32:33 [INFO] Room may be available!!!!
+11:32:33 [INFO] Scrolling to trigger lazy-load before room scan...
+11:32:39 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+11:32:44 [INFO] Total room rows found: 24
+11:32:50 [INFO] room_type name is: 
+11:32:55 [INFO] bed_type name is: 
+11:32:55 [INFO] extra_features name is: None
+11:32:55 [INFO] breakfast name is: None
+11:32:56 [INFO] discounted_price is: IDR 264,054
+11:33:01 [INFO] room_type name is: 
+11:33:06 [INFO] bed_type name is: 
+11:33:06 [INFO] extra_features name is: None
+11:33:06 [INFO] breakfast name is: None
+11:33:08 [INFO] discounted_price is: IDR 264,054
+11:33:13 [INFO] room_type name is: 
+11:33:18 [INFO] bed_type name is: 
+11:33:18 [INFO] extra_features name is: None
+11:33:18 [INFO] breakfast name is: None
+11:33:20 [INFO] discounted_price is: IDR 272,737
+11:33:25 [INFO] room_type name is: 
+11:33:30 [INFO] bed_type name is: 
+11:33:30 [INFO] extra_features name is: None
+11:33:30 [INFO] breakfast name is: None
+11:33:32 [INFO] discounted_price is: IDR 281,262
+11:33:37 [INFO] room_type name is: 
+11:33:42 [INFO] bed_type name is: 
+11:33:42 [INFO] extra_features name is: None
+11:33:42 [INFO] breakfast name is: None
+11:33:44 [INFO] discounted_price is: IDR 281,262
+11:33:49 [INFO] room_type name is: 
+11:33:54 [INFO] bed_type name is: 
+11:33:54 [INFO] extra_features name is: None
+11:33:54 [INFO] breakfast name is: None
+11:33:56 [INFO] discounted_price is: IDR 287,468
+11:34:01 [INFO] room_type name is: 
+11:34:06 [INFO] bed_type name is: 
+11:34:07 [INFO] extra_features name is: None
+11:34:07 [INFO] breakfast name is: None
+11:34:08 [INFO] discounted_price is: IDR 287,468
+11:34:14 [INFO] room_type name is: 
+11:34:19 [INFO] bed_type name is: 
+11:34:19 [INFO] extra_features name is: None
+11:34:19 [INFO] breakfast name is: None
+11:34:21 [INFO] discounted_price is: IDR 315,294
+11:34:26 [INFO] room_type name is: 
+11:34:31 [INFO] bed_type name is: None
+11:34:31 [INFO] extra_features name is: None
+11:34:31 [INFO] breakfast name is: None
+11:34:33 [INFO] discounted_price is: IDR 315,294
+11:34:39 [INFO] room_type name is: 
+11:34:44 [INFO] bed_type name is: 
+11:34:44 [INFO] extra_features name is: None
+11:34:44 [INFO] breakfast name is: None
+11:34:47 [INFO] discounted_price is: IDR 320,848
+11:34:52 [INFO] room_type name is: 
+11:34:53 [INFO] Finish processing URL listed competitor.
+11:34:53 [INFO] ==================================================
+11:34:53 [INFO] Driver shut down. Session END.
+11:34:53 [INFO] ==================================================
+11:52:54 [INFO] Auto-detected Chrome (registry): 151.0.7922.174 → major version 151
+11:53:01 [INFO] patching driver executable C:\Users\anton\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+11:53:02 [INFO] UC Chrome started in headed mode via Xvfb
+11:53:02 [INFO] Updating only competitor mode.
+11:53:02 [INFO] Searching through all URLs that available.
+11:53:02 [INFO] cross_check is : https://www.tiket.com/en-id/hotel/indonesia/the-rinaya-canggu-by-ecommerceloka-711001731907473479
+
+11:53:02 [INFO] last line is : https://www.tiket.com/en-id/hotel/indonesia/pondok-lulik-homestay-canggu-701001704786629479
+11:53:02 [INFO] Found last checkpoint!!!
+11:53:02 [INFO] Safe guarding with 15 properties limiter, breaking algorithm now!
+11:53:02 [INFO] [1/25] Scraping …
+11:53:02 [INFO] Stratified sampling start at today + 3 days
+11:53:02 [INFO]   Visiting: https://www.tiket.com/en-id/hotel/indonesia/the-rinaya-canggu-by-ecommerceloka-711001731907473479?checkin=2026-08-29&checkout=2026-08-30&adult=2&room=1&night=1
+11:53:09 [INFO] Annoying promotional popup detected and closed.
+11:53:10 [INFO] property name is: The Rinaya Canggu by ecommerceloka
+11:53:30 [INFO] Room may be available!!!!
+11:53:30 [INFO] Scrolling to trigger lazy-load before room scan...
+11:53:36 [INFO] Room container found via: div.MainRoomGroupLists_room_group_lists_container__04n19
+11:53:41 [INFO] Total room rows found: 24
+11:53:46 [INFO] room_type name is: Double Superior Room
+11:53:51 [INFO] bed_type name is: Double
+11:53:51 [INFO] extra_features name is: None
+11:53:51 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:53:53 [INFO] discounted_price is: IDR 264,054
+11:53:58 [INFO] room_type name is: Twin Superior Room
+11:54:03 [INFO] bed_type name is: Twin
+11:54:03 [INFO] extra_features name is: None
+11:54:03 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:54:04 [INFO] discounted_price is: IDR 264,054
+11:54:09 [INFO] room_type name is: Twin Superior Room with Garden View
+11:54:14 [INFO] bed_type name is: Twin
+11:54:14 [INFO] extra_features name is: None
+11:54:14 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+11:54:16 [INFO] discounted_price is: IDR 272,737
+11:54:21 [INFO] room_type name is: Double Superior Room
+11:54:26 [INFO] bed_type name is: Double
+11:54:26 [INFO] extra_features name is: None
+11:54:26 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:54:28 [INFO] discounted_price is: IDR 281,262
+11:54:33 [INFO] room_type name is: Twin Superior Room
+11:54:38 [INFO] bed_type name is: Twin
+11:54:38 [INFO] extra_features name is: None
+11:54:38 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:54:39 [INFO] discounted_price is: IDR 281,262
+11:54:44 [INFO] room_type name is: Double Superior Room with City View
+11:54:50 [INFO] bed_type name is: Double
+11:54:50 [INFO] extra_features name is: ['Non-smoking Room']
+11:54:50 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:54:51 [INFO] discounted_price is: IDR 287,853
+11:54:56 [INFO] room_type name is: Twin Superior Room with Garden View
+11:55:01 [INFO] bed_type name is: Twin
+11:55:01 [INFO] extra_features name is: ['Non-smoking Room']
+11:55:02 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+11:55:03 [INFO] discounted_price is: IDR 287,853
+11:55:08 [INFO] room_type name is: Double Deluxe Room
+11:55:13 [INFO] bed_type name is: Double
+11:55:13 [INFO] extra_features name is: None
+11:55:13 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:55:15 [INFO] discounted_price is: IDR 315,294
+11:55:20 [INFO] room_type name is: Deluxe Room
+11:55:25 [INFO] bed_type name is: None
+11:55:25 [INFO] extra_features name is: None
+11:55:25 [INFO] breakfast name is: ['No breakfast', 'Breakfast (2 pax)']
+11:55:27 [INFO] discounted_price is: IDR 315,294
+11:55:32 [INFO] room_type name is: Twin Deluxe Room with Pool View
+11:55:37 [INFO] bed_type name is: Twin
+11:55:37 [INFO] extra_features name is: None
+11:55:37 [INFO] breakfast name is: ['No breakfast', 'No breakfast', 'Breakfast (2 pax)']
+11:55:39 [INFO] discounted_price is: IDR 320,848
+11:55:42 [INFO] Finish processing URL listed competitor.
+11:55:42 [INFO] ==================================================

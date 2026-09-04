@@ -1,0 +1,728 @@
+"""
+Competitor-note service.
+
+Laravel (LokaPro) computes every figure shown on the Competitor page and POSTs
+them here already-calculated. This service asks a local Ollama model to phrase
+them as a short note, then verifies the model did not invent, round, or mistype
+a single digit before handing the prose back.
+
+The model does no arithmetic. It copies numbers out of a FACTS block into
+sentences. The note renders directly below the tables containing those same
+numbers, so one wrong digit is a visible contradiction, not a rounding error.
+
+Two layers protect against that:
+  verify_numbers() rejects any numeric token we did not send.
+  fallback_note()  produces correct prose without the model at all.
+
+The second is what makes the first affordable: we can throw away the model's
+output twice and still have something true to render.
+
+-------------------------------------------------------------------------------
+2026-07-16 CONTRACT BREAK. The UI moved from a per-competitor dropdown to an
+accordion showing every competitor at once, with ONE market-wide insight box at
+the bottom of the page. The payload changed shape accordingly:
+
+  GONE:  competitor, ota, lowest, highest, most_volatile, most_stable,
+         insufficient_data          (these were per-competitor-per-OTA)
+  NEW:   competitor_count, market_cheapest, market_priciest,
+         last_minute_cheapest, early_book_cheapest, most_fluctuating
+  KEPT:  competitor_min/max, our_* , vs_*, skip_reason, occupancy_*
+
+Prices are pooled ACROSS competitors AND across OTAs: "cheapest in the market"
+means cheapest anywhere it is listed, so every pick carries its competitor, room,
+OTA and date window to keep the claim checkable against the table above.
+
+The note now has two labelled sections the Revenue team asked for by name:
+  MARKET CONDITION - cheapest overall, cheapest per booking segment, volatility
+  OUR CONDITION    - our price against the market band, plus our occupancy
+
+2026-07-17 ENGLISH ONLY. The `language` field is still accepted but ignored.
+qwen2.5:3b would not hold Indonesian against an English FACTS block — asked for
+"id" it replied in English anyway, while the fallback answered in Indonesian, so
+the card's language flipped depending on whether the guard passed. The team
+reads English, so one language is both simpler and honest about what the model
+actually does.
+
+Dependencies unchanged: fastapi, uvicorn[standard], httpx, pydantic>=2
+(python-dotenv optional).
+
+Requires the matching Laravel side: CompetitorNoteService::marketStats() +
+CompetitorAggregateController::noteData(), which sends exactly the schema below.
+-------------------------------------------------------------------------------
+"""
+
+from __future__ import annotations
+
+import os
+import re
+import secrets
+from typing import Literal, Optional
+
+import httpx
+from fastapi import Depends, FastAPI, Header, HTTPException
+from pydantic import BaseModel
+
+try:  # load .env sitting next to this file, if one exists
+    from dotenv import load_dotenv
+
+    load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
+except ImportError:
+    pass  # env vars set by systemd/shell instead
+
+# -- Config -------------------------------------------------------------------
+
+AUTH_TOKEN = os.environ.get("COMPETITOR_NOTE_TOKEN", "")
+
+OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://127.0.0.1:11434").rstrip("/")
+OLLAMA_TIMEOUT = float(os.environ.get("OLLAMA_TIMEOUT", "60"))
+
+# The model only rephrases figures that are already calculated, so capability
+# barely matters for the numbers — verify_numbers() and fallback_note() absorb
+# digit slips either way. It matters for the CLAIMS around them, which nothing
+# in this file can police: qwen2.5:3b invented a room type for us ("our Standard
+# rooms", borrowed from a competitor) and merged the priciest-room fact with the
+# volatility fact. That is why the default moved 3b -> 7b-instruct on 2026-07-17.
+DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:7b-instruct")
+
+# The payload names a model. Passing that to Ollama unchecked would let anyone
+# holding the token make this box pull and run an arbitrary model, so the name
+# is only honoured if it is on this list; otherwise we quietly use the default.
+ALLOWED_MODELS = {
+    m.strip()
+    for m in os.environ.get("OLLAMA_MODEL_ALLOWLIST", DEFAULT_MODEL).split(",")
+    if m.strip()
+}
+
+app = FastAPI(title="competitor-note", docs_url=None, redoc_url=None)
+
+
+# -- Contract -----------------------------------------------------------------
+#
+# Mirrors what Laravel's noteData() sends. Two ways fields go MISSING (absent
+# from the JSON, not null) — every one of them therefore needs a default, or a
+# normal request 422s in a way that reads like a Laravel bug:
+#
+#   1. skip_reason set -> compare() returns ONLY our_price/vs_min_pct/vs_max/
+#      skip_reason. our_booking_date, our_nights, vs_max_pct are absent.
+#   2. property has no room types -> occupancy() returns null and Laravel merges
+#      nothing, so occupied_rooms/total_rooms/occupancy_pct are all absent.
+#
+# By contrast most_fluctuating / last_minute_cheapest / early_book_cheapest are
+# always PRESENT but may be null.
+
+
+class MarketPick(BaseModel):
+    """One cell singled out of the market: who, which room, where, when."""
+
+    competitor: str
+    room: str
+    price: int
+    ota: str = ""
+    # "+3 Days" | "+7 Days" | "+14 Days" | "+30 Days" — the table's column label.
+    window: str = ""
+
+
+class Fluctuation(BaseModel):
+    competitor: str
+    cv_pct: float
+    # How many of that property's rooms had enough observations to measure.
+    # Laravel already refuses to name a "most fluctuating" property unless at
+    # least two properties are ranked and the winner's cv_pct > 0.
+    rooms_measured: int = 0
+
+
+class NoteRequest(BaseModel):
+    as_of: str
+    currency: str = "IDR"
+    model: Optional[str] = None
+    # Accepted for contract compatibility and then ignored: notes are English
+    # only. qwen2.5:3b could not hold Indonesian against an English FACTS block
+    # anyway — it replied in English regardless — and the team reads English.
+    # Typed str rather than Literal so a payload still sending "id" gets a note
+    # instead of a 422, which Laravel would render as a missing card.
+    language: str = "en"
+
+    # -- MARKET CONDITION --
+    competitor_count: int = 0
+    market_cheapest: MarketPick
+    market_priciest: MarketPick
+    last_minute_cheapest: Optional[MarketPick] = None
+    early_book_cheapest: Optional[MarketPick] = None
+    most_fluctuating: Optional[Fluctuation] = None
+
+    # Same values as market_cheapest.price / market_priciest.price. Laravel
+    # sends them under these names so its compare() could stay untouched; the
+    # vs_* figures below are computed against them.
+    competitor_min: int
+    competitor_max: int
+
+    # -- OUR CONDITION --
+    our_price: Optional[int] = None
+    our_booking_date: Optional[str] = None
+    our_nights: Optional[int] = None
+    vs_min_pct: Optional[float] = None
+    vs_max: Optional[Literal["below", "equal", "above"]] = None
+    vs_max_pct: Optional[float] = None
+    skip_reason: Optional[Literal["no_booking", "currency_mismatch"]] = None
+
+    occupied_rooms: Optional[int] = None
+    total_rooms: Optional[int] = None
+    occupancy_pct: Optional[float] = None
+
+    @property
+    def compares(self) -> bool:
+        """True when we have a price of our own worth talking about."""
+        return self.skip_reason is None and self.our_price is not None
+
+    @property
+    def has_occupancy(self) -> bool:
+        # All three or nothing: the prose names the counts as well as the
+        # percentage, and a partial payload would render "None of our None
+        # rooms are occupied (72.7%)" straight into the card.
+        return (
+            self.occupancy_pct is not None
+            and self.occupied_rooms is not None
+            and self.total_rooms is not None
+        )
+
+    @property
+    def picks(self) -> list[MarketPick]:
+        """Every MarketPick actually present, for string/number harvesting."""
+        return [
+            p
+            for p in (
+                self.market_cheapest,
+                self.market_priciest,
+                self.last_minute_cheapest,
+                self.early_book_cheapest,
+            )
+            if p is not None
+        ]
+
+
+class NoteResponse(BaseModel):
+    note: str
+
+
+# -- Auth ---------------------------------------------------------------------
+
+
+def require_token(authorization: str = Header(default="")) -> None:
+    scheme, _, presented = authorization.partition(" ")
+    if scheme.lower() != "bearer" or not AUTH_TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    # compare_digest, not ==, so the comparison does not leak the token
+    # prefix through timing.
+    if not secrets.compare_digest(presented, AUTH_TOKEN):
+        raise HTTPException(status_code=401, detail="unauthorized")
+
+
+# -- Number handling ----------------------------------------------------------
+
+# A run of digits that may carry , or . separators inside it. Requiring a digit
+# at both ends keeps a sentence-final period out of the token.
+_NUM = re.compile(r"\d[\d.,]*\d|\d")
+
+
+def norm(token: str) -> str:
+    """785,000 == 785.000 == 785000 -> '785000'. Also 12.3 -> '123'.
+
+    Both sides of every comparison go through this, so collapsing the decimal
+    point is safe: it only means we cannot tell 12.3 from 123, and 123 is not a
+    figure we ever send.
+    """
+    return token.replace(",", "").replace(".", "").lstrip("0") or "0"
+
+
+def numeric_tokens(text: str) -> list[str]:
+    return _NUM.findall(text)
+
+
+def fmt_price(value: int) -> str:
+    """785000 -> '785,000', matching how the Laravel table above renders it."""
+    return f"{value:,}"
+
+
+def fmt_pct(value: float) -> str:
+    return f"{value:.1f}".rstrip("0").rstrip(".")
+
+
+def allowed_numbers(p: NoteRequest) -> set[str]:
+    """Every numeric token the note is permitted to contain.
+
+    Anything outside this set was invented, computed, or mistyped by the model.
+    """
+    allowed: set[str] = set()
+
+    def allow(value) -> None:
+        if value is None:
+            return
+        # Sign never survives to the note: build_facts renders every percentage
+        # through abs(), and _NUM cannot capture a leading minus. Allowing the
+        # signed form only would put "-111" in the set while the note correctly
+        # says "11.1%" -> norm "111" -> rejected, and a vs_min_pct below zero
+        # (we are cheaper than the market) would silently force the fallback
+        # every time. Compare on magnitude, which is all we ever print.
+        if isinstance(value, (int, float)) and not isinstance(value, bool):
+            value = abs(value)
+        allowed.add(norm(str(value)))
+        if isinstance(value, float):
+            # A model handed 12.3 will sometimes write "about 12%". That is not
+            # an invented figure, so tolerate the rounded and 1-dp forms.
+            allowed.add(norm(f"{value:.1f}"))
+            allowed.add(norm(str(round(value))))
+        if isinstance(value, int):
+            # Keep both groupings allowed even though we only ever print commas:
+            # the model sometimes regroups 450,000 as 450.000 on its own, and
+            # that is a copy, not an invention.
+            allowed.add(norm(fmt_price(value)))
+            allowed.add(norm(fmt_price(value).replace(",", ".")))
+
+    for value in (
+        p.competitor_count,
+        p.competitor_min,
+        p.competitor_max,
+        p.our_price,
+        p.our_nights,
+        p.vs_min_pct,
+        p.vs_max_pct,
+        p.most_fluctuating.cv_pct if p.most_fluctuating else None,
+        p.most_fluctuating.rooms_measured if p.most_fluctuating else None,
+        p.occupied_rooms,
+        p.total_rooms,
+        p.occupancy_pct,
+    ):
+        allow(value)
+
+    for pick in p.picks:
+        allow(pick.price)
+
+    # Digits riding inside the strings we send. This is NOT cosmetic: the window
+    # labels are "+3 / +7 / +14 / +30 Days", and 14 and 30 fall outside the small
+    # range() below — omit these and the guard rejects a note that correctly
+    # writes "+14 Days", every single time.
+    # REVIEW: worth a test that asserts "+14 Days" and "+30 Days" survive the
+    # guard; this is the most likely place a future edit reintroduces the bug.
+    strings: list[str] = [p.as_of, p.our_booking_date or ""]
+    for pick in p.picks:
+        strings += [pick.competitor, pick.room, pick.ota, pick.window]
+    if p.most_fluctuating:
+        strings.append(p.most_fluctuating.competitor)
+
+    for s in strings:
+        for token in numeric_tokens(s):
+            allowed.add(norm(token))
+
+    # Ordinary prose counts: "all three competitors", "the two cheapest".
+    for n in range(11):
+        allowed.add(norm(str(n)))
+
+    return allowed
+
+
+def verify_numbers(note: str, p: NoteRequest) -> Optional[str]:
+    """Return the first numeric token in the note we never sent, or None."""
+    allowed = allowed_numbers(p)
+    for token in numeric_tokens(note):
+        if norm(token) not in allowed:
+            return token
+    return None
+
+
+# -- Prompt -------------------------------------------------------------------
+
+SYSTEM = (
+    "You write a short factual briefing about hotel pricing for a revenue team. "
+    "You are given FACTS that are already calculated. "
+    "Copy every number from FACTS digit for digit. "
+    "Never calculate, derive, round, or invent a number. "
+    "Never write a number that does not appear in FACTS. "
+    # 2-4, not 2-3: MARKET CONDITION now carries four points, and a hard 3-cap
+    # made the model drop one rather than write a fourth sentence.
+    "Write exactly two labelled sections, each 2 to 4 sentences of plain prose. "
+    "No markdown, no bullet points, no code blocks, no preamble. "
+    "Neutral and descriptive. Do not give advice or recommendations."
+)
+
+
+def build_facts(p: NoteRequest) -> str:
+    cur = p.currency
+
+    def money(value: int) -> str:
+        return f"{cur} {fmt_price(value)}"
+
+    def describe(pick: MarketPick) -> str:
+        where = f" on {pick.ota}" if pick.ota else ""
+        when = f" in the {pick.window} window" if pick.window else ""
+        return f"{pick.room} at {pick.competitor} for {money(pick.price)}{where}{when}"
+
+    lines = [
+        "[MARKET CONDITION]",
+        f"Competitors tracked: {p.competitor_count}, prices as of {p.as_of}",
+        f"Cheapest room anywhere in the market: {describe(p.market_cheapest)}",
+        f"Most expensive room anywhere in the market: {describe(p.market_priciest)}",
+    ]
+
+    if p.last_minute_cheapest:
+        lines.append(
+            f"Cheapest Last Minute booking: {describe(p.last_minute_cheapest)}"
+        )
+    else:
+        lines.append("Cheapest Last Minute booking: no Last Minute prices available")
+
+    if p.early_book_cheapest:
+        lines.append(f"Cheapest Early Book booking: {describe(p.early_book_cheapest)}")
+    else:
+        lines.append("Cheapest Early Book booking: no Early Book prices available")
+
+    if p.most_fluctuating:
+        lines.append(
+            f"Property whose prices move the most: {p.most_fluctuating.competitor}, "
+            f"average variation {fmt_pct(p.most_fluctuating.cv_pct)}% across "
+            f"{p.most_fluctuating.rooms_measured} room type(s)"
+        )
+    else:
+        # Laravel returns null when nothing moved or only one property could be
+        # ranked. Saying "prices are steady" is the honest reading of that.
+        lines.append(
+            "Price movement: no property stands out as fluctuating; "
+            "prices are steady across the market"
+        )
+
+    lines.append("")
+    lines.append("[OUR CONDITION]")
+
+    if p.compares:
+        lines.append(
+            f"Our latest confirmed booking was made on {p.our_booking_date} and works "
+            f"out to {money(p.our_price)} per night"
+        )
+        if p.vs_min_pct is not None:
+            side = "above" if p.vs_min_pct > 0 else "below"
+            lines.append(
+                f"Against the cheapest room in the market ({money(p.competitor_min)}), "
+                f"our price is {fmt_pct(abs(p.vs_min_pct))}% {side} it"
+            )
+        if p.vs_max and p.vs_max_pct is not None:
+            # Phrased as "it", not repeating the subject: the line already names
+            # the most expensive room, and a redundant FACT reads back as
+            # redundant prose in the model's output.
+            verdict = {
+                "above": "EXCEEDS it",
+                "equal": "MATCHES it",
+                "below": "stays BELOW it",
+            }[p.vs_max]
+            lines.append(
+                f"Against the most expensive room in the market "
+                f"({money(p.competitor_max)}), our price {verdict}, a difference of "
+                f"{fmt_pct(abs(p.vs_max_pct))}%"
+            )
+    elif p.skip_reason == "no_booking":
+        lines.append(
+            "Our price: no confirmed booking on record, so no comparison is possible"
+        )
+    elif p.skip_reason == "currency_mismatch":
+        lines.append(
+            "Our price: the latest booking is in another currency, so no comparison "
+            "is possible"
+        )
+
+    if p.has_occupancy:
+        lines.append(
+            f"Our current occupancy: {p.occupied_rooms} of {p.total_rooms} rooms "
+            f"occupied right now ({fmt_pct(p.occupancy_pct)}%)"
+        )
+
+    return "\n".join(lines)
+
+
+def build_prompt(p: NoteRequest, correction: Optional[str] = None) -> str:
+    """Assemble the instruction around FACTS.
+
+    The RULES below are not decoration. Each one is a failure we watched a model
+    actually commit against these exact facts, and none of them is catchable by
+    verify_numbers(), because in every case the digits were right and only the
+    claim was wrong:
+
+      Rule 2  qwen2.5:7b said the cheapest room was in the "+30 Days" window
+              when its FACTS line said "+14 Days". It had lifted the window off
+              the Early Book line, which named the same room at the same price.
+              The guard passed it: 30 is a legitimate number elsewhere.
+      Rule 3  the same model attached a property-wide variation to one room
+              ("the 2 Bedroom Villa ... fluctuates 18.4% across three room
+              types"). A room type does not contain room types.
+      Rule 4  qwen2.5:3b invented a room type for us, borrowing a competitor's
+              ("our Standard rooms"). We never send a room type of our own.
+
+    Points are spelled out one per segment rather than bundled ("Last Minute and
+    Early Book" as one point) because the bundled form kept getting half-covered.
+    """
+    market_points = [
+        "the cheapest room in the market, taking its property, room type and "
+        "window only from the 'Cheapest room anywhere in the market' line"
+    ]
+    market_points.append(
+        "the cheapest Last Minute booking, with the window from its own "
+        "'Cheapest Last Minute booking' line"
+        if p.last_minute_cheapest
+        else "that no Last Minute prices are available"
+    )
+    market_points.append(
+        "the cheapest Early Book booking, with the window from its own "
+        "'Cheapest Early Book booking' line"
+        if p.early_book_cheapest
+        else "that no Early Book prices are available"
+    )
+    market_points.append(
+        "which property's prices move the most, attributing the variation to "
+        "that property as a whole and not to any one room"
+        if p.most_fluctuating
+        else "that no property's prices stand out as fluctuating"
+    )
+
+    our_points = []
+    if p.compares:
+        our_points.append("our price per night, stated explicitly")
+        our_points.append(
+            "how it compares to the cheapest room in the market, and to the most "
+            "expensive room in the market"
+        )
+    else:
+        our_points.append(
+            "that we have no comparable price of our own (state this in one short "
+            "clause, do not speculate why)"
+        )
+    if p.has_occupancy:
+        our_points.append("our current occupancy")
+
+    # The UI renders this with `white-space: pre-line`, so a single newline
+    # between the two sections survives to the browser as a line break. We do
+    # not rely on the model honouring that: clean_reply pins the shape.
+    prompt = (
+        "FACTS\n"
+        f"{build_facts(p)}\n\n"
+        "RULES\n"
+        "1. Every number you write must appear in FACTS above, character for "
+        "character.\n"
+        "2. Each FACTS line stands alone. Never move a property, room type, OTA "
+        "or date window from one line onto another. Two lines may name the same "
+        "room in different windows; that is not a contradiction, and you must "
+        "report each line with its own window.\n"
+        "3. A variation percentage describes a property as a whole, never a "
+        "single room type. Do not attach it to a room.\n"
+        "4. We have no room type of our own. Never name one for us, and never "
+        "borrow a competitor's.\n"
+        "5. Write only what FACTS states. Add no detail of your own.\n\n"
+        "TASK\n"
+        "Write the briefing as exactly two sections.\n"
+        "Line 1 must start with 'MARKET CONDITION: ' and cover, in order: "
+        + "; ".join(market_points)
+        + ".\n"
+        "Line 2 must start with 'OUR CONDITION: ' and cover, in order: "
+        + "; ".join(our_points)
+        + ".\n"
+        "Separate the two lines with a single newline."
+    )
+
+    if correction:
+        prompt += (
+            f"\n\nYour previous attempt contained the number {correction}, which does "
+            "not appear in FACTS. That is not allowed. Rewrite the briefing using "
+            "only the numbers listed in FACTS."
+        )
+
+    return prompt
+
+
+# -- Reply cleanup ------------------------------------------------------------
+
+_THINK = re.compile(r"<think>.*?</think>", re.DOTALL | re.IGNORECASE)
+_OPEN_THINK = re.compile(r"<think>.*", re.DOTALL | re.IGNORECASE)
+_FENCE = re.compile(r"^```[a-zA-Z]*\s*|\s*```$", re.MULTILINE)
+# The "here is..." branch must NOT require a trailing newline: the model often
+# writes "Here is the briefing: MARKET CONDITION: ..." all on one line, and
+# demanding \n let that preamble through into the card.
+_PREAMBLE = re.compile(
+    r"^\s*(here(?:'s| is| are)[^:\n]*:\s*|sure[,!][^\n]*\n|certainly[,!][^\n]*\n)",
+    re.IGNORECASE,
+)
+_MD = re.compile(r"[*_`#>]|^\s*[-•]\s+", re.MULTILINE)
+
+
+def clean_reply(raw: str) -> str:
+    """Strip model scaffolding and pin the note to exactly two lines.
+
+    The UI renders with `white-space: pre-line`, so every newline the model
+    emits becomes a visible break. Asking it for two lines is not enough: the
+    same prompt yields two tidy lines one call and eight ragged ones the next,
+    label stranded on its own line. So rather than preserve the model's
+    newlines, we discard them all and reinstate the one break the layout needs,
+    in front of the OUR CONDITION label.
+
+    If the model mangles that label the break is simply not reinserted and the
+    note renders as one paragraph — worse looking, still true.
+    """
+    text = _THINK.sub(" ", raw)
+    text = _OPEN_THINK.sub(" ", text)  # reasoning block that never closed
+    text = _FENCE.sub(" ", text)
+    text = _PREAMBLE.sub("", text)
+    text = _MD.sub(" ", text)
+    text = re.sub(r"\s+", " ", text).strip()  # flatten, newlines included
+    text = re.sub(r"\s*(OUR CONDITION\s*:)", r"\n\1", text, count=1, flags=re.IGNORECASE)
+    return text.strip()
+
+
+# -- Fallback -----------------------------------------------------------------
+
+
+def fallback_note(p: NoteRequest) -> str:
+    """Deterministic prose covering the same two sections.
+
+    Always available, always numerically correct. This is why the guard can
+    afford to reject the model twice and walk away.
+    """
+    cur = p.currency
+
+    def money(value: int) -> str:
+        return f"{cur} {fmt_price(value)}"
+
+    # -- MARKET CONDITION --
+    market: list[str] = []
+    mc, mp = p.market_cheapest, p.market_priciest
+
+    market.append(
+        f"Across {p.competitor_count} competitors, the cheapest room in the market "
+        f"is the {mc.room} at {mc.competitor} for {money(mc.price)}, and the most "
+        f"expensive is the {mp.room} at {mp.competitor} for {money(mp.price)} "
+        f"(as of {p.as_of})."
+    )
+
+    if p.last_minute_cheapest:
+        lm = p.last_minute_cheapest
+        market.append(
+            f"For Last Minute, {lm.competitor} is cheapest in the {lm.window} window "
+            f"({lm.room} at {money(lm.price)})."
+        )
+    if p.early_book_cheapest:
+        eb = p.early_book_cheapest
+        market.append(
+            f"For Early Book, {eb.competitor} is cheapest in the {eb.window} window "
+            f"({eb.room} at {money(eb.price)})."
+        )
+
+    if p.most_fluctuating:
+        mf = p.most_fluctuating
+        market.append(
+            f"{mf.competitor} shows the most price movement, averaging "
+            f"{fmt_pct(mf.cv_pct)}% variation."
+        )
+    else:
+        market.append("No property stands out as fluctuating; prices are steady.")
+
+    # -- OUR CONDITION --
+    ours: list[str] = []
+
+    if p.compares:
+        sentence = (
+            f"Our latest confirmed booking ({p.our_booking_date}) works out to "
+            f"{money(p.our_price)} per night"
+        )
+        if p.vs_min_pct is not None:
+            side = "above" if p.vs_min_pct > 0 else "below"
+            sentence += (
+                f", {fmt_pct(abs(p.vs_min_pct))}% {side} the cheapest room in "
+                "the market"
+            )
+        if p.vs_max and p.vs_max_pct is not None:
+            word = {
+                "below": "still below",
+                "above": "above",
+                "equal": "level with",
+            }[p.vs_max]
+            sentence += (
+                f", and {word} the most expensive room in the market "
+                f"(a {fmt_pct(abs(p.vs_max_pct))}% difference)"
+            )
+        ours.append(sentence + ".")
+    elif p.skip_reason == "no_booking":
+        ours.append("We have no confirmed booking on record to compare against.")
+    elif p.skip_reason == "currency_mismatch":
+        ours.append(
+            "Our latest booking is in another currency, so no comparison is shown."
+        )
+
+    if p.has_occupancy:
+        verb = "is" if p.occupied_rooms == 1 else "are"  # "1 of our 11 rooms is"
+        ours.append(
+            f"Right now, {p.occupied_rooms} of our {p.total_rooms} rooms {verb} "
+            f"occupied ({fmt_pct(p.occupancy_pct)}%)."
+        )
+
+    out = "MARKET CONDITION: " + " ".join(market)
+    if ours:
+        out += "\nOUR CONDITION: " + " ".join(ours)
+    return out
+
+
+# -- Ollama -------------------------------------------------------------------
+
+
+def pick_model(requested: Optional[str]) -> str:
+    return requested if requested in ALLOWED_MODELS else DEFAULT_MODEL
+
+
+async def ask_ollama(model: str, prompt: str) -> str:
+    async with httpx.AsyncClient(timeout=OLLAMA_TIMEOUT) as client:
+        resp = await client.post(
+            f"{OLLAMA_URL}/api/chat",
+            json={
+                "model": model,
+                "stream": False,
+                "think": False,  # ignored by non-reasoning models
+                "messages": [
+                    {"role": "system", "content": SYSTEM},
+                    {"role": "user", "content": prompt},
+                ],
+                # REVIEW: num_predict is unset, so Ollama's default cap applies.
+                # Two sections are longer than the old single paragraph — if
+                # notes come back truncated mid-sentence, raise it here.
+                "options": {"temperature": 0.2},
+            },
+        )
+        resp.raise_for_status()
+        return resp.json().get("message", {}).get("content", "")
+
+
+# -- Endpoint -----------------------------------------------------------------
+
+
+@app.get("/health")
+async def health() -> dict:
+    return {"ok": True, "models": sorted(ALLOWED_MODELS), "default": DEFAULT_MODEL}
+
+
+@app.post(
+    "/competitor-note",
+    response_model=NoteResponse,
+    dependencies=[Depends(require_token)],
+)
+async def competitor_note(payload: NoteRequest) -> NoteResponse:
+    model = pick_model(payload.model)
+
+    correction: Optional[str] = None
+    for _ in range(2):  # first attempt, then one retry with the bad number quoted
+        try:
+            raw = await ask_ollama(model, build_prompt(payload, correction))
+        except Exception:
+            break  # model unreachable or erroring; the fallback is just as true
+
+        note = clean_reply(raw)
+        if not note:
+            break
+
+        offender = verify_numbers(note, payload)
+        if offender is None:
+            return NoteResponse(note=note)
+        correction = offender
+
+    return NoteResponse(note=fallback_note(payload))

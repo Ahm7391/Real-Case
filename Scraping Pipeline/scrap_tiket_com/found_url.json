@@ -1,0 +1,1298 @@
+[
+    {
+        "properties_name": "The Villas Umalas",
+        "competitor_id": 1,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/the-villas-umalas-906001782801593356"
+    },
+    {
+        "properties_name": "Manca Villa",
+        "competitor_id": 2,
+        "slug": "manca-villa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/manca-villa-canggu-by-ini-vie-hospitality-602001675936221785"
+    },
+    {
+        "properties_name": "The Canggu Boutique Villas & Spa",
+        "competitor_id": 3,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/the-canggu-boutique-villas-712001733363558661"
+    },
+    {
+        "properties_name": "Batur Homestay",
+        "competitor_id": 10,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/batur-homestay-and-lodge-512001671833984132"
+    },
+    {
+        "properties_name": "Pondok Bali Cottage",
+        "competitor_id": 11,
+        "slug": "pondok-bali-cottage",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/pondok-bali-cottage-412001638935287788"
+    },
+    {
+        "properties_name": "Bintang House Kintamani",
+        "competitor_id": 22,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/bintang-house-303001583319337168"
+    },
+    {
+        "properties_name": "Black Lava Hostel & Lodge",
+        "competitor_id": 23,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/black-lava-hostel-kintamani-606001685966365773"
+    },
+    {
+        "properties_name": "Reddoorz @ Panglima Sudirman",
+        "competitor_id": 25,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/reddoorz-panglima-sudirman-surabaya-610001697430661449"
+    },
+    {
+        "properties_name": "Kertajaya Residence Syariah Surabaya",
+        "competitor_id": 27,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/hotel-o-surabaya-near-universitas-airlangga-formerly-kertajaya-residence-surabaya-812001766988741802"
+    },
+    {
+        "properties_name": "Bogor Icon Apartment",
+        "competitor_id": 42,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/bogor-icon-apartment-906001780891894221"
+    },
+    {
+        "properties_name": "Hotel Semeru",
+        "competitor_id": 43,
+        "slug": "hotel-semeru",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/hotel-semeru-bogor-203001552907689571"
+    },
+    {
+        "properties_name": "Victory Munggu",
+        "competitor_id": 44,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/victory-munggu-by-ecommerceloka-706001718355854387"
+    },
+    {
+        "properties_name": "Villa Alisha Pererenan",
+        "competitor_id": 45,
+        "slug": "villa-alisha-pererenan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/villa-alisha-907001784241506537"
+    },
+    {
+        "properties_name": "Sanata Yoga Guesthouse",
+        "competitor_id": 50,
+        "slug": "sanata-yoga-guesthouse",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/sanata-yoga-guesthouse-301001579892698999"
+    },
+    {
+        "properties_name": "Canggu Bona Kubu",
+        "competitor_id": 51,
+        "slug": "canggu-bona-kubu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/canggu-bona-kubu-by-kamara-701001705886743338"
+    },
+    {
+        "properties_name": "Nari Homestay",
+        "competitor_id": 52,
+        "slug": "nari-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/nari-homestay-canggu-2-901001769580356419"
+    },
+    {
+        "properties_name": "Harmoni Guesthouse",
+        "competitor_id": 56,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/harmoni-guest-house-banyuwangi-301001579899482640"
+    },
+    {
+        "properties_name": "Hotel Manyar",
+        "competitor_id": 57,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/gunawangsa-manyar-hotel-surabaya-108001534490302319"
+    },
+    {
+        "properties_name": "Berlian Abadi",
+        "competitor_id": 58,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/berlian-abadi-hotel-by-sinergi-703001710740719903"
+    },
+    {
+        "properties_name": "Uno Hotel Surabaya",
+        "competitor_id": 64,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/hotel-o-genteng-near-genteng-market-formerly-uno-hotel-808001755859769770"
+    },
+    {
+        "properties_name": "OYO 2354 3 Point Residence",
+        "competitor_id": 65,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/3-point-syariah-residence-509001662719430688"
+    },
+    {
+        "properties_name": "Bumi Banyu Bening Syariah",
+        "competitor_id": 66,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/bumi-banyu-bening-syariah-by-ecommerceloka-507001656996327490"
+    },
+    {
+        "properties_name": "Bliss Ubud Abangan",
+        "competitor_id": 67,
+        "slug": "bliss-ubud-abangan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/bliss-ubud-abangan-303001583319454358"
+    },
+    {
+        "properties_name": "Alam Terrace Cottages",
+        "competitor_id": 68,
+        "slug": "alam-terrace-cottages",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/alam-terrace-cottages-412001639107148485"
+    },
+    {
+        "properties_name": "Bali Astetic Villa",
+        "competitor_id": 70,
+        "slug": "bali-astetic-villa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/bali-astetic-villa-502001644488132685"
+    },
+    {
+        "properties_name": "Batur Green Hill",
+        "competitor_id": 71,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/batur-green-hill-404001619511442041"
+    },
+    {
+        "properties_name": "OYO Flagship 3688 Pot Art",
+        "competitor_id": 93,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/oyo-flagship-3688-pot-art-812001765526391554"
+    },
+    {
+        "properties_name": "RedDoorz @ Kertajaya Surabaya",
+        "competitor_id": 95,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/reddoorz-kertajaya-surabaya-205001558717238951"
+    },
+    {
+        "properties_name": "The Rinaya Canggu",
+        "competitor_id": 96,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/the-rinaya-canggu-by-ecommerceloka-711001731907473479"
+    },
+    {
+        "properties_name": "Asung Guesthouse",
+        "competitor_id": 97,
+        "slug": "asung-guesthouse",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/asung-guesthouse-108001534518585635"
+    },
+    {
+        "properties_name": "Canggu Dream Village",
+        "competitor_id": 98,
+        "slug": "canggu-dream-village",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/canggu-dream-village-210001571022920759"
+    },
+    {
+        "properties_name": "Noormans Hotel Semarang",
+        "competitor_id": 99,
+        "slug": "noormans-hotel-semarang",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/noormans-hotel-semarang-608001691121074482"
+    },
+    {
+        "properties_name": "Hotel Candi Indah",
+        "competitor_id": 101,
+        "slug": "hotel-candi-indah",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/hotel-candi-indah-akpol-semarang-802001739347208082"
+    },
+    {
+        "properties_name": "Jero Ratna Homestay",
+        "competitor_id": 102,
+        "slug": "jero-ratna-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/jero-ratna-homestay-310001602629261428"
+    },
+    {
+        "properties_name": "Cempaka 3 Inn",
+        "competitor_id": 108,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/losmen-cempaka-3-807001752026413064"
+    },
+    {
+        "properties_name": "Danasari Homestay",
+        "competitor_id": 113,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/danasari-homestay-108001534517734584"
+    },
+    {
+        "properties_name": "Sukma Guesthouse",
+        "competitor_id": 114,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/suksma-guesthouse-811001762471866526"
+    },
+    {
+        "properties_name": "Dewi Antara Homestay",
+        "competitor_id": 115,
+        "slug": "dewi-antara-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/dewi-antara-homestay-212001576256304597"
+    },
+    {
+        "properties_name": "Dajan Buyan Homestay",
+        "competitor_id": 119,
+        "slug": "dajan-buyan-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/dajan-buyan-homestay-203001551897784423"
+    },
+    {
+        "properties_name": "Umah lumbung bedugul",
+        "competitor_id": 120,
+        "slug": "umah-lumbung-bedugul",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/umah-lumbung-bedugul-409001632791766307"
+    },
+    {
+        "properties_name": "Puri Canggu Rooms ll",
+        "competitor_id": 121,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/puri-canggu-rooms-2-804001745913004141"
+    },
+    {
+        "properties_name": "Grandpa Resort",
+        "competitor_id": 122,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/grandpa-guest-house-904001777174210382"
+    },
+    {
+        "properties_name": "Capila Villa Bali",
+        "competitor_id": 130,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/capila-villa-canggu-412001639985510615"
+    },
+    {
+        "properties_name": "Japa Guesthouse",
+        "competitor_id": 132,
+        "slug": "japa-guesthouse",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/japa-guesthouse-709001727158518031"
+    },
+    {
+        "properties_name": "Villa Danu",
+        "competitor_id": 136,
+        "slug": "villa-danu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/villa-danu-kintamani-710001728842986828"
+    },
+    {
+        "properties_name": "Guest House The Argopuro",
+        "competitor_id": 137,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/rsy-argopuro-guest-house-605001683809762793"
+    },
+    {
+        "properties_name": "U Tube Hotel",
+        "competitor_id": 147,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/u-tube-hotel-uluwatu-412001639984042339"
+    },
+    {
+        "properties_name": "Uma Manyar Sunset Villa",
+        "competitor_id": 151,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/uma-manyar-sunset-villa-901001768979747261"
+    },
+    {
+        "properties_name": "Ubud Chez Nyoman",
+        "competitor_id": 152,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/ubud-chez-nyoman-412001639108210800"
+    },
+    {
+        "properties_name": "Bakung Beach Resort",
+        "competitor_id": 153,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/bakung-beach-resort-711001730787629998"
+    },
+    {
+        "properties_name": "Palm Beach Hotel Bali",
+        "competitor_id": 154,
+        "slug": "palm-beach-hotel-bali",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/palm-beach-hotel-bali-108001534517328955"
+    },
+    {
+        "properties_name": "Angkul Angkul Segara Beach Kuta",
+        "competitor_id": 155,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/angkul-angkul-segara-beach-kuta-by-kamara-612001701839730759"
+    },
+    {
+        "properties_name": "Adiwana Warnakali Resort",
+        "competitor_id": 156,
+        "slug": "adiwana-warnakali-resort",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/adiwana-warnakali-resort-408001630135516828"
+    },
+    {
+        "properties_name": "Semabu Hills Hotel Nusa Penida",
+        "competitor_id": 157,
+        "slug": "semabu-hills-hotel-nusa-penida",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/semabu-hills-hotel-nusa-penida-504001650525331313"
+    },
+    {
+        "properties_name": "The Kalangan",
+        "competitor_id": 159,
+        "slug": "the-kalangan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/the-kalangan-301001579892747997"
+    },
+    {
+        "properties_name": "Munari Resort and Spa Ubud",
+        "competitor_id": 160,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/munari-resort-ubud-802001740486004952"
+    },
+    {
+        "properties_name": "Ubud Sky",
+        "competitor_id": 161,
+        "slug": "ubud-sky",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/moon-villa-2bdr-and-private-pool-enjoy-ubud-sky-710001728798626761"
+    },
+    {
+        "properties_name": "Wijaya Guesthouse",
+        "competitor_id": 162,
+        "slug": "wijaya-guesthouse",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/wijaya-guest-house-406001622521685484"
+    },
+    {
+        "properties_name": "Tirtha Canggu Suites",
+        "competitor_id": 167,
+        "slug": "tirtha-canggu-suites",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/tirtha-canggu-suites-412001639979903535"
+    },
+    {
+        "properties_name": "BRAW Inn Canggu",
+        "competitor_id": 168,
+        "slug": "braw-inn-canggu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/braw-inn-canggu-112001545041701675"
+    },
+    {
+        "properties_name": "Sunrise Penida Hill",
+        "competitor_id": 169,
+        "slug": "sunrise-penida-hill",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/sunrise-penida-hill-906001780916683770"
+    },
+    {
+        "properties_name": "Abasan Hill Hotel and Spa",
+        "competitor_id": 171,
+        "slug": "abasan-hill-hotel-and-spa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/abasan-hill-hotel-and-spa-412001639107133065"
+    },
+    {
+        "properties_name": "Hotel Cahaya 3",
+        "competitor_id": 172,
+        "slug": "hotel-cahaya-3",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/hotel-cahaya-3-502001644555750582"
+    },
+    {
+        "properties_name": "RedDoorz Near Juanda International Airport 2",
+        "competitor_id": 173,
+        "slug": "reddoorz-near-juanda-international-airport-2",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/reddoorz-near-juanda-international-airport-2-206001560509709910"
+    },
+    {
+        "properties_name": "Nova Guest House",
+        "competitor_id": 174,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/nova-guest-house-syariah-303001583376308154"
+    },
+    {
+        "properties_name": "Euforia Guest House",
+        "competitor_id": 175,
+        "slug": "euforia-guest-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/euforia-guest-house-411001638209992382"
+    },
+    {
+        "properties_name": "Wasabi Hotel",
+        "competitor_id": 176,
+        "slug": "wasabi-hotel",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/wasabi-hotel-and-restaurant-611001699737378771"
+    },
+    {
+        "properties_name": "Murai Guest House",
+        "competitor_id": 179,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/murai-guest-house-412001638531062273"
+    },
+    {
+        "properties_name": "Mount Batur Villa",
+        "competitor_id": 182,
+        "slug": "mount-batur-villa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/mount-batur-villa-301001578882616846"
+    },
+    {
+        "properties_name": "OYO 3132 Mahkota Sivali",
+        "competitor_id": 185,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/mahkota-sivali-near-soekarno-hatta-airport-mitra-reddoorz-702001708584672699"
+    },
+    {
+        "properties_name": "The Paving Villa",
+        "competitor_id": 190,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/the-paving-villa-610001698208493085"
+    },
+    {
+        "properties_name": "Canggu Nadi Guest House",
+        "competitor_id": 191,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/canggu-nadi-2-guest-house-802001739990740408"
+    },
+    {
+        "properties_name": "Keramas Surf Camp",
+        "competitor_id": 197,
+        "slug": "keramas-surf-camp",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/keramas-surf-camp-506001655352326445"
+    },
+    {
+        "properties_name": "The Uma Guesthouse",
+        "competitor_id": 200,
+        "slug": "the-uma-guesthouse",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/the-uma-guesthouse-301001579898551990"
+    },
+    {
+        "properties_name": "D'canggu homestay",
+        "competitor_id": 204,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/dcanggu-homestay-510001664936715727"
+    },
+    {
+        "properties_name": "ASTON INN Mataram",
+        "competitor_id": 213,
+        "slug": "aston-inn-mataram",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/aston-inn-mataram-108001534490335182"
+    },
+    {
+        "properties_name": "Amerta Home Stay",
+        "competitor_id": 220,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/amerta-homestay-201001547830862600"
+    },
+    {
+        "properties_name": "RedLiving Apartment Green lake View Ciputat- Aurora Rooms",
+        "competitor_id": 227,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/redliving-apartemen-green-lake-view-ciputat-aurora-rooms-608001692942627346"
+    },
+    {
+        "properties_name": "The Lonceng By Sila Dharma Mesari Management",
+        "competitor_id": 231,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/the-lonceng-canggu-by-sdm-407001625474723977"
+    },
+    {
+        "properties_name": "Bima Sakti House Canggu",
+        "competitor_id": 232,
+        "slug": "bima-sakti-house-canggu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/bima-sakti-house-canggu-412001639989055902"
+    },
+    {
+        "properties_name": "Surf Motel",
+        "competitor_id": 233,
+        "slug": "surf-motel",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/surf-motel-canggu-904001776891572210"
+    },
+    {
+        "properties_name": "Gading Guest House",
+        "competitor_id": 238,
+        "slug": "gading-guest-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/gading-guest-house-108001534490326306"
+    },
+    {
+        "properties_name": "Cleo Hotel Jemursari Surabaya",
+        "competitor_id": 240,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/cleo-hotel-jemursari-108001534490349449"
+    },
+    {
+        "properties_name": "Amaris Hotel Margorejo Surabaya",
+        "competitor_id": 241,
+        "slug": "amaris-hotel-margorejo-surabaya",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/amaris-hotel-margorejo-surabaya-412001639990690373"
+    },
+    {
+        "properties_name": "Charisma Homestay",
+        "competitor_id": 242,
+        "slug": "charisma-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/charisma-homestay-surabaya-812001765447336359"
+    },
+    {
+        "properties_name": "Kencana Garden",
+        "competitor_id": 243,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/kencana-garden-bungalow-709001725258315554"
+    },
+    {
+        "properties_name": "Bale Gede Lembongan",
+        "competitor_id": 244,
+        "slug": "bale-gede-lembongan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/bale-gede-lembongan-412001639989875124"
+    },
+    {
+        "properties_name": "The Palm Grove Villas",
+        "competitor_id": 245,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/the-palm-grove-412001639987456715"
+    },
+    {
+        "properties_name": "Adiputra Guesthouse 2",
+        "competitor_id": 249,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/adiputra-guesthouse-homiq-810001759905012876"
+    },
+    {
+        "properties_name": "RedDoorz near AMIKOM Yogyakarta",
+        "competitor_id": 252,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/reddoorz-near-amikom-yogyakarta-203001551897308844"
+    },
+    {
+        "properties_name": "Koolkost near Stadion Maguwoharjo",
+        "competitor_id": 253,
+        "slug": "koolkost-near-stadion-maguwoharjo",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/koolkost-near-stadion-maguwoharjo-604001681288707821"
+    },
+    {
+        "properties_name": "Ayuning Guest House Syariah Semarang Mitra RedDoorz",
+        "competitor_id": 261,
+        "slug": "ayuning-guest-house-syariah-semarang-mitra-reddoorz",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/ayuning-guest-house-syariah-semarang-mitra-reddoorz-807001752214160439"
+    },
+    {
+        "properties_name": "Homestay Sakinah Syariah Mitra RedDoorz",
+        "competitor_id": 265,
+        "slug": "homestay-sakinah-syariah-mitra-reddoorz",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/homestay-sakinah-syariah-mitra-reddoorz-702001708584672726"
+    },
+    {
+        "properties_name": "Dana's House",
+        "competitor_id": 266,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/danas-house-510001666839646346"
+    },
+    {
+        "properties_name": "Fabel Homestay",
+        "competitor_id": 267,
+        "slug": "fabel-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/fabel-homestay-206001560508967050"
+    },
+    {
+        "properties_name": "RedDoorz Plus near Palembang Square Mall",
+        "competitor_id": 268,
+        "slug": "reddoorz-plus-near-palembang-square-mall",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/reddoorz-plus-near-palembang-square-mall-108001534490376019"
+    },
+    {
+        "properties_name": "Cove T63",
+        "competitor_id": 271,
+        "slug": "cove-t63",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/cove-t63-509001662451830256"
+    },
+    {
+        "properties_name": "Cozy Residence Tomang",
+        "competitor_id": 272,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/cozy-residence-tomang-506001654591275876"
+    },
+    {
+        "properties_name": "OYO 1487 Residence Khoe",
+        "competitor_id": 273,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/hotel-o-residence-khoe-903001773227123468"
+    },
+    {
+        "properties_name": "Maple Hotel Grogol",
+        "competitor_id": 274,
+        "slug": "maple-hotel-grogol",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/maple-hotel-grogol-108001534490384127"
+    },
+    {
+        "properties_name": "Social Hub by TwoSpaces",
+        "competitor_id": 275,
+        "slug": "social-hub-by-twospaces",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/social-hub-by-twospaces-412001639108094470"
+    },
+    {
+        "properties_name": "Grand Inna Tunjungan",
+        "competitor_id": 277,
+        "slug": "grand-inna-tunjungan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/grand-inna-tunjungan-hotel-surabaya-809001757921764802"
+    },
+    {
+        "properties_name": "Nite & Day Surabaya - Kedungdoro",
+        "competitor_id": 278,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/nite-day-surabaya-kedungdoro-108001534490366489"
+    },
+    {
+        "properties_name": "D'jineng Rice Terrace Canggu",
+        "competitor_id": 280,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/djineng-rice-terrace-canggu-511001669192830200"
+    },
+    {
+        "properties_name": "De Dukuh Guest House",
+        "competitor_id": 282,
+        "slug": "de-dukuh-guest-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/de-dukuh-guest-house-206001560501728834"
+    },
+    {
+        "properties_name": "Berlian Inn Kuta Beach",
+        "competitor_id": 283,
+        "slug": "berlian-inn-kuta-beach",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/berlian-inn-kuta-beach-902001770963485411"
+    },
+    {
+        "properties_name": "2",
+        "competitor_id": 284,
+        "slug": "arnaya-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/arnaya-homestay-303001583319135404"
+    },
+    {
+        "properties_name": "Twin Island Villas & Dive Resort",
+        "competitor_id": 285,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/twin-island-villas-dive-resort-108001534518529323"
+    },
+    {
+        "properties_name": "D'Lesung Villas Lembongan",
+        "competitor_id": 286,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/dlesung-villas-lembongan-510001664645140474"
+    },
+    {
+        "properties_name": "Bukit Permata Lembongan",
+        "competitor_id": 287,
+        "slug": "bukit-permata-lembongan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/bukit-permata-lembongan-203001551897286582"
+    },
+    {
+        "properties_name": "Rinjani Garden",
+        "competitor_id": 289,
+        "slug": "rinjani-garden",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/rinjani-garden-syariah-by-ecommerceloka-807001752213688165"
+    },
+    {
+        "properties_name": "Tulus Hati Ubud Retreat & Spa",
+        "competitor_id": 291,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/tulus-hati-ubud-retreat-904001775276440924"
+    },
+    {
+        "properties_name": "Sanga Suites",
+        "competitor_id": 292,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/sanga-suites-villas-712001733474104432"
+    },
+    {
+        "properties_name": "LeGreen Suite Waihaong",
+        "competitor_id": 297,
+        "slug": "legreen-suite-waihaong",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/legreen-suite-waihaong-ambon-108001534490384639"
+    },
+    {
+        "properties_name": "Rumaruma Farvet Residence",
+        "competitor_id": 299,
+        "slug": "rumaruma-farvet-residence",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/rumaruma-farvet-residence-ambon-501001641783179757"
+    },
+    {
+        "properties_name": "The Green Ponci Bedugul",
+        "competitor_id": 303,
+        "slug": "the-green-ponci-bedugul",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/the-green-ponci-bedugul-612001701905664585"
+    },
+    {
+        "properties_name": "Strawberry Hill Hotel & Restaurant",
+        "competitor_id": 304,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/strawberry-hill-hotel-restaurant-303001583318128401"
+    },
+    {
+        "properties_name": "The Kd Suites & Coffee Shop",
+        "competitor_id": 308,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/the-kd-suites-coffee-shop-508001661422538811"
+    },
+    {
+        "properties_name": "The Ume",
+        "competitor_id": 309,
+        "slug": "the-ume",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/the-ume-cemagi-611001700636210904"
+    },
+    {
+        "properties_name": "The Djakarta Anandita Syariah Hotel",
+        "competitor_id": 310,
+        "slug": "the-djakarta-anandita-syariah-hotel",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/the-djakarta-anandita-syariah-hotel-507001657304417508"
+    },
+    {
+        "properties_name": "Roommates Hostel Canggu by Ini Vie Hospitality",
+        "competitor_id": 313,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/roomates-hostel-canggu-by-ini-vie-hospitality-810001760333412068"
+    },
+    {
+        "properties_name": "Jonsen Homestay",
+        "competitor_id": 314,
+        "slug": "jonsen-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/jonsen-homestay-202001550250016982"
+    },
+    {
+        "properties_name": "Andi Beach House",
+        "competitor_id": 315,
+        "slug": "andi-beach-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/andi-beach-house-510001665392253040"
+    },
+    {
+        "properties_name": "Lembah Rinjani Villa & Resto by ecommerceloka",
+        "competitor_id": 316,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/lembah-rinjani-villa-resto-syariah-by-ecommerceloka-706001718697020460"
+    },
+    {
+        "properties_name": "Masmara Resort Canggu",
+        "competitor_id": 320,
+        "slug": "masmara-resort-canggu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/masmara-resort-canggu-311001605066311722"
+    },
+    {
+        "properties_name": "Rhythm & Rumble",
+        "competitor_id": 321,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/rhythm-rumble-hostel-902001770628074857"
+    },
+    {
+        "properties_name": "Eastin Ashta Resort Canggu",
+        "competitor_id": 322,
+        "slug": "eastin-ashta-resort-canggu",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/eastin-ashta-resort-canggu-108001534520245976"
+    },
+    {
+        "properties_name": "RedDoorz @ Tanjung Sari Surabaya",
+        "competitor_id": 323,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/reddoorz-tanjung-sari-surabaya-412001640080996300"
+    },
+    {
+        "properties_name": "Promosia Guest House",
+        "competitor_id": 324,
+        "slug": "promosia-guest-house",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/promosia-guest-house-206001560508033006"
+    },
+    {
+        "properties_name": "Keramas Sacred River Retreat Resort and Villa",
+        "competitor_id": 329,
+        "slug": "keramas-sacred-river-retreat-resort-and-villa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/keramas-sacred-river-retreat-resort-and-villa-801001736494643030"
+    },
+    {
+        "properties_name": "Villa Casablanca Surf Keramas",
+        "competitor_id": 330,
+        "slug": "villa-casablanca-surf-keramas",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/villa-casablanca-surf-keramas-406001622920668369"
+    },
+    {
+        "properties_name": "Green Vanilla Bungalow",
+        "competitor_id": 335,
+        "slug": "green-vanilla-bungalow",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/green-vanilla-bungalow-310001603225553521"
+    },
+    {
+        "properties_name": "Taman Unique Hotel",
+        "competitor_id": 338,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/taman-unique-hotel-senggigi-804001744774204564"
+    },
+    {
+        "properties_name": "Glamour camping bedugul",
+        "competitor_id": 339,
+        "slug": "glamour-camping-bedugul",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/glamour-camping-bedugul-412001639107468486"
+    },
+    {
+        "properties_name": "Popitan Garden Campground & Glamping Bedugul",
+        "competitor_id": 340,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/popitan-garden-campground-glamping-bedugul-605001684461932570"
+    },
+    {
+        "properties_name": "Segara Wangi Beach Cottages",
+        "competitor_id": 341,
+        "slug": "segara-wangi-beach-cottages",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/segara-wangi-beach-cottages-108001534518362194"
+    },
+    {
+        "properties_name": "Ashyana Candidasa Beach Resort",
+        "competitor_id": 342,
+        "slug": "ashyana-candidasa-beach-resort",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/ashyana-candidasa-beach-resort-206001560500114801"
+    },
+    {
+        "properties_name": "Bali Palms Resort",
+        "competitor_id": 343,
+        "slug": "bali-palms-resort",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/bali-palms-resort-108001534490277385"
+    },
+    {
+        "properties_name": "Kubu Indah Homestay Sanur",
+        "competitor_id": 344,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/kubu-indah-homestay-810001760954412469"
+    },
+    {
+        "properties_name": "Svarna Hotel",
+        "competitor_id": 345,
+        "slug": "svarna-hotel",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/svarna-hotel-sanur-408001630380850291"
+    },
+    {
+        "properties_name": "Gazebo Beach Hotel",
+        "competitor_id": 346,
+        "slug": "gazebo-beach-hotel",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/gazebo-beach-hotel-611001700452599323"
+    },
+    {
+        "properties_name": "Rayz UMM Hotel Malang",
+        "competitor_id": 350,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/rayz-umm-hotel-malang-906001782194514367"
+    },
+    {
+        "properties_name": "Favehotel Malang",
+        "competitor_id": 352,
+        "slug": "favehotel-malang",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/favehotel-malang-404001617246031513"
+    },
+    {
+        "properties_name": "Louto Dmell Guesthouse",
+        "competitor_id": 354,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/louto-dmell-homestay-412001639993968086"
+    },
+    {
+        "properties_name": "Cening Ayu Sanur",
+        "competitor_id": 355,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/cening-ayu-sanur-907001784194335088"
+    },
+    {
+        "properties_name": "Kaja Villa",
+        "competitor_id": 358,
+        "slug": "kaja-villa",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/kaja-villa-303001583410557156"
+    },
+    {
+        "properties_name": "Prema Ubud Romantic Villas",
+        "competitor_id": 361,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/prema-ubud-villas-812001764978844661"
+    },
+    {
+        "properties_name": "RAMP COTTAGE",
+        "competitor_id": 363,
+        "slug": "ramp-cottage",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/ramp-cottage-302001580954419466"
+    },
+    {
+        "properties_name": "Dayuh House",
+        "competitor_id": 364,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/dayuh-house-403001616043629618"
+    },
+    {
+        "properties_name": "CBG INN RedPartner near Stasiun Solo balapan",
+        "competitor_id": 366,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/cbg-inn-villas-solo-809001756889291398"
+    },
+    {
+        "properties_name": "The Peace Arta Bungalow",
+        "competitor_id": 367,
+        "slug": "the-peace-arta-bungalow",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/the-peace-arta-bungalow-206001560358845916"
+    },
+    {
+        "properties_name": "Umah Putih",
+        "competitor_id": 368,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/umah-putih-310001604043595978"
+    },
+    {
+        "properties_name": "Nushe Hostel",
+        "competitor_id": 369,
+        "slug": "nushe-hostel",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/nushe-hostel-room-809001759117684609"
+    },
+    {
+        "properties_name": "Santhara Canggu Wooden House",
+        "competitor_id": 374,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/santhara-canggu-604001680921625992"
+    },
+    {
+        "properties_name": "TNC Residence Syariah Mataram",
+        "competitor_id": 375,
+        "slug": "tnc-residence-syariah-mataram",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/tnc-residence-syariah-mataram-807001753203711262"
+    },
+    {
+        "properties_name": "Stardust Villas Nusa Lembongan",
+        "competitor_id": 376,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/stardust-villas-607001689283543428"
+    },
+    {
+        "properties_name": "Seaside Huts Lembongan",
+        "competitor_id": 377,
+        "slug": "seaside-huts-lembongan",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/seaside-huts-lembongan-508001661750445136"
+    },
+    {
+        "properties_name": "Hotel Dewata Indah Denpasar Mitra RedDoorz",
+        "competitor_id": 378,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/reddoorz-hotel-dewata-indah-denpasar-810001759892420331"
+    },
+    {
+        "properties_name": "Duyung Homestay",
+        "competitor_id": 379,
+        "slug": "duyung-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/duyung-homestay-206001560502935594"
+    },
+    {
+        "properties_name": "Asoka Hotel & Suite",
+        "competitor_id": 380,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/homes/indonesia/asoka-hotel-suite-703001711310678181"
+    },
+    {
+        "properties_name": "Sekar Waru Homestay",
+        "competitor_id": 381,
+        "slug": "sekar-waru-homestay",
+        "match": "substring",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/sekar-waru-homestay-412001639108073956"
+    },
+    {
+        "properties_name": "Pondok Lulik",
+        "competitor_id": 383,
+        "slug": "",
+        "match": "",
+        "score": 1.0,
+        "url": "https://www.tiket.com/en-id/hotel/indonesia/pondok-lulik-homestay-canggu-701001704786629479"
+    }
+]

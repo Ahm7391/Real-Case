@@ -1,0 +1,508 @@
+"""
+Competitor-note service.
+
+Laravel (LokaPro) computes every figure in the competitor price table and POSTs
+them here already-calculated. This service asks a local Ollama model to phrase
+them as a short note, then verifies that the model did not invent, round, or
+mistype a single digit before handing the prose back.
+
+The model does no arithmetic. It copies numbers out of a FACTS block into
+sentences. The note renders directly beneath the table containing those same
+numbers, so one wrong digit is a visible contradiction, not a rounding error.
+
+Two layers protect against that:
+  verify_numbers() rejects any numeric token we did not send.
+  fallback_note()  produces correct prose without the model at all.
+
+The second is what makes the first affordable: we can throw away the model's
+output twice and still have something true to render.
+"""
+
+from __future__ import annotations
+
+import os
+import re
+import secrets
+from typing import Literal, Optional
+
+import httpx
+from fastapi import Depends, FastAPI, Header, HTTPException
+from pydantic import BaseModel, Field
+
+try:  # load .env sitting next to this file, if one exists
+    from dotenv import load_dotenv
+
+    load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
+except ImportError:
+    pass  # env vars set by systemd/shell instead
+
+# ── Config ────────────────────────────────────────────────────────────────────
+
+AUTH_TOKEN = os.environ.get("COMPETITOR_NOTE_TOKEN", "")
+
+OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://127.0.0.1:11434").rstrip("/")
+OLLAMA_TIMEOUT = float(os.environ.get("OLLAMA_TIMEOUT", "60"))
+
+# Small on purpose: the model rephrases figures that are already calculated, it
+# does not reason about them. A 3B slips a digit more often than a 7B would,
+# which is what verify_numbers() and fallback_note() are here to absorb.
+DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:3b")
+
+# The payload names a model. Passing that to Ollama unchecked would let anyone
+# holding the token make this box pull and run an arbitrary model, so the name
+# is only honoured if it is on this list; otherwise we quietly use the default.
+ALLOWED_MODELS = {
+    m.strip()
+    for m in os.environ.get("OLLAMA_MODEL_ALLOWLIST", DEFAULT_MODEL).split(",")
+    if m.strip()
+}
+
+app = FastAPI(title="competitor-note", docs_url=None, redoc_url=None)
+
+
+# ── Contract ──────────────────────────────────────────────────────────────────
+#
+# Mirrors what Laravel's compare() sends. When skip_reason is set, compare()
+# returns ONLY our_price/vs_min_pct/vs_max/skip_reason — our_booking_date,
+# our_nights and vs_max_pct are absent from the JSON, not null. Every field
+# below that can go missing therefore has a default; making any of them
+# required turns a normal skip into a 422 that reads like a Laravel bug.
+
+
+class RoomPrice(BaseModel):
+    room: str
+    price: int
+
+
+class RoomCV(BaseModel):
+    room: str
+    cv_pct: float
+
+
+class NoteRequest(BaseModel):
+    competitor: str
+    ota: str
+    as_of: str
+    currency: str = "IDR"
+    model: Optional[str] = None
+    language: Literal["en", "id"] = "en"
+
+    lowest: RoomPrice
+    highest: RoomPrice
+    most_volatile: Optional[RoomCV] = None
+    most_stable: Optional[RoomCV] = None
+    insufficient_data: list[str] = Field(default_factory=list)
+    competitor_min: int
+    competitor_max: int
+
+    our_price: Optional[int] = None
+    our_booking_date: Optional[str] = None
+    our_nights: Optional[int] = None
+    vs_min_pct: Optional[float] = None
+    vs_max: Optional[Literal["below", "equal", "above"]] = None
+    vs_max_pct: Optional[float] = None
+    skip_reason: Optional[Literal["no_booking", "currency_mismatch"]] = None
+    # Occupancy of our own property. Absent when the property has no room types
+    # configured (Laravel omits them), so all three must default.
+    occupied_rooms: Optional[int] = None
+    total_rooms: Optional[int] = None
+    occupancy_pct: Optional[float] = None
+
+    @property
+    def compares(self) -> bool:
+        """True when we have a price of our own worth talking about."""
+        return self.skip_reason is None and self.our_price is not None
+
+    @property
+    def has_occupancy(self) -> bool:
+        return self.occupancy_pct is not None
+
+
+class NoteResponse(BaseModel):
+    note: str
+
+
+# ── Auth ──────────────────────────────────────────────────────────────────────
+
+
+def require_token(authorization: str = Header(default="")) -> None:
+    scheme, _, presented = authorization.partition(" ")
+    if scheme.lower() != "bearer" or not AUTH_TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    # compare_digest, not ==, so the comparison does not leak the token
+    # prefix through timing.
+    if not secrets.compare_digest(presented, AUTH_TOKEN):
+        raise HTTPException(status_code=401, detail="unauthorized")
+
+
+# ── Number handling ───────────────────────────────────────────────────────────
+
+# A run of digits that may carry , or . separators inside it. Requiring a digit
+# at both ends keeps a sentence-final period out of the token.
+_NUM = re.compile(r"\d[\d.,]*\d|\d")
+
+
+def norm(token: str) -> str:
+    """785,000 == 785.000 == 785000 -> '785000'. Also 12.3 -> '123'.
+
+    Both sides of every comparison go through this, so collapsing the decimal
+    point is safe: it only means we cannot tell 12.3 from 123, and 123 is not a
+    figure we ever send.
+    """
+    return token.replace(",", "").replace(".", "").lstrip("0") or "0"
+
+
+def numeric_tokens(text: str) -> list[str]:
+    return _NUM.findall(text)
+
+
+def fmt_price(value: int, language: str) -> str:
+    """Group thousands the way the reader's locale does: 785.000 vs 785,000."""
+    grouped = f"{value:,}"
+    return grouped.replace(",", ".") if language == "id" else grouped
+
+
+def fmt_pct(value: float) -> str:
+    return f"{value:.1f}".rstrip("0").rstrip(".")
+
+
+def allowed_numbers(p: NoteRequest) -> set[str]:
+    """Every numeric token the note is permitted to contain.
+
+    Anything outside this set was invented, computed, or mistyped by the model.
+    """
+    allowed: set[str] = set()
+
+    def allow(value) -> None:
+        if value is None:
+            return
+        allowed.add(norm(str(value)))
+        if isinstance(value, float):
+            # A model handed 12.3 will sometimes write "about 12%". That is not
+            # an invented figure, so tolerate the rounded and 1-dp forms.
+            allowed.add(norm(f"{value:.1f}"))
+            allowed.add(norm(str(round(value))))
+        if isinstance(value, int):
+            allowed.add(norm(fmt_price(value, "en")))
+            allowed.add(norm(fmt_price(value, "id")))
+
+    for value in (
+        p.lowest.price,
+        p.highest.price,
+        p.competitor_min,
+        p.competitor_max,
+        p.our_price,
+        p.our_nights,
+        p.vs_min_pct,
+        p.vs_max_pct,
+        p.most_volatile.cv_pct if p.most_volatile else None,
+        p.most_stable.cv_pct if p.most_stable else None,
+        p.occupied_rooms,
+        p.total_rooms,
+        p.occupancy_pct,
+    ):
+        allow(value)
+
+    # Digits that ride along inside the strings we send: "2 Bedroom Villa",
+    # "Room 101", the dates. The model is copying these, not calculating them.
+    strings = [
+        p.competitor,
+        p.ota,
+        p.as_of,
+        p.our_booking_date or "",
+        p.lowest.room,
+        p.highest.room,
+        p.most_volatile.room if p.most_volatile else "",
+        p.most_stable.room if p.most_stable else "",
+        *p.insufficient_data,
+    ]
+    for s in strings:
+        for token in numeric_tokens(s):
+            allowed.add(norm(token))
+
+    # Ordinary prose counts: "all three rooms", "the two cheapest".
+    for n in range(11):
+        allowed.add(norm(str(n)))
+
+    return allowed
+
+
+def verify_numbers(note: str, p: NoteRequest) -> Optional[str]:
+    """Return the first numeric token in the note we never sent, or None."""
+    allowed = allowed_numbers(p)
+    for token in numeric_tokens(note):
+        if norm(token) not in allowed:
+            return token
+    return None
+
+
+# ── Prompt ────────────────────────────────────────────────────────────────────
+
+SYSTEM = (
+    "You write one short factual paragraph about hotel pricing. "
+    "You are given FACTS that are already calculated. "
+    "Copy every number from FACTS digit for digit. "
+    "Never calculate, derive, round, or invent a number. "
+    "Never write a number that does not appear in FACTS. "
+    "Write 3 to 4 sentences of plain prose. "
+    "No markdown, no headings, no bullet points, no code blocks, no preamble. "
+    "Neutral and descriptive. Do not give advice or recommendations."
+)
+
+
+def build_facts(p: NoteRequest) -> str:
+    cur = p.currency
+    lines = [
+        f"Competitor: {p.competitor}",
+        f"Source: {p.ota}, prices as of {p.as_of}",
+        f"Cheapest room: {p.lowest.room} at {cur} {fmt_price(p.lowest.price, p.language)}",
+        f"Priciest room: {p.highest.room} at {cur} {fmt_price(p.highest.price, p.language)}",
+    ]
+
+    if p.most_volatile:
+        lines.append(
+            f"Most price-volatile room: {p.most_volatile.room}, "
+            f"variation {fmt_pct(p.most_volatile.cv_pct)}%"
+        )
+    if p.most_stable:
+        lines.append(
+            f"Most price-stable room: {p.most_stable.room}, "
+            f"variation {fmt_pct(p.most_stable.cv_pct)}%"
+        )
+    if p.insufficient_data:
+        lines.append(
+            "Rooms with too little data to judge volatility: "
+            + ", ".join(p.insufficient_data)
+        )
+
+    if p.compares:
+        direction = {"below": "cheaper than", "above": "more expensive than", "equal": "the same as"}
+        lines.append(
+            f"Our price: {cur} {fmt_price(p.our_price, p.language)} "
+            f"for {p.our_nights} night(s) booked {p.our_booking_date}"
+        )
+        if p.vs_min_pct is not None:
+            lines.append(
+                f"Our price vs their cheapest room: {fmt_pct(abs(p.vs_min_pct))}% "
+                f"{'above' if p.vs_min_pct > 0 else 'below'} it"
+            )
+        if p.vs_max and p.vs_max_pct is not None:
+            lines.append(
+                f"Our price vs their priciest room: "
+                f"{fmt_pct(abs(p.vs_max_pct))}% {direction[p.vs_max]} it"
+            )
+    if p.has_occupancy:
+        lines.append(
+            f"Our current occupancy: {p.occupied_rooms} of {p.total_rooms} "
+            f"rooms occupied ({fmt_pct(p.occupancy_pct)}%)"
+        )
+
+    return "\n".join(lines)
+
+
+def build_prompt(p: NoteRequest, correction: Optional[str] = None) -> str:
+    order = [
+        "1. The cheapest and the priciest room.",
+        "2. Which room's price moves most and which moves least.",
+    ]
+    if p.compares:
+        order.append("3. How our price compares to theirs.")
+    else:
+        order.append(
+            "3. Do NOT mention our own price at all. We have no comparable price. "
+            "Say nothing about it, not even that it is missing."
+        )
+
+    if p.has_occupancy:
+        order.append(f"{len(order) + 1}. Our property's current occupancy rate.")
+
+    lang = "Indonesian" if p.language == "id" else "English"
+
+    prompt = (
+        "FACTS\n"
+        f"{build_facts(p)}\n\n"
+        f"Write the paragraph in {lang}. Cover these points in this order:\n"
+        + "\n".join(order)
+        + "\n\nEvery number you write must appear in FACTS above, character for character."
+    )
+
+    if correction:
+        prompt += (
+            f"\n\nYour previous attempt contained the number {correction}, which does "
+            "not appear in FACTS. That is not allowed. Rewrite the paragraph using "
+            "only the numbers listed in FACTS."
+        )
+
+    return prompt
+
+
+# ── Reply cleanup ─────────────────────────────────────────────────────────────
+
+_THINK = re.compile(r"<think>.*?</think>", re.DOTALL | re.IGNORECASE)
+_OPEN_THINK = re.compile(r"<think>.*", re.DOTALL | re.IGNORECASE)
+_FENCE = re.compile(r"^```[a-zA-Z]*\s*|\s*```$", re.MULTILINE)
+_PREAMBLE = re.compile(
+    r"^\s*(here(?:'s| is| are)[^:\n]*:|sure[,!][^\n]*\n|certainly[,!][^\n]*\n)",
+    re.IGNORECASE,
+)
+_MD = re.compile(r"[*_`#>]|^\s*[-•]\s+", re.MULTILINE)
+
+
+def clean_reply(raw: str) -> str:
+    text = _THINK.sub(" ", raw)
+    text = _OPEN_THINK.sub(" ", text)  # reasoning block that never closed
+    text = _FENCE.sub(" ", text)
+    text = _PREAMBLE.sub("", text)
+    text = _MD.sub(" ", text)
+    text = re.sub(r"\s+", " ", text)  # collapse to a single paragraph
+    return text.strip()
+
+
+# ── Fallback ──────────────────────────────────────────────────────────────────
+
+
+def fallback_note(p: NoteRequest) -> str:
+    """Deterministic prose covering the same three points.
+
+    Always available, always numerically correct. This is why the guard can
+    afford to reject the model twice and walk away.
+    """
+    cur = p.currency
+    low = f"{cur} {fmt_price(p.lowest.price, p.language)}"
+    high = f"{cur} {fmt_price(p.highest.price, p.language)}"
+    id_ = p.language == "id"
+
+    parts: list[str] = []
+
+    if id_:
+        parts.append(
+            f"Di {p.ota}, kamar termurah di {p.competitor} adalah {p.lowest.room} "
+            f"seharga {low}, sementara yang termahal adalah {p.highest.room} seharga {high} "
+            f"(data per {p.as_of})."
+        )
+    else:
+        parts.append(
+            f"On {p.ota}, the cheapest room at {p.competitor} is the {p.lowest.room} "
+            f"at {low}, while the priciest is the {p.highest.room} at {high} "
+            f"(as of {p.as_of})."
+        )
+
+    if p.most_volatile and p.most_stable:
+        parts.append(
+            f"Harga {p.most_volatile.room} paling sering berubah "
+            f"({fmt_pct(p.most_volatile.cv_pct)}%), sedangkan {p.most_stable.room} "
+            f"paling stabil ({fmt_pct(p.most_stable.cv_pct)}%)."
+            if id_
+            else
+            f"The {p.most_volatile.room} moves around the most "
+            f"({fmt_pct(p.most_volatile.cv_pct)}% variation), while the "
+            f"{p.most_stable.room} is the steadiest at {fmt_pct(p.most_stable.cv_pct)}%."
+        )
+    elif p.most_volatile:
+        parts.append(
+            f"Harga {p.most_volatile.room} paling fluktuatif "
+            f"({fmt_pct(p.most_volatile.cv_pct)}%)."
+            if id_
+            else
+            f"The {p.most_volatile.room} shows the most price movement at "
+            f"{fmt_pct(p.most_volatile.cv_pct)}% variation."
+        )
+    elif p.most_stable:
+        parts.append(
+            f"Harga {p.most_stable.room} paling stabil "
+            f"({fmt_pct(p.most_stable.cv_pct)}%)."
+            if id_
+            else
+            f"The {p.most_stable.room} is the steadiest room at "
+            f"{fmt_pct(p.most_stable.cv_pct)}% variation."
+        )
+
+    if p.compares:
+        ours = f"{cur} {fmt_price(p.our_price, p.language)}"
+        if id_:
+            sentence = f"Harga kami {ours}"
+            if p.vs_min_pct is not None:
+                side = "di atas" if p.vs_min_pct > 0 else "di bawah"
+                sentence += f", {fmt_pct(abs(p.vs_min_pct))}% {side} kamar termurah mereka"
+            if p.vs_max and p.vs_max_pct is not None:
+                word = {"below": "lebih murah dari", "above": "lebih mahal dari", "equal": "sama dengan"}[p.vs_max]
+                sentence += f", dan {fmt_pct(abs(p.vs_max_pct))}% {word} kamar termahal mereka"
+            parts.append(sentence + ".")
+        else:
+            sentence = f"Our own price is {ours}"
+            if p.vs_min_pct is not None:
+                side = "above" if p.vs_min_pct > 0 else "below"
+                sentence += f", {fmt_pct(abs(p.vs_min_pct))}% {side} their cheapest room"
+            if p.vs_max and p.vs_max_pct is not None:
+                word = {"below": "cheaper than", "above": "more expensive than", "equal": "level with"}[p.vs_max]
+                sentence += f", and {fmt_pct(abs(p.vs_max_pct))}% {word} their priciest"
+            parts.append(sentence + ".")
+
+    if p.has_occupancy:
+        parts.append(
+            f"Saat ini {p.occupied_rooms} dari {p.total_rooms} kamar kami terisi "
+            f"({fmt_pct(p.occupancy_pct)}%)."
+            if id_
+            else
+            f"Right now, {p.occupied_rooms} of {p.total_rooms} of our rooms are "
+            f"occupied ({fmt_pct(p.occupancy_pct)}%)."
+        )
+
+    return " ".join(parts)
+
+
+# ── Ollama ────────────────────────────────────────────────────────────────────
+
+
+def pick_model(requested: Optional[str]) -> str:
+    return requested if requested in ALLOWED_MODELS else DEFAULT_MODEL
+
+
+async def ask_ollama(model: str, prompt: str) -> str:
+    async with httpx.AsyncClient(timeout=OLLAMA_TIMEOUT) as client:
+        resp = await client.post(
+            f"{OLLAMA_URL}/api/chat",
+            json={
+                "model": model,
+                "stream": False,
+                "think": False,  # ignored by non-reasoning models
+                "messages": [
+                    {"role": "system", "content": SYSTEM},
+                    {"role": "user", "content": prompt},
+                ],
+                "options": {"temperature": 0.2},
+            },
+        )
+        resp.raise_for_status()
+        return resp.json().get("message", {}).get("content", "")
+
+
+# ── Endpoint ──────────────────────────────────────────────────────────────────
+
+
+@app.get("/health")
+async def health() -> dict:
+    return {"ok": True, "models": sorted(ALLOWED_MODELS), "default": DEFAULT_MODEL}
+
+
+@app.post("/competitor-note", response_model=NoteResponse, dependencies=[Depends(require_token)])
+async def competitor_note(payload: NoteRequest) -> NoteResponse:
+    model = pick_model(payload.model)
+
+    correction: Optional[str] = None
+    for _ in range(2):  # first attempt, then one retry with the bad number quoted
+        try:
+            raw = await ask_ollama(model, build_prompt(payload, correction))
+        except Exception:
+            break  # model unreachable or erroring; the fallback is just as true
+
+        note = clean_reply(raw)
+        if not note:
+            break
+
+        offender = verify_numbers(note, payload)
+        if offender is None:
+            return NoteResponse(note=note)
+        correction = offender
+
+    return NoteResponse(note=fallback_note(payload))
