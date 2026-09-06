@@ -10,14 +10,12 @@ import time
 
 
 # CONFIG ----------------------------------------------------------------- 
-CUSTOMER_REQUEST = "CUST_REQUEST_URL"
-API_ENDPOINT_2 = "ENDPOINT_URL_2"
-API_TOKEN = os.getenv("TOKEN_SERVER")
+API_TOKEN = "analytics-demo-token"
 BUFFER_FILE = "cust_details.json"
 MAX_DAYS_PER_REQUEST = 90
 
 # THIS IS TO RECEIVE DATA FETCHING FROM NEW ENDPOINT
-API_ENDPOINT = os.getenv("ENDPOINT_URL")
+API_ENDPOINT = "http://localhost:8000/api/analytics-demo"
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 app = FastAPI(title='VPS Data Receiver')
@@ -42,7 +40,6 @@ def build_payload(customer_id, day_start, day_end):
         "customer_id": customer_id,
         "start_date": day_start,
         "finish_date": day_end,
-        # "data_search_type": data_search_type
     }
 
 def buffer_data(data):
@@ -65,7 +62,6 @@ class FetchRequest(BaseModel):
     numeric_id : int
     day_start: str
     day_end: str
-    data_search_type: str
 
 def send_request(payload):
     headers = {

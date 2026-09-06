@@ -37,6 +37,8 @@ def data_onboarding(key_id, cust_id, day_start, day_end):
 
         # if not isinstance(payload, dict):
         #     raise HTTPException(status_code=400, detail="Payload must be a JSON object")
+
+        # FOR DEMO THE DATA WILL BE LIMITED FROM 01-01-2024 TO 01-01-2025
         payload = {
             "customer_id":cust_id,
             "day_start":day_start,
@@ -102,22 +104,23 @@ class InitRequest(BaseModel):
 
 @app.post("/receive-data")
 async def receive_data(request: InitRequest, 
-                       background_tasks: BackgroundTasks,
-                       x_api_key: str = Header(None)):
+                       background_tasks: BackgroundTasks):
     # Generate a unique Job ID
     jobID = generate_tag_id()
 
-    if not x_api_key or x_api_key != TESTING_KEY:
-        raise HTTPException(
-            status_code=401,
-            detail={
-                "key_id": jobID,
-                "customer_id": "",
-                "datetime_request": datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
-                "status_code": 3,
-                "status_message": "Invalid or missing API key."
-            }
-        )
+    # Since we don't demonstrate API key checking inside .env, we don't need this
+    # All system in closed loop and for demonstration only
+    # if not x_api_key or x_api_key != TESTING_KEY:
+    #     raise HTTPException(
+    #         status_code=401,
+    #         detail={
+    #             "key_id": jobID,
+    #             "customer_id": "",
+    #             "datetime_request": datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
+    #             "status_code": 3,
+    #             "status_message": "Invalid or missing API key."
+    #         }
+    #     )
 
     onboarding_result = data_onboarding(jobID, request.customer_id, 
                                         request.day_start, request.day_end)
