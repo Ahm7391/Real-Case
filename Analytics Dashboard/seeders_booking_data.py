@@ -57,10 +57,23 @@ def sample_ota() -> int:
 
 def sample_price_per_night() -> int:
     """
-    Price per night between 210,000 and 350,000, mean around 280,000.
+    Price per night with Gaussian noise and occasional outliers (~5% chance)
+    so that outlier_fx in main.py has clear opportunities to detect and filter outliers.
     """
-    val = np.random.normal(loc=280000, scale=25000)
-    return int(np.clip(round(val), 210000, 350000))
+    rand = random.random()
+    if rand < 0.03:
+        # High outlier (e.g. presidential suite / holiday surge pricing)
+        val = np.random.normal(loc=750000, scale=120000)
+        return int(np.clip(round(val), 450000, 1500000))
+    elif rand < 0.05:
+        # Low outlier (e.g. flash promo / super discounted rate)
+        val = np.random.normal(loc=110000, scale=20000)
+        return int(np.clip(round(val), 60000, 160000))
+    else:
+        # Regular price with Gaussian noise around mean=280,000
+        val = np.random.normal(loc=280000, scale=30000)
+        return int(np.clip(round(val), 180000, 380000))
+
 
 
 # ==============================================================================
@@ -127,7 +140,7 @@ def generate_bookings() -> list[dict]:
                     "check_out": check_out_timestamp,
                     "net_amount_stay": net_amount_stay,
                     "ota": sample_ota(),
-                    "is_confirmed": True,
+                    "is_confirmed": "True",
                 }
                 bookings.append(record)
 
