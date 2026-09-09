@@ -19,8 +19,8 @@ import requests, datetime
 # ]
 # GITHUB_TOKEN = ""
 load_dotenv()
-API_KEY = os.getenv('LOKAPRO_API_KEY')
-COMPANY_API_URL = os.getenv("ANALYTIC_DATA_HOOK_URL")
+API_KEY = "SEND_BACK_ANALYTICS"
+COMPANY_API_URL = "http://localhost:8000/api/dummy-records"
 DEBUG_STAT = False
 
 CURR_FILE = os.path.abspath(__file__)
@@ -235,9 +235,6 @@ def plotly_preprocess(source_df, cust):
     end_search = str(buffer_df['booking_date'].max())
     charts = {
         "key_id":joblib_id,
-        "datetime_push":"",
-        "status_code":"",
-        "status_message":"",
         "customer_id":customer_id_num,
         "date_start":start_search,
         "date_end":end_search,
