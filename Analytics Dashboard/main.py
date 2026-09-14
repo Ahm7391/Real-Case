@@ -121,8 +121,7 @@ def chartjs_to_endpoint(data, use_company_api=True):
     try:
         if use_company_api:
             url = COMPANY_API_URL
-            headers = {"Content-Type": "application/json",
-                       "X-API-KEY": API_KEY}
+            headers = {"Content-Type": "application/json"}
             # response = requests.post(WEBHOOK_URL, headers=headers, data=json.dumps(data))
             
         else:
@@ -131,12 +130,12 @@ def chartjs_to_endpoint(data, use_company_api=True):
                 "Content-Type": "application/json"
             }
 
-        response = requests.post(url, headers=headers, json=data, verify=True)
+        response = requests.post(url, headers=headers, json=data)
         # For debugging
         if response.status_code == 200:
-            print("✅ ChartJS successfully sent!")
+            print("ChartJS successfully sent!")
         else:
-            print(f"⚠️ Failed to send data. Status: {response.status_code}, Response: {response.text}")
+            print(f"Failed to send data. Status: {response.status_code}, Response: {response.text}")
         return response.status_code
     except Exception as e:
         print(f"❌ Error sending ChartJS: {e}")
@@ -313,7 +312,7 @@ def plotly_preprocess(source_df, cust):
         #  CREATE SECOND ROW ---------------------------------------------------------------------------------------------------------------
         #  OTA COUNT WITH PIE CHART, MONTHLY CHECK IN WITH BAR PLOR, DAILY CHECK IN WITH BAR PLOT
         print("processing performance section!!!")
-        ota_count = buffer_df.groupby('ota_name')['ota_name'].count()
+        ota_count = buffer_df.groupby('ota')['ota'].count()
         month_check_in = buffer_df.groupby('check_in_month')['check_in_month'].count()
         day_check_in = buffer_df.groupby('check_in_weekday')['check_in_weekday'].count().sort_values(ascending=False)
 
@@ -741,7 +740,7 @@ def plotly_preprocess(source_df, cust):
                 charts["result"].append(chart)
         
         # CREATE OTA COUNT DONUT CHART -------------------------------------------------------------------------------
-        ota_count = buffer_df[['ota_name','lead_days','price_per_night']].reset_index(drop=True)
+        ota_count = buffer_df[['ota','lead_days','price_per_night']].reset_index(drop=True)
         bins_array = []
 
         name_dataset = {
@@ -783,10 +782,10 @@ def plotly_preprocess(source_df, cust):
             donut_chart = copy.deepcopy(major_donut_template)
             tempo_buffer = ota_count[(ota_count['categories_stay'] == i)]
             sub_list_filter = []
-            for k, v in tempo_buffer['ota_name'].value_counts().items():
+            for k, v in tempo_buffer['ota'].value_counts().items():
                 container_filter = {
-                    "name": k,
-                    "data": v
+                    "name": str(k),
+                    "data": int(v)
                 }
                 sub_list_filter.append(container_filter)
             donut_chart["chart_slug_name"] = name_dataset[i]["title"]
@@ -807,9 +806,9 @@ def plotly_preprocess(source_df, cust):
         chart_template_boxplot = []
         
         # charts2 = {}
-        ota_list = [i for i in buffer_df['ota_name'].unique()]
+        ota_list = [i for i in buffer_df['ota'].unique()]
         for i in range(len(ota_list)):
-            temp = buffer_df.loc[(buffer_df['ota_name'] == ota_list[i]),:]
+            temp = buffer_df.loc[(buffer_df['ota'] == ota_list[i]),:]
             median_val = temp['price_per_night'].median()
             Q1 = temp['price_per_night'].quantile(0.25)
             Q3 = temp['price_per_night'].quantile(0.75)
@@ -818,8 +817,8 @@ def plotly_preprocess(source_df, cust):
             max_val = Q3 + 1.5 * IQR
 
             subset_boxplot = {
-                    "name":ota_list[i],
-                    "data":[min_val, Q1, median_val, Q3, max_val]
+                    "name": str(ota_list[i]),
+                    "data": to_serializable_list([min_val, Q1, median_val, Q3, max_val])
                 }
             chart_template_boxplot.append(subset_boxplot)
         major_boxplot_template["dataset"] = chart_template_boxplot

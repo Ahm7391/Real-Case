@@ -20,8 +20,8 @@ def save_incoming_data(work_id, payload: dict):
     if "customer_id" not in payload or "day_start" not in payload or "day_end" not in payload:
         raise HTTPException(status_code=400, detail="Invalid payload format")
     
-    if "data_search_type" not in payload:
-        raise HTTPException(status_code=400, detail="Invalid payload format")
+    # if "data_search_type" not in payload:
+    #     raise HTTPException(status_code=400, detail="Invalid payload format")
 
     # # Validate data_request is a list
     # if not isinstance(payload["booking_data"], list):
