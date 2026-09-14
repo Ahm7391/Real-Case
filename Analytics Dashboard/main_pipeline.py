@@ -129,8 +129,8 @@ async def receive_data(request: InitRequest,
 
     return onboarding_result
 
-@app.get("/status/{job_id}")
-async def get_status(job_id: str):
-    if job_id not in jobs:
-        raise HTTPException(status_code=404, detail="Job not found")
-    return jobs[job_id]  
+# @app.get("/status/{job_id}")
+# async def get_status(job_id: str):
+#     if job_id not in jobs:
+#         raise HTTPException(status_code=404, detail="Job not found")
+#     return jobs[job_id]  

@@ -105,7 +105,7 @@ def fetch_data_bak(request):
         try:
             day_start = datetime.strptime(request.day_start, "%Y-%m-%d")
             day_end = datetime.strptime(request.day_end, "%Y-%m-%d")
-            request_typ = request.data_search_type
+            # request_typ = request.data_search_type
         except ValueError:
             raise HTTPException(status_code=400, detail="Invalid date format. Use YYYY-MM-DD.")
 
@@ -120,7 +120,7 @@ def fetch_data_bak(request):
         for idx, (chunk_start, chunk_end) in enumerate(date_chunks, start=1):
             payload = build_payload(
                 # customer_id=customer_map[request.customer_id],
-                customer_id=request.numeric_id,
+                customer_id=request.customer_id,
                 day_start=chunk_start.strftime("%Y-%m-%d"),
                 day_end=chunk_end.strftime("%Y-%m-%d"),
                 # data_search_type=request_typ

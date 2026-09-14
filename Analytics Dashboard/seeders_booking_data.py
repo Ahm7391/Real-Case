@@ -23,7 +23,7 @@ END_DATE = date(2025, 1, 1)
 
 # Laravel API endpoint (Change port or path as needed)
 LARAVEL_API_URL = "http://localhost:8000/api/dummy-bookings"
-BATCH_SIZE = 100  # Number of records per API POST payload
+BATCH_SIZE = 80  # Number of records per API POST payload
 
 
 # ==============================================================================
