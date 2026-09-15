@@ -69,49 +69,7 @@ def overtaking_job():
         print("No request_queue recorded.")
         return []
 
-def exec_overtaking(priority_job):
-    if os.path.exists(os.path.join(BASE_DIR,"checkpoint_save.txt")):
-        original_cp = 0
-        print("Checkpoint record found, it will be overtaken.")
-        # Save the looping sequence checkpoint first
-        with open(os.path.join(BASE_DIR,"checkpoint_save.txt"), "r") as f:
-            first_line = f.readline().strip()
-            customer_id = int(first_line)
-            original_cp = customer_id
-        
-        # Begin the priority job overtaking
-        print("================ Priority Job will begin =================")
-        for i in range(len(priority_job)):
-            print(f"[PRIORITY] Processing customer {priority_job[i]}")
-            with open(os.path.join(BASE_DIR,"checkpoint_save.txt"), "w") as f:
-                f.write(str(priority_job[i]))
-            for pipeline in PIPELINES:
-                run_pipeline(pipeline) 
 
-        # Return the original checkpoint value to checkpoint_save.txt
-        with open(os.path.join(BASE_DIR,"checkpoint_save.txt"), "w") as f:
-            f.write(str(original_cp))
-
-        # Delete that customer ID from request_queue.json because already processed
-        with open(os.path.join(BASE_DIR,"request_queue.json"), "r") as f:
-            see_data = json.load(f)
-        
-        will_remove = []
-        for k, v in see_data.items():
-            if k in priority_job:
-                will_remove.append(k)
-        for iii in range(len(will_remove)):
-            if will_remove[iii] in see_data:
-                del see_data[will_remove[iii]]
-        
-        with open(os.path.join(BASE_DIR,"request_queue.json"), "w") as f:
-            json.dump(see_data, f)
-
-    else:
-        # maybe checkpoint do the first time check
-        print("[ERROR] No checkpoint_save.txt ever found.")
-
-# TODO: REVISE MAIN SO THAT IT REVERTS TO ORIGINAL IN WHICH PIPELINE RUN WITH PREDICTION ONLY AND NO PRIORITY
 def main():
     cycle = 0
     main_counter = 0
@@ -121,20 +79,10 @@ def main():
         logging.info(f"=== Cycle {cycle} START ===")
         logging.info(f"Curent main_counter is: {main_counter}")
 
-        for loop in range(1, LOOPS + 1):
-            logging.info(f"--- Loop {loop}/{LOOPS} ---")
-            # time.sleep(3)
-            # priority_job = overtaking_job()
-            # print("Post-Checking")
-            # time.sleep(3)
-            # if len(priority_job) > 0:
-            #     print("Interupting the Job: There are some properties to be prioritized.")
-            #     exec_overtaking(priority_job)
-
-            for pipeline in PIPELINES:
-                run_pipeline(pipeline)  # serial: waits for each to finish
-            main_counter += 1
-            if main_counter > total_seq: break
+        for pipeline in PIPELINES:
+            run_pipeline(pipeline)  # serial: waits for each to finish
+        main_counter += 1
+        if main_counter > total_seq: break
 
         logging.info(f"=== Cycle {cycle} DONE — sleeping {SLEEP_BETWEEN_CYCLES}s ===")
         time.sleep(SLEEP_BETWEEN_CYCLES)

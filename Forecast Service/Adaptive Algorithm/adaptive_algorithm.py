@@ -42,8 +42,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 load_dotenv()
 TOKEN_KEY = os.getenv('TOKEN_SERVER')
 ROOM_NUMBER_GET = os.getenv("TOTAL_ROOM_NUMBER_URL")
-API_KEY = os.getenv('LOKAPRO_PREDICTIVE_API_KEY')
-COMPANY_API_URL = os.getenv("PREDICTIVE_DATA_HOOK_URL")
+PREDICTIVE_DATA_HOOK_URL = "http://localhost:8000/api/prediction-result"
 API_TOKEN_CONSTANT = os.getenv("API_TOKEN_FOR_CONSTANTS")
 API_ENDPOINT_CONSTANT = os.getenv("API_URL_FOR_CONSTANTS")
 CONSTANT_SAVER = os.getenv("CONSTANT_SAVER_URL")
@@ -61,16 +60,6 @@ FOLDER_PATH_DATABASE = os.path.join(MAIN_FILE, "EB-LM-Book/Routine-EB")
 FOLDER_PATH_WEIGHTS = os.path.join(CURR_DIR,"Weights")
 N_FEATURES = 1
 
-# app = FastAPI(
-#     docs_url=None,
-#     redoc_url=None,
-#     openapi_url=None,
-# )
-
-# @app.get("/")
-# def root():
-#     return {"message": "Inference Session Started!!"}
-
 TASKS = {}
 
 def task(fn):
@@ -83,65 +72,6 @@ class ZeroDataError(Exception):
 ###################################################################
 ######--------------MODEL ARCHITECTURE-----------------------######
 ###################################################################
-# THIS IS FOR LONG-TERM PREDICTION
-# @task
-# def make_model(encoder_length, decoder_length):
-#     ENC_LEN_LT = encoder_length       # encoder input length
-#     DEC_LEN_LT = decoder_length        # days to forecast per pass
-#     N_FEATURES = 1     # number of input features per day
-#     ENC_UNITS = [128, 64]
-#     DEC_UNITS = [96, 64]
-#     DROPOUT = 0.1
-
-#     class BahdanauAttention(layers.Layer):
-#         def __init__(self, units):
-#             super().__init__()
-#             self.W1 = keras.layers.Dense(units)
-#             self.W2 = keras.layers.Dense(units)
-#             self.V  = keras.layers.Dense(1)
-
-#         def call(self, query, values):
-#             query_with_time_axis = tf.expand_dims(query, 1)
-#             score = self.V(tf.nn.tanh(self.W1(values) + self.W2(query_with_time_axis)))
-#             attention_weights = tf.nn.softmax(score, axis=1)
-#             context_vector = attention_weights * values
-#             context_vector = tf.reduce_sum(context_vector, axis=1)  # (batch, hidden_enc)
-#             return context_vector, tf.squeeze(attention_weights, -1)
-
-#     # --- Build encoder ---
-#     enc_inputs_lt = keras.layers.Input(shape=(None, N_FEATURES), name='encoder_input')
-#     x_lt = enc_inputs_lt
-#     for i, units in enumerate(ENC_UNITS):
-#         return_seq = True
-#         x_lt = keras.layers.GRU(units, return_sequences=return_seq, return_state=True,
-#                     dropout=DROPOUT, name=f'encoder_gru_{i}')(x_lt)[0]
-#     encoder_outputs_lt = x_lt
-#     encoder_final_state_lt = keras.layers.GlobalAveragePooling1D()(encoder_outputs_lt)  # (batch, hidden)
-
-#     # --- Decoder ---
-#     dec_inputs_lt = keras.layers.Input(shape=(DEC_LEN_LT, N_FEATURES), name='decoder_input')
-#     enc_proj_lt = keras.layers.Dense(DEC_UNITS[0], name="enc_proj")(encoder_outputs_lt)
-
-#     # --- Attention ---
-#     attention_lt = BahdanauAttention(units=DEC_UNITS[0])
-#     context_vector_lt, _ = attention_lt(encoder_final_state_lt, enc_proj_lt)   # (batch, hidden)
-#     context_tiled_lt = keras.layers.RepeatVector(DEC_LEN_LT, name="context_tiled")(context_vector_lt)  # (batch, DEC_LEN, hidden)
-#     decoder_combined_input_lt = keras.layers.Concatenate(axis=-1, name="decoder_combined")([dec_inputs_lt, context_tiled_lt])
-
-#     y_lt = decoder_combined_input_lt
-#     for i, units in enumerate(DEC_UNITS):
-#         y_lt = keras.layers.GRU(units, return_sequences=True, dropout=DROPOUT, name=f'decoder_gru_{i}')(y_lt)
-
-#     y_lt = keras.layers.TimeDistributed(keras.layers.Dense(64, activation='relu'), name='td_dense')(y_lt)
-#     y_lt = keras.layers.TimeDistributed(keras.layers.Dense(1), name='td_out')(y_lt)  # shape (batch, DEC_LEN, 1)
-#     decoder_outputs_lt = keras.layers.Reshape((DEC_LEN_LT,), name='decoder_outputs')(y_lt)
-
-#     model_longterm = keras.models.Model([enc_inputs_lt, dec_inputs_lt], decoder_outputs_lt)
-#     model_longterm.compile(optimizer=tf.keras.optimizers.Adam(1e-3),
-#                 loss=tf.keras.losses.Huber(), metrics=[tf.keras.metrics.MeanAbsoluteError()])
-
-#     model_longterm.summary()
-#     return model_longterm
 @task
 def make_model(encoder_length, decoder_length):
     ENC_LEN_LT = encoder_length
@@ -262,16 +192,8 @@ def chartjs_to_endpoint(data, customer_id, error_msg=None, use_company_api=True)
     #     json.dump(data, f, indent=4)
     try:
         if use_company_api:
-            # url = os.getenv("PREDICTIVE_DATA_HOOK_URL")
-            # headers = {"Content-Type": "application/json",
-            #            "Authorization": f"Bearer {TOKEN_KEY}"}
-            # response = requests.post(WEBHOOK_URL, headers=headers, data=json.dumps(data))
-            save_file_path = os.path.join(FOLDER_PATH_DATABASE, f"routine_early_bird_{customer_id}.json")
-            with open(save_file_path, "w") as f:
-                json.dump(data, f)
-            print("Saved data to JSON.")
-            # os.replace("routine_early_bird.tmp", "routine_early_bird.json")
-
+            url = PREDICTIVE_DATA_HOOK_URL
+            headers = {"Content-Type": "application/json"}
         else:
             url = WEBHOOK_URL
             headers = {
@@ -302,35 +224,6 @@ def chartjs_to_endpoint(data, customer_id, error_msg=None, use_company_api=True)
         # else:
         #     print(f"Failed to send data. Status: {response.status_code}, Response: {response.text}")
         # return response.status_code
-    except Exception as e:
-        print(f"Error sending ChartJS: {e}")
-        raise
-
-@task
-def constants_to_endpoint(data, use_company_api=False):
-    # with open("check.json", "w") as f:
-    #     json.dump(data, f, indent=4)
-    try:
-        if use_company_api:
-            url = os.getenv("CONSTANT_SAVER")
-            headers = {"Content-Type": "application/json",
-                       "Authorization": f"Bearer {API_KEY}"}
-            # response = requests.post(WEBHOOK_URL, headers=headers, data=json.dumps(data))
-            
-        else:
-            url = WEBHOOK_URL
-            headers = {
-                "Content-Type": "application/json"
-            }
-
-        response = requests.post(url, headers=headers, json=data)
-
-        # For debugging
-        if response.status_code == 200:
-            print("ChartJS successfully sent!")
-        else:
-            print(f"Failed to send data. Status: {response.status_code}, Response: {response.text}")
-        return response.status_code
     except Exception as e:
         print(f"Error sending ChartJS: {e}")
         raise
