@@ -55,25 +55,56 @@ def sample_ota() -> int:
     return int(np.clip(round(val), 1, 5))
 
 
-def sample_price_per_night() -> int:
+def sample_room_type() -> int:
     """
-    Price per night with Gaussian noise and occasional outliers (~5% chance)
-    so that outlier_fx in main.py has clear opportunities to detect and filter outliers.
+    Samples room_type_id according to distribution:
+    - 50% Room Type 3 (Standard Room - cheapest)
+    - 30% Room Type 2 (Suite Room - most expensive)
+    - 20% Room Type 1 (Family Room - mid-tier)
     """
-    rand = random.random()
-    if rand < 0.03:
-        # High outlier (e.g. presidential suite / holiday surge pricing)
-        val = np.random.normal(loc=750000, scale=120000)
-        return int(np.clip(round(val), 450000, 1500000))
-    elif rand < 0.05:
-        # Low outlier (e.g. flash promo / super discounted rate)
-        val = np.random.normal(loc=110000, scale=20000)
-        return int(np.clip(round(val), 60000, 160000))
-    else:
-        # Regular price with Gaussian noise around mean=280,000
-        val = np.random.normal(loc=280000, scale=30000)
-        return int(np.clip(round(val), 180000, 380000))
+    return int(np.random.choice([3, 2, 1], p=[0.50, 0.30, 0.20]))
 
+
+def sample_price_per_night(room_type_id: int) -> int:
+    """
+    Price per night based on room_type_id with Gaussian noise and occasional outliers (~5% chance).
+    - Room Type 2 (Suite): Most expensive (~850k base)
+    - Room Type 1 (Family): Mid-tier (~500k base)
+    - Room Type 3 (Standard): Cheapest (~280k base)
+    """
+    price_profiles = {
+        3: {  # Standard (Cheapest)
+            "regular": (280000, 30000, 180000, 380000),
+            "high_outlier": (550000, 50000, 420000, 750000),
+            "low_outlier": (110000, 20000, 60000, 160000),
+        },
+        1: {  # Family (Mid-tier)
+            "regular": (500000, 45000, 350000, 650000),
+            "high_outlier": (950000, 80000, 750000, 1250000),
+            "low_outlier": (250000, 30000, 180000, 320000),
+        },
+        2: {  # Suite (Most expensive)
+            "regular": (850000, 70000, 650000, 1100000),
+            "high_outlier": (1500000, 150000, 1200000, 2000000),
+            "low_outlier": (450000, 50000, 350000, 550000),
+        },
+    }
+
+    profile = price_profiles.get(room_type_id, price_profiles[3])
+    rand = random.random()
+
+    if rand < 0.03:
+        # High outlier (~3%)
+        loc, scale, low, high = profile["high_outlier"]
+    elif rand < 0.05:
+        # Low outlier (~2%)
+        loc, scale, low, high = profile["low_outlier"]
+    else:
+        # Regular price (~95%)
+        loc, scale, low, high = profile["regular"]
+
+    val = np.random.normal(loc=loc, scale=scale)
+    return int(np.clip(round(val), low, high))
 
 
 # ==============================================================================
@@ -115,8 +146,9 @@ def generate_bookings() -> list[dict]:
                 for night in stay_nights:
                     occupancy[night] += 1
 
-                # Calculate monetary details
-                price_per_night = sample_price_per_night()
+                # Sample room type and calculate monetary details
+                room_type_id = sample_room_type()
+                price_per_night = sample_price_per_night(room_type_id)
                 net_amount_stay = price_per_night * stay_days
 
                 # Generate realistic timestamps (check-in at 14:00, check-out at 12:00)
@@ -141,6 +173,7 @@ def generate_bookings() -> list[dict]:
                     "net_amount_stay": net_amount_stay,
                     "ota": sample_ota(),
                     "is_confirmed": "True",
+                    "room_type_id": room_type_id,
                 }
                 bookings.append(record)
 
@@ -175,12 +208,12 @@ def send_to_laravel(bookings: list[dict], endpoint: str = LARAVEL_API_URL):
             response = requests.post(endpoint, json=payload, headers=headers, timeout=10)
             if response.status_code in (200, 201):
                 success_count += len(batch)
-                print(f"    -> Sent batch {i // BATCH_SIZE + 1}: {len(batch)} records [HTTP {response.status_code}]")
+                print(f"-> Sent batch {i // BATCH_SIZE + 1}: {len(batch)} records [HTTP {response.status_code}]")
             else:
-                print(f"[!] Batch failed [HTTP {response.status_code}]: {response.text}", file=sys.stderr)
+                print(f"Batch failed [HTTP {response.status_code}]: {response.text}", file=sys.stderr)
         except requests.exceptions.RequestException as err:
-            print(f"[✗] Connection Error: {err}", file=sys.stderr)
-            print("[!] Make sure your Laravel server is up (e.g., 'php artisan serve').")
+            print(f"Connection Error: {err}", file=sys.stderr)
+            print("Make sure your Laravel server is up (e.g., 'php artisan serve').")
             return
 
     print(f"\n Finished: Successfully seeded {success_count}/{total_records} records into Laravel.")

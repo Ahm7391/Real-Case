@@ -14,10 +14,7 @@ load_dotenv()
 
 TRAINING_BUFFER_FILE = "training_mat.json"
 INFERENCE_BUFFER_FILE = "inference_mat.json"
-CUSTOMER_REQUEST = os.getenv("CUST_REQUEST_URL")
-API_ENDPOINT = os.getenv("ENDPOINT_URL")
-API_TOKEN = os.getenv("TOKEN_SERVER")
-# CUSTOMER_LIST = "/customer_list_folder/customer_list.json"
+API_ENDPOINT = "http://localhost:8000/api/forecast-demo"
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)
 FOLDER_PATH_COMPRATE = os.path.join(CURR_DIR, "Comprate")
@@ -61,65 +58,6 @@ def read_incoming_data(work_id, payload: dict):
 
     return cust_id
 
-
-# ============================= FETCHING WITH 1 YEAR DATABASE FOR PREDICTION =============================
-# def load_customer_map():
-#     headers = {
-#         "Content-Type": "application/json",
-#         "Authorization": f"Bearer {API_TOKEN}"
-#     }
-
-#     payload_cust = {
-#         "mode":"list_customer"
-#     }
-#     print("\nSending request customer_list to API...")
-#     try:
-#         response = requests.post(CUSTOMER_REQUEST, headers=headers, json=payload_cust, timeout=15)
-#         response.raise_for_status()  # Raises HTTPError for bad status codes
-#     except requests.exceptions.Timeout:
-#         raise RuntimeError("Request timed out. The server may be slow or unavailable.")
-#     except requests.exceptions.HTTPError as e:
-#         raise RuntimeError(f"HTTP error occurred: {e} - Response: {response.text}")
-#     except requests.exceptions.RequestException as e:
-#         raise RuntimeError(f"Request failed: {e}")
-
-#     folder_path = "/workspaces/Ecommerce-Project/Machine Learning Development/customer_list_folder"
-#     os.makedirs(folder_path, exist_ok=True)
-
-#     file_path = os.path.join(folder_path, "customer_list.json")
-#     with open(file_path, "w") as f:
-#         json.dump(response.json(), f, indent=4)
-#     print(f"Response buffered to {CUSTOMER_LIST}")
-
-#     if not os.path.exists(file_path):
-#         raise FileNotFoundError(f"Customer JSON file not found: {file_path}")
-    
-#     with open(file_path, "r") as f:
-#         data = json.load(f)
-
-#     # Build dictionary: {customer_name: customer_id}
-#     return {item["customer_name"]: item["customer_id"] for item in data.get("data", [])}
-
-# def select_customer(customer_map):
-#     print("\nAvailable customers:")
-#     for name in sorted(customer_map.keys()):
-#         print(f" - {name}")
-
-#     customer_name = input("\nEnter customer name: ").strip()
-#     if customer_name not in customer_map:
-#         raise ValueError(f"Customer '{customer_name}' not found in list.")
-    
-#     return customer_name, customer_map[customer_name]
-
-# def get_date(prompt):
-#     while True:
-#         date_str = input(f"Enter {prompt} date (YYYY-MM-DD): ").strip()
-#         try:
-#             datetime.strptime(date_str, "%Y-%m-%d")
-#             return date_str
-#         except ValueError:
-#             print("Invalid date format. Please use YYYY-MM-DD.")
-
 def build_payload(customer_id, start_date, finish_date):
     return {
         "customer_id": customer_id,
@@ -131,22 +69,6 @@ def buffer_data(data):
     with open(INFERENCE_BUFFER_FILE, "w") as f:
         json.dump(data, f, indent=4)
     print(f"Response buffered to {INFERENCE_BUFFER_FILE}")
-
-def buffer_data_complete(data, last_min, total_room):
-    os.makedirs(FOLDER_PATH_COMPRATE, exist_ok=True)
-    cust_name_json = os.path.join(FOLDER_PATH_COMPRATE, f"main_data_complete.json")
-    with open(cust_name_json, "w") as f:
-        json.dump(data, f, indent=4)
-    print(f"Response buffered to {cust_name_json}")
-
-    last_min_json = os.path.join(FOLDER_PATH_COMPRATE, f"last_min_rate.json")
-    with open(last_min_json, "w") as f:
-        json.dump(last_min, f, indent=4)
-    print(f"Response buffered to {last_min_json}")
-
-    with open('total_room.txt', 'w') as file:
-        file.write(str(total_room))
-    print(f"Response buffered to total_room.txt")
 
 def chunk_date_range(start_date: datetime, end_date: datetime, max_days: int = MAX_DAYS_PER_REQUEST):
     chunks = []
@@ -165,13 +87,12 @@ class FetchRequest(BaseModel):
 
 def send_request(payload):
     headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {API_TOKEN}"
+        "Content-Type": "application/json"
     }
 
     print("\nSending request to API...")
     try:
-        response = requests.post(API_ENDPOINT, headers=headers, json=payload, timeout=15, verify=False)
+        response = requests.post(API_ENDPOINT, headers=headers, json=payload)
         response.raise_for_status()  # Raises HTTPError for bad status codes
         if response.status_code == 404:
             logging.error(f"❌ Chunk {payload['start_date']} → {payload['end_date']} returned 404 (out of range or not found). Skipping...")     
@@ -198,32 +119,13 @@ def load_id():
             data = json.load(f)
         return data
     
-# @app.get("/customers")
-# def get_customers():
-#     try:
-#         customer_map = load_customer_map()
-#         return {"customers": list(customer_map.keys())}
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
-    
-# @app.post("/fetch")
 def fetch_data_bak():
     incoming_order = load_id()
 
     customer_name = incoming_order['data']['customer_id']
     start_date = datetime.today().date() - timedelta(days=365)
     end_date = datetime.today().date()
-    # start_date = datetime.strptime(incoming_order['data']['start_date'], "%Y-%m-%d")
-    # end_date = datetime.strptime(incoming_order['data']['finish_date'], "%Y-%m-%d")
-    # get_customers()
-    # print("A")
     try:
-        # Load customer map
-        # customer_map = load_customer_map()
-        # print("B")
-        # if customer_name not in customer_map:
-        #     raise HTTPException(status_code=404, detail="Customer not found.")
-
         # Validate date formats
         start_dt = start_date
         end_dt = end_date
@@ -245,12 +147,7 @@ def fetch_data_bak():
             )
 
             try:
-                result2 = send_request(payload)
-                result3 = result2.copy()
-                # result = result2['booking_data']
-                result = result2['data']
-                # with open("Tumbal.json", "w") as f:
-                #     json.dump(result, f, indent=4)
+                result = send_request(payload)
                 if not result:
                     logging.warning(f"No data found for {chunk_start} → {chunk_end}, skipping...")
                     continue
@@ -261,11 +158,6 @@ def fetch_data_bak():
                     # If API returns non-list JSON, append raw
                     aggregated_results.append(result)
 
-                # if just_once == True:
-                #     early_book = result3['compset_latest_rate']['early_booking']
-                #     last_min_book = result3['compset_latest_rate']['last_minute_booking']
-                #     total_room = result3["customer"]["total_room"]
-                #     just_once = False
                 logging.info(f"Added {len(result)} records from this chunk.")
             except requests.exceptions.RequestException as e:
                 logging.error(f"Request failed for chunk {chunk_start} → {chunk_end}: {e}")
@@ -281,7 +173,6 @@ def fetch_data_bak():
         # Save aggregated result to buffer
         if aggregated_results != []:
             buffer_data(aggregated_results)
-            # buffer_data_complete(early_book, last_min_book, total_room)
 
         return {
             "status": "success",
