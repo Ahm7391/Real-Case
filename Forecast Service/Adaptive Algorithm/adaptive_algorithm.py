@@ -40,12 +40,7 @@ warnings.filterwarnings("ignore", category=pd.errors.SettingWithCopyWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 load_dotenv()
-TOKEN_KEY = os.getenv('TOKEN_SERVER')
-ROOM_NUMBER_GET = os.getenv("TOTAL_ROOM_NUMBER_URL")
 PREDICTIVE_DATA_HOOK_URL = "http://localhost:8000/api/prediction-result"
-API_TOKEN_CONSTANT = os.getenv("API_TOKEN_FOR_CONSTANTS")
-API_ENDPOINT_CONSTANT = os.getenv("API_URL_FOR_CONSTANTS")
-CONSTANT_SAVER = os.getenv("CONSTANT_SAVER_URL")
 WEBHOOK_URL = "https://2f68b6cd-a59f-4429-af46-00f19a73248e.mock.pstmn.io/webhook"
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)
@@ -59,6 +54,12 @@ FOLDER_PATH_RESULTS = os.path.join(MAIN_FILE, "Machine Learning Development/Long
 FOLDER_PATH_DATABASE = os.path.join(MAIN_FILE, "EB-LM-Book/Routine-EB")
 FOLDER_PATH_WEIGHTS = os.path.join(CURR_DIR,"Weights")
 N_FEATURES = 1
+
+# ====================================================================
+# GLOBAL FORECAST CONFIGURATION
+# ====================================================================
+PREDICT_DAYS_FORWARD = 180  # Number of days forward to forecast (configurable)
+
 
 TASKS = {}
 
@@ -187,9 +188,7 @@ def make_model(encoder_length, decoder_length):
 ############----------------EXTRACTION AND LOADING FUNCTIONS----------------------------#######
 ###############################################################################################
 @task
-def chartjs_to_endpoint(data, customer_id, error_msg=None, use_company_api=True):
-    # with open("check.json", "w") as f:
-    #     json.dump(data, f, indent=4)
+def data_to_endpoint(data, customer_id, error_msg=None, use_company_api=True):
     try:
         if use_company_api:
             url = PREDICTIVE_DATA_HOOK_URL
@@ -208,7 +207,7 @@ def chartjs_to_endpoint(data, customer_id, error_msg=None, use_company_api=True)
                 f.write(f"Date: {datetime.now(ZoneInfo('Asia/Makassar')).strftime('%Y-%m-%d %H:%M:%S')} ")
                 f.write(f"Property ID: {customer_id}")
                 f.write("\nStatus: SENT. DATA NOT BLANK.\n")
-                print("ChartJS successfully sent!")
+                print("Prediction Package successfully sent!")
             elif len(data) == 0:
                 f.write("Adaptive Pipeline ")
                 f.write(f"Date: {datetime.now(ZoneInfo('Asia/Makassar')).strftime('%Y-%m-%d %H:%M:%S')} ")
@@ -216,28 +215,15 @@ def chartjs_to_endpoint(data, customer_id, error_msg=None, use_company_api=True)
                 f.write("\nStatus: SENT. DATA BLANK OR ERROR OCCURED.\n")
                 if error_msg:
                     f.write(f"Error due to : {error_msg}")
-                print("ChartJS successfully sent with NOTE!")
+                print("Prediction Package sent with NOTE!")
 
-        # For debugging
-        # if response.status_code == 200:
-        #     print("ChartJS successfully sent!")
-        # else:
-        #     print(f"Failed to send data. Status: {response.status_code}, Response: {response.text}")
-        # return response.status_code
     except Exception as e:
-        print(f"Error sending ChartJS: {e}")
+        print(f"Error sending prediction package due to: {e}")
         raise
 
 @task
 def load_id():
     charts = {
-        "key_id": "",
-        "datetime_push":"",
-        "status_code":"",
-        "status_message":"",
-        "customer_id":"",
-        "date_start":"",
-        "date_end":"",
         "result":[],
     }
     # LOAD_ID IS FOR JOB NAMING IDENTIFICATIONS AND ALSO INFORMING SERVER IF THE DATA IS NOT AVAILABLE
@@ -249,76 +235,30 @@ def load_id():
             with open("cust_request.json", "r") as f:
                 data = json.load(f)
                 customer_id = data["data"]["customer_id"]
-                job_id_num = data["job_identification"]
-            # with open('total_room.txt', 'r') as file:
-            #     content = file.read()
-            #     content = int(content)
-            # return customer_id, job_id_num, content
+            total_room_number = 15
 
-            print("Let's check the total room number.")
-            headers = {
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {TOKEN_KEY}"
-            }
-
-            print("Requesting total_room_number.....")
-            try:
-                response = requests.get(ROOM_NUMBER_GET, headers=headers)
-                response.raise_for_status()  # Raises HTTPError for bad status codes   
-                incoming_data = response.json()
-                total_room_number = 0
-                area_identifier = 0
-                for v in range(len(incoming_data["data"])):
-                    if incoming_data["data"][v]["id"] == int(customer_id):
-                        total_room_number = incoming_data["data"][v]["number_of_rooms"]
-                        print(f"total room number is: {total_room_number}")
-                        area_identifier = incoming_data["data"][v]["area_id"]
-                        print(f"area id number is: {area_identifier}")
-                        break
-
-            except requests.exceptions.Timeout:
-                raise RuntimeError("Request timed out. The server may be slow or unavailable.")
-            except requests.exceptions.HTTPError as e:
-                raise RuntimeError(f"HTTP error occurred: {e} - Response: {response.text}")
-            except requests.exceptions.RequestException as e:
-                raise RuntimeError(f"Request failed: {e}")
-
-            return customer_id, job_id_num, total_room_number
+            return customer_id, total_room_number
         except FileNotFoundError as e:
             print(f"[FILE NOT FOUND] Empty incoming data!")
-            charts["key_id"] = job_id_num
-            charts["datetime_push"] = datetime.now(ZoneInfo("Asia/Makassar")).strftime("%Y-%m-%d %H:%M:%S")
-            charts["status_code"] = 3
-            charts["status_message"] = "[FILE NOT FOUND] Empty incoming data!"
-            charts["date_start"] = ""
-            charts["date_end"] = ""
             charts["result"] = [{
-                "model_version": "v1.0.0",
-                "customer_id": customer_id,
-                "currency_id": "",
+                "status": f"failed due to {e}",
+                "customer_id": "",
                 "forecasts": []
             }]
             error_summary = f"{type(e).__name__}: {e}"
-            chartjs_to_endpoint(charts["result"][0], customer_id, error_msg=error_summary)
+            data_to_endpoint(charts["result"][0], customer_id, error_msg=error_summary)
             traceback.print_exc()
             raise
         except Exception as e:
             print(f"[ERROR] Unexpected error while reading file cust_request.json or total_room.txt!")
             error_summary = f"{type(e).__name__}: {e}"
-            charts["key_id"] = job_id_num
-            charts["datetime_push"] = datetime.now(ZoneInfo("Asia/Makassar")).strftime("%Y-%m-%d %H:%M:%S")
-            charts["status_code"] = 3
-            charts["status_message"] = error_summary
-            charts["date_start"] = ""
-            charts["date_end"] = ""
             charts["result"] = [{
-                "model_version": "v1.0.0",
+                "status": f"failed due to {e}",
                 "customer_id": customer_id,
-                "currency_id": "",
                 "forecasts": []
             }]
             error_summary = f"{type(e).__name__}: {e}"
-            chartjs_to_endpoint(charts["result"][0], customer_id, error_msg=error_summary)
+            data_to_endpoint(charts["result"][0], customer_id, error_msg=error_summary)
             traceback.print_exc()
             raise
 
@@ -329,122 +269,54 @@ def normalize_json_to_df(jsondata):
         df = pd.json_normalize(data)  
     return df
 
-# def fetch_json_from_api(api_urls):
-#     main_df = pd.DataFrame()
-
-#     try:
-#         for filename in os.listdir(api_urls):
-#             if filename.lower().endswith("inference_mat.json"):
-#                 print(filename)
-#                 filename = os.path.join(api_urls, filename)
-#                 df_temp = normalize_json_to_df(filename)
-#                 main_df = pd.concat([main_df, df_temp], ignore_index=True)
-
-#         if main_df.shape == (0, 0):
-#             raise ZeroDataError("Received zero value, cannot continue processing")
-        
-#         print("Fetching success!!!")
-#         return main_df
-#     except ZeroDataError as e:
-#         error_summary = f"{type(e).__name__}: {e}"
-#         return error_summary
-
 @task
 def fetch_json_from_api(api_urls):
     try:
         df_tempor = pd.DataFrame()
-        name_list = []
-        booking_date = []
-        check_in = []
-        check_out = []
-        is_confirmed_list = []
-        country_id = []
-        currency_id = []
-        net_amount_stay = []
-        room_type_id = []
-        room_type_name = []
-        ota_id = []
-        ota_name = []
-        lokapro_room_id = []
-
         for filename in os.listdir(api_urls):
             if filename.lower().endswith("inference_mat.json"):
                 filename = os.path.join(api_urls, filename)
                 df_tempor = normalize_json_to_df(filename)
-                # print(f"df_temp is \n{df_temp}\n")
-        for i in range(len(df_tempor)):
-            name_list.append(df_tempor.iloc[i, 1])
-            booking_date.append(df_tempor.iloc[i, 2])
-            check_in.append(df_tempor.iloc[i, 3])
-            check_out.append(df_tempor.iloc[i, 4])
-            is_confirmed_list.append(df_tempor.iloc[i, 5])
-            country_id.append(df_tempor.iloc[i, 6])
-            currency_id.append(df_tempor.iloc[i, 7])
-            ota_id.append(df_tempor.iloc[i, 8])
-            ota_name.append(df_tempor.iloc[i, 9])
-            net_amount_stay.append(df_tempor.iloc[i, 10])
-            room_type_id.append(df_tempor.iloc[i, 11])
-            room_type_name.append(df_tempor.iloc[i, 14])
-            lokapro_room_id.append(int(df_tempor.iloc[i, 13]) if not (pd.isna(df_tempor.iloc[i, 13])) else 0)
-        
-        main_df = pd.DataFrame({
-            'customer_name': name_list,
-            'booking_date': booking_date,
-            'check_in': check_in,
-            'check_out': check_out,
-            'is_confirmed': is_confirmed_list,
-            'country_id': country_id,
-            'currency_id': currency_id,
-            'ota_id' : ota_id,
-            'ota_name': ota_name,
-            'net_amount_stay': net_amount_stay,
-            'room_type_id': room_type_id,
-            'room_type_name': room_type_name,
-            'lokapro_room_id': lokapro_room_id
-        })
-
-        if main_df.shape == (0, 0):
+                
+        if df_tempor.empty:
             raise ZeroDataError("Received zero value, cannot continue processing")
         
+        main_df = pd.DataFrame()
+        main_df['customer_name'] = df_tempor['customer_name'] if 'customer_name' in df_tempor.columns else df_tempor.iloc[:, 0]
+        main_df['booking_date'] = df_tempor['booking_date'] if 'booking_date' in df_tempor.columns else df_tempor.iloc[:, 1]
+        main_df['check_in'] = df_tempor['check_in'] if 'check_in' in df_tempor.columns else df_tempor.iloc[:, 2]
+        main_df['check_out'] = df_tempor['check_out'] if 'check_out' in df_tempor.columns else df_tempor.iloc[:, 3]
+        main_df['net_amount_stay'] = df_tempor['net_amount_stay'] if 'net_amount_stay' in df_tempor.columns else df_tempor.iloc[:, 4]
+        
+        if 'ota_name' in df_tempor.columns:
+            main_df['ota_name'] = df_tempor['ota_name']
+            main_df['ota_id'] = df_tempor['ota_id'] if 'ota_id' in df_tempor.columns else df_tempor['ota_name']
+        elif 'ota_id' in df_tempor.columns:
+            main_df['ota_id'] = df_tempor['ota_id']
+            main_df['ota_name'] = df_tempor['ota_id'].astype(str)
+        else:
+            main_df['ota_id'] = df_tempor.iloc[:, 5] if df_tempor.shape[1] > 5 else "unknown"
+            main_df['ota_name'] = main_df['ota_id'].astype(str)
+            
+        main_df['is_confirmed'] = df_tempor['is_confirmed'] if 'is_confirmed' in df_tempor.columns else (df_tempor.iloc[:, 6] if df_tempor.shape[1] > 6 else True)
+        
+        if 'room_type_id' in df_tempor.columns:
+            main_df['room_type_id'] = df_tempor['room_type_id']
+        elif df_tempor.shape[1] > 7:
+            main_df['room_type_id'] = df_tempor.iloc[:, 7]
+            
         print("Fetching success!!!")
         return main_df
-    except ZeroDataError as e:
-        error_summary = f"{type(e).__name__}: {e}"
-        return error_summary
-
-@task
-def load_constant(customer_id): # return dalam bentuk dictionaries
-    payload = {
-        "customer_id": customer_id,
-        "type": ""
-    }
-
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {API_TOKEN_CONSTANT}"
-    }
-    print("\nRequesting Property constant...")
-
-    try:
-        response = requests.post(API_ENDPOINT_CONSTANT, headers=headers, json=payload, timeout=15, verify=False)
-        response.raise_for_status()  # Raises HTTPError for bad status codes
-        if response.status_code == 404:
-            logging.error(f"Error 404 received!!!")     
-        return response.json()
-    except requests.exceptions.Timeout:
-        raise RuntimeError("Request timed out. The server may be slow or unavailable.")
-    except requests.exceptions.HTTPError as e:
-        raise RuntimeError(f"HTTP error occurred: {e} - Response: {response.text}")
-    except requests.exceptions.RequestException as e:
-        raise RuntimeError(f"Request failed: {e}")
+    except ZeroDataError:
+        raise
+    except Exception as e:
+        print(f"[fetch_json_from_api] Error: {e}")
+        raise
 
 @task
 def preprocess_df(main_df):
-    # main_df['net_amount_stay'] = main_df['net_amount_stay'] / 100
-    # main_df = main_df.drop(columns='id')
     main_df = main_df.drop(columns='customer_name')
     main_df = main_df.dropna()
-    # main_df = main_df.fillna('unknown')
     
     main_df['booking_date'] = pd.to_datetime(main_df['booking_date'], format='mixed',
                                             dayfirst=True)
@@ -454,30 +326,9 @@ def preprocess_df(main_df):
                                             dayfirst=True)
 
     main_df['lead_days'] = (main_df['check_in'] - main_df['booking_date']).dt.days
-    # main_df['booking_day'] = main_df['booking_date'].dt.day
-    # main_df['booking_month'] = main_df['booking_date'].dt.month
-    # main_df['booking_year'] = main_df['booking_date'].dt.year
-
-    # main_df['check_in_day'] = main_df['check_in'].dt.day
-    # main_df['check_in_month'] = main_df['check_in'].dt.month
-    # main_df['check_in_year'] = main_df['check_in'].dt.year
-    # main_df['check_in_weekday'] = main_df['check_in'].dt.day_name() 
-
-    # main_df['check_out_day'] = main_df['check_out'].dt.day
-    # main_df['check_out_month'] = main_df['check_out'].dt.month
-    # main_df['check_out_year'] = main_df['check_out'].dt.year
-
     main_df['stay_days'] = (main_df['check_out'] - main_df['check_in']).dt.days
     main_df['price_per_night'] = main_df['net_amount_stay'] / main_df['stay_days']
-    currency_id_data = int(main_df['currency_id'].values[0])
 
-    # no_net = []
-    # for i in range(len(main_df['net_amount_stay'])):
-    #   if main_df.iloc[i, 5] == 0:
-    #       no_net.append(0)
-    #   else:
-    #       no_net.append(1)
-    # main_df['net_amount_avail'] = no_net
     main_df['net_amount_avail'] = (main_df['net_amount_stay'] != 0).astype(int)
     main_df['is_confirmed'] = main_df['is_confirmed'].replace({'t': True, 'f': False})
     main_df = main_df.loc[(main_df['lead_days'] >= 0) & 
@@ -485,7 +336,7 @@ def preprocess_df(main_df):
                        (main_df['price_per_night'] <= 18000000) &
                        (main_df['net_amount_stay'] > 0) &
                        (main_df['ota_name'] != "Hotel Direct Booking"), :] 
-    return main_df, currency_id_data
+    return main_df
 # ============================================= END SECTION  ===============================================
 
 ###############################################################################################
@@ -493,7 +344,6 @@ def preprocess_df(main_df):
 ###############################################################################################
 @task
 def outlier_fx(data, parameter):
-    # data = data[data['ota_name'] != "Website Direct"]
     q1 = data[parameter].quantile(0.25)
     q3 = data[parameter].quantile(0.75)
     iqr = q3 - q1
@@ -669,37 +519,8 @@ def pickup_rate_correction(check_df):
             if pd.isna(daily_counts.loc[i, 'delta_lead_days']):
                 daily_counts.loc[i, 'delta_lead_days'] = 1
         daily_counts['daily_pickup'] = daily_counts['daily_pickup'].astype(int)
-        # YANG MAU DIUBAH ITU CUMULATIVE PU RATE SAJA
         daily_counts['cumulative_pickup_rate'] = daily_counts['cumulative_bookings'] / daily_counts['delta_lead_days']
         daily_counts['booking_rate'] = daily_counts['cumulative_pickup_rate']
-    # try:
-    #     check_df['booking_date'] = pd.to_datetime(check_df['booking_date'])
-    #     check_df['check_in'] = pd.to_datetime(check_df['check_in'])
-
-    #     daily_counts = check_df.groupby(['booking_date', 'check_in']).size().reset_index(name='daily_bookings')
-    #     daily_counts['lead_days'] = (daily_counts['check_in'] - daily_counts['booking_date']).dt.days
-    #     daily_counts['cumulative_bookings'] = daily_counts.groupby('check_in')['daily_bookings'].cumsum()
-    #     daily_counts['daily_pickup'] = daily_counts.groupby('check_in')['cumulative_bookings'].diff()
-    #     daily_counts['delta_lead_days'] = abs(daily_counts.groupby('check_in')['lead_days'].diff())
-    #     first_day = daily_counts.groupby('check_in')['cumulative_bookings'].transform('first')
-    #     first_lead_days = daily_counts.groupby('check_in')['lead_days'].transform('first')
-    #     daily_counts['cumulative_pickup_rate'] = ((daily_counts['cumulative_bookings'] - first_day) / first_day.replace(0, pd.NA))
-    #     daily_counts['booking_rate'] = (daily_counts['cumulative_bookings'] / abs(daily_counts['lead_days'] - first_lead_days))
-    #     for i in range(len(daily_counts['booking_rate'])):
-    #         if daily_counts['booking_rate'][i] == np.inf:
-    #             daily_counts['booking_rate'][i] = (daily_counts['cumulative_bookings'][i] / daily_counts['lead_days'][i])
-    #     daily_counts['booking_rate'] = daily_counts['booking_rate'].replace(np.inf, 0)
-
-    #     counter_days = daily_counts['check_in'].min()
-    #     max_date = daily_counts['check_in'].max()
-    #     while counter_days <= max_date:
-    #         inspection = daily_counts[daily_counts['check_in'] == counter_days]
-    #         if len(inspection) > 0:
-    #             if inspection["booking_date"].values[-1] < inspection["check_in"].values[-1]:
-    #                 first_lead_days = inspection['lead_days'].values[0]
-    #                 correction_rate = inspection["cumulative_bookings"].values[-1] / first_lead_days
-    #                 daily_counts.loc[daily_counts['check_in'] == counter_days, 'booking_rate'] = correction_rate
-    #         counter_days = counter_days + timedelta(days=1)
         return daily_counts
     except KeyError as e:
         print("[pickup_rate_correction] Missing column:", e)
@@ -715,104 +536,6 @@ def pickup_rate_correction(check_df):
         print("[pickup_rate_correction] Unexpected critical error:", e)
         traceback.print_exc()
         raise
-
-# @task
-# def continuous_occ_rate_correction(df_master, remaining_room, mem_buffer,
-#                                    mem_buffer_ckout, max_room_number, avail_percentage):
-#     try:
-#         start_range = df_master['booking_date'].max() + timedelta(days=1)
-#         end_range = df_master['check_in'].max()
-#         mov_days = start_range
-
-#         rooms_left = remaining_room
-#         memory_buffer = mem_buffer
-#         memory_buffer_ckout = mem_buffer_ckout
-#         collected_date = []
-#         occ_rate = []
-#         track_room = []
-#         counter = 0
-#         delta_date = end_range - start_range
-#         delta_date = int(delta_date.days)
-#         while mov_days <= end_range:
-#             # print(f"Booking date start from {mov_days}")
-#             resampling = df_master[(df_master['booking_date'] >= mov_days) &
-#                             (df_master['booking_date'] <= end_range)]
-#             resampling = resampling.loc[(resampling['booking_date'] == mov_days),
-#                                         ['check_in', 'check_out', 'booking_date', 'price_per_night']]
-#             count_occur_ckin = resampling.groupby('check_in')['check_in'].count()
-#             count_occur_ckout = resampling.groupby('check_out')['check_out'].count()
-
-#             for i in range(len(count_occur_ckin)):
-#                 ckin_record = count_occur_ckin.index[i]
-#                 delta = int(count_occur_ckin.values[i])
-#                 if ckin_record not in memory_buffer:
-#                     memory_buffer[ckin_record] = [delta, ckin_record]
-#                     # print(f"added Check-in : {memory_buffer[ckin_record]}")
-#                 elif ckin_record in memory_buffer:
-#                     memory_buffer[ckin_record][0] = delta + memory_buffer[ckin_record][0]
-#                     # print(f"Day {mov_days} updated +{abs(delta)} bookings")
-
-#             for i in range(len(count_occur_ckout)):
-#                 ckout_record = count_occur_ckout.index[i]
-#                 delta = int(count_occur_ckout.values[i])
-#                 if ckout_record not in memory_buffer_ckout:
-#                     memory_buffer_ckout[ckout_record] = [delta, ckout_record]
-#                     # print(f"added Check-in : {memory_buffer_ckout[ckout_record]}")
-#                 elif ckout_record in memory_buffer_ckout:
-#                     memory_buffer_ckout[ckout_record][0] = delta + memory_buffer_ckout[ckout_record][0]
-#                     # print(f"Check out Day {memory_buffer_ckout[ckout_record][1]} updated +{abs(delta)} bookings")
-#             try:
-#                 if mov_days in memory_buffer:
-#                     if mov_days == memory_buffer[mov_days][1]:
-#                         rooms_left = rooms_left - memory_buffer[mov_days][0]
-#                         # print(f"Added rooms occupied : {memory_buffer[mov_days][0]}")
-#                 if mov_days in memory_buffer_ckout:
-#                     if mov_days == memory_buffer_ckout[mov_days][1]:
-#                         rooms_left = rooms_left + memory_buffer_ckout[mov_days][0]
-#                         # print(f"Freed occupied rooms : {memory_buffer_ckout[mov_days][0]}")
-#             except Exception as e:
-#                 print(f"[ERROR] details: {e}")
-
-#             if counter % 30 == 0 and delta_date > 0:
-#                 progress_calculation = (counter / delta_date) * 100
-#                 print(f"Progress (Extension steps): {progress_calculation:.2f}%")
-#                 print(f"Total rooms at day {mov_days} is {rooms_left}")
-#             avail_occupancy = int((avail_percentage / 100) * max_room_number)
-
-#             if avail_occupancy != 0:
-#                 occupied_percentage = ((avail_occupancy - rooms_left) / avail_occupancy) * 100
-#             else:
-#                 occupied_percentage = 100
-#             # occupancy_rate = occupied_percentage - 100
-#             occupancy_rate = occupied_percentage
-#             collected_date.append(mov_days)
-#             occ_rate.append(occupancy_rate)
-#             track_room.append(rooms_left)
-#             # print(memory_buffer)
-#             # print(memory_buffer_ckout, "\n")
-#             counter = counter + 1
-#             mov_days = mov_days + timedelta(days=1)
-
-#         continuous_occ_rate = pd.DataFrame({
-#             "Dates":collected_date,
-#             "Occupancy Rate":occ_rate,
-#             "Rooms Left":track_room
-#         })
-#         return continuous_occ_rate, memory_buffer
-#     except KeyError as e:
-#         print("[continuous_occ_rate_correction] Missing column:", e)
-#         traceback.print_exc()
-#         raise
-
-#     except (TypeError, ValueError, IndexError, AttributeError) as e:
-#         print("[continuous_occ_rate_correction] Invalid DataFrame:", e)
-#         traceback.print_exc()
-#         raise
-
-#     except Exception as e:
-#         print("[continuous_occ_rate_correction] Unexpected critical error:", e)
-#         traceback.print_exc()
-#         raise
 
 @task
 def occupancy_rate_correction(occ, avail_room, avail_percentage):
@@ -854,97 +577,7 @@ def occupancy_rate_correction(occ, avail_room, avail_percentage):
             "Occupancy Rate":occ_rate,
             "Rooms Left":track_room
         })
-
         return summary_occ
-    # try:
-    #     occ['booking_date'] = pd.to_datetime(occ['booking_date'])
-    #     occ['check_in'] = pd.to_datetime(occ['check_in'])
-    #     occ['check_out'] = pd.to_datetime(occ['check_out'])
-    #     start_range = occ['booking_date'].min()
-    #     end_range = occ['booking_date'].max()
-    #     # end_range = start_range + timedelta(days=60)
-
-    #     memory_buffer = {}
-    #     memory_buffer_ckout = {}
-    #     collected_date = []
-    #     occ_rate = []
-    #     track_room = []
-    #     focus = occ.sort_values(by='booking_date')
-    #     offset_days = start_range
-    #     rooms_left = avail_room
-    #     counter = 0
-    #     delta_date = end_range - start_range
-    #     delta_date = int(delta_date.days)
-    #     while offset_days <= end_range:
-    #         # print(f"Booking date start from {offset_days}")
-    #         resampling = focus[(focus['booking_date'] >= offset_days) &
-    #                         (focus['booking_date'] <= end_range)]
-    #         resampling = resampling.loc[(resampling['booking_date'] == offset_days),
-    #                                     ['check_in', 'check_out', 'booking_date', 'price_per_night']]
-    #         count_occur_ckin = resampling.groupby('check_in')['check_in'].count()
-    #         count_occur_ckout = resampling.groupby('check_out')['check_out'].count()
-
-    #         for i in range(len(count_occur_ckin)):
-    #             ckin_record = count_occur_ckin.index[i]
-    #             delta = int(count_occur_ckin.values[i])
-    #             if ckin_record not in memory_buffer:
-    #                 memory_buffer[ckin_record] = [delta, ckin_record]
-    #                 # print(f"added Check-in : {memory_buffer[ckin_record]}")
-    #             elif ckin_record in memory_buffer:
-    #                 memory_buffer[ckin_record][0] = delta + memory_buffer[ckin_record][0]
-    #                 # print(f"Day {offset_days} updated +{abs(delta)} bookings")
-
-    #         for i in range(len(count_occur_ckout)):
-    #             ckout_record = count_occur_ckout.index[i]
-    #             delta = int(count_occur_ckout.values[i])
-    #             if ckout_record not in memory_buffer_ckout:
-    #                 memory_buffer_ckout[ckout_record] = [delta, ckout_record]
-    #                 # print(f"added Check-out : {memory_buffer_ckout[ckout_record]}")
-    #             elif ckout_record in memory_buffer_ckout:
-    #                 memory_buffer_ckout[ckout_record][0] = delta + memory_buffer_ckout[ckout_record][0]
-    #                 # print(f"Check out Day {memory_buffer_ckout[ckout_record][1]} updated +{abs(delta)} bookings")
-
-    #         try:
-    #             if offset_days in memory_buffer:
-    #                 if offset_days == memory_buffer[offset_days][1]:
-    #                     rooms_left = rooms_left - memory_buffer[offset_days][0]
-    #                     # print(f"Added rooms occupied : {memory_buffer[offset_days][0]}")
-
-    #             if offset_days in memory_buffer_ckout:
-    #                 if offset_days == memory_buffer_ckout[offset_days][1]:
-    #                     rooms_left = rooms_left + memory_buffer_ckout[offset_days][0]
-    #                     # print(f"Freed occupied rooms : {memory_buffer_ckout[offset_days][0]}")
-    #         except Exception as e:
-    #             print(f"[ERROR] details: {e}")
-
-    #         if counter % 30 == 0:
-    #             progress_calculation = (counter / delta_date) * 100
-    #             print(f"Progress: {progress_calculation:.2f}%")
-    #             print(f"Total rooms at day {offset_days} is {rooms_left}")
-    #         avail_occupancy = int((avail_percentage / 100) * avail_room)
-    #         if avail_occupancy != 0:
-    #             occupied_percentage = ((avail_occupancy - rooms_left) / avail_occupancy) * 100
-    #         else:
-    #             occupied_percentage = 100
-    #         # occupancy_rate = occupied_percentage - 100
-    #         occupancy_rate = occupied_percentage
-    #         collected_date.append(offset_days)
-    #         occ_rate.append(occupancy_rate)
-    #         track_room.append(rooms_left)
-    #         counter = counter + 1
-    #         # print(memory_buffer)
-    #         # print(memory_buffer_ckout, "\n")
-    #         offset_days = offset_days + timedelta(days=1)
-
-    #     summary_occ = pd.DataFrame({
-    #         "Dates":collected_date,
-    #         "Occupancy Rate":occ_rate,
-    #         "Rooms Left":track_room
-    #     })
-    #     next_prediction, memory_buffer = continuous_occ_rate_correction(occ, rooms_left, memory_buffer,
-    #                                                                     memory_buffer_ckout, avail_room, avail_percentage)
-    #     summary_occ = pd.concat([summary_occ, next_prediction], ignore_index=True)
-    #     return summary_occ, memory_buffer
     except KeyError as e:
         print("[occupancy_rate_correction] Missing column:", e)
         traceback.print_exc()
@@ -976,30 +609,14 @@ def segmentation_step(sub_dfa, room_type_avail):
         best_k_val = sub_dfb['room_type_id'].nunique()
 
         room_type_mapper = {}
-        lokapro_room_mapper = {}
         counter = 1
 
         for i in (sub_dfb['room_type_id'].value_counts().index):
             room_type_mapper[i] = counter
-
-            take_room_label = sub_dfb.loc[(sub_dfb['room_type_id'] == i), :]
-            lokapro_room_mapper[i] = [take_room_label.iloc[0, 10], take_room_label.iloc[0, 11]]
             counter += 1
         print(f"room_type_mapper is : {room_type_mapper}")
 
-        cluster_index = []
-        lpro_index_id = []
-        lpro_index_num = []
-        for i in range(len(sub_dfb)):
-            current_room_type = str(sub_dfb.iloc[i, 9])
-            current_room_name = str(sub_dfb.iloc[i, 10])
-            lokapro_room_numid = str(sub_dfb.iloc[i, 11])
-            cluster_index.append(room_type_mapper[current_room_type])
-            lpro_index_id.append(current_room_name)
-            lpro_index_num.append(lokapro_room_numid)
-        sub_dfb['cluster'] = cluster_index
-        sub_dfb['lpro_room_name'] = lpro_index_id
-        sub_dfb['lpro_room_numid'] = lpro_index_num
+        sub_dfb['cluster'] = sub_dfb['room_type_id'].map(room_type_mapper)
     return sub_dfb, best_k_val
 
 @task
@@ -1018,8 +635,6 @@ def feeder_adaptive_algorithm(dates_buffer=None, y_pred_mean=None, y_test_mean=N
     main_storage = {}
     infer_main_storage = {}
     adaptive_price_storage_infer = adaptive_price_storage.copy()
-    # main_storage[n] = adaptive_price_storage.copy()
-    # infer_main_storage[n] = adaptive_price_storage_infer.copy()
 
     try:
         if job_sched == 1:
@@ -1033,27 +648,38 @@ def feeder_adaptive_algorithm(dates_buffer=None, y_pred_mean=None, y_test_mean=N
             return main_storage
 
         elif job_sched == 2:
-            concise = segment_n[["check_in", "price_per_night"]]
-            filtered_df = concise[concise["check_in"].isin(pred_df["Dates"])]
-            filtered_df["check_in"] = pd.to_datetime(filtered_df["check_in"])
-            filtered_df = filtered_df.groupby("check_in")["price_per_night"].mean()
-            filtered_df.resample('D')
-            value_capture = [float(pred_df.iloc[i, 1]) for i in range(len(pred_df)) if pred_df.iloc[i, 0] in filtered_df.index]
-            date_capture = [pred_df.iloc[i, 0] for i in range(len(pred_df)) if pred_df.iloc[i, 0] in filtered_df.index]
-            filtered_df2 = pd.DataFrame({
-                "Dates":date_capture,
-                "Values":value_capture
-            })
-            filtered_df2["Dates"] = pd.to_datetime(filtered_df2["Dates"]).dt.strftime("%Y-%m-%d")
+            pred_df_copy = pred_df.copy()
+            pred_df_copy['Dates'] = pd.to_datetime(pred_df_copy['Dates']).dt.strftime("%Y-%m-%d")
 
-            pred_df['Dates'] = pd.to_datetime(pred_df['Dates']).dt.strftime("%Y-%m-%d")
+            concise = segment_n[["check_in", "price_per_night"]].copy()
+            concise["check_in"] = pd.to_datetime(concise["check_in"]).dt.strftime("%Y-%m-%d")
+            historical_grp = concise.groupby("check_in")["price_per_night"].mean()
+
+            value_capture = []
+            date_capture = []
+            actual_capture = []
+            for i in range(len(pred_df_copy)):
+                d_str = str(pred_df_copy.iloc[i, 0])
+                pred_val = float(pred_df_copy.iloc[i, 1])
+                date_capture.append(d_str)
+                value_capture.append(pred_val)
+                if d_str in historical_grp.index:
+                    actual_capture.append(float(historical_grp.loc[d_str]))
+                else:
+                    actual_capture.append(pred_val)
+
+            filtered_df2 = pd.DataFrame({
+                "Dates": date_capture,
+                "Values": value_capture
+            })
+
             ckin_data_buffer_infer = pickup_rate_correction(segment_n)
             booking_rate_infer = ckin_data_buffer_infer.groupby('check_in')['booking_rate'].last()
-            booking_rate_infer.resample('D').last()
+            booking_rate_infer = booking_rate_infer.resample('D').last()
             booking_rate_infer = booking_rate_infer.reset_index(drop=False)
             booking_rate_infer['check_in'] = pd.to_datetime(booking_rate_infer['check_in'])
             occ_data_buffer_infer = occupancy_rate_correction(segment_n, avail_room, avail_percentage)
-            must_contain = [filtered_df2["Dates"].values, value_capture, filtered_df.values,
+            must_contain = [filtered_df2["Dates"].values, value_capture, np.array(actual_capture),
                             ckin_data_buffer_infer, booking_rate_infer, occ_data_buffer_infer]
             pointer = 0
             for k in adaptive_price_storage_infer.keys():
@@ -1084,11 +710,8 @@ def feeder_adaptive_algorithm(dates_buffer=None, y_pred_mean=None, y_test_mean=N
 ######--------------PREDICTION ALGORITHM---------------------######
 ###################################################################
 @task
-def prediction_sequence(df_input, customer_id, job_id_num, total_room, 
-                        room_type_avail, currency_info, constants_list=None):
-    # ENC_SEQ_LEN_LT = 90
-    # STEP_AHEAD_LT = 60
-    MAX_FUTURE_LT = 360
+def prediction_sequence(df_input, customer_id, total_room, room_type_avail, constants_list=None):
+    MAX_FUTURE_LT = PREDICT_DAYS_FORWARD
     infer_aa_dictionaries = {}
     prediction_database = {}
     need_prediction = False
@@ -1104,23 +727,15 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
     })
     
     charts = {
-        "key_id":job_id_num,
-        "datetime_push":datetime.now(ZoneInfo("Asia/Makassar")).strftime("%Y-%m-%d %H:%M:%S"),
-        "status_code":"",
-        "status_message":"",
-        "customer_id":customer_id,
-        "date_start":"",
-        "date_end":"",
         "result":[{
-            "model_version": "v1.0.0",
+            "status": "",
             "customer_id": customer_id,
-            "currency_id": "",
             "forecasts": []
         }]
     }
 
     try:
-        # BASICALLY THIS IS JUST COOLDOWN
+        # COOLDOWN BY DATABASE AND MODEL CHECKING
         if not os.path.exists(os.path.join(FOLDER_PATH_PREDICTIONS, f"longterm_{customer_id}_predictions.pkl")): # CHECK IF PREVIOUSLY WE HAVE TRAINED A MODEL BEFORE
             print("Data not exist creating new entry.")
             need_prediction = True
@@ -1192,8 +807,7 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
                 print(f"max booking date is: {max_booking_date}")
                 ts = segment_n[segment_n['check_in'] <= pd.to_datetime(max_booking_date)] # clipping for model
                 ts = ts.groupby('check_in')['price_per_night'].mean()
-                # print(ts.head(10))
-                # print(ts.tail(10))
+
                 # Strategy 1: Fit LOWESS on irregular timestamps, then re-grid to daily
                 # This avoids time-axis compression from resample+dropna
                 lowess = sm.nonparametric.lowess
@@ -1305,7 +919,6 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
                     future_pred_lt = scaler.inverse_transform(future_pred_scaled_lt)
 
                     mod_date_lt = ts_monthly.index.max()
-                    # mod_date_lt = datetime.now()
                     max_date_lt = mod_date_lt + timedelta(days=(MAX_FUTURE_LT + offset_time))
                     curr_date_lt = mod_date_lt
 
@@ -1318,7 +931,6 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
                     # buffer_date = buffer_date.tolist()
                     future_pred_lt = future_pred_lt[(-len(buffer_box_lt) + offset_time):]
                     buffer_date_lt = pd.Series(buffer_date_lt)
-                    # print("Pay attention this is buffer date looks like: ", buffer_date)
 
                     prediction_pairing_lt = pd.DataFrame({
                         "Dates":buffer_date_lt.values[-len(future_pred_lt):],
@@ -1339,8 +951,7 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
                         "value_data":future_pred_lt.flatten(),
                         "shape_date":buffer_date_lt.values[-len(future_pred_lt):].shape,
                         "shape_value":future_pred_lt.flatten().shape,
-                        "room_id_name":segment_n['lokapro_room_id'].values[0],
-                        "room_name":segment_n['room_type_name'].values[0]
+                        "room_id_name":segment_n['room_type_id'].values[0]
                     }
                     prediction_database[n] = storage
                 elif X.shape[0] < 10:
@@ -1373,10 +984,6 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
                         print("Reason: Prices are normally distributed")
                         tempor_sel_value = segment_n['price_per_night'].mode()
                         sel_value = np.average(tempor_sel_value)
-                        # if len(tempor_sel_value) > 1:
-                        #     sel_value = np.average(tempor_sel_value)
-                        # else:
-                        #     sel_value = tempor_sel_value
                     else:
                         print("USING MEDIAN AUTO-FILL")
                         print("Reason: Prices are NOT normally distributed")
@@ -1387,23 +994,20 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
                     
                     storage = {
                         "date_update":datetime.now(),
-                        "date_data":buffer_date_lt.values[-360:],
+                        "date_data":buffer_date_lt.values[-PREDICT_DAYS_FORWARD:],
                         "value_data":[0 for _ in range(len(buffer_date_lt))],
                         "shape_date":"",
                         "shape_value":"",
-                        "room_id_name":segment_n['lokapro_room_id'].values[0],
-                        "room_name":segment_n['room_type_name'].values[0]
+                        "room_id_name":segment_n['room_type_id'].values[0]
                     }
                     prediction_database[n] = storage
-                    # print(f"segment {n} has content of {storage}")
-                    # TODO: instead use 0 analyze data distribution and inject highest mode data
                     price_storage = {
-                        "dates_buffer":buffer_date_lt.values[-360:],
-                        "y_pred_mean":[sel_value for _ in range(len(buffer_date_lt.values[-360:]))],
-                        "y_test_mean":[sel_value for _ in range(len(buffer_date_lt.values[-360:]))],
-                        "ckin_data_buffer":[0 for _ in range(len(buffer_date_lt.values[-360:]))],
-                        "booking_rate":[0 for _ in range(len(buffer_date_lt.values[-360:]))],
-                        "occ_data_buffer":[0 for _ in range(len(buffer_date_lt.values[-360:]))]
+                        "dates_buffer":buffer_date_lt.values[-PREDICT_DAYS_FORWARD:],
+                        "y_pred_mean":[sel_value for _ in range(len(buffer_date_lt.values[-PREDICT_DAYS_FORWARD:]))],
+                        "y_test_mean":[sel_value for _ in range(len(buffer_date_lt.values[-PREDICT_DAYS_FORWARD:]))],
+                        "ckin_data_buffer":[0 for _ in range(len(buffer_date_lt.values[-PREDICT_DAYS_FORWARD:]))],
+                        "booking_rate":[0 for _ in range(len(buffer_date_lt.values[-PREDICT_DAYS_FORWARD:]))],
+                        "occ_data_buffer":[0 for _ in range(len(buffer_date_lt.values[-PREDICT_DAYS_FORWARD:]))]
                     }
                     infer_aa_dictionaries[n] = price_storage
 
@@ -1437,7 +1041,6 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
                 pickle.dump(records_training, f)
                 print(f"success saving to model_meta.pkl")   
         K.clear_session()
-        # del model_longterm
         gc.collect()
     except RuntimeError as e:
         print("[CAUTION] System will auto-fill empty fields with 0 values since reliable prediction is not available.")
@@ -1454,7 +1057,7 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
 
         mod_date_lt = ts_monthly.index.max()
         # mod_date_lt = datetime.now()
-        max_date_lt = mod_date_lt + timedelta(days=(MAX_FUTURE_LT + offset_time))
+        max_date_lt = mod_date_lt + timedelta(days=(PREDICT_DAYS_FORWARD + offset_time))
         curr_date_lt = mod_date_lt
 
         buffer_box_lt = []
@@ -1463,33 +1066,27 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
             buffer_box_lt.append(curr_date_lt)
         buffer_date_lt = ts_monthly.index.union(buffer_box_lt)
         buffer_date_lt = pd.to_datetime(buffer_date_lt, format="%Y-%m-%d")
-        # buffer_date = buffer_date.tolist()
-        # future_pred_lt = future_pred_lt[(-len(buffer_box_lt) + offset_time):]
         buffer_date_lt = pd.Series(buffer_date_lt)
 
         presentation_charts = {
-            "model_version": "v1.0.0",
+            "status": "",
             "customer_id": customer_id,
-            "currency_id": currency_info,
             "forecasts": []
         }
 
         sub_process_dict = {
             "room_type_id": "",
-            "room_type_name": "",
             "forecast_date": "",
             "forecasted_price": "",
-            "high_season_positive_multiplier_rate": 0,
-            "all_season_positive_multiplier_rate": 0,
-            "high_season_negative_multiplier_rate": 0,
-            "all_season_negative_multiplier_rate": 0,
-            "all_room_types_min_forecasted_price": None ,
-            "all_room_types_median_forecasted_price": None,
-            "all_room_types_max_forecasted_price": None
         }
+
+        if 'sub_df' not in locals() or 'n_cluster' not in locals():
+            sub_df, n_cluster = segmentation_step(df_input, room_type_avail)
 
         for n in range(1, n_cluster + 1):
             highlight_room_type = sub_df[sub_df['cluster'] == n]
+            if len(highlight_room_type) == 0:
+                continue
             sub_process_dict_copy = sub_process_dict.copy()
 
             stat, p_value = stats.shapiro(highlight_room_type['price_per_night'])
@@ -1499,44 +1096,33 @@ def prediction_sequence(df_input, customer_id, job_id_num, total_room,
             if p_value > 0.05:
                 print("USING MODE AUTO-FILL")
                 print("Reason: Prices are normally distributed")
-                tempor_sel_value = segment_n['price_per_night'].mode()
-                sel_value = np.average(tempor_sel_value)
-                # if len(tempor_sel_value) > 1:
-                #     sel_value = np.average(tempor_sel_value)
-                # else:
-                #     sel_value = tempor_sel_value
+                tempor_sel_value = highlight_room_type['price_per_night'].mode()
+                sel_value = np.average(tempor_sel_value) if len(tempor_sel_value) > 0 else highlight_room_type['price_per_night'].mean()
             else:
                 print("USING MEDIAN AUTO-FILL")
                 print("Reason: Prices are NOT normally distributed")
                 sel_value = highlight_room_type['price_per_night'].median()
-            # sub_df['room_id'] and sub_df['room_name']
-            highlight_roomtype_name = highlight_room_type['lpro_room_name'].values[0]
-            highlight_roomtype_numid = str(highlight_room_type['lpro_room_numid'].values[0])
+            highlight_roomtype_numid = str(highlight_room_type['room_type_id'].values[0]) if 'room_type_id' in highlight_room_type.columns else str(n)
             for y in range(len(buffer_date_lt)):
                 sub_process_dict_copy['forecast_date'] = pd.Timestamp(buffer_date_lt.values[y]).strftime('%Y-%m-%d')
                 sub_process_dict_copy['forecasted_price'] = sel_value
                 sub_process_dict_copy['room_type_id'] = highlight_roomtype_numid
-                sub_process_dict_copy['room_type_name'] = highlight_roomtype_name
-                presentation_charts['forecasts'].append(sub_process_dict_copy)
-        # print(f"type of pc : {type(presentation_charts['forecasts'])}")
-        # print(f"content of pc : {presentation_charts['forecasts'][0]}")
+                presentation_charts['forecasts'].append(sub_process_dict_copy.copy())
         print("A section")
-        chartjs_to_endpoint(presentation_charts, customer_id)
+        data_to_endpoint(presentation_charts, customer_id)
     except ZeroDataError as e:
         error_summary = f"{type(e).__name__}: {e}"
         print(error_summary)
-        charts["status_message"] = error_summary
-        charts["status_code"] = 3
-        chartjs_to_endpoint(charts["result"][0], customer_id, error_msg=error_summary)
+        charts["result"][0]["status"] = f"error due to: {error_summary}"
+        data_to_endpoint(charts["result"][0], customer_id, error_msg=error_summary)
         K.clear_session()
         del model_longterm
         gc.collect()
     except Exception as e:
         error_summary = f"{type(e).__name__}: {e}"
         print(error_summary)
-        charts["status_message"] = error_summary
-        charts["status_code"] = 3
-        chartjs_to_endpoint(charts["result"][0], customer_id, error_msg=error_summary)
+        charts["result"][0]["status"] = f"error due to: {error_summary}"
+        data_to_endpoint(charts["result"][0], customer_id, error_msg=error_summary)
         K.clear_session()
         del model_longterm
         gc.collect()
@@ -1553,44 +1139,13 @@ def error_logger(error_msg, customer_id=None):
         if customer_id:
             f.write(f"Customer id is : {customer_id}")
 
-def get_user_defined_rate(customer_id, room_id):
-    print("Sending request to server and check if there's any saved rates.")
-    url = os.getenv("REQUEST_CORRECTED_PRICE")
-    if not url:
-        print("[WARNING] REQUEST_CORRECTED_PRICE env variable not set. Skipping user-defined rates.")
-        return []
-    headers = {"Content-Type": "application/json",
-            "Authorization": f"Bearer {TOKEN_KEY}"}
-    payload = {
-        "customer_id":int(customer_id),
-        "room_type_id":int(room_id)
-    }
-    try:
-        response = requests.post(url, headers=headers, json=payload) # expected endpoint api/send-corrected-price
-        response.raise_for_status()  # Raises HTTPError for bad status codes
-        if response.status_code == 404:
-            logging.error(f"Returned 404 (Payload Invalid).") 
-            raise RuntimeError("[ERROR] Payload invalid or not available.")     
-        return response.json()
-    except requests.exceptions.Timeout as e:
-        error_summary = f"{type(e).__name__}: {e}"
-        error_logger(error_summary, customer_id)
-        raise RuntimeError("Request timed out. The server may be slow or unavailable.")
-    except requests.exceptions.HTTPError as e:
-        error_summary = f"{type(e).__name__}: {e}"
-        error_logger(error_summary, customer_id)
-        raise RuntimeError(f"HTTP error occurred: {e} - Response: {response.text}")
-    except requests.exceptions.RequestException as e:
-        error_summary = f"{type(e).__name__}: {e}"
-        error_logger(error_summary, customer_id)
-        raise RuntimeError(f"Request failed: {e}")
 
 ###############################################################################################
 #################--------------PRICE RATE ADAPTIVE SYSTEM---------------------#################
 ###############################################################################################
 @task
 def preprocess_pairing(dates_buffer, y_pred_mean, y_test_mean, ckin_data_buffer,
-                        booking_rate, occ_data_buffer, user_corrections=None):
+                        booking_rate, occ_data_buffer):
     pickup_rate_box = []
     booking_rate_box = []
     occupancy_rate_box = []
@@ -1603,66 +1158,42 @@ def preprocess_pairing(dates_buffer, y_pred_mean, y_test_mean, ckin_data_buffer,
             "Actual Price":y_test_mean
         })
 
-        # =========================================================================
-        # [PLACEHOLDER] USER CORRECTED PRICES INJECTION - LAYER 1: PRICE ANCHORING
-        # =========================================================================
-        # Payload format from Laravel: [{"YYYY-MM-DD": corrected_price}, ...] or {"YYYY-MM-DD": corrected_price}
-        corrections_dict = {}
-        if user_corrections is not None and len(user_corrections) > 0:
-            print(f"[INFO] user_corrections is not none proceeding...")
-            if isinstance(user_corrections, list):
-                for item in user_corrections:
-                    if isinstance(item, dict):
-                        for d, p in item.items():
-                            corrections_dict[str(d)] = float(p)
-            elif isinstance(user_corrections, dict):
-                corrections_dict = {str(d): float(p) for d, p in user_corrections.items()}
-
-        if len(corrections_dict) > 0:
-            print(f"[INFO] Injecting {len(corrections_dict)} user corrected prices into pairing dataset...")
-            for date_str, custom_price in corrections_dict.items():
-                date_mask = (pairing["Date"] == str(date_str))
-                if date_mask.any():
-                    # 1. Update Baseline Value: Anchors BayesianLinTS & safety limits to user target price
-                    pairing.loc[date_mask, "Baseline Value"] = float(custom_price)
-                    # 2. Update Actual Price: Calibrates the day-to-day ±10% jump guardrail
-                    pairing.loc[date_mask, "Actual Price"] = float(custom_price)
-        # =========================================================================
-
         if not isinstance(ckin_data_buffer, list):
             print("Normal pairing")
             tempo = ckin_data_buffer.sort_values(by="check_in")
             tempo["check_in"] = pd.to_datetime(tempo["check_in"]).dt.strftime("%Y-%m-%d")
             booking_rate["check_in"] = pd.to_datetime(booking_rate["check_in"]).dt.strftime("%Y-%m-%d")
             occ_data_buffer["Dates"] = pd.to_datetime(occ_data_buffer["Dates"]).dt.strftime("%Y-%m-%d")
-            # crossmatch_df = pd.DataFrame()
+
             for i in range(len(pairing)):
-                true_a, true_b, true_c = False, False, False
-                if pairing.iloc[i, 0] in tempo["check_in"].values:
-                    value_plchldr = tempo.iloc[(tempo["check_in"].values == pairing.iloc[i, 0]), 7].values[0]
-                    pickup_rate_box.append(value_plchldr)
-                    true_a = True
-                if pairing.iloc[i, 0] in booking_rate["check_in"].values:
-                    value_plchldr = booking_rate.iloc[(booking_rate["check_in"].values == pairing.iloc[i, 0]), 1].values[0]
-                    booking_rate_box.append(value_plchldr)
-                    true_b = True
-                if pairing.iloc[i, 0] in occ_data_buffer["Dates"].values:
-                    value_plchldr = occ_data_buffer.iloc[(occ_data_buffer["Dates"].values == pairing.iloc[i, 0]), 1].values[0]
-                    occupancy_rate_box.append(value_plchldr)
-                    true_c = True
-                if true_a == True and true_b == True and true_c == True:
-                    date_plchldr = occ_data_buffer.iloc[i, 0]
-                    date_box.append(date_plchldr)
-                    true_a, true_b, true_c = False, False, False
+                curr_date = str(pairing.iloc[i, 0])
+                if curr_date in tempo["check_in"].values:
+                    val_a = tempo.loc[(tempo["check_in"] == curr_date), "cumulative_pickup_rate"].values[0]
+                    pickup_rate_box.append(float(val_a) if pd.notna(val_a) else 0.0)
+                else:
+                    pickup_rate_box.append(0.0)
+
+                if curr_date in booking_rate["check_in"].values:
+                    val_b = booking_rate.loc[(booking_rate["check_in"] == curr_date), "booking_rate"].values[0]
+                    booking_rate_box.append(float(val_b) if pd.notna(val_b) else 0.0)
+                else:
+                    booking_rate_box.append(0.0)
+
+                if curr_date in occ_data_buffer["Dates"].values:
+                    val_c = occ_data_buffer.loc[(occ_data_buffer["Dates"] == curr_date), "Occupancy Rate"].values[0]
+                    occupancy_rate_box.append(float(val_c) if pd.notna(val_c) else 0.0)
+                else:
+                    occupancy_rate_box.append(0.0)
+
             pairing['Pickup Rate'] = pickup_rate_box
             pairing['Booking Rate'] = booking_rate_box
             pairing['Occupancy Rate'] = occupancy_rate_box
             pairing = pairing.sort_values(by="Date")
         else:
             print("Contingency pairing")
-            pickup_rate_box = [0 for _ in range(len(pairing['Date']))]
-            booking_rate_box = [0 for _ in range(len(pairing['Date']))]
-            occupancy_rate_box = [0 for _ in range(len(pairing['Date']))]
+            pickup_rate_box = [0.0 for _ in range(len(pairing['Date']))]
+            booking_rate_box = [0.0 for _ in range(len(pairing['Date']))]
+            occupancy_rate_box = [0.0 for _ in range(len(pairing['Date']))]
             pairing['Pickup Rate'] = pickup_rate_box
             pairing['Booking Rate'] = booking_rate_box
             pairing['Occupancy Rate'] = occupancy_rate_box
@@ -1744,12 +1275,6 @@ def compute_signals(df: pd.DataFrame, last_date, window_days: int = 30, as_of: d
         # z-scores relative to occupancy window (you can easily change to pickup)
         z_score_occ = (occupancy_last - mu_occ) / sigma_occ
         z_score_pcr = (pickup_last - mu_pcr) / sigma_pcr
-        # if last_date == datetime.strptime("2026-03-01", "%Y-%m-%d") and len(last_row) > 0:
-        #     print(f"[DEBUG] last_row is: {last_row}")
-        #     print(f"[DEBUG] date {last_date} : \n{recent}")
-        #     print(f"[DEBUG] occupancy_last: {occupancy_last}")
-        #     print(f"[DEBUG] average: {mu_occ}")
-        #     print(f"[DEBUG] stdev: {sigma_occ}")
 
         if abs(z_score_occ) > abs(z_score_pcr):
             mu = mu_occ
@@ -1846,20 +1371,9 @@ def build_context_vector(row) -> np.ndarray:
 
 # ---------- 3) WARMSTART USING HISTORY ----------
 @task
-def warmstart(agent, df, action_grid, elasticity, user_corrections=None):
+def warmstart(agent, df, action_grid, elasticity):
     baseline_price = df["Baseline Value"].iloc[-1]
     # print(f"Baseline price is : {baseline_price}")
-
-    # Payload format from Laravel: [{"YYYY-MM-DD": corrected_price}, ...] or {"YYYY-MM-DD": corrected_price}
-    corrections_dict = {}
-    if user_corrections is not None and len(user_corrections) > 0:
-        if isinstance(user_corrections, list):
-            for item in user_corrections:
-                if isinstance(item, dict):
-                    for d, p in item.items():
-                        corrections_dict[str(d)] = float(p)
-        elif isinstance(user_corrections, dict):
-            corrections_dict = {str(d): float(p) for d, p in user_corrections.items()}
 
     for _, row in df.iterrows():
         base_conv = row["Occupancy Rate"]
@@ -1871,21 +1385,6 @@ def warmstart(agent, df, action_grid, elasticity, user_corrections=None):
             adj_conv = max(0, base_conv * (1 + elasticity * (delta * 100)))
             reward = adj_conv * baseline_price
 
-            # =========================================================================
-            # [PLACEHOLDER] USER CORRECTED PRICES INJECTION - LAYER 2: POLICY LEARNING (RLHF)
-            # =========================================================================
-            # If the user manually set a price on this historical date, give an extra
-            # reward bonus to the arm (delta) that was closest to the user's chosen price.
-            if len(corrections_dict) > 0 and date_str in corrections_dict and baseline_price > 0:
-                print("We got a predicted price that almost close to user corrected price!!!!!")
-                user_price = corrections_dict[date_str]
-                user_delta = (user_price - baseline_price) / baseline_price
-                # If this candidate arm is very close to the user's manual adjustment
-                if abs(delta - user_delta) < 0.02:
-                    print("Ding ding ding!!!!!! GOT BONUS!!!!!!!")
-                    reward *= 1.30  # +30% reward bonus to reinforce human decision policy
-            # =========================================================================
-
             agent.update(arm_idx, context, reward)
 
 # ---------- 4) PRICE SUGGESTION ----------
@@ -1895,13 +1394,10 @@ def suggest_price(agent, df: pd.DataFrame, last_date, action_grid, max_jump=0.10
         out_of_limit = False
 
         df = prepare_features(df)
-        # print(f"df is : {df}\n")
-        # print(f"last-date is : {last_date}\n")
         filtering_date = df.loc[(df["Date"] <= last_date), :]
-        # print(f"filtering_date is : {filtering_date}")
         if len(filtering_date) > 0:
             last = filtering_date.iloc[-1]
-        else: # CUMAN NYALA PAS PERTAMA-TAMA AJA PAS DF FILTERING DATE MASIH KOSONG
+        else: 
             last = df.iloc[-1]
 
         baseline_price = last["Baseline Value"]
@@ -1968,29 +1464,13 @@ def load_record_data(customer_id):
     return data, data2
 
 @task
-def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_type_avail):
+def adaptive_calculation(customer_id, df_input, room_type_avail):
     data, data2 = load_record_data(customer_id)
     adaptive_suggestion = {}
     start_search = str(df_input['booking_date'].min())
     end_search = str(df_input['booking_date'].max())
 
-    # =========================================================================
-    # [PLACEHOLDER] USER CORRECTED PRICES - INGESTION PLACEHOLDER
-    # =========================================================================
-    # If user_corrections is not provided via parameter, you can load it here from API or DB:
-    # Example format: user_corrections = {"2026-09-01": 750000, "2026-09-02": 800000}
-    # if user_corrections is None:
-    #     user_corrections = fetch_user_corrections_from_laravel(customer_id)
-    # =========================================================================
-
     charts = {
-        "key_id":joblib_id,
-        "datetime_push":"",
-        "status_code":"",
-        "status_message":"",
-        "customer_id":customer_id,
-        "date_start":start_search,
-        "date_end":end_search,
         "result":[]
     }
     try:
@@ -2001,32 +1481,27 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
 
                 feature_name = [n for n in data2[k].keys()]
                 focus_room_id = data[k]['room_id_name']
-                # [PLACEHOLDER] Fetch or parse user-corrected prices from Laravel / incoming request JSON
-                # user_corrections = load_user_corrections(customer_id)
-                # expected received file format is list of dicts like this:
-                # [{"YYYY-MM-DD": corrected_price}, {"YYYY-MM-DD": corrected_price}, ...]
-                user_corrections = get_user_defined_rate(customer_id, focus_room_id) 
 
                 preprocessing_df = preprocess_pairing(data2[k][feature_name[0]], data2[k][feature_name[1]],
                                                     data2[k][feature_name[2]], data2[k][feature_name[3]],
-                                                    data2[k][feature_name[4]], data2[k][feature_name[5]],
-                                                    user_corrections=user_corrections)
+                                                    data2[k][feature_name[4]], data2[k][feature_name[5]])
 
                 # additional_data_df untuk menambah dataset buat bandit pelajari, bahkan untuk harga dimasa depan (kalo sudah ada datanya kenapa gak dioelajari juga)
                 additional_data_df = preprocessing_df
                 elasticity = -0.01
-                # print(f"Additional_data_df is : {additional_data_df}")
                 # cek pake occupancy rate dari tanggal ini sampai ke beberapa hari ke depan yang ada historikal cek innya
                 occupancy_rate_df = data2[k][feature_name[5]]
-                if not isinstance(occupancy_rate_df, list):
+                if not isinstance(occupancy_rate_df, list) and isinstance(occupancy_rate_df, pd.DataFrame):
                     print("Normal calculations")
                     occupancy_rate_df["Dates"] = pd.to_datetime(occupancy_rate_df["Dates"])
-                    future_dates = occupancy_rate_df.loc[(occupancy_rate_df["Dates"] >= datetime.now()), "Dates"].values
+                    future_dates = preprocessing_df.loc[(pd.to_datetime(preprocessing_df["Date"]) >= pd.Timestamp.now().floor('D')), "Date"].values
+                    if len(future_dates) == 0:
+                        future_dates = preprocessing_df["Date"].values
                 else:
                     print("Contingency calculations")
-                    future_dates = preprocessing_df.loc[(preprocessing_df["Date"] >= datetime.now()), "Date"].values
-                
-                # print(f"[DEBUG] crosscheck future_dates {future_dates}")
+                    future_dates = preprocessing_df.loc[(pd.to_datetime(preprocessing_df["Date"]) >= pd.Timestamp.now().floor('D')), "Date"].values
+                    if len(future_dates) == 0:
+                        future_dates = preprocessing_df["Date"].values
 
                 date_box = []
                 z_score_box = []
@@ -2038,23 +1513,20 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
                 room_label = []
                 room_name = []
                 for i in future_dates:
-                    # print(f"Date on check is {i}")
                     append_signal = True
                     # Convert i (last_date) to pandas Timestamp before passing to compute_signals
                     signal = compute_signals(preprocessing_df, pd.Timestamp(i), 30) # RETURN BOOLEAN ANOMALY OR NOT ANOMALY
-                    # print(f"Signal is {signal["classification"]}")
-                    # print(f"z-score is : {signal["z_score_occ"]}")
                     if signal["classification"] == "surge":
-                        print("SURGE DETECTED!!!")
+                        # print("SURGE DETECTED!!!")
                         action_grid = [0.0, 0.02, 0.04, 0.06, 0.08]
                     elif signal["classification"] == "mild_increase":
-                        print("MILD INCREASE DETECTED!!!")
+                        # print("MILD INCREASE DETECTED!!!")
                         action_grid = [0.0, 0.01, 0.03, 0.05]
                     elif signal["classification"] == "mild_drop":
-                        print("MILD DROP DETECTED!!!")
+                        # print("MILD DROP DETECTED!!!")
                         action_grid = [-0.05, -0.03, -0.01, 0.0]
                     elif signal["classification"] == "drop_demand":
-                        print("DROP DEMAND DETECTED!!!")
+                        # print("DROP DEMAND DETECTED!!!")
                         action_grid = [-0.08, -0.06, -0.04, -0.02, 0.0]
                     else:
                         # append_signal = False
@@ -2064,7 +1536,7 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
                         # continue
 
                     agent = BayesianLinearTS(n_arms=len(action_grid), dim=len(FEATURES), ridge=80)
-                    warmstart(agent, additional_data_df, action_grid, elasticity, user_corrections=user_corrections)
+                    warmstart(agent, additional_data_df, action_grid, elasticity)
                     suggestion = suggest_price(agent, preprocessing_df, i, action_grid)
                     # print(f"price suggestion analysis : \n{suggestion}\n")
                     if append_signal == True:
@@ -2076,32 +1548,6 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
                         recommended_price.append(suggestion["safe_price"])
                         ool_data.append(suggestion["out_of_limit"])
                         room_label.append(data[k]['room_id_name'])
-                        room_name.append(data[k]['room_name'])
-
-                # THIS IS FOR DEBUGGING ONLY, USE DATAFRAME FOR VISUAL, AND JSON FOR METADATA
-                # action_sum_df = pd.DataFrame({
-                #     "Date":date_box,
-                #     "Z-Score":z_score_box,
-                #     "Remarks":remarks,
-                #     "Constant Selection":constant_selection,
-                #     "Price Baseline":price_baseline,
-                #     "Recommended Price":recommended_price
-                # })
-                # action_sum_df = {
-                #     "Date":pd.to_datetime(date_box).strftime("%Y-%m-%d").tolist(),
-                #     "Z-Score":z_score_box,
-                #     "Remarks":remarks,
-                #     "Constant Selection":constant_selection,
-                #     "Price Baseline":price_baseline,
-                #     "Recommended Price":recommended_price
-                # }
-                # action_sum_df = {
-                #     "type": "line_chart",
-                #     "chart_slug_name":"adaptive_pricing",
-                #     "x-axis": pd.to_datetime(date_box).strftime("%Y-%m-%d").tolist(),
-                #     "Price Baseline": price_baseline,
-                #     "Recommended Price": recommended_price,
-                # }
 
                 action_sum_df = {
                     "type": "line_chart",
@@ -2118,8 +1564,7 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
                         "Out of limit": ool_data[iii],
                         "Rate Change": constant_selection[iii],
                         "Remarks": remarks[iii],
-                        "Room Id Num": room_label[iii],
-                        "Room Id Name": room_name[iii]
+                        "Room Id Num": room_label[iii]
                     }
                     action_sum_df["Data"].append(sub_action_sum)
                 # print(f"action_sum_df['Data'] check : {action_sum_df['Data']}")
@@ -2134,23 +1579,14 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
             adaptive_suggestion[k] = action_sum_df
             # json_records[k] = action_sum_df
             charts["result"].append(action_sum_df)
-            charts["datetime_push"] = datetime.now(ZoneInfo("Asia/Makassar")).strftime("%Y-%m-%d %H:%M:%S")
-            charts["status_code"] = 2
-            charts["status_message"] = "Data successfully processed!"
     except Exception as e:
         error_summary = f"{type(e).__name__}: {e}"
-        charts["datetime_push"] = datetime.now(ZoneInfo("Asia/Makassar")).strftime("%Y-%m-%d %H:%M:%S")
-        charts["status_code"] = 3
-        charts["status_message"] = error_summary
-        charts["date_start"] = ""
-        charts["date_end"] = ""
         charts["result"] = [{
-            "model_version": "v1.0.0",
+            "status": f"error due to: {error_summary}",
             "customer_id": customer_id,
-            "currency_id": currency_id,
             "forecasts": []
         }]
-        chartjs_to_endpoint(charts["result"][0], customer_id, error_msg=error_summary)
+        data_to_endpoint(charts["result"][0], customer_id, error_msg=error_summary)
         raise
 
     # REPROCESS THE CHARTS SO FOR LONGER THAN 30 DAYS IT FOLLOWS THE SAME STANDARDIZE FORMAT
@@ -2158,9 +1594,8 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
     content_data = charts["result"]
 
     presentation_charts = {
-        "model_version": "v1.0.0",
+        "status": "Data successfully processed!",
         "customer_id": customer_id,
-        "currency_id": currency_id,
         "forecasts": []
     }
 
@@ -2171,7 +1606,6 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
     rate_change_adaptive = []
     remarks_adaptive = []
     room_type_num_adaptive = []
-    room_real_name_adaptive = []
     if len(content_data) > 0:
         # print(f"[DEBUG] content_data length: {len(content_data)}")
         for i in range(len(content_data)):
@@ -2184,7 +1618,6 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
                     rate_change_adaptive.append(content_data[i]["Data"][j]["Rate Change"])
                     remarks_adaptive.append(content_data[i]["Data"][j]["Remarks"])
                     room_type_num_adaptive.append(content_data[i]["Data"][j]["Room Id Num"])
-                    room_real_name_adaptive.append(content_data[i]["Data"][j]["Room Id Name"])
 
             else:
                 print(f"[DEBUG] content_data[{i}] has empty Data, skipping...")
@@ -2196,23 +1629,8 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
             "Recommended Price": recommended_price_adaptive,
             "Rate Change": rate_change_adaptive,
             "Remarks": remarks_adaptive,
-            "Room Type": room_type_num_adaptive,
-            "Room Type Name": room_real_name_adaptive
+            "Room Type": room_type_num_adaptive
         })
-
-        # sub_process_dict = {
-        #     "room_type_id": "",
-        #     "room_type_name": "",
-        #     "forecast_date": "",
-        #     "forecasted_price": None,
-        #     "high_season_positive_multiplier_rate": "",
-        #     "all_season_positive_multiplier_rate": "",
-        #     "high_season_negative_multiplier_rate": "",
-        #     "all_season_negative_multiplier_rate": "",
-        #     "all_room_types_min_forecasted_price": None ,
-        #     "all_room_types_median_forecasted_price": None,
-        #     "all_room_types_max_forecasted_price": None
-        # }
 
         sub_process_dict = {
             "property_id": int,
@@ -2231,14 +1649,10 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
         for i in range(len(adaptive_suggestion_df)):
             sub_process_dict_copy = sub_process_dict.copy()
             sub_process_dict_copy["property_id"] = int(customer_id)
-            # print(f"[DEBUG] Reprocessing adaptive_suggestion_df row {i} with Date {adaptive_suggestion_df.iloc[i, 0]} and Room Type {adaptive_suggestion_df.iloc[i, 5]}")
-            # sub_process_dict_copy["high_season_positive_multiplier_rate"] = 0
-            # sub_process_dict_copy["all_season_positive_multiplier_rate"] = 0
-            # sub_process_dict_copy["high_season_negative_multiplier_rate"] = 0
-            # sub_process_dict_copy["all_season_negative_multiplier_rate"] = 0
 
-            if adaptive_suggestion_df.iloc[i, 0] != "" and adaptive_suggestion_df.iloc[i, 0] > datetime.now() + timedelta(days=30):
-                sub_process_dict_copy["forecast_date"] = adaptive_suggestion_df.iloc[i, 0].strftime("%Y-%m-%d %H:%M:%S")
+            date_val = adaptive_suggestion_df.iloc[i, 0]
+            if pd.notna(date_val) and str(date_val) != "":
+                sub_process_dict_copy["forecast_date"] = pd.to_datetime(date_val).strftime("%Y-%m-%d %H:%M:%S")
             else:
                 continue
 
@@ -2246,50 +1660,27 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
                 # print(f"[DEBUG] Room type available, processing with room type {adaptive_suggestion_df.iloc[i, 5]}")
                 sub_process_dict_copy["room_type_id"] = int(adaptive_suggestion_df.iloc[i, 5])
                 sub_process_dict_copy["forecasted_price"] = int(adaptive_suggestion_df.iloc[i, 1])
-                # sub_process_dict_copy["room_type_name"] = adaptive_suggestion_df.iloc[i, 6]
 
                 if adaptive_suggestion_df.iloc[i, 4] == "surge":
-                    # sub_process_dict_copy["high_season_positive_multiplier_rate"] = adaptive_suggestion_df.iloc[i, 3]
                     sub_process_dict_copy["corrected_price"] = adaptive_suggestion_df.iloc[i, 2]
                 elif adaptive_suggestion_df.iloc[i, 4] == "mild_increase":
-                    # sub_process_dict_copy["all_season_positive_multiplier_rate"] = adaptive_suggestion_df.iloc[i, 3]
                     sub_process_dict_copy["corrected_price"] = adaptive_suggestion_df.iloc[i, 2]
                 elif adaptive_suggestion_df.iloc[i, 4] == "mild_drop":
-                    # sub_process_dict_copy["all_season_negative_multiplier_rate"] = adaptive_suggestion_df.iloc[i, 3]
                     sub_process_dict_copy["corrected_price"] = adaptive_suggestion_df.iloc[i, 2]
                 elif adaptive_suggestion_df.iloc[i, 4] == "drop_demand":
-                    # sub_process_dict_copy["high_season_negative_multiplier_rate"] = adaptive_suggestion_df.iloc[i, 3]
                     sub_process_dict_copy["corrected_price"] = adaptive_suggestion_df.iloc[i, 2]
                 else:
                     sub_process_dict_copy["corrected_price"] = adaptive_suggestion_df.iloc[i, 2]
 
                 presentation_charts["forecasts"].append(sub_process_dict_copy)
             else:
-                # TODO: AMBIL NILAI MINIMUM SAJA
                 print(f"Checking if date : {adaptive_suggestion_df.iloc[i, 0]} already on the list or not")
                 sub_process_dict_copy["room_type_id"] = 0
                 if adaptive_suggestion_df.iloc[i, 0] not in date_bin_checker:
-                    # print("Okay no such date, processing data...")
-                    # print(f"[DEBUG] Room type not available, aggregating data for date {adaptive_suggestion_df.iloc[i, 0]}")
                     # Uh oh we don't have exact room_type so we will aggregate all room type based on the same date, and set max, min and median prices
                     aggregate_data_tempo = adaptive_suggestion_df.loc[(adaptive_suggestion_df["Date"] == adaptive_suggestion_df.iloc[i, 0]), :]
                     sub_process_dict_copy["corrected_price"] = aggregate_data_tempo["Recommended Price"].min()
                     sub_process_dict_copy["forecasted_price"] = aggregate_data_tempo["Price Baseline"].min()
-                    # max_price_adaptive = aggregate_data_tempo["Recommended Price"].max()
-                    # min_price_adaptive = aggregate_data_tempo["Recommended Price"].min()
-                    # median_price_adaptive = aggregate_data_tempo["Recommended Price"].median()
-
-                    # _highpos_rate_change_max = aggregate_data_tempo.loc[aggregate_data_tempo["Remarks"] == "surge", "Rate Change"].max()
-                    # _allpos_rate_change_max = aggregate_data_tempo.loc[aggregate_data_tempo["Remarks"] == "mild_increase", "Rate Change"].max()
-                    # _highneg_rate_change_max = aggregate_data_tempo.loc[aggregate_data_tempo["Remarks"] == "drop_demand", "Rate Change"].min()
-                    # _allneg_rate_change_max = aggregate_data_tempo.loc[aggregate_data_tempo["Remarks"] == "mild_drop", "Rate Change"].min()
-                    # sub_process_dict_copy["all_room_types_max_forecasted_price"] = max_price_adaptive
-                    # sub_process_dict_copy["all_room_types_min_forecasted_price"] = min_price_adaptive
-                    # sub_process_dict_copy["all_room_types_median_forecasted_price"] = median_price_adaptive
-                    # sub_process_dict_copy["high_season_positive_multiplier_rate"] = _highpos_rate_change_max if not np.isnan(_highpos_rate_change_max) else 0
-                    # sub_process_dict_copy["all_season_positive_multiplier_rate"] = _allpos_rate_change_max if not np.isnan(_allpos_rate_change_max) else 0
-                    # sub_process_dict_copy["high_season_negative_multiplier_rate"] = _highneg_rate_change_max if not np.isnan(_highneg_rate_change_max) else 0
-                    # sub_process_dict_copy["all_season_negative_multiplier_rate"] = _allneg_rate_change_max if not np.isnan(_allneg_rate_change_max) else 0
                     date_bin_checker.append(adaptive_suggestion_df.iloc[i, 0])
                     presentation_charts["forecasts"].append(sub_process_dict_copy)
                 else:
@@ -2298,15 +1689,7 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
     else:
         print("No data in content_data to reprocess for adaptive suggestion charts.")
     
-    # print(f"type of presentation_chart Date : {type(presentation_charts["forecasts"][0]["forecast_date"])}")
-    # print(f"type of room_type_id : {type(presentation_charts["forecasts"][0]["room_type_id"])}")
-    # print(f"type of forecasted_price : {type(presentation_charts["forecasts"][0]["forecasted_price"])}")
-    # print(f"type of high_season_positive_multiplier_rate : {type(presentation_charts["forecasts"][0]["high_season_positive_multiplier_rate"])}")
-    # print(f"type of all_season_positive_multiplier_rate : {type(presentation_charts["forecasts"][0]["all_season_positive_multiplier_rate"])}")
-    # print(f"type of high_season_negative_multiplier_rate : {type(presentation_charts["forecasts"][0]["high_season_negative_multiplier_rate"])}")
-    # print(f"type of all_season_negative_multiplier_rate : {type(presentation_charts["forecasts"][0]["all_season_negative_multiplier_rate"])}")
-    print("B section")
-    chartjs_to_endpoint(presentation_charts, customer_id)
+    data_to_endpoint(presentation_charts, customer_id)
     os.makedirs(FOLDER_PATH_SUGGESTION, exist_ok=True)
     full_path_suggestions = os.path.join(FOLDER_PATH_SUGGESTION, f"suggestion_containers_{customer_id}.pkl")  
     with open(full_path_suggestions, "wb") as f:
@@ -2326,23 +1709,23 @@ def adaptive_calculation(joblib_id, customer_id, df_input, currency_id, room_typ
 def adaptive_algorithm():
     try:
         print("DEBUG: inference session STARTED")
-        customer_id, job_id, room_number = load_id()
-        # required_constants = load_constant(customer_id)
+        customer_id, room_number = load_id()
         df = fetch_json_from_api(CURR_DIR)
+        if isinstance(df, str):
+            return JSONResponse({"error": df}, status_code=400)
         print("Combined dataframe shape:", df.shape)
         if df.empty:
             return JSONResponse({"error": "No JSON files found"}, status_code=404)
         print("Combined dataframe shape:", df.shape)
-        df, currency_info = preprocess_df(df)
+        df = preprocess_df(df)
         print("After preprocess shape:", df.shape)
         if "room_type_id" in df.columns:
             room_type_avail = True
         else:        
             room_type_avail = False
 
-        prediction_sequence(df, customer_id, job_id, total_room=room_number, room_type_avail=room_type_avail, 
-                            currency_info=currency_info, constants_list=None)
-        adaptive_calculation(job_id, customer_id, df, currency_info, room_type_avail=room_type_avail)
+        prediction_sequence(df, customer_id, total_room=room_number, room_type_avail=room_type_avail, constants_list=None)
+        adaptive_calculation(customer_id, df, room_type_avail=room_type_avail)
         print("Process Finished, may add dictionaries of details in the future")
         file_path = ["inference_mat.json", "cust_request.json", "total_room.txt"]  # Replace with the actual file path
         for i in file_path:

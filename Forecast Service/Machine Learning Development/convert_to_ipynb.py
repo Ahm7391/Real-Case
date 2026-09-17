@@ -7,7 +7,6 @@ def convert(filename, out_filename):
         
     markers = [
         "MODEL ARCHITECTURE",
-        "XGBoost MODEL",
         "EXTRACTION AND LOADING FUNCTIONS",
         "ALGORITHMS AND HELPER FUNCTIONS",
         "OPTUNA HYPERPARAMETER ALGORITHM",

@@ -13,8 +13,8 @@ from adaptive_preproc_json import read_incoming_data, fetch_data_bak, FetchReque
 from adaptive_algorithm import adaptive_algorithm
 
 import time
-import fcntl  # LINUX ONLY (Uncomment for Linux/production)
-# import msvcrt   # WINDOWS ONLY (Comment out before pushing to Linux/production)
+# import fcntl  # LINUX ONLY (Uncomment for Linux/production)
+import msvcrt   # WINDOWS ONLY (Comment out before pushing to Linux/production)
 import uuid
 
 CURR_FILE = os.path.abspath(__file__)
@@ -24,10 +24,6 @@ LOCK_FILE = "analytics_pipeline.lock"
 app = FastAPI(title="Adaptive Pricing Demonstration")
 load_dotenv()
 jobs = {}
-
-RECEIVE_COMPANY_API_KEY = os.getenv("PREDICTIVE_AUTH_API_KEY")
-CUSTOMERS_LIST = os.getenv("TOTAL_ROOM_NUMBER_URL")
-API_KEY = os.getenv("TOKEN_SERVER")
 
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)
@@ -48,48 +44,48 @@ def error_logger(error_msg, customer_id=None):
 # LINUX LOCKING MECHANISM (Uncomment when deploying/pushing to Linux)
 # ==============================================================================
 
-def acquire_lock():
-    fd = open(LOCK_FILE, "w")
-    try:
-        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        return fd
-    except BlockingIOError as e:
-        fd.close()
-        error_summary = f"{type(e).__name__}: {e}"
-        error_logger(error_summary)
-        return None
-
-def release_lock(fd):
-    try:
-        fcntl.flock(fd, fcntl.LOCK_UN)
-    finally:
-        fd.close()
-# ==============================================================================
-# WINDOWS LOCKING MECHANISM (Active for Windows local testing)
-# ==============================================================================
 # def acquire_lock():
+#     fd = open(LOCK_FILE, "w")
 #     try:
-#         fd = open(LOCK_FILE, "w")
-#         msvcrt.locking(fd.fileno(), msvcrt.LK_NBLCK, 1)
+#         fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
 #         return fd
-#     except (IOError, OSError) as e:
-#         if 'fd' in locals() and not fd.closed:
-#             fd.close()
+#     except BlockingIOError as e:
+#         fd.close()
 #         error_summary = f"{type(e).__name__}: {e}"
 #         error_logger(error_summary)
 #         return None
 
 # def release_lock(fd):
 #     try:
-#         if fd and not fd.closed:
-#             fd.seek(0)
-#             msvcrt.locking(fd.fileno(), msvcrt.LK_UNLCK, 1)
-#     except (IOError, OSError) as e:
-#         error_summary = f"{type(e).__name__}: {e}"
-#         error_logger(error_summary)
+#         fcntl.flock(fd, fcntl.LOCK_UN)
 #     finally:
-#         if fd and not fd.closed:
-#             fd.close()
+#         fd.close()
+# ==============================================================================
+# WINDOWS LOCKING MECHANISM (Active for Windows local testing)
+# ==============================================================================
+def acquire_lock():
+    try:
+        fd = open(LOCK_FILE, "w")
+        msvcrt.locking(fd.fileno(), msvcrt.LK_NBLCK, 1)
+        return fd
+    except (IOError, OSError) as e:
+        if 'fd' in locals() and not fd.closed:
+            fd.close()
+        error_summary = f"{type(e).__name__}: {e}"
+        error_logger(error_summary)
+        return None
+
+def release_lock(fd):
+    try:
+        if fd and not fd.closed:
+            fd.seek(0)
+            msvcrt.locking(fd.fileno(), msvcrt.LK_UNLCK, 1)
+    except (IOError, OSError) as e:
+        error_summary = f"{type(e).__name__}: {e}"
+        error_logger(error_summary)
+    finally:
+        if fd and not fd.closed:
+            fd.close()
 
 def generate_tag_id(random_length=4):
     timestamp = datetime.now(ZoneInfo("Asia/Makassar")).strftime("%Y%m%d%H%M")

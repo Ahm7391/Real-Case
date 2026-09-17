@@ -18,8 +18,12 @@ import requests
 # ==============================================================================
 CUSTOMER_ID = 1
 TOTAL_ROOMS = 10
-START_DATE = date(2024, 1, 1)
-END_DATE = date(2025, 1, 1)
+END_DATE = date.today() - timedelta(days=1)
+try:
+    START_DATE = END_DATE.replace(year=END_DATE.year - 2)
+except ValueError:
+    START_DATE = END_DATE.replace(year=END_DATE.year - 2, day=28)
+
 
 # Laravel API endpoint (Change port or path as needed)
 LARAVEL_API_URL = "http://localhost:8000/api/dummy-bookings"
