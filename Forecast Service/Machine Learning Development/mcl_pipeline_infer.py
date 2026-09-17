@@ -10,7 +10,9 @@ from dotenv import load_dotenv
 from preproc_json import read_incoming_data, fetch_data_bak, FetchRequest
 from prediction_master import inference_pipeline
 
-import time, fcntl
+import time
+# import fcntl
+import msvcrt
 import uuid
 
 CURR_FILE = os.path.abspath(__file__)
@@ -22,8 +24,6 @@ app = FastAPI(title="Ecommerce Machine Learning Section")
 load_dotenv()
 jobs = {}
 
-RECEIVE_COMPANY_API_KEY = os.getenv("PREDICTIVE_AUTH_API_KEY")
-
 def error_logger(error_msg, customer_id=None):
     datetime_format_save = datetime.datetime.now(ZoneInfo('Asia/Makassar')).strftime('%Y-%m-%d')
     with open(f"runtime_error_logger_{datetime_format_save}.txt", 'a') as f:
@@ -34,22 +34,52 @@ def error_logger(error_msg, customer_id=None):
         if customer_id:
             f.write(f"Customer id is : {customer_id}")
 
+# ==============================================================================
+# LINUX LOCKING MECHANISM (Uncomment when deploying/pushing to Linux)
+# ==============================================================================
+
+# def acquire_lock():
+#     fd = open(LOCK_FILE, "w")
+#     try:
+#         fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+#         return fd
+#     except BlockingIOError as e:
+#         fd.close()
+#         error_summary = f"{type(e).__name__}: {e}"
+#         error_logger(error_summary)
+#         return None
+
+# def release_lock(fd):
+#     try:
+#         fcntl.flock(fd, fcntl.LOCK_UN)
+#     finally:
+#         fd.close()
+# ==============================================================================
+# WINDOWS LOCKING MECHANISM (Active for Windows local testing)
+# ==============================================================================
 def acquire_lock():
-    fd = open(LOCK_FILE, "w")
     try:
-        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        fd = open(LOCK_FILE, "w")
+        msvcrt.locking(fd.fileno(), msvcrt.LK_NBLCK, 1)
         return fd
-    except BlockingIOError as e:
-        fd.close()
+    except (IOError, OSError) as e:
+        if 'fd' in locals() and not fd.closed:
+            fd.close()
         error_summary = f"{type(e).__name__}: {e}"
         error_logger(error_summary)
         return None
 
 def release_lock(fd):
     try:
-        fcntl.flock(fd, fcntl.LOCK_UN)
+        if fd and not fd.closed:
+            fd.seek(0)
+            msvcrt.locking(fd.fileno(), msvcrt.LK_UNLCK, 1)
+    except (IOError, OSError) as e:
+        error_summary = f"{type(e).__name__}: {e}"
+        error_logger(error_summary)
     finally:
-        fd.close()
+        if fd and not fd.closed:
+            fd.close()
 
 def generate_tag_id(random_length=4):
     timestamp = datetime.datetime.now(ZoneInfo("Asia/Makassar")).strftime("%Y%m%d%H%M")
@@ -65,31 +95,15 @@ def update_job_status(job_id: str, status_code: int, message: str, customer_id: 
         "status_message": message
     }
 
-def receive_checkpoint():
-    checkpoint_path = os.path.join(FOLDER_PATH_CP, "checkpoint_details.txt")
-    if os.path.exists(checkpoint_path):
-        print("Checkpoint details found!")
-        with open(checkpoint_path, "r") as f:
-            first_line = f.readline().strip()
-            customer_id = int(first_line)
-            print(f"customer id to be processed is : {customer_id}")
-        return customer_id
-    else:
-        raise RuntimeError("FATAL ERROR: NO DATA AVAILABLE, PERHAPS NEED UPDATE FIRST BY ADAPTIVE PIPELINE.")
-
-def data_onboarding(key_id, cust_id, predict_days, job_sched=None):
+def data_onboarding(key_id, cust_id, job_sched=None):
     try:
         # if predict_days >= 31:
         #     raise HTTPException(status_code=400, detail="Prediction days only limitied up to 31 days.")
         
         if job_sched == 1:
             payload = {
-                "customer_id":cust_id,
-                "predict_days":predict_days
+                "customer_id":cust_id
             }
-            # payload = json.dumps(payload, indent=4)
-            # except Exception:
-            #     raise HTTPException(status_code=400, detail="Invalid JSON format")
 
             if not isinstance(payload, dict):
                 raise HTTPException(status_code=400, detail="Payload must be a JSON object")
@@ -150,15 +164,8 @@ def enqueue_and_run_analytics(job_ident, payload):
     job_id = f"{time.time_ns()}_{uuid.uuid4().hex}.job"
     job_path = os.path.join(QUEUE_DIR, job_id)
 
-    # job_payload = {
-    #     "customer_id": payload.customer_id,
-    #     "predict_days": payload.predict_days,
-    #     "job_id": job_ident
-    # }
-
     job_payload = {
         "customer_id": payload,
-        "predict_days": 30,
         "job_id": job_ident
     }
 
@@ -183,72 +190,21 @@ def enqueue_and_run_analytics(job_ident, payload):
                 job_payload = json.load(f)
 
             os.remove(job_path)
-            data_onboarding(job_payload["job_id"], job_payload["customer_id"], 
-                            job_payload["predict_days"], job_sched=1)
+            data_onboarding(job_payload["job_id"], job_payload["customer_id"], job_sched=1)
             main_sequence()
     finally:
         release_lock(lock_fd)
 
-# class MaintenanceReq(BaseModel):
-#     # Konsepnya, untuk mengurangi jamming pada traffic server, pengambilan data untuk training
-#     # tidak dapat dilakukan sekaligus, sehingga diciptakan 2 mode, mode pertama untuk menarik JSON 
-#     # per properti saja berdasarkan rentang tanggal, mode kedua baru mengaktifkan script training sesungguhnya
-#     # Mode 1 collect all data and stores JSON files
-#     # Mode 2 start training
-#     mode : int
-#     customer_name : str | None = None
-#     start_dt : str | None = None
-#     end_dt : str | None = None
 
-
-# @app.post("/training-step")
-# def training_step(request: MaintenanceReq,
-#                   background_tasks: BackgroundTasks):
-#     try:
-#         if request.mode == 1:
-#             aggregator_data(request.customer_name, request.start_dt, request.end_dt)
-#         elif request.mode == 2:
-#             background_tasks.add_task(training_pipeline)
-#         else:
-#             print("Mode number is not between 1 and 2.")
-#             raise HTTPException(status_code=500, detail="Mode number out of range.")
-        
-#         return {
-#             "status": 2,
-#             "message":"Instructions Received, VPS is processing now, you can disconnect."
-#         }
-
-#     except Exception as e:
-#         error_summary = f"{type(e).__name__}: {e}"
-#         print(f"[ERROR] due to: {error_summary}")
-
-@app.post("/predict-step")
-# async def predict_step(request: InferenceReq, 
-#                        background_tasks : BackgroundTasks,
-#                        x_api_key: str = Header(None)):
-# async def predict_step():
 def predict_step():
-    # Generate a unique Job ID
     jobID = generate_tag_id()
-    # print("Incoming Headers:", dict(request.headers))
-    # if not x_api_key or x_api_key != RECEIVE_COMPANY_API_KEY:
-    #     raise HTTPException(
-    #         status_code=401,
-    #         detail={
-    #             "key_id": jobID,
-    #             "customer_id": "",
-    #             "datetime_request": datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
-    #             "status_code": 3,
-    #             "status_message": "Invalid or missing API key. Please provide a valid X-API-KEY header."
-    #         }
-    #     )
 
     try:
-        customer_tbp = receive_checkpoint()
+        customer_tbp = 1
         # Step 1: Handle onboarding (blocking)
         # onboarding_result = data_onboarding(jobID, request.customer_id, 
         #                                     request.predict_days, job_sched=0)
-        onboarding_result = data_onboarding(jobID, customer_tbp, predict_days=28, job_sched=0)
+        onboarding_result = data_onboarding(jobID, customer_tbp, job_sched=0)
         # background_tasks.add_task(data_onboarding, jobID, request.customer_id, request.customer_name)
         # Step 2: Schedule `main_sequence` to run in the background
         # background_tasks.add_task(main_sequence)

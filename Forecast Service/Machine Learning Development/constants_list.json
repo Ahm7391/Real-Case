@@ -15,7 +15,7 @@
         "corr_constant": [1e-2, -5e-4, 0, -1e-3, 0, 0.08]
     },
     "reserved_for_test": {
-        "total_room":100,
+        "total_room":15,
         "avail_percentage":100,
         "corr_constant":[0, 0, 0, 0, 0]
     }
