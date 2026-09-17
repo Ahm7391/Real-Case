@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Dummy Booking Generator and Seeder for Laravel Microservice.
+Dummy Booking Generator and Seeder for Laravel Microservice with Future Demand Simulation.
 
-Generates realistic hotel booking data for customer_id = 1 from 2024-01-01 to 2025-01-01
-under a strict 10-room capacity constraint, then injects data into Laravel via REST API.
+Generates realistic historical hotel booking data + 180-day forward advance bookings for customer_id = 1,
+under a strict TOTAL_ROOMS capacity constraint. Simulates high-demand surge dates and low-demand drop dates
+to demonstrate dynamic pricing and Multi-Armed Bandit (MAB) adaptive capabilities.
 """
 
 from collections import defaultdict
@@ -18,12 +19,13 @@ import requests
 # ==============================================================================
 CUSTOMER_ID = 1
 TOTAL_ROOMS = 10
-END_DATE = date.today() - timedelta(days=1)
-try:
-    START_DATE = END_DATE.replace(year=END_DATE.year - 2)
-except ValueError:
-    START_DATE = END_DATE.replace(year=END_DATE.year - 2, day=28)
+TODAY = date.today()
 
+# Historical range (1 year back)
+HISTORICAL_START = TODAY - timedelta(days=365)
+
+# Forward prediction / simulation horizon (180 days forward)
+FORWARD_DAYS = 180
 
 # Laravel API endpoint (Change port or path as needed)
 LARAVEL_API_URL = "http://localhost:8000/api/dummy-bookings"
@@ -44,11 +46,11 @@ def sample_lead_time_days() -> int:
 
 def sample_stay_days() -> int:
     """
-    Stay duration: 1 to 10 days, median around 3 days.
+    Stay duration: 1 to 5 days, median around 2 days.
     Modeled using a log-normal distribution.
     """
-    val = np.random.lognormal(mean=np.log(3), sigma=0.5)
-    return int(np.clip(round(val), 1, 10))
+    val = np.random.lognormal(mean=np.log(2), sigma=0.5)
+    return int(np.clip(round(val), 1, 5))
 
 
 def sample_ota() -> int:
@@ -112,24 +114,36 @@ def sample_price_per_night(room_type_id: int) -> int:
 
 
 # ==============================================================================
-# DATA GENERATION WITH OCCUPANCY CONSTRAINT
+# DATA GENERATION WITH OCCUPANCY CONSTRAINT & DEMAND PATTERNS
 # ==============================================================================
 def generate_bookings() -> list[dict]:
     """
-    Iterates through each booking day from START_DATE to END_DATE.
-    Simulates incoming booking requests while respecting the max room limit.
+    Generates:
+    1. 1-year historical bookings up to yesterday.
+    2. 180-day forward advance bookings with 5-6 random Surge Dates and 5-6 Low-demand Dates,
+       strictly adhering to the TOTAL_ROOMS (10 rooms) capacity limit.
     """
-    # Track occupied rooms per calendar date: {date: occupied_rooms_count}
     occupancy = defaultdict(int)
     bookings = []
 
-    current_booking_day = START_DATE
-    total_days = (END_DATE - START_DATE).days + 1
+    # 1. Randomly designate 6 Surge Dates and 6 Low-Demand Dates in the forward 180 days
+    forward_date_pool = [TODAY + timedelta(days=d) for d in range(10, FORWARD_DAYS - 5)]
+    surge_dates = set(random.sample(forward_date_pool, k=6))
+    
+    remaining_pool = [d for d in forward_date_pool if d not in surge_dates]
+    low_demand_dates = set(random.sample(remaining_pool, k=6))
 
-    print(f"[*] Simulating bookings for {total_days} days (Max {TOTAL_ROOMS} rooms)...")
+    print(f"[*] Simulating bookings: 365 historical days + {FORWARD_DAYS} forward days (Max {TOTAL_ROOMS} rooms)...")
+    print(f"[*] Selected High Demand / Surge Dates (Check-in Spikes):")
+    for d in sorted(surge_dates):
+        print(f"    - {d.strftime('%Y-%m-%d')} (Day +{(d - TODAY).days})")
+    print(f"[*] Selected Low Demand Dates (Check-in Drops):")
+    for d in sorted(low_demand_dates):
+        print(f"    - {d.strftime('%Y-%m-%d')} (Day +{(d - TODAY).days})")
 
-    while current_booking_day <= END_DATE:
-        # Simulate 1 to 4 customer booking attempts per day
+    # 2. Historical Booking Simulation (HISTORICAL_START to Yesterday)
+    current_booking_day = HISTORICAL_START
+    while current_booking_day < TODAY:
         daily_attempts = random.randint(1, 4)
 
         for _ in range(daily_attempts):
@@ -139,23 +153,17 @@ def generate_bookings() -> list[dict]:
             check_in_date = current_booking_day + timedelta(days=lead_time)
             check_out_date = check_in_date + timedelta(days=stay_days)
 
-            # Check if all nights of the stay have an available room (< TOTAL_ROOMS)
-            stay_nights = [
-                check_in_date + timedelta(days=d) for d in range(stay_days)
-            ]
+            stay_nights = [check_in_date + timedelta(days=d) for d in range(stay_days)]
             can_book = all(occupancy[night] < TOTAL_ROOMS for night in stay_nights)
 
             if can_book:
-                # Reserve room for each night of the stay
                 for night in stay_nights:
                     occupancy[night] += 1
 
-                # Sample room type and calculate monetary details
                 room_type_id = sample_room_type()
                 price_per_night = sample_price_per_night(room_type_id)
                 net_amount_stay = price_per_night * stay_days
 
-                # Generate realistic timestamps (check-in at 14:00, check-out at 12:00)
                 random_booking_time = time(
                     random.randint(8, 22), random.randint(0, 59), random.randint(0, 59)
                 )
@@ -183,7 +191,65 @@ def generate_bookings() -> list[dict]:
 
         current_booking_day += timedelta(days=1)
 
-    print(f"Generated {len(bookings)} valid bookings without overbooking.")
+    # 3. Forward Advance Booking Simulation (Check-in from TODAY + 1 to TODAY + FORWARD_DAYS)
+    for forward_idx in range(1, FORWARD_DAYS + 1):
+        target_checkin = TODAY + timedelta(days=forward_idx)
+
+        if target_checkin in low_demand_dates:
+            # Drop Demand: 0 booking attempts
+            daily_attempts = 0
+        elif target_checkin in surge_dates:
+            # High Surge Demand: Multiple attempts trying to fill 8-10 rooms
+            daily_attempts = random.randint(8, 14)
+        else:
+            # Standard baseline advance bookings (0-2 attempts per forward day)
+            daily_attempts = random.choices([0, 1, 2], weights=[0.45, 0.40, 0.15])[0]
+
+        for _ in range(daily_attempts):
+            stay_days = random.randint(1, 3)
+            check_in_date = target_checkin
+            check_out_date = check_in_date + timedelta(days=stay_days)
+
+            # Advance booking created within the recent 1 to 14 days
+            booked_on_day = TODAY - timedelta(days=random.randint(1, 14))
+
+            stay_nights = [check_in_date + timedelta(days=d) for d in range(stay_days)]
+            can_book = all(occupancy[night] < TOTAL_ROOMS for night in stay_nights)
+
+            if can_book:
+                for night in stay_nights:
+                    occupancy[night] += 1
+
+                room_type_id = sample_room_type()
+                price_per_night = sample_price_per_night(room_type_id)
+                net_amount_stay = price_per_night * stay_days
+
+                random_booking_time = time(
+                    random.randint(8, 22), random.randint(0, 59), random.randint(0, 59)
+                )
+                booking_timestamp = datetime.combine(
+                    booked_on_day, random_booking_time
+                ).isoformat()
+                check_in_timestamp = datetime.combine(
+                    check_in_date, time(14, 0, 0)
+                ).isoformat()
+                check_out_timestamp = datetime.combine(
+                    check_out_date, time(12, 0, 0)
+                ).isoformat()
+
+                record = {
+                    "customer_id": CUSTOMER_ID,
+                    "booking_date": booking_timestamp,
+                    "check_in": check_in_timestamp,
+                    "check_out": check_out_timestamp,
+                    "net_amount_stay": net_amount_stay,
+                    "ota": sample_ota(),
+                    "is_confirmed": "True",
+                    "room_type_id": room_type_id,
+                }
+                bookings.append(record)
+
+    print(f"\n[*] Total generated bookings: {len(bookings)} valid entries without overbooking.")
     return bookings
 
 
@@ -220,7 +286,7 @@ def send_to_laravel(bookings: list[dict], endpoint: str = LARAVEL_API_URL):
             print("Make sure your Laravel server is up (e.g., 'php artisan serve').")
             return
 
-    print(f"\n Finished: Successfully seeded {success_count}/{total_records} records into Laravel.")
+    print(f"\n[*] Finished: Successfully seeded {success_count}/{total_records} records into Laravel.")
 
 
 # ==============================================================================
