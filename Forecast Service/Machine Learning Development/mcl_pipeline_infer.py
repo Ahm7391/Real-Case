@@ -1,6 +1,6 @@
 import datetime
 import random
-import string, json, subprocess, sys
+import string, json, subprocess, sys, requests
 import os
 
 from fastapi import FastAPI, HTTPException, BackgroundTasks, Header, Request
@@ -22,7 +22,31 @@ FOLDER_PATH_CP = os.path.join(CURR_DIR, "Checkpoint")
 
 app = FastAPI(title="Ecommerce Machine Learning Section")
 load_dotenv()
+API_KEY = os.getenv("TOKEN_SERVER")
+PREDICTION_PROGRESS_URL = os.getenv("PREDICTION_PROGRESS_URL", "http://localhost:8000/api/prediction-progress")
 jobs = {}
+
+def report_progress(job_id: str, customer_id: int, progress_percent: int, stage_name: str, message: str, status: str = "running"):
+    """
+    Sends pipeline progress status to Laravel backend endpoint (prediction_progress).
+    """
+    payload = {
+        "job_id": str(job_id),
+        "customer_id": int(customer_id) if customer_id else None,
+        "progress_percent": int(progress_percent),
+        "stage_name": stage_name,
+        "message": message,
+        "status": status,
+    }
+    try:
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {API_KEY}" if API_KEY else ""
+        }
+        response = requests.post(PREDICTION_PROGRESS_URL, json=payload, headers=headers, timeout=5)
+        print(f"[PROGRESS {progress_percent}%] {stage_name}: {message} (Status: {response.status_code})")
+    except Exception as e:
+        print(f"[PROGRESS WARNING] Could not report progress ({progress_percent}%): {e}")
 
 def error_logger(error_msg, customer_id=None):
     datetime_format_save = datetime.datetime.now(ZoneInfo('Asia/Makassar')).strftime('%Y-%m-%d')
@@ -191,6 +215,17 @@ def enqueue_and_run_analytics(job_ident, payload):
 
             os.remove(job_path)
             data_onboarding(job_payload["job_id"], job_payload["customer_id"], job_sched=1)
+
+            # Milestone: Prediction data onboarding completed (52% progress)
+            report_progress(
+                job_id=job_payload["job_id"],
+                customer_id=job_payload["customer_id"],
+                progress_percent=52,
+                stage_name="prediction_onboarding_completed",
+                message="Prediction data onboarding completed. Starting ML prediction sequence...",
+                status="running"
+            )
+
             main_sequence()
     finally:
         release_lock(lock_fd)

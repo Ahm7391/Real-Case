@@ -145,7 +145,7 @@ model.compile(optimizer=tf.keras.optimizers.Adam(1e-3),
 ############----------------EXTRACTION AND LOADING FUNCTIONS----------------------------#######
 ###############################################################################################
 @task
-def data_to_endpoint(data, customer_id, error_msg=None, use_company_api=False):
+def data_to_endpoint(data, customer_id, error_msg=None, use_company_api=True):
     try:
         if use_company_api:
             url = COMPANY_API_URL

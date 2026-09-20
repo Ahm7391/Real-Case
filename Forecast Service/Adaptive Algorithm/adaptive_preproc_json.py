@@ -15,6 +15,8 @@ load_dotenv()
 TRAINING_BUFFER_FILE = "training_mat.json"
 INFERENCE_BUFFER_FILE = "inference_mat.json"
 API_ENDPOINT = "http://localhost:8000/api/forecast-demo"
+API_KEY = os.getenv("TOKEN_SERVER")
+PREDICTION_PROGRESS_URL = os.getenv("PREDICTION_PROGRESS_URL", "http://127.0.0.1:8000/api/prediction-progress")
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)
 FOLDER_PATH_COMPRATE = os.path.join(CURR_DIR, "Comprate")
@@ -27,6 +29,28 @@ app = FastAPI(title='VPS Data Receiver')
 @app.get("/")
 def root():
     return {"message": "VPS API is running and ready to receive data"}
+
+def report_progress(job_id: str, customer_id: int, progress_percent: int, stage_name: str, message: str, status: str = "running"):
+    """
+    Sends pipeline progress status to Laravel backend endpoint (prediction_progress).
+    """
+    payload = {
+        "job_id": str(job_id),
+        "customer_id": int(customer_id) if customer_id else None,
+        "progress_percent": int(progress_percent),
+        "stage_name": stage_name,
+        "message": message,
+        "status": status,
+    }
+    try:
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {API_KEY}" if API_KEY else ""
+        }
+        response = requests.post(PREDICTION_PROGRESS_URL, json=payload, headers=headers, timeout=5)
+        print(f"[PROGRESS {progress_percent}%] {stage_name}: {message} (Status: {response.status_code})")
+    except Exception as e:
+        print(f"[PROGRESS WARNING] Could not report progress ({progress_percent}%): {e}")
 
 def error_logger(error_msg, customer_id=None):
     datetime_format_save = datetime.now(ZoneInfo('Asia/Makassar')).strftime('%Y-%m-%d')
@@ -69,6 +93,20 @@ def buffer_data(data):
     with open(INFERENCE_BUFFER_FILE, "w") as f:
         json.dump(data, f, indent=4)
     print(f"Response buffered to {INFERENCE_BUFFER_FILE}")
+
+    # Milestone 2: Data successfully aggregated into inference buffer (15% progress)
+    req_info = load_id()
+    if req_info:
+        job_id = req_info.get("job_identification", "")
+        cust_id = req_info.get("data", {}).get("customer_id")
+        report_progress(
+            job_id=job_id,
+            customer_id=cust_id,
+            progress_percent=15,
+            stage_name="adaptive_data_buffered",
+            message="Historical booking data successfully fetched and aggregated.",
+            status="running"
+        )
 
 def chunk_date_range(start_date: datetime, end_date: datetime, max_days: int = MAX_DAYS_PER_REQUEST):
     chunks = []
