@@ -40,7 +40,9 @@ warnings.filterwarnings("ignore", category=pd.errors.SettingWithCopyWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 load_dotenv()
+API_KEY = os.getenv("TOKEN_SERVER")
 PREDICTIVE_DATA_HOOK_URL = "http://localhost:8000/api/prediction-result"
+PREDICTION_PROGRESS_URL = os.getenv("PREDICTION_PROGRESS_URL", "http://localhost:8000/api/prediction-progress")
 WEBHOOK_URL = "https://2f68b6cd-a59f-4429-af46-00f19a73248e.mock.pstmn.io/webhook"
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)
@@ -54,6 +56,28 @@ FOLDER_PATH_RESULTS = os.path.join(MAIN_FILE, "Machine Learning Development/Long
 FOLDER_PATH_DATABASE = os.path.join(MAIN_FILE, "EB-LM-Book/Routine-EB")
 FOLDER_PATH_WEIGHTS = os.path.join(CURR_DIR,"Weights")
 N_FEATURES = 1
+
+def report_progress(job_id: str, customer_id: int, progress_percent: int, stage_name: str, message: str, status: str = "running"):
+    """
+    Sends pipeline progress status to Laravel backend endpoint (prediction_progress).
+    """
+    payload = {
+        "job_id": str(job_id),
+        "customer_id": int(customer_id) if customer_id else None,
+        "progress_percent": int(progress_percent),
+        "stage_name": stage_name,
+        "message": message,
+        "status": status,
+    }
+    try:
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {API_KEY}" if API_KEY else ""
+        }
+        response = requests.post(PREDICTION_PROGRESS_URL, json=payload, headers=headers, timeout=5)
+        print(f"[PROGRESS {progress_percent}%] {stage_name}: {message} (Status: {response.status_code})")
+    except Exception as e:
+        print(f"[PROGRESS WARNING] Could not report progress ({progress_percent}%): {e}")
 
 # ====================================================================
 # GLOBAL FORECAST CONFIGURATION
@@ -235,9 +259,10 @@ def load_id():
             with open("cust_request.json", "r") as f:
                 data = json.load(f)
                 customer_id = data["data"]["customer_id"]
+                job_id = data.get("job_identification", "")
             total_room_number = 15
 
-            return customer_id, total_room_number
+            return customer_id, total_room_number, job_id
         except FileNotFoundError as e:
             print(f"[FILE NOT FOUND] Empty incoming data!")
             charts["result"] = [{
@@ -1709,7 +1734,7 @@ def adaptive_calculation(customer_id, df_input, room_type_avail):
 def adaptive_algorithm():
     try:
         print("DEBUG: inference session STARTED")
-        customer_id, room_number = load_id()
+        customer_id, room_number, job_id = load_id()
         df = fetch_json_from_api(CURR_DIR)
         if isinstance(df, str):
             return JSONResponse({"error": df}, status_code=400)
@@ -1723,9 +1748,41 @@ def adaptive_algorithm():
             room_type_avail = True
         else:        
             room_type_avail = False
+        
+        # [MILESTONE UPDATE] After Data Cleaning process finished progress should reach 25%
+        report_progress(
+            job_id=job_id,
+            customer_id=customer_id,
+            progress_percent=25,
+            stage_name="adaptive_data_cleaning_completed",
+            message="Data cleaning & preprocessing completed. Starting long-term prediction sequence...",
+            status="running"
+        )
 
         prediction_sequence(df, customer_id, total_room=room_number, room_type_avail=room_type_avail, constants_list=None)
+        
+        # [MILESTONE UPDATE] After Prediction Sequence finished progress should reach 35%
+        report_progress(
+            job_id=job_id,
+            customer_id=customer_id,
+            progress_percent=35,
+            stage_name="adaptive_prediction_sequence_completed",
+            message="Long-term prediction sequence completed. Calculating adaptive multipliers...",
+            status="running"
+        )
+
         adaptive_calculation(customer_id, df, room_type_avail=room_type_avail)
+        
+        # [MILESTONE UPDATE] After Adaptive Calculation finished progress should reach 50%
+        report_progress(
+            job_id=job_id,
+            customer_id=customer_id,
+            progress_percent=50,
+            stage_name="adaptive_calculation_completed",
+            message="Adaptive calculation completed. Adaptive pipeline finished (50%).",
+            status="running"
+        )
+
         print("Process Finished, may add dictionaries of details in the future")
         file_path = ["inference_mat.json", "cust_request.json", "total_room.txt"]  # Replace with the actual file path
         for i in file_path:
