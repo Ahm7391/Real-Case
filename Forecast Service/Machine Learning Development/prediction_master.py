@@ -64,6 +64,32 @@ STEP_AHEAD = 7     # predict 5 days at a time
 MAX_FUTURE = 30    # total prediction horizon
 ENC_SEQ_LEN = 14   # encoder input length
 N_FEATURES = 1
+
+API_KEY = os.getenv("TOKEN_SERVER")
+PREDICTION_PROGRESS_URL = "http://localhost:8000/api/prediction-progress"
+
+def report_progress(job_id: str, customer_id: int, progress_percent: int, stage_name: str, message: str, status: str = "running"):
+    """
+    Sends pipeline progress status to Laravel backend endpoint (prediction_progress).
+    """
+    payload = {
+        "job_id": str(job_id),
+        "customer_id": int(customer_id) if customer_id else None,
+        "progress_percent": int(progress_percent),
+        "stage_name": stage_name,
+        "message": message,
+        "status": status,
+    }
+    try:
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {API_KEY}" if API_KEY else ""
+        }
+        response = requests.post(PREDICTION_PROGRESS_URL, json=payload, headers=headers, timeout=5)
+        print(f"[PROGRESS {progress_percent}%] {stage_name}: {message} (Status: {response.status_code})")
+    except Exception as e:
+        print(f"[PROGRESS WARNING] Could not report progress ({progress_percent}%): {e}")
+
 # OVERIDE_DEBUG_STAGE = True
 # app = FastAPI()
 
@@ -196,9 +222,10 @@ def load_id():
             with open("cust_request.json", "r") as f:
                 data = json.load(f)
                 customer_id = data["data"]["customer_id"]
+                job_id = data.get("job_identification", "")
             total_room_number = 15
 
-            return customer_id, total_room_number
+            return customer_id, total_room_number, job_id
         except FileNotFoundError as e:
             print(f"[FILE NOT FOUND] Empty incoming data!")
             error_summary = f"{type(e).__name__}: {e}"
@@ -1071,7 +1098,7 @@ def prediction_sequence(df_input, cancellation_number,
     loaded_model = model
     # debug_model = model
     forecast_horizon = 7
-    customer_id_num, total_room = load_id() 
+    customer_id_num, total_room, job_id = load_id() 
     # customer_id_num, joblib_id, delta_days = load_id() 
     start_search = str(df_input['booking_date'].min())
     end_search = str(df_input['booking_date'].max())
@@ -1554,6 +1581,17 @@ def prediction_sequence(df_input, cancellation_number,
                     upper_sub_dat.append(sub_process_dict_copy)
             # Replace the original forecasts with the aggregated ones when room type is not available
             charts["result"]["forecasts"] = upper_sub_dat
+
+        # [MILESTONE UPDATE] Milestone 9: Model Inference Done (85% progress)
+        report_progress(
+            job_id=job_id,
+            customer_id=customer_id_num,
+            progress_percent=85,
+            stage_name="prediction_model_inference_completed",
+            message="Model inference and prediction post-processing completed. Packaging results...",
+            status="running"
+        )
+
         data_to_endpoint(charts["result"], customer_id_num)
         K.clear_session()
         for var_name in ['loaded_model', 'segment_n', 'sub_df', 'algo_df', 'ts', 'ts_monthly']:
@@ -1588,6 +1626,7 @@ def prediction_sequence(df_input, cancellation_number,
 @task
 def inference_pipeline():
     print("DEBUG: inference session STARTED")
+    customer_id, total_room, job_id = load_id()
     df = fetch_json_from_api(API_URLS)
     print("Combined dataframe shape:", df.shape)
     if df.empty:
@@ -1596,8 +1635,29 @@ def inference_pipeline():
     df, cancel_rate = preprocess_df(df)
     print("After preprocess shape:", df.shape)
 
+    # [MILESTONE UPDATE] Milestone 8: STL / Feature Prep Done (75% progress)
+    report_progress(
+        job_id=job_id,
+        customer_id=customer_id,
+        progress_percent=75,
+        stage_name="prediction_feature_prep_completed",
+        message="Data preprocessing and feature preparation completed. Starting model inference sequence...",
+        status="running"
+    )
+
     try:
         prediction_sequence(df, cancel_rate, correction_active=True)
+
+        # [MILESTONE UPDATE] Milestone 10: Pipeline Completed (100% progress)
+        report_progress(
+            job_id=job_id,
+            customer_id=customer_id,
+            progress_percent=100,
+            stage_name="prediction_pipeline_completed",
+            message="Forecasting and prediction pipeline completed successfully.",
+            status="completed"
+        )
+
         print("Process Finished, may add dictionaries of details in the future")
         file_path = ["inference_mat.json", "cust_request.json"]  # Replace with the actual file path
         for i in file_path:

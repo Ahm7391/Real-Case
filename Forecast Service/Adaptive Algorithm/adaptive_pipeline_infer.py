@@ -26,7 +26,7 @@ load_dotenv()
 jobs = {}
 
 API_KEY = os.getenv("TOKEN_SERVER")
-PREDICTION_PROGRESS_URL = os.getenv("PREDICTION_PROGRESS_URL", "http://127.0.0.1:8000/api/prediction-progress")
+PREDICTION_PROGRESS_URL = "http://127.0.0.1:8000/api/prediction-progress"
 
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)
@@ -232,23 +232,26 @@ def enqueue_and_run_analytics(job_ident, payload):
     finally:
         release_lock(lock_fd)
 
-def adaptive_active():
-    jobID = generate_tag_id()
+def adaptive_active(jobID=None, cust_id=1):
+    if not jobID:
+        jobID = generate_tag_id()
 
     try:
         # Step 1: Handle onboarding (blocking)
         # onboarding_result = data_onboarding(jobID, request.customer_id, job_sched=0)
-        onboarding_result = data_onboarding(jobID, 1, job_sched=0)
+        onboarding_result = data_onboarding(jobID, cust_id, job_sched=0)
         # background_tasks.add_task(data_onboarding, jobID, request.customer_id, request.customer_name)
         # Step 2: Schedule `main_sequence` to run in the background
         # background_tasks.add_task(enqueue_and_run_analytics, onboarding_result["key_id"], request)
-        enqueue_and_run_analytics(onboarding_result["key_id"], 1)
+        enqueue_and_run_analytics(onboarding_result["key_id"], cust_id)
         # Step 3: Immediately return success response
         return onboarding_result
     except Exception as e:
         error_summary = f"{type(e).__name__}: {e}"
-        error_logger(error_summary, customer_id=1)
+        error_logger(error_summary, customer_id=cust_id)
         return onboarding_result
   
 if __name__ == "__main__":
-    adaptive_active()
+    job_id_arg = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1].strip() else None
+    cust_id_arg = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].strip().isdigit() else 1
+    adaptive_active(jobID=job_id_arg, cust_id=cust_id_arg)

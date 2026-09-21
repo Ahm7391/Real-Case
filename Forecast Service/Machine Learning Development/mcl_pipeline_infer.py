@@ -23,7 +23,7 @@ FOLDER_PATH_CP = os.path.join(CURR_DIR, "Checkpoint")
 app = FastAPI(title="Ecommerce Machine Learning Section")
 load_dotenv()
 API_KEY = os.getenv("TOKEN_SERVER")
-PREDICTION_PROGRESS_URL = os.getenv("PREDICTION_PROGRESS_URL", "http://localhost:8000/api/prediction-progress")
+PREDICTION_PROGRESS_URL = "http://localhost:8000/api/prediction-progress"
 jobs = {}
 
 def report_progress(job_id: str, customer_id: int, progress_percent: int, stage_name: str, message: str, status: str = "running"):
@@ -231,11 +231,12 @@ def enqueue_and_run_analytics(job_ident, payload):
         release_lock(lock_fd)
 
 
-def predict_step():
-    jobID = generate_tag_id()
+def predict_step(jobID=None, cust_id=1):
+    if not jobID:
+        jobID = generate_tag_id()
 
     try:
-        customer_tbp = 1
+        customer_tbp = cust_id
         # Step 1: Handle onboarding (blocking)
         # onboarding_result = data_onboarding(jobID, request.customer_id, 
         #                                     request.predict_days, job_sched=0)
@@ -253,4 +254,6 @@ def predict_step():
         return onboarding_result
 
 if __name__ == "__main__":
-    predict_step()
+    job_id_arg = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1].strip() else None
+    cust_id_arg = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].strip().isdigit() else 1
+    predict_step(jobID=job_id_arg, cust_id=cust_id_arg)
