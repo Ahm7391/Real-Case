@@ -3,6 +3,12 @@ import sys, os, json
 import time
 import logging
 from datetime import datetime
+from typing import Optional
+
+from fastapi import FastAPI, BackgroundTasks, Request
+from pydantic import BaseModel
+
+app = FastAPI(title="Forecast Pipeline Orchestrator")
 
 logging.basicConfig(
     level=logging.INFO,
@@ -11,82 +17,68 @@ logging.basicConfig(
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-LOOPS = 10
-SLEEP_BETWEEN_CYCLES = 120  # seconds
-
 PIPELINES = [
-    # "/home/ubuntu/Ecommerce-Project/Ecommerce-Project/Adaptive Algorithm/adaptive_pipeline_infer.py",
-    # "/home/ubuntu/Ecommerce-Project/Ecommerce-Project/Machine Learning Development/mcl_pipeline_infer.py",
-    # "/home/antoniohazman8855/Ecommerce-Project/Adaptive Algorithm/adaptive_pipeline_infer.py",
-    # "/home/antoniohazman8855/Ecommerce-Project/Machine Learning Development/mcl_pipeline_infer.py",
-    "/home/gecko/ecommerce-project/Ready-Production/Adaptive Algorithm/adaptive_pipeline_infer.py",
-    "/home/gecko/ecommerce-project/Ready-Production/Machine Learning Development/mcl_pipeline_infer.py",
+    os.path.join(BASE_DIR, "adaptive_pipeline_infer.py"),
+    os.path.abspath(os.path.join(BASE_DIR, "..", "Machine Learning Development", "mcl_pipeline_infer.py")),
 ]
 
-def run_pipeline(script):
+def run_pipeline(script, job_id: str, customer_id: str):
     script_dir = os.path.dirname(os.path.abspath(script))
-    logging.info(f"Running {script}...")
-    subprocess.run([sys.executable, script], check=True, cwd=script_dir)
-    logging.info(f"Finished {script}")
+    logging.info(f"Running {script} for Job ID: {job_id}, Customer ID: {customer_id}...")
+    subprocess.run([sys.executable, script, str(job_id), str(customer_id)], check=True, cwd=script_dir)
+    logging.info(f"Finished {script} for Job ID: {job_id}")
 
-def length_checker():
-    if not os.path.exists(os.path.join(BASE_DIR, "customers_main_data.json")):
-        print("No customers main data found, we need to create the data first.")
-        print("Run the adaptive_pipeline_infer.py to update database.")
-        return 0
-    else:
-        print("Checking total customer")
-        with open(os.path.join(BASE_DIR,"customers_main_data.json"), "r") as f:
-            content_check = json.load(f)
-        length_of_data = len(content_check['data'])
-        return length_of_data
-
-def overtaking_job(): 
-    print("Checking external priority job...")
-    if os.path.exists(os.path.join(BASE_DIR,"request_queue.json")):
-        print("Found Request Queue..")
-        with open(os.path.join(BASE_DIR,"request_queue.json"), "r") as f:
-            see_data = json.load(f)
-
-        # before processing data, let's delete expired dates data
-        for v in see_data.values():
-            to_remove = []
-            for i in v:
-                if datetime.strptime(i, "%Y-%m-%d") <= datetime.now():
-                    to_remove.append(i)
-            for ii in range(len(to_remove)):
-                if to_remove[ii] in v:
-                    v.remove(to_remove[ii])
-
-        urgent = 3 # this is to set threshold limit that if passed must be prioritize
-        list_of_urgent = []
-        for k, v in see_data.items():
-            if len(v) >= urgent:
-                print(f"Identified urgent job for customer ID: {k}")
-                list_of_urgent.append(k)
-        return list_of_urgent
-    else:
-        print("No request_queue recorded.")
-        return []
-
-
-def main():
-    cycle = 0
-    main_counter = 0
-    total_seq = length_checker()
-    while True:  
-        cycle += 1
-        logging.info(f"=== Cycle {cycle} START ===")
-        logging.info(f"Curent main_counter is: {main_counter}")
-
+def execute_forecast_sequence(job_id: str, customer_id: str):
+    logging.info(f"=== Forecast Sequence STARTED for Job: {job_id}, Customer: {customer_id} ===")
+    try:
         for pipeline in PIPELINES:
-            run_pipeline(pipeline)  # serial: waits for each to finish
-        main_counter += 1
-        if main_counter > total_seq: break
+            run_pipeline(pipeline, job_id, customer_id)
+        logging.info(f"=== Forecast Sequence COMPLETED for Job: {job_id} ===")
+    except Exception as e:
+        logging.error(f"Error executing pipeline sequence for Job {job_id}: {e}")
 
-        logging.info(f"=== Cycle {cycle} DONE — sleeping {SLEEP_BETWEEN_CYCLES}s ===")
-        time.sleep(SLEEP_BETWEEN_CYCLES)
-        if main_counter > total_seq: break
+@app.api_route("/forecast-service-call", methods=["GET", "POST"])
+async def forecast_service_call(
+    request: Request,
+    background_tasks: BackgroundTasks,
+    job_id: Optional[str] = None,
+    customer_id: Optional[str] = None,
+    start_date: Optional[str] = None,
+    finish_date: Optional[str] = None,
+):
+    payload_data = {}
+    try:
+        payload_data = await request.json()
+    except Exception:
+        pass
 
-if __name__ == "__main__":
-    main()
+    if not isinstance(payload_data, dict):
+        payload_data = {}
+
+    query_params = dict(request.query_params)
+
+    resolved_job_id = (
+        payload_data.get("job_id")
+        or query_params.get("job_id")
+        or job_id
+        or f"JOB_FC_{int(time.time())}"
+    )
+    resolved_customer_id = (
+        payload_data.get("customer_id")
+        or query_params.get("customer_id")
+        or customer_id
+        or "1"
+    )
+
+    logging.info(f"Received forecast trigger from Laravel: Job ID={resolved_job_id}, Customer ID={resolved_customer_id}")
+
+    # Dispatch to background task so the FastAPI endpoint returns immediately within Laravel's 5s timeout
+    background_tasks.add_task(execute_forecast_sequence, str(resolved_job_id), str(resolved_customer_id))
+
+    return {
+        "status": "success",
+        "job_id": str(resolved_job_id),
+        "customer_id": str(resolved_customer_id),
+        "message": "Forecasting sequence dispatched to background worker."
+    }
+
