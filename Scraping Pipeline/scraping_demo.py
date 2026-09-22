@@ -1,28 +1,55 @@
 import time
-import random, tempfile
-import os, json, re, shutil
+import random
+import os, re, json, asyncio
 import logging
 from datetime import datetime, timedelta
-from urllib.parse import urlparse
-from url_checker import request_by_system
+from urllib.parse import urlparse, parse_qs, urlencode
+from concurrent.futures import ThreadPoolExecutor
+from fetcher_logic import run_fetching
  
 import pandas as pd
 import numpy as np
+from fastapi import FastAPI
+from fastapi.responses import StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware
 from selenium import webdriver
-from selenium.webdriver.common.timeouts import Timeouts
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, StaleElementReferenceException
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.common.exceptions import StaleElementReferenceException, ElementClickInterceptedException
-from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)
+
+app = FastAPI(title="Scraping Demo pipeline")
+
+# Enable CORS so frontend (Laravel / Blade / React / Vue) can establish SSE connection
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+executor = ThreadPoolExecutor(max_workers=2)
+
+class QueueLogHandler(logging.Handler):
+    """Custom log handler that forwards log records to an asyncio.Queue."""
+    def __init__(self, queue: asyncio.Queue, loop: asyncio.AbstractEventLoop):
+        super().__init__()
+        self.queue = queue
+        self.loop = loop
+
+    def emit(self, record):
+        try:
+            msg = self.format(record)
+            self.loop.call_soon_threadsafe(self.queue.put_nowait, msg)
+        except Exception:
+            self.handleError(record)
 
 DEST_ID        = "-2701757"  # Ubud's stable Booking.com city ID
 DEST_TYPE      = "city"
@@ -31,9 +58,9 @@ LOG_FILE       = "scraper.log"
 ADULTS         = 2
 ROOMS          = 1
 CHILDREN       = 0
-SLEEP_MIN      = 5           # seconds between requests (min)
-SLEEP_MAX      = 7           # seconds between requests (max)
-PAGE_TIMEOUT   = 20          # seconds to wait for DOM element
+SLEEP_MIN      = 3           # seconds between requests (min)
+SLEEP_MAX      = 5           # seconds between requests (max)
+PAGE_TIMEOUT   = 10          # seconds to wait for DOM element
 
 ALLOWED_LOCATIONS = ["Indonesia"]
  
@@ -169,7 +196,6 @@ def soft_scroll(driver):
         # Random chunk size (human scrolls vary between short and long flicks)
         chunk = random.randint(500, 1000)
         current_position += chunk
-        log.info(f"current_pos is : {current_position}")
 
         # Smooth scroll via JS scrollTo with 'smooth' behavior
         driver.execute_script(f"""
@@ -185,7 +211,6 @@ def soft_scroll(driver):
         # Occasionally scroll slightly back up (very human-like)
         if random.random() < 0.1:   # 10% chance
             scroll_back = random.randint(50, 150)
-            print(f"  [scroll] Natural scroll back: {scroll_back:.1f}s")
             driver.execute_script(f"""
                 window.scrollTo({{
                     top: {current_position - scroll_back},
@@ -199,10 +224,7 @@ def soft_scroll(driver):
 
         # If we've scrolled past current content bottom, check stability
         if current_position >= new_height:
-            log.info(f"  [scroll] Scroll past current bottom")
-            log.info(f"  [scroll] Current Position is : {current_position}")
-            log.info(f"  [scroll] new_height 1 is : {new_height}")
-            time.sleep(5)  # wait a beat for any final lazy loads
+            time.sleep(2)  # wait a beat for any final lazy loads
             new_height = driver.execute_script("return document.body.scrollHeight")
             if new_height == last_height:
                 # One final slow scroll to absolute bottom
@@ -215,7 +237,7 @@ def soft_scroll(driver):
                         });
                     """)
                     new_height = driver.execute_script("return document.body.scrollHeight")
-                    time.sleep(5)
+                    time.sleep(1)
                 last_height = new_height
                 if new_height == last_height:
                     log.info("  [scroll] Reached stable bottom.")
@@ -410,7 +432,8 @@ def scrape_hotel_price(
                     price_td = tds[1]
                     # log.info(f"[DEBUG] apa isinya sih? {price_td.text.strip()}")
                     log.info("trigger scrolling to fight lazy loader")
-                    soft_scroll(driver)
+                    if idx == 0: 
+                        soft_scroll(driver)
                     stage_pass = False
                     try:
                         # price_span = price_td.find_element(By.CSS_SELECTOR, "span.prco-valign-middle-helper")
@@ -634,7 +657,8 @@ def scrape_hotel_price_early_book(
                     price_td = tds[1]
                     # log.info(f"[DEBUG] apa isinya sih? {price_td.text.strip()}")
                     log.info("trigger scrolling to fight lazy loader")
-                    soft_scroll(driver)
+                    if idx == 0 :
+                        soft_scroll(driver)
                     stage_pass = False
                     try:
                         # price_span = price_td.find_element(By.CSS_SELECTOR, "span.prco-valign-middle-helper")
@@ -841,7 +865,7 @@ def master_scrape_flow(driver, targets, prop_scope):
             log.info("=" * 50)
     return driver
 
-def run():
+def execute_scraping_job():
     driver = build_driver()
     url_find_competitor = ["https://www.booking.com/hotel/id/oyo-491-coconut.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"]
     url_find_customer = ["https://www.booking.com/hotel/id/oyo-221-pratisarawirya.html?aid=304142&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&req_adults=2&no_rooms=1"]
@@ -850,7 +874,8 @@ def run():
         driver = master_scrape_flow(driver, url_find_competitor, prop_scope="competitor")
         log.info("Scraping customer")
         driver = master_scrape_flow(driver, url_find_customer, prop_scope="customer")
-        
+        log.info("Scraping is done, now we will send back the data to Laravel.")
+        run_fetching()
     except Exception as e:
         log.error(f"Unexpected error: {e}", exc_info=True)
     finally:
@@ -861,6 +886,43 @@ def run():
                 log.warning(f"Error quitting driver at session end: {e}")
         log.info("Driver shut down. Session END.")
         log.info("=" * 50)
+        log.info("[STREAM_JOB_FINISHED]")
 
-if __name__ == "__main__":
-    run()
+@app.get("/scraping-service-call")
+async def run():
+    queue = asyncio.Queue()
+    loop = asyncio.get_running_loop()
+
+    # Attach QueueLogHandler to root logger to capture all module logs
+    handler = QueueLogHandler(queue, loop)
+    handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+    root_logger = logging.getLogger()
+    root_logger.addHandler(handler)
+
+    # Dispatch synchronous scraping task to ThreadPoolExecutor
+    loop.run_in_executor(executor, execute_scraping_job)
+
+    async def event_generator():
+        try:
+            while True:
+                msg = await queue.get()
+                if "[STREAM_JOB_FINISHED]" in msg:
+                    yield f"data: {json.dumps({'log': msg, 'done': True})}\n\n"
+                    break
+                yield f"data: {json.dumps({'log': msg, 'done': False})}\n\n"
+        finally:
+            root_logger.removeHandler(handler)
+
+    return StreamingResponse(
+        event_generator(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no"
+        }
+    )
+
+# if __name__ == "__main__":
+#     import uvicorn
+#     uvicorn.run(app, host="0.0.0.0", port=8000)
