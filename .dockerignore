@@ -1,0 +1,13 @@
+.git
+.gitignore
+.editorconfig
+**/.venv
+**/node_modules
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.ipynb_checkpoints
+Laravel Environment/back-end-app/vendor
+Laravel Environment/back-end-app/storage/logs/*.log
+Laravel Environment/back-end-app/bootstrap/cache/*.php

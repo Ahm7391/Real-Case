@@ -41,8 +41,8 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 load_dotenv()
 API_KEY = os.getenv("TOKEN_SERVER")
-PREDICTIVE_DATA_HOOK_URL = "http://localhost:8000/api/prediction-result"
-PREDICTION_PROGRESS_URL = "http://localhost:8000/api/prediction-progress"
+PREDICTIVE_DATA_HOOK_URL = os.getenv("COMPANY_API_URL", os.getenv("PREDICTIVE_DATA_HOOK_URL", "http://localhost:8000/api/prediction-result"))
+PREDICTION_PROGRESS_URL = os.getenv("PREDICTION_PROGRESS_URL", "http://localhost:8000/api/prediction-progress")
 WEBHOOK_URL = "https://2f68b6cd-a59f-4429-af46-00f19a73248e.mock.pstmn.io/webhook"
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)

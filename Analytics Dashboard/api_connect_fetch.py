@@ -15,7 +15,7 @@ BUFFER_FILE = "cust_details.json"
 MAX_DAYS_PER_REQUEST = 90
 
 # THIS IS TO RECEIVE DATA FETCHING FROM NEW ENDPOINT
-API_ENDPOINT = "http://localhost:8000/api/analytics-demo"
+API_ENDPOINT = os.getenv("API_ENDPOINT", "http://localhost:8000/api/analytics-demo")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 app = FastAPI(title='VPS Data Receiver')

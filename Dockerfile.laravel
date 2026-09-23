@@ -1,0 +1,31 @@
+FROM php:8.2-cli-alpine
+
+# Install system dependencies and PostgreSQL PHP extensions
+RUN apk add --no-cache \
+    postgresql-dev \
+    git \
+    unzip \
+    libzip-dev \
+    bash \
+    curl \
+    && docker-php-ext-install pdo pdo_pgsql pgsql zip pcntl bcmath
+
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+WORKDIR /var/www/html
+
+# Copy composer definition files for dependency caching
+COPY "Laravel Environment/back-end-app/composer.json" "Laravel Environment/back-end-app/composer.lock*" ./
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader --no-scripts
+
+# Copy Laravel application code
+COPY "Laravel Environment/back-end-app" ./
+
+# Copy and setup entrypoint script
+COPY docker/entrypoint-laravel.sh /usr/local/bin/entrypoint-laravel.sh
+RUN chmod +x /usr/local/bin/entrypoint-laravel.sh
+
+EXPOSE 8000
+
+ENTRYPOINT ["/usr/local/bin/entrypoint-laravel.sh"]

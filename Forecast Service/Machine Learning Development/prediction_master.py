@@ -50,7 +50,7 @@ warnings.filterwarnings("ignore", category=pd.errors.SettingWithCopyWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 load_dotenv()
-COMPANY_API_URL = "http://localhost:8000/api/prediction-result"
+COMPANY_API_URL = os.getenv("COMPANY_API_URL", "http://localhost:8000/api/prediction-result")
 HOLIDAY_EVENTS_GET = "https://tanggalmerah.upset.dev/api/holidays?year=2026&type=holiday"
 MAIN_FILE = Path(__file__).resolve().parents[1]
 WEBHOOK_URL = "https://2f68b6cd-a59f-4429-af46-00f19a73248e.mock.pstmn.io/webhook"
@@ -66,7 +66,7 @@ ENC_SEQ_LEN = 14   # encoder input length
 N_FEATURES = 1
 
 API_KEY = os.getenv("TOKEN_SERVER")
-PREDICTION_PROGRESS_URL = "http://localhost:8000/api/prediction-progress"
+PREDICTION_PROGRESS_URL = os.getenv("PREDICTION_PROGRESS_URL", "http://localhost:8000/api/prediction-progress")
 
 def report_progress(job_id: str, customer_id: int, progress_percent: int, stage_name: str, message: str, status: str = "running"):
     """

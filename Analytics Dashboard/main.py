@@ -20,7 +20,7 @@ import requests, datetime
 # GITHUB_TOKEN = ""
 load_dotenv()
 API_KEY = "SEND_BACK_ANALYTICS"
-COMPANY_API_URL = "http://localhost:8000/api/dummy-records"
+COMPANY_API_URL = os.getenv("COMPANY_API_URL", "http://localhost:8000/api/dummy-records")
 DEBUG_STAT = False
 
 CURR_FILE = os.path.abspath(__file__)

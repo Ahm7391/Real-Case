@@ -14,6 +14,8 @@ import sys
 import numpy as np
 import requests
 
+import os
+
 # ==============================================================================
 # CONFIGURATION
 # ==============================================================================
@@ -27,8 +29,8 @@ HISTORICAL_START = TODAY - timedelta(days=365)
 # Forward prediction / simulation horizon (180 days forward)
 FORWARD_DAYS = 180
 
-# Laravel API endpoint (Change port or path as needed)
-LARAVEL_API_URL = "http://localhost:8000/api/dummy-bookings"
+# Laravel API endpoint (Configurable via environment variable)
+LARAVEL_API_URL = os.getenv("LARAVEL_API_URL", "http://localhost:8000/api/dummy-bookings")
 BATCH_SIZE = 80  # Number of records per API POST payload
 
 

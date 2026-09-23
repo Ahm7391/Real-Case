@@ -13,9 +13,13 @@ from adaptive_preproc_json import read_incoming_data, fetch_data_bak, FetchReque
 from adaptive_algorithm import adaptive_algorithm
 
 import time
-# import fcntl  # LINUX ONLY (Uncomment for Linux/production)
-import msvcrt   # WINDOWS ONLY (Comment out before pushing to Linux/production)
 import uuid
+import sys
+
+if sys.platform == "win32":
+    import msvcrt
+else:
+    import fcntl
 
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)
@@ -26,7 +30,7 @@ load_dotenv()
 jobs = {}
 
 API_KEY = os.getenv("TOKEN_SERVER")
-PREDICTION_PROGRESS_URL = "http://127.0.0.1:8000/api/prediction-progress"
+PREDICTION_PROGRESS_URL = os.getenv("PREDICTION_PROGRESS_URL", "http://127.0.0.1:8000/api/prediction-progress")
 
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)
@@ -69,29 +73,16 @@ def error_logger(error_msg, customer_id=None):
 # LINUX LOCKING MECHANISM (Uncomment when deploying/pushing to Linux)
 # ==============================================================================
 
-# def acquire_lock():
-#     fd = open(LOCK_FILE, "w")
-#     try:
-#         fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-#         return fd
-#     except BlockingIOError as e:
-#         fd.close()
-#         error_summary = f"{type(e).__name__}: {e}"
-#         error_logger(error_summary)
-#         return None
-
-# def release_lock(fd):
-#     try:
-#         fcntl.flock(fd, fcntl.LOCK_UN)
-#     finally:
-#         fd.close()
 # ==============================================================================
-# WINDOWS LOCKING MECHANISM (Active for Windows local testing)
+# CROSS-PLATFORM LOCKING MECHANISM (Windows msvcrt / Linux fcntl)
 # ==============================================================================
 def acquire_lock():
     try:
         fd = open(LOCK_FILE, "w")
-        msvcrt.locking(fd.fileno(), msvcrt.LK_NBLCK, 1)
+        if sys.platform == "win32":
+            msvcrt.locking(fd.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
         return fd
     except (IOError, OSError) as e:
         if 'fd' in locals() and not fd.closed:
@@ -104,7 +95,10 @@ def release_lock(fd):
     try:
         if fd and not fd.closed:
             fd.seek(0)
-            msvcrt.locking(fd.fileno(), msvcrt.LK_UNLCK, 1)
+            if sys.platform == "win32":
+                msvcrt.locking(fd.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                fcntl.flock(fd, fcntl.LOCK_UN)
     except (IOError, OSError) as e:
         error_summary = f"{type(e).__name__}: {e}"
         error_logger(error_summary)

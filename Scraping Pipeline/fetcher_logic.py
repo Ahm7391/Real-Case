@@ -2,8 +2,8 @@ import pickle, requests, time
 import pandas as pd
 import json, os, datetime
 
-SCRAPING_RESULT_FEEDBACK = "http://localhost:8000/api/scraping-competitor"
-CUSTOMER_SCRAPING_RESULT = "http://localhost:8000/api/scraping-customer"
+SCRAPING_RESULT_FEEDBACK = os.getenv("SCRAPING_RESULT_FEEDBACK", "http://localhost:8000/api/scraping-competitor")
+CUSTOMER_SCRAPING_RESULT = os.getenv("CUSTOMER_SCRAPING_RESULT", "http://localhost:8000/api/scraping-customer")
 
 CURR_FILE = os.path.abspath(__file__)
 CURR_DIR = os.path.dirname(CURR_FILE)

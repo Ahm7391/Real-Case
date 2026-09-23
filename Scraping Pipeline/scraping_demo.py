@@ -97,14 +97,21 @@ def is_allowed(url: str):
     # Default: disallow anything not explicitly in our allowed list
     return False
 
+import sys
+
 def build_driver():
     options = Options()
     options.page_load_strategy = 'eager'
-    # options.binary_location = "/opt/chrome/chrome-linux64/chrome"
-    # options.add_argument("--headless=new")
-    options.add_argument("--disable-gpu")        # required on some VPS
     
-    # options.add_argument("--single-process")
+    # Enable headless mode in Linux / container environments or if HEADLESS is set
+    if os.getenv("HEADLESS", "false").lower() in ("true", "1", "yes") or sys.platform != "win32":
+        options.add_argument("--headless=new")
+
+    chrome_bin = os.getenv("CHROME_BIN")
+    if chrome_bin and os.path.exists(chrome_bin):
+        options.binary_location = chrome_bin
+
+    options.add_argument("--disable-gpu")        # required on some VPS
     options.add_argument("--no-zygote")
     options.add_argument("--disable-software-rasterizer")
     options.add_argument("--disable-extensions")
@@ -122,8 +129,15 @@ def build_driver():
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/124.0.0.0 Safari/537.36"
     )
+
+    chromedriver_path = os.getenv("CHROMEDRIVER_PATH")
+    if chromedriver_path and os.path.exists(chromedriver_path):
+        service = Service(chromedriver_path)
+    else:
+        service = Service(ChromeDriverManager().install())
+
     driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager().install()),
+        service=service,
         options=options
     )
     driver.execute_cdp_cmd("Network.enable", {})
