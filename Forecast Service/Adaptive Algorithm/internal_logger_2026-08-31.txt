@@ -1,4 +1,0 @@
-Adaptive Pipeline Date: 2026-08-31 10:22:19 Property ID: 6
-Status: SENT. DATA NOT BLANK.
-Adaptive Pipeline Date: 2026-08-31 10:27:02 Property ID: 6
-Status: SENT. DATA NOT BLANK.
