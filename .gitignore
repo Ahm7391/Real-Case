@@ -1,0 +1,33 @@
+# Environment & Backups
+.env
+.env.*
+!.env.example
+*.bak
+*.bak2
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.ipynb_checkpoints/
+
+# Laravel & PHP
+/Laravel Environment/back-end-app/vendor/
+/Laravel Environment/back-end-app/node_modules/
+/Laravel Environment/back-end-app/storage/logs/*.log
+/Laravel Environment/back-end-app/storage/framework/sessions/*
+/Laravel Environment/back-end-app/storage/framework/views/*
+/Laravel Environment/back-end-app/storage/framework/cache/*
+/Laravel Environment/back-end-app/bootstrap/cache/*.php
+/Laravel Environment/back-end-app/resources/js/example_js
+/Laravel Environment/back-end-app/resources/js/module_js
+/Laravel Environment/back-end-app/resources/views/ecommerce
+/Laravel Environment/back-end-app/resources/views/invoices
+
+# OS & Logs
+*.log
+.DS_Store
+Thumbs.db

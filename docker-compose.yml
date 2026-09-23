@@ -1,0 +1,122 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: demo_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-my_laravel_db}
+      POSTGRES_USER: ${DB_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-secret}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d my_laravel_db"]
+      interval: 4s
+      timeout: 5s
+      retries: 6
+
+  laravel-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.laravel
+    container_name: demo_laravel_app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    environment:
+      APP_NAME: Laravel
+      APP_ENV: local
+      APP_DEBUG: "true"
+      APP_KEY: base64:31z/mD+NXW0PrZ8hydVkQr0hbfRUp+7l2eg7mhacJ3g=
+      APP_URL: http://localhost:8000
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: ${DB_DATABASE:-my_laravel_db}
+      DB_USERNAME: ${DB_USERNAME:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-secret}
+      # Microservice Endpoints
+      PYTHON_PIPELINE_URL: http://analytics-service:8001
+      FORECAST_SERVICE_URL: http://forecast-service:8002
+      SCRAPER_SERVICE_URL: http://localhost:8003
+
+  analytics-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    container_name: demo_analytics_service
+    restart: unless-stopped
+    working_dir: /app/Analytics Dashboard
+    command: uvicorn main_pipeline:app --host 0.0.0.0 --port 8001
+    ports:
+      - "8001:8001"
+    environment:
+      LARAVEL_API_URL: http://laravel-app:8000/api/dummy-bookings
+      COMPANY_API_URL: http://laravel-app:8000/api/dummy-records
+      API_ENDPOINT: http://laravel-app:8000/api/analytics-demo
+    depends_on:
+      - laravel-app
+
+  forecast-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    container_name: demo_forecast_service
+    restart: unless-stopped
+    working_dir: /app/Forecast Service/Adaptive Algorithm
+    command: uvicorn orchestrator:app --host 0.0.0.0 --port 8002
+    ports:
+      - "8002:8002"
+    environment:
+      LARAVEL_BASE_URL: http://laravel-app:8000
+      PREDICTION_PROGRESS_URL: http://laravel-app:8000/api/prediction-progress
+      COMPANY_API_URL: http://laravel-app:8000/api/prediction-result
+      API_ENDPOINT: http://laravel-app:8000/api/forecast-demo
+    depends_on:
+      - laravel-app
+
+  scraping-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.scraper
+    container_name: demo_scraping_service
+    restart: unless-stopped
+    ports:
+      - "8003:8003"
+    environment:
+      SCRAPING_RESULT_FEEDBACK: http://laravel-app:8000/api/scraping-competitor
+      CUSTOMER_SCRAPING_RESULT: http://laravel-app:8000/api/scraping-customer
+      HEADLESS: "true"
+    depends_on:
+      - laravel-app
+
+  seeder-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    container_name: demo_seeder_runner
+    working_dir: /app/Analytics Dashboard
+    command: >
+      bash -c "
+        echo 'Waiting for Laravel backend API to respond...' &&
+        until curl -s http://laravel-app:8000/api/health > /dev/null 2>&1; do
+          sleep 2
+        done &&
+        echo 'Laravel API is ready! Seeding initial booking records...' &&
+        python seeders_booking_data.py &&
+        echo 'Initial data seeding completed successfully.'
+      "
+    environment:
+      LARAVEL_API_URL: http://laravel-app:8000/api/dummy-bookings
+    depends_on:
+      - laravel-app
+
+volumes:
+  postgres_data:

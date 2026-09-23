@@ -1,0 +1,53 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class ScrapedCustomer extends Model
+{
+    use HasFactory;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'scraped_customer';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var list<string>
+     */
+    protected $fillable = [
+        'customer_id',
+        'room_type_id',
+        'ota_source',
+        'price',
+        'perks',
+        'scraped_at',
+        'target_date',
+        'category',
+    ];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'customer_id' => 'string',
+            'room_type_id' => 'string',
+            'ota_source' => 'string',
+            'price' => 'integer',
+            'perks' => 'string',
+            'scraped_at' => 'datetime',
+            'target_date' => 'datetime',
+            'category' => 'integer',
+        ];
+    }
+}

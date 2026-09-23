@@ -1,0 +1,31 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install Chromium & Chromedriver dependencies for headless containerized scraping
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    chromium \
+    chromium-driver \
+    curl \
+    fonts-liberation \
+    libnss3 \
+    libxss1 \
+    libasound2 \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV CHROME_BIN=/usr/bin/chromium
+ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
+ENV HEADLESS=true
+
+# Install Python requirements
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application source tree
+COPY . /app
+
+WORKDIR /app/Scraping Pipeline
+
+EXPOSE 8003
+
+CMD ["uvicorn", "scraping_demo:app", "--host", "0.0.0.0", "--port", "8003"]
