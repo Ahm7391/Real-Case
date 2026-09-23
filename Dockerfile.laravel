@@ -1,4 +1,4 @@
-FROM php:8.2-cli-alpine
+FROM php:8.3-cli-alpine
 
 # Install system dependencies and PostgreSQL PHP extensions
 RUN apk add --no-cache \
@@ -15,16 +15,18 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
-# Copy composer definition files for dependency caching
-COPY "Laravel Environment/back-end-app/composer.json" "Laravel Environment/back-end-app/composer.lock*" ./
+# Copy composer definition files for dependency caching (JSON array format for spaces)
+COPY ["Laravel Environment/back-end-app/composer.json", "Laravel Environment/back-end-app/composer.lock", "./"]
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader --no-scripts
 
 # Copy Laravel application code
-COPY "Laravel Environment/back-end-app" ./
+COPY ["Laravel Environment/back-end-app", "./"]
 
-# Copy and setup entrypoint script
-COPY docker/entrypoint-laravel.sh /usr/local/bin/entrypoint-laravel.sh
-RUN chmod +x /usr/local/bin/entrypoint-laravel.sh
+# Copy and setup entrypoint script with CRLF fix for Windows hosts
+COPY ["docker/entrypoint-laravel.sh", "/usr/local/bin/entrypoint-laravel.sh"]
+RUN tr -d '\r' < /usr/local/bin/entrypoint-laravel.sh > /usr/local/bin/temp-entrypoint.sh \
+    && mv /usr/local/bin/temp-entrypoint.sh /usr/local/bin/entrypoint-laravel.sh \
+    && chmod +x /usr/local/bin/entrypoint-laravel.sh
 
 EXPOSE 8000
 

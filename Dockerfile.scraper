@@ -24,7 +24,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application source tree
 COPY . /app
 
-WORKDIR /app/Scraping Pipeline
+WORKDIR "/app/Scraping Pipeline"
 
 EXPOSE 8003
 
